@@ -2041,6 +2041,9 @@ extern fn DBusMessage* DBusMessage.new_method_error(&self, ZString error_name, Z
 <* Maps to DBusMessage::new_method_error_literal *>
 extern fn DBusMessage* DBusMessage.new_method_error_literal(&self, ZString error_name, ZString error_message) @extern("g_dbus_message_new_method_error_literal");
 
+<* Maps to DBusMessage::new_method_error_valist *>
+extern fn DBusMessage* DBusMessage.new_method_error_valist(&self, ZString error_name, ZString error_message_format, ZString var_args) @extern("g_dbus_message_new_method_error_valist");
+
 <* Maps to DBusMessage::new_method_reply *>
 extern fn DBusMessage* DBusMessage.new_method_reply(&self, ) @extern("g_dbus_message_new_method_reply");
 
@@ -2159,6 +2162,9 @@ extern fn void DBusMethodInvocation.return_error(&self, glib::Quark domain, int 
 
 <* Maps to DBusMethodInvocation::return_error_literal *>
 extern fn void DBusMethodInvocation.return_error_literal(&self, glib::Quark domain, int code, ZString message) @extern("g_dbus_method_invocation_return_error_literal");
+
+<* Maps to DBusMethodInvocation::return_error_valist *>
+extern fn void DBusMethodInvocation.return_error_valist(&self, glib::Quark domain, int code, ZString format, ZString var_args) @extern("g_dbus_method_invocation_return_error_valist");
 
 <* Maps to DBusMethodInvocation::return_gerror *>
 extern fn void DBusMethodInvocation.return_gerror(&self, glib::Error* error) @extern("g_dbus_method_invocation_return_gerror");
@@ -4214,6 +4220,9 @@ extern fn void OutputStream.splice_async(&self, InputStream* source, OutputStrea
 <* Maps to OutputStream::splice_finish *>
 extern fn isz OutputStream.splice_finish(&self, AsyncResult* result) @extern("g_output_stream_splice_finish");
 
+<* Maps to OutputStream::vprintf *>
+extern fn bool OutputStream.vprintf(&self, usz* bytes_written, Cancellable* cancellable, glib::Error* error, ZString format, ZString args) @extern("g_output_stream_vprintf");
+
 <* Maps to OutputStream::write *>
 extern fn isz OutputStream.write(&self, char buffer, usz count, Cancellable* cancellable) @extern("g_output_stream_write");
 
@@ -4800,6 +4809,9 @@ extern fn void SimpleAsyncResult.set_check_cancellable(&self, Cancellable* check
 
 <* Maps to SimpleAsyncResult::set_error *>
 extern fn void SimpleAsyncResult.set_error(&self, glib::Quark domain, int code, ZString format, any rest) @extern("g_simple_async_result_set_error");
+
+<* Maps to SimpleAsyncResult::set_error_va *>
+extern fn void SimpleAsyncResult.set_error_va(&self, glib::Quark domain, int code, ZString format, ZString args) @extern("g_simple_async_result_set_error_va");
 
 <* Maps to SimpleAsyncResult::set_from_error *>
 extern fn void SimpleAsyncResult.set_from_error(&self, glib::Error* error) @extern("g_simple_async_result_set_from_error");

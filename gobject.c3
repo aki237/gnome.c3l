@@ -370,6 +370,9 @@ extern fn void Object.get_property(&self, ZString property_name, Value* value) @
 <* Maps to Object::get_qdata *>
 extern fn void* Object.get_qdata(&self, glib::Quark quark) @extern("g_object_get_qdata");
 
+<* Maps to Object::get_valist *>
+extern fn void Object.get_valist(&self, ZString first_property_name, ZString var_args) @extern("g_object_get_valist");
+
 <* Maps to Object::getv *>
 extern fn void Object.getv(&self, uint n_properties, ZString* names, Value values) @extern("g_object_getv");
 
@@ -420,6 +423,9 @@ extern fn void Object.set_qdata(&self, glib::Quark quark, void* data) @extern("g
 
 <* Maps to Object::set_qdata_full *>
 extern fn void Object.set_qdata_full(&self, glib::Quark quark, void* data, glib::DestroyNotify destroy) @extern("g_object_set_qdata_full");
+
+<* Maps to Object::set_valist *>
+extern fn void Object.set_valist(&self, ZString first_property_name, ZString var_args) @extern("g_object_set_valist");
 
 <* Maps to Object::setv *>
 extern fn void Object.setv(&self, uint n_properties, ZString* names, Value values) @extern("g_object_setv");

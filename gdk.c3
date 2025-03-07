@@ -586,6 +586,9 @@ extern fn void Clipboard.set_text(&self, ZString text) @extern("gdk_clipboard_se
 <* Maps to Clipboard::set_texture *>
 extern fn void Clipboard.set_texture(&self, Texture* texture) @extern("gdk_clipboard_set_texture");
 
+<* Maps to Clipboard::set_valist *>
+extern fn void Clipboard.set_valist(&self, usz type, ZString args) @extern("gdk_clipboard_set_valist");
+
 <* Maps to Clipboard::set_value *>
 extern fn void Clipboard.set_value(&self, gobject::Value* value) @extern("gdk_clipboard_set_value");
 
@@ -2051,6 +2054,9 @@ extern fn CairoContext* Surface.create_cairo_context(&self, ) @extern("gdk_surfa
 
 <* Maps to Surface::create_gl_context *>
 extern fn GLContext* Surface.create_gl_context(&self, ) @extern("gdk_surface_create_gl_context");
+
+<* Maps to Surface::create_similar_surface *>
+extern fn cairo::Surface* Surface.create_similar_surface(&self, cairo::Content content, int width, int height) @extern("gdk_surface_create_similar_surface");
 
 <* Maps to Surface::create_vulkan_context *>
 extern fn VulkanContext* Surface.create_vulkan_context(&self, ) @extern("gdk_surface_create_vulkan_context");

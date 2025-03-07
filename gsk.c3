@@ -603,6 +603,9 @@ extern fn int GLShader.find_uniform_by_name(&self, ZString name) @extern("gsk_gl
 <* Maps to GLShader::format_args *>
 extern fn glib::Bytes* GLShader.format_args(&self, any rest) @extern("gsk_gl_shader_format_args");
 
+<* Maps to GLShader::format_args_va *>
+extern fn glib::Bytes* GLShader.format_args_va(&self, ZString uniforms) @extern("gsk_gl_shader_format_args_va");
+
 <* Maps to GLShader::get_arg_bool *>
 extern fn bool GLShader.get_arg_bool(&self, glib::Bytes* args, int idx) @extern("gsk_gl_shader_get_arg_bool");
 

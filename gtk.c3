@@ -2953,11 +2953,17 @@ extern fn void CellArea.cell_get(&self, CellRenderer* renderer, ZString first_pr
 <* Maps to CellArea::cell_get_property *>
 extern fn void CellArea.cell_get_property(&self, CellRenderer* renderer, ZString property_name, gobject::Value* value) @extern("gtk_cell_area_cell_get_property");
 
+<* Maps to CellArea::cell_get_valist *>
+extern fn void CellArea.cell_get_valist(&self, CellRenderer* renderer, ZString first_property_name, ZString var_args) @extern("gtk_cell_area_cell_get_valist");
+
 <* Maps to CellArea::cell_set *>
 extern fn void CellArea.cell_set(&self, CellRenderer* renderer, ZString first_prop_name, any rest) @extern("gtk_cell_area_cell_set");
 
 <* Maps to CellArea::cell_set_property *>
 extern fn void CellArea.cell_set_property(&self, CellRenderer* renderer, ZString property_name, gobject::Value* value) @extern("gtk_cell_area_cell_set_property");
+
+<* Maps to CellArea::cell_set_valist *>
+extern fn void CellArea.cell_set_valist(&self, CellRenderer* renderer, ZString first_property_name, ZString var_args) @extern("gtk_cell_area_cell_set_valist");
 
 <* Maps to CellArea::copy_context *>
 extern fn CellAreaContext* CellArea.copy_context(&self, CellAreaContext* context) @extern("gtk_cell_area_copy_context");
@@ -8615,6 +8621,9 @@ extern fn void ListStore.set(&self, TreeIter* iter, any rest) @extern("gtk_list_
 <* Maps to ListStore::set_column_types *>
 extern fn void ListStore.set_column_types(&self, int n_columns, usz types) @extern("gtk_list_store_set_column_types");
 
+<* Maps to ListStore::set_valist *>
+extern fn void ListStore.set_valist(&self, TreeIter* iter, ZString var_args) @extern("gtk_list_store_set_valist");
+
 <* Maps to ListStore::set_value *>
 extern fn void ListStore.set_value(&self, TreeIter* iter, int column, gobject::Value* value) @extern("gtk_list_store_set_value");
 
@@ -8848,6 +8857,9 @@ extern fn void MediaStream.ended(&self, ) @extern("gtk_media_stream_ended");
 
 <* Maps to MediaStream::error *>
 extern fn void MediaStream.error(&self, glib::Quark domain, int code, ZString format, any rest) @extern("gtk_media_stream_error");
+
+<* Maps to MediaStream::error_valist *>
+extern fn void MediaStream.error_valist(&self, glib::Quark domain, int code, ZString format, ZString args) @extern("gtk_media_stream_error_valist");
 
 <* Maps to MediaStream::gerror *>
 extern fn void MediaStream.gerror(&self, glib::Error* error) @extern("gtk_media_stream_gerror");
@@ -14137,6 +14149,9 @@ extern fn void TreeStore.set(&self, TreeIter* iter, any rest) @extern("gtk_tree_
 
 <* Maps to TreeStore::set_column_types *>
 extern fn void TreeStore.set_column_types(&self, int n_columns, usz types) @extern("gtk_tree_store_set_column_types");
+
+<* Maps to TreeStore::set_valist *>
+extern fn void TreeStore.set_valist(&self, TreeIter* iter, ZString var_args) @extern("gtk_tree_store_set_valist");
 
 <* Maps to TreeStore::set_value *>
 extern fn void TreeStore.set_value(&self, TreeIter* iter, int column, gobject::Value* value) @extern("gtk_tree_store_set_value");
