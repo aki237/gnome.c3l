@@ -15,7 +15,7 @@ import gio;
 import gtk;
 
 
-distinct TabViewShortcuts = int;
+typedef TabViewShortcuts = int;
 const TabViewShortcuts TAB_VIEW_SHORTCUTS_ALL_SHORTCUTS = 4095;
 const TabViewShortcuts TAB_VIEW_SHORTCUTS_ALT_DIGITS = 1024;
 const TabViewShortcuts TAB_VIEW_SHORTCUTS_ALT_ZERO = 2048;
@@ -31,7 +31,7 @@ const TabViewShortcuts TAB_VIEW_SHORTCUTS_CONTROL_SHIFT_TAB = 2;
 const TabViewShortcuts TAB_VIEW_SHORTCUTS_CONTROL_TAB = 1;
 const TabViewShortcuts TAB_VIEW_SHORTCUTS_NONE = 0;
 
-distinct AccentColor = int;
+typedef AccentColor = int;
 const AccentColor ACCENT_COLOR_BLUE = 0;
 const AccentColor ACCENT_COLOR_GREEN = 2;
 const AccentColor ACCENT_COLOR_ORANGE = 4;
@@ -42,39 +42,39 @@ const AccentColor ACCENT_COLOR_SLATE = 8;
 const AccentColor ACCENT_COLOR_TEAL = 1;
 const AccentColor ACCENT_COLOR_YELLOW = 3;
 
-distinct AnimationState = int;
+typedef AnimationState = int;
 const AnimationState ANIMATION_STATE_FINISHED = 3;
 const AnimationState ANIMATION_STATE_IDLE = 0;
 const AnimationState ANIMATION_STATE_PAUSED = 1;
 const AnimationState ANIMATION_STATE_PLAYING = 2;
 
-distinct BreakpointConditionLengthType = int;
+typedef BreakpointConditionLengthType = int;
 const BreakpointConditionLengthType BREAKPOINT_CONDITION_LENGTH_TYPE_MAX_HEIGHT = 3;
 const BreakpointConditionLengthType BREAKPOINT_CONDITION_LENGTH_TYPE_MAX_WIDTH = 1;
 const BreakpointConditionLengthType BREAKPOINT_CONDITION_LENGTH_TYPE_MIN_HEIGHT = 2;
 const BreakpointConditionLengthType BREAKPOINT_CONDITION_LENGTH_TYPE_MIN_WIDTH = 0;
 
-distinct BreakpointConditionRatioType = int;
+typedef BreakpointConditionRatioType = int;
 const BreakpointConditionRatioType BREAKPOINT_CONDITION_RATIO_TYPE_MAX_ASPECT_RATIO = 1;
 const BreakpointConditionRatioType BREAKPOINT_CONDITION_RATIO_TYPE_MIN_ASPECT_RATIO = 0;
 
-distinct CenteringPolicy = int;
+typedef CenteringPolicy = int;
 const CenteringPolicy CENTERING_POLICY_LOOSE = 0;
 const CenteringPolicy CENTERING_POLICY_STRICT = 1;
 
-distinct ColorScheme = int;
+typedef ColorScheme = int;
 const ColorScheme COLOR_SCHEME_DEFAULT = 0;
 const ColorScheme COLOR_SCHEME_FORCE_DARK = 4;
 const ColorScheme COLOR_SCHEME_FORCE_LIGHT = 1;
 const ColorScheme COLOR_SCHEME_PREFER_DARK = 3;
 const ColorScheme COLOR_SCHEME_PREFER_LIGHT = 2;
 
-distinct DialogPresentationMode = int;
+typedef DialogPresentationMode = int;
 const DialogPresentationMode DIALOG_PRESENTATION_MODE_AUTO = 0;
 const DialogPresentationMode DIALOG_PRESENTATION_MODE_BOTTOM_SHEET = 2;
 const DialogPresentationMode DIALOG_PRESENTATION_MODE_FLOATING = 1;
 
-distinct Easing = int;
+typedef Easing = int;
 const Easing EASING_EASE_IN_BACK = 25;
 const Easing EASING_EASE_IN_BOUNCE = 28;
 const Easing EASING_EASE_IN_CIRC = 19;
@@ -107,222 +107,222 @@ const Easing EASING_EASE_OUT_QUINT = 11;
 const Easing EASING_EASE_OUT_SINE = 14;
 const Easing EASING_LINEAR = 0;
 
-distinct FlapFoldPolicy = int;
+typedef FlapFoldPolicy = int;
 const FlapFoldPolicy FLAP_FOLD_POLICY_ALWAYS = 1;
 const FlapFoldPolicy FLAP_FOLD_POLICY_AUTO = 2;
 const FlapFoldPolicy FLAP_FOLD_POLICY_NEVER = 0;
 
-distinct FlapTransitionType = int;
+typedef FlapTransitionType = int;
 const FlapTransitionType FLAP_TRANSITION_TYPE_OVER = 0;
 const FlapTransitionType FLAP_TRANSITION_TYPE_SLIDE = 2;
 const FlapTransitionType FLAP_TRANSITION_TYPE_UNDER = 1;
 
-distinct FoldThresholdPolicy = int;
+typedef FoldThresholdPolicy = int;
 const FoldThresholdPolicy FOLD_THRESHOLD_POLICY_MINIMUM = 0;
 const FoldThresholdPolicy FOLD_THRESHOLD_POLICY_NATURAL = 1;
 
-distinct LeafletTransitionType = int;
+typedef LeafletTransitionType = int;
 const LeafletTransitionType LEAFLET_TRANSITION_TYPE_OVER = 0;
 const LeafletTransitionType LEAFLET_TRANSITION_TYPE_SLIDE = 2;
 const LeafletTransitionType LEAFLET_TRANSITION_TYPE_UNDER = 1;
 
-distinct LengthUnit = int;
+typedef LengthUnit = int;
 const LengthUnit LENGTH_UNIT_PT = 1;
 const LengthUnit LENGTH_UNIT_PX = 0;
 const LengthUnit LENGTH_UNIT_SP = 2;
 
-distinct NavigationDirection = int;
+typedef NavigationDirection = int;
 const NavigationDirection NAVIGATION_DIRECTION_BACK = 0;
 const NavigationDirection NAVIGATION_DIRECTION_FORWARD = 1;
 
-distinct ResponseAppearance = int;
+typedef ResponseAppearance = int;
 const ResponseAppearance RESPONSE_APPEARANCE_DEFAULT = 0;
 const ResponseAppearance RESPONSE_APPEARANCE_DESTRUCTIVE = 2;
 const ResponseAppearance RESPONSE_APPEARANCE_SUGGESTED = 1;
 
-distinct SqueezerTransitionType = int;
+typedef SqueezerTransitionType = int;
 const SqueezerTransitionType SQUEEZER_TRANSITION_TYPE_CROSSFADE = 1;
 const SqueezerTransitionType SQUEEZER_TRANSITION_TYPE_NONE = 0;
 
-distinct ToastPriority = int;
+typedef ToastPriority = int;
 const ToastPriority TOAST_PRIORITY_HIGH = 1;
 const ToastPriority TOAST_PRIORITY_NORMAL = 0;
 
-distinct ToolbarStyle = int;
+typedef ToolbarStyle = int;
 const ToolbarStyle TOOLBAR_STYLE_FLAT = 0;
 const ToolbarStyle TOOLBAR_STYLE_RAISED = 1;
 const ToolbarStyle TOOLBAR_STYLE_RAISED_BORDER = 2;
 
-distinct ViewSwitcherPolicy = int;
+typedef ViewSwitcherPolicy = int;
 const ViewSwitcherPolicy VIEW_SWITCHER_POLICY_NARROW = 0;
 const ViewSwitcherPolicy VIEW_SWITCHER_POLICY_WIDE = 1;
 
 
 
-distinct AboutDialogClass = void*;
+typedef AboutDialogClass = void*;
 
-distinct AboutWindowClass = void*;
+typedef AboutWindowClass = void*;
 
-distinct ActionRowClass = void*;
+typedef ActionRowClass = void*;
 
-distinct AlertDialogClass = void*;
+typedef AlertDialogClass = void*;
 
-distinct AnimationClass = void*;
+typedef AnimationClass = void*;
 
-distinct AnimationTargetClass = void*;
+typedef AnimationTargetClass = void*;
 
-distinct ApplicationClass = void*;
+typedef ApplicationClass = void*;
 
-distinct ApplicationWindowClass = void*;
+typedef ApplicationWindowClass = void*;
 
-distinct AvatarClass = void*;
+typedef AvatarClass = void*;
 
-distinct BannerClass = void*;
+typedef BannerClass = void*;
 
-distinct BinClass = void*;
+typedef BinClass = void*;
 
-distinct BottomSheetClass = void*;
+typedef BottomSheetClass = void*;
 
-distinct BreakpointBinClass = void*;
+typedef BreakpointBinClass = void*;
 
-distinct BreakpointClass = void*;
+typedef BreakpointClass = void*;
 
-distinct BreakpointCondition = void*;
+typedef BreakpointCondition = void*;
 
-distinct ButtonContentClass = void*;
+typedef ButtonContentClass = void*;
 
-distinct ButtonRowClass = void*;
+typedef ButtonRowClass = void*;
 
-distinct CallbackAnimationTargetClass = void*;
+typedef CallbackAnimationTargetClass = void*;
 
-distinct CarouselClass = void*;
+typedef CarouselClass = void*;
 
-distinct CarouselIndicatorDotsClass = void*;
+typedef CarouselIndicatorDotsClass = void*;
 
-distinct CarouselIndicatorLinesClass = void*;
+typedef CarouselIndicatorLinesClass = void*;
 
-distinct ClampClass = void*;
+typedef ClampClass = void*;
 
-distinct ClampLayoutClass = void*;
+typedef ClampLayoutClass = void*;
 
-distinct ClampScrollableClass = void*;
+typedef ClampScrollableClass = void*;
 
-distinct ComboRowClass = void*;
+typedef ComboRowClass = void*;
 
-distinct DialogClass = void*;
+typedef DialogClass = void*;
 
-distinct EntryRowClass = void*;
+typedef EntryRowClass = void*;
 
-distinct EnumListItemClass = void*;
+typedef EnumListItemClass = void*;
 
-distinct EnumListModelClass = void*;
+typedef EnumListModelClass = void*;
 
-distinct ExpanderRowClass = void*;
+typedef ExpanderRowClass = void*;
 
-distinct FlapClass = void*;
+typedef FlapClass = void*;
 
-distinct HeaderBarClass = void*;
+typedef HeaderBarClass = void*;
 
-distinct LayoutClass = void*;
+typedef LayoutClass = void*;
 
-distinct LayoutSlotClass = void*;
+typedef LayoutSlotClass = void*;
 
-distinct LeafletClass = void*;
+typedef LeafletClass = void*;
 
-distinct LeafletPageClass = void*;
+typedef LeafletPageClass = void*;
 
-distinct MessageDialogClass = void*;
+typedef MessageDialogClass = void*;
 
-distinct MultiLayoutViewClass = void*;
+typedef MultiLayoutViewClass = void*;
 
-distinct NavigationPageClass = void*;
+typedef NavigationPageClass = void*;
 
-distinct NavigationSplitViewClass = void*;
+typedef NavigationSplitViewClass = void*;
 
-distinct NavigationViewClass = void*;
+typedef NavigationViewClass = void*;
 
-distinct OverlaySplitViewClass = void*;
+typedef OverlaySplitViewClass = void*;
 
-distinct PasswordEntryRowClass = void*;
+typedef PasswordEntryRowClass = void*;
 
-distinct PreferencesDialogClass = void*;
+typedef PreferencesDialogClass = void*;
 
-distinct PreferencesGroupClass = void*;
+typedef PreferencesGroupClass = void*;
 
-distinct PreferencesPageClass = void*;
+typedef PreferencesPageClass = void*;
 
-distinct PreferencesRowClass = void*;
+typedef PreferencesRowClass = void*;
 
-distinct PreferencesWindowClass = void*;
+typedef PreferencesWindowClass = void*;
 
-distinct PropertyAnimationTargetClass = void*;
+typedef PropertyAnimationTargetClass = void*;
 
-distinct SpinRowClass = void*;
+typedef SpinRowClass = void*;
 
-distinct SpinnerClass = void*;
+typedef SpinnerClass = void*;
 
-distinct SpinnerPaintableClass = void*;
+typedef SpinnerPaintableClass = void*;
 
-distinct SplitButtonClass = void*;
+typedef SplitButtonClass = void*;
 
-distinct SpringAnimationClass = void*;
+typedef SpringAnimationClass = void*;
 
-distinct SpringParams = void*;
+typedef SpringParams = void*;
 
-distinct SqueezerClass = void*;
+typedef SqueezerClass = void*;
 
-distinct SqueezerPageClass = void*;
+typedef SqueezerPageClass = void*;
 
-distinct StatusPageClass = void*;
+typedef StatusPageClass = void*;
 
-distinct StyleManagerClass = void*;
+typedef StyleManagerClass = void*;
 
-distinct SwipeTrackerClass = void*;
+typedef SwipeTrackerClass = void*;
 
-distinct SwipeableInterface = void*;
+typedef SwipeableInterface = void*;
 
-distinct SwitchRowClass = void*;
+typedef SwitchRowClass = void*;
 
-distinct TabBarClass = void*;
+typedef TabBarClass = void*;
 
-distinct TabButtonClass = void*;
+typedef TabButtonClass = void*;
 
-distinct TabOverviewClass = void*;
+typedef TabOverviewClass = void*;
 
-distinct TabPageClass = void*;
+typedef TabPageClass = void*;
 
-distinct TabViewClass = void*;
+typedef TabViewClass = void*;
 
-distinct TimedAnimationClass = void*;
+typedef TimedAnimationClass = void*;
 
-distinct ToastClass = void*;
+typedef ToastClass = void*;
 
-distinct ToastOverlayClass = void*;
+typedef ToastOverlayClass = void*;
 
-distinct ToolbarViewClass = void*;
+typedef ToolbarViewClass = void*;
 
-distinct ViewStackClass = void*;
+typedef ViewStackClass = void*;
 
-distinct ViewStackPageClass = void*;
+typedef ViewStackPageClass = void*;
 
-distinct ViewStackPagesClass = void*;
+typedef ViewStackPagesClass = void*;
 
-distinct ViewSwitcherBarClass = void*;
+typedef ViewSwitcherBarClass = void*;
 
-distinct ViewSwitcherClass = void*;
+typedef ViewSwitcherClass = void*;
 
-distinct ViewSwitcherTitleClass = void*;
+typedef ViewSwitcherTitleClass = void*;
 
-distinct WindowClass = void*;
+typedef WindowClass = void*;
 
-distinct WindowTitleClass = void*;
+typedef WindowTitleClass = void*;
 
 
-def AnimationTargetFunc = fn void(double value, void* user_data);
+alias AnimationTargetFunc = fn void(double value, void* user_data);
 
 
 <* Maps to AdwAboutDialog *>
-distinct AboutDialog = void*;
+typedef AboutDialog = void*;
 
 // Class to parent cast.
 fn Dialog* AboutDialog.as_Dialog(&self) => (Dialog*)(self);
@@ -477,7 +477,7 @@ extern fn void AboutDialog.set_website(&self, ZString website) @extern("adw_abou
 
 
 <* Maps to AdwAboutWindow *>
-distinct AboutWindow = void*;
+typedef AboutWindow = void*;
 
 // Class to parent cast.
 fn Window* AboutWindow.as_Window(&self) => (Window*)(self);
@@ -632,7 +632,7 @@ extern fn void AboutWindow.set_website(&self, ZString website) @extern("adw_abou
 
 
 <* Maps to AdwActionRow *>
-distinct ActionRow = void*;
+typedef ActionRow = void*;
 
 // Class to parent cast.
 fn PreferencesRow* ActionRow.as_PreferencesRow(&self) => (PreferencesRow*)(self);
@@ -700,7 +700,7 @@ extern fn void ActionRow.set_title_lines(&self, int title_lines) @extern("adw_ac
 
 
 <* Maps to AdwAlertDialog *>
-distinct AlertDialog = void*;
+typedef AlertDialog = void*;
 
 // Class to parent cast.
 fn Dialog* AlertDialog.as_Dialog(&self) => (Dialog*)(self);
@@ -816,7 +816,7 @@ extern fn void AlertDialog.set_response_label(&self, ZString response, ZString l
 
 
 <* Maps to AdwAnimation *>
-distinct Animation = void*;
+typedef Animation = void*;
 
 // Class to parent cast.
 fn gobject::Object* Animation.as_gobject_Object(&self) => (gobject::Object*)(self);
@@ -869,7 +869,7 @@ extern fn void Animation.skip(&self, ) @extern("adw_animation_skip");
 
 
 <* Maps to AdwAnimationTarget *>
-distinct AnimationTarget = void*;
+typedef AnimationTarget = void*;
 
 // Class to parent cast.
 fn gobject::Object* AnimationTarget.as_gobject_Object(&self) => (gobject::Object*)(self);
@@ -886,7 +886,7 @@ fn gobject::Object* AnimationTarget.as_gobject_Object(&self) => (gobject::Object
 
 
 <* Maps to AdwApplication *>
-distinct Application = void*;
+typedef Application = void*;
 
 // Class to parent cast.
 fn gtk::Application* Application.as_gtk_Application(&self) => (gtk::Application*)(self);
@@ -909,7 +909,7 @@ extern fn StyleManager* Application.get_style_manager(&self, ) @extern("adw_appl
 
 
 <* Maps to AdwApplicationWindow *>
-distinct ApplicationWindow = void*;
+typedef ApplicationWindow = void*;
 
 // Class to parent cast.
 fn gtk::ApplicationWindow* ApplicationWindow.as_gtk_ApplicationWindow(&self) => (gtk::ApplicationWindow*)(self);
@@ -947,7 +947,7 @@ extern fn void ApplicationWindow.set_content(&self, gtk::Widget* content) @exter
 
 
 <* Maps to AdwAvatar *>
-distinct Avatar = void*;
+typedef Avatar = void*;
 
 // Class to parent cast.
 fn gtk::Widget* Avatar.as_gtk_Widget(&self) => (gtk::Widget*)(self);
@@ -1000,7 +1000,7 @@ extern fn void Avatar.set_text(&self, ZString text) @extern("adw_avatar_set_text
 
 
 <* Maps to AdwBanner *>
-distinct Banner = void*;
+typedef Banner = void*;
 
 // Class to parent cast.
 fn gtk::Widget* Banner.as_gtk_Widget(&self) => (gtk::Widget*)(self);
@@ -1044,7 +1044,7 @@ extern fn void Banner.set_use_markup(&self, bool use_markup) @extern("adw_banner
 
 
 <* Maps to AdwBin *>
-distinct Bin = void*;
+typedef Bin = void*;
 
 // Class to parent cast.
 fn gtk::Widget* Bin.as_gtk_Widget(&self) => (gtk::Widget*)(self);
@@ -1070,7 +1070,7 @@ extern fn void Bin.set_child(&self, gtk::Widget* child) @extern("adw_bin_set_chi
 
 
 <* Maps to AdwBottomSheet *>
-distinct BottomSheet = void*;
+typedef BottomSheet = void*;
 
 // Class to parent cast.
 fn gtk::Widget* BottomSheet.as_gtk_Widget(&self) => (gtk::Widget*)(self);
@@ -1156,7 +1156,7 @@ extern fn void BottomSheet.set_show_drag_handle(&self, bool show_drag_handle) @e
 
 
 <* Maps to AdwBreakpoint *>
-distinct Breakpoint = void*;
+typedef Breakpoint = void*;
 
 // Class to parent cast.
 fn gobject::Object* Breakpoint.as_gobject_Object(&self) => (gobject::Object*)(self);
@@ -1194,7 +1194,7 @@ extern fn void Breakpoint.set_condition(&self, BreakpointCondition* condition) @
 
 
 <* Maps to AdwBreakpointBin *>
-distinct BreakpointBin = void*;
+typedef BreakpointBin = void*;
 
 // Class to parent cast.
 fn gtk::Widget* BreakpointBin.as_gtk_Widget(&self) => (gtk::Widget*)(self);
@@ -1229,7 +1229,7 @@ extern fn void BreakpointBin.set_child(&self, gtk::Widget* child) @extern("adw_b
 
 
 <* Maps to AdwButtonContent *>
-distinct ButtonContent = void*;
+typedef ButtonContent = void*;
 
 // Class to parent cast.
 fn gtk::Widget* ButtonContent.as_gtk_Widget(&self) => (gtk::Widget*)(self);
@@ -1273,7 +1273,7 @@ extern fn void ButtonContent.set_use_underline(&self, bool use_underline) @exter
 
 
 <* Maps to AdwButtonRow *>
-distinct ButtonRow = void*;
+typedef ButtonRow = void*;
 
 // Class to parent cast.
 fn PreferencesRow* ButtonRow.as_PreferencesRow(&self) => (PreferencesRow*)(self);
@@ -1305,7 +1305,7 @@ extern fn void ButtonRow.set_start_icon_name(&self, ZString icon_name) @extern("
 
 
 <* Maps to AdwCallbackAnimationTarget *>
-distinct CallbackAnimationTarget = void*;
+typedef CallbackAnimationTarget = void*;
 
 // Class to parent cast.
 fn AnimationTarget* CallbackAnimationTarget.as_AnimationTarget(&self) => (AnimationTarget*)(self);
@@ -1325,7 +1325,7 @@ extern fn AnimationTarget* callback_animation_target_new(AnimationTargetFunc cal
 
 
 <* Maps to AdwCarousel *>
-distinct Carousel = void*;
+typedef Carousel = void*;
 
 // Class to parent cast.
 fn gtk::Widget* Carousel.as_gtk_Widget(&self) => (gtk::Widget*)(self);
@@ -1414,7 +1414,7 @@ extern fn void Carousel.set_spacing(&self, uint spacing) @extern("adw_carousel_s
 
 
 <* Maps to AdwCarouselIndicatorDots *>
-distinct CarouselIndicatorDots = void*;
+typedef CarouselIndicatorDots = void*;
 
 // Class to parent cast.
 fn gtk::Widget* CarouselIndicatorDots.as_gtk_Widget(&self) => (gtk::Widget*)(self);
@@ -1440,7 +1440,7 @@ extern fn void CarouselIndicatorDots.set_carousel(&self, Carousel* carousel) @ex
 
 
 <* Maps to AdwCarouselIndicatorLines *>
-distinct CarouselIndicatorLines = void*;
+typedef CarouselIndicatorLines = void*;
 
 // Class to parent cast.
 fn gtk::Widget* CarouselIndicatorLines.as_gtk_Widget(&self) => (gtk::Widget*)(self);
@@ -1466,7 +1466,7 @@ extern fn void CarouselIndicatorLines.set_carousel(&self, Carousel* carousel) @e
 
 
 <* Maps to AdwClamp *>
-distinct Clamp = void*;
+typedef Clamp = void*;
 
 // Class to parent cast.
 fn gtk::Widget* Clamp.as_gtk_Widget(&self) => (gtk::Widget*)(self);
@@ -1510,7 +1510,7 @@ extern fn void Clamp.set_unit(&self, LengthUnit unit) @extern("adw_clamp_set_uni
 
 
 <* Maps to AdwClampLayout *>
-distinct ClampLayout = void*;
+typedef ClampLayout = void*;
 
 // Class to parent cast.
 fn gtk::LayoutManager* ClampLayout.as_gtk_LayoutManager(&self) => (gtk::LayoutManager*)(self);
@@ -1548,7 +1548,7 @@ extern fn void ClampLayout.set_unit(&self, LengthUnit unit) @extern("adw_clamp_l
 
 
 <* Maps to AdwClampScrollable *>
-distinct ClampScrollable = void*;
+typedef ClampScrollable = void*;
 
 // Class to parent cast.
 fn gtk::Widget* ClampScrollable.as_gtk_Widget(&self) => (gtk::Widget*)(self);
@@ -1592,7 +1592,7 @@ extern fn void ClampScrollable.set_unit(&self, LengthUnit unit) @extern("adw_cla
 
 
 <* Maps to AdwComboRow *>
-distinct ComboRow = void*;
+typedef ComboRow = void*;
 
 // Class to parent cast.
 fn ActionRow* ComboRow.as_ActionRow(&self) => (ActionRow*)(self);
@@ -1669,7 +1669,7 @@ extern fn void ComboRow.set_use_subtitle(&self, bool use_subtitle) @extern("adw_
 
 
 <* Maps to AdwDialog *>
-distinct Dialog = void*;
+typedef Dialog = void*;
 
 // Class to parent cast.
 fn gtk::Widget* Dialog.as_gtk_Widget(&self) => (gtk::Widget*)(self);
@@ -1758,7 +1758,7 @@ extern fn void Dialog.set_title(&self, ZString title) @extern("adw_dialog_set_ti
 
 
 <* Maps to AdwEntryRow *>
-distinct EntryRow = void*;
+typedef EntryRow = void*;
 
 // Class to parent cast.
 fn PreferencesRow* EntryRow.as_PreferencesRow(&self) => (PreferencesRow*)(self);
@@ -1835,7 +1835,7 @@ extern fn void EntryRow.set_show_apply_button(&self, bool show_apply_button) @ex
 
 
 <* Maps to AdwEnumListItem *>
-distinct EnumListItem = void*;
+typedef EnumListItem = void*;
 
 // Class to parent cast.
 fn gobject::Object* EnumListItem.as_gobject_Object(&self) => (gobject::Object*)(self);
@@ -1861,7 +1861,7 @@ extern fn int EnumListItem.get_value(&self, ) @extern("adw_enum_list_item_get_va
 
 
 <* Maps to AdwEnumListModel *>
-distinct EnumListModel = void*;
+typedef EnumListModel = void*;
 
 // Class to parent cast.
 fn gobject::Object* EnumListModel.as_gobject_Object(&self) => (gobject::Object*)(self);
@@ -1887,7 +1887,7 @@ extern fn usz EnumListModel.get_enum_type(&self, ) @extern("adw_enum_list_model_
 
 
 <* Maps to AdwExpanderRow *>
-distinct ExpanderRow = void*;
+typedef ExpanderRow = void*;
 
 // Class to parent cast.
 fn PreferencesRow* ExpanderRow.as_PreferencesRow(&self) => (PreferencesRow*)(self);
@@ -1964,7 +1964,7 @@ extern fn void ExpanderRow.set_title_lines(&self, int title_lines) @extern("adw_
 
 
 <* Maps to AdwFlap *>
-distinct Flap = void*;
+typedef Flap = void*;
 
 // Class to parent cast.
 fn gtk::Widget* Flap.as_gtk_Widget(&self) => (gtk::Widget*)(self);
@@ -2074,7 +2074,7 @@ extern fn void Flap.set_transition_type(&self, FlapTransitionType transition_typ
 
 
 <* Maps to AdwHeaderBar *>
-distinct HeaderBar = void*;
+typedef HeaderBar = void*;
 
 // Class to parent cast.
 fn gtk::Widget* HeaderBar.as_gtk_Widget(&self) => (gtk::Widget*)(self);
@@ -2145,7 +2145,7 @@ extern fn void HeaderBar.set_title_widget(&self, gtk::Widget* title_widget) @ext
 
 
 <* Maps to AdwLayout *>
-distinct Layout = void*;
+typedef Layout = void*;
 
 // Class to parent cast.
 fn gobject::Object* Layout.as_gobject_Object(&self) => (gobject::Object*)(self);
@@ -2174,7 +2174,7 @@ extern fn void Layout.set_name(&self, ZString name) @extern("adw_layout_set_name
 
 
 <* Maps to AdwLayoutSlot *>
-distinct LayoutSlot = void*;
+typedef LayoutSlot = void*;
 
 // Class to parent cast.
 fn gtk::Widget* LayoutSlot.as_gtk_Widget(&self) => (gtk::Widget*)(self);
@@ -2197,7 +2197,7 @@ extern fn ZString LayoutSlot.get_slot_id(&self, ) @extern("adw_layout_slot_get_s
 
 
 <* Maps to AdwLeaflet *>
-distinct Leaflet = void*;
+typedef Leaflet = void*;
 
 // Class to parent cast.
 fn gtk::Widget* Leaflet.as_gtk_Widget(&self) => (gtk::Widget*)(self);
@@ -2313,7 +2313,7 @@ extern fn void Leaflet.set_visible_child_name(&self, ZString name) @extern("adw_
 
 
 <* Maps to AdwLeafletPage *>
-distinct LeafletPage = void*;
+typedef LeafletPage = void*;
 
 // Class to parent cast.
 fn gobject::Object* LeafletPage.as_gobject_Object(&self) => (gobject::Object*)(self);
@@ -2345,7 +2345,7 @@ extern fn void LeafletPage.set_navigatable(&self, bool navigatable) @extern("adw
 
 
 <* Maps to AdwMessageDialog *>
-distinct MessageDialog = void*;
+typedef MessageDialog = void*;
 
 // Class to parent cast.
 fn gtk::Window* MessageDialog.as_gtk_Window(&self) => (gtk::Window*)(self);
@@ -2458,7 +2458,7 @@ extern fn void MessageDialog.set_response_label(&self, ZString response, ZString
 
 
 <* Maps to AdwMultiLayoutView *>
-distinct MultiLayoutView = void*;
+typedef MultiLayoutView = void*;
 
 // Class to parent cast.
 fn gtk::Widget* MultiLayoutView.as_gtk_Widget(&self) => (gtk::Widget*)(self);
@@ -2505,7 +2505,7 @@ extern fn void MultiLayoutView.set_layout_name(&self, ZString name) @extern("adw
 
 
 <* Maps to AdwNavigationPage *>
-distinct NavigationPage = void*;
+typedef NavigationPage = void*;
 
 // Class to parent cast.
 fn gtk::Widget* NavigationPage.as_gtk_Widget(&self) => (gtk::Widget*)(self);
@@ -2552,7 +2552,7 @@ extern fn void NavigationPage.set_title(&self, ZString title) @extern("adw_navig
 
 
 <* Maps to AdwNavigationSplitView *>
-distinct NavigationSplitView = void*;
+typedef NavigationSplitView = void*;
 
 // Class to parent cast.
 fn gtk::Widget* NavigationSplitView.as_gtk_Widget(&self) => (gtk::Widget*)(self);
@@ -2620,7 +2620,7 @@ extern fn void NavigationSplitView.set_sidebar_width_unit(&self, LengthUnit unit
 
 
 <* Maps to AdwNavigationView *>
-distinct NavigationView = void*;
+typedef NavigationView = void*;
 
 // Class to parent cast.
 fn gtk::Widget* NavigationView.as_gtk_Widget(&self) => (gtk::Widget*)(self);
@@ -2691,7 +2691,7 @@ extern fn void NavigationView.set_pop_on_escape(&self, bool pop_on_escape) @exte
 
 
 <* Maps to AdwOverlaySplitView *>
-distinct OverlaySplitView = void*;
+typedef OverlaySplitView = void*;
 
 // Class to parent cast.
 fn gtk::Widget* OverlaySplitView.as_gtk_Widget(&self) => (gtk::Widget*)(self);
@@ -2783,7 +2783,7 @@ extern fn void OverlaySplitView.set_sidebar_width_unit(&self, LengthUnit unit) @
 
 
 <* Maps to AdwPasswordEntryRow *>
-distinct PasswordEntryRow = void*;
+typedef PasswordEntryRow = void*;
 
 // Class to parent cast.
 fn EntryRow* PasswordEntryRow.as_EntryRow(&self) => (EntryRow*)(self);
@@ -2803,7 +2803,7 @@ extern fn gtk::Widget* password_entry_row_new() @extern("adw_password_entry_row_
 
 
 <* Maps to AdwPreferencesDialog *>
-distinct PreferencesDialog = void*;
+typedef PreferencesDialog = void*;
 
 // Class to parent cast.
 fn Dialog* PreferencesDialog.as_Dialog(&self) => (Dialog*)(self);
@@ -2856,7 +2856,7 @@ extern fn void PreferencesDialog.set_visible_page_name(&self, ZString name) @ext
 
 
 <* Maps to AdwPreferencesGroup *>
-distinct PreferencesGroup = void*;
+typedef PreferencesGroup = void*;
 
 // Class to parent cast.
 fn gtk::Widget* PreferencesGroup.as_gtk_Widget(&self) => (gtk::Widget*)(self);
@@ -2906,7 +2906,7 @@ extern fn void PreferencesGroup.set_title(&self, ZString title) @extern("adw_pre
 
 
 <* Maps to AdwPreferencesPage *>
-distinct PreferencesPage = void*;
+typedef PreferencesPage = void*;
 
 // Class to parent cast.
 fn gtk::Widget* PreferencesPage.as_gtk_Widget(&self) => (gtk::Widget*)(self);
@@ -2971,7 +2971,7 @@ extern fn void PreferencesPage.set_use_underline(&self, bool use_underline) @ext
 
 
 <* Maps to AdwPreferencesRow *>
-distinct PreferencesRow = void*;
+typedef PreferencesRow = void*;
 
 // Class to parent cast.
 fn gtk::ListBoxRow* PreferencesRow.as_gtk_ListBoxRow(&self) => (gtk::ListBoxRow*)(self);
@@ -3015,7 +3015,7 @@ extern fn void PreferencesRow.set_use_underline(&self, bool use_underline) @exte
 
 
 <* Maps to AdwPreferencesWindow *>
-distinct PreferencesWindow = void*;
+typedef PreferencesWindow = void*;
 
 // Class to parent cast.
 fn Window* PreferencesWindow.as_Window(&self) => (Window*)(self);
@@ -3080,7 +3080,7 @@ extern fn void PreferencesWindow.set_visible_page_name(&self, ZString name) @ext
 
 
 <* Maps to AdwPropertyAnimationTarget *>
-distinct PropertyAnimationTarget = void*;
+typedef PropertyAnimationTarget = void*;
 
 // Class to parent cast.
 fn AnimationTarget* PropertyAnimationTarget.as_AnimationTarget(&self) => (AnimationTarget*)(self);
@@ -3109,7 +3109,7 @@ extern fn gobject::ParamSpec* PropertyAnimationTarget.get_pspec(&self, ) @extern
 
 
 <* Maps to AdwSpinRow *>
-distinct SpinRow = void*;
+typedef SpinRow = void*;
 
 // Class to parent cast.
 fn ActionRow* SpinRow.as_ActionRow(&self) => (ActionRow*)(self);
@@ -3189,7 +3189,7 @@ extern fn void SpinRow.update(&self, ) @extern("adw_spin_row_update");
 
 
 <* Maps to AdwSpinner *>
-distinct Spinner = void*;
+typedef Spinner = void*;
 
 // Class to parent cast.
 fn gtk::Widget* Spinner.as_gtk_Widget(&self) => (gtk::Widget*)(self);
@@ -3209,7 +3209,7 @@ extern fn gtk::Widget* spinner_new() @extern("adw_spinner_new");
 
 
 <* Maps to AdwSpinnerPaintable *>
-distinct SpinnerPaintable = void*;
+typedef SpinnerPaintable = void*;
 
 // Class to parent cast.
 fn gobject::Object* SpinnerPaintable.as_gobject_Object(&self) => (gobject::Object*)(self);
@@ -3235,7 +3235,7 @@ extern fn void SpinnerPaintable.set_widget(&self, gtk::Widget* widget) @extern("
 
 
 <* Maps to AdwSplitButton *>
-distinct SplitButton = void*;
+typedef SplitButton = void*;
 
 // Class to parent cast.
 fn gtk::Widget* SplitButton.as_gtk_Widget(&self) => (gtk::Widget*)(self);
@@ -3315,7 +3315,7 @@ extern fn void SplitButton.set_use_underline(&self, bool use_underline) @extern(
 
 
 <* Maps to AdwSpringAnimation *>
-distinct SpringAnimation = void*;
+typedef SpringAnimation = void*;
 
 // Class to parent cast.
 fn Animation* SpringAnimation.as_Animation(&self) => (Animation*)(self);
@@ -3383,7 +3383,7 @@ extern fn void SpringAnimation.set_value_to(&self, double value) @extern("adw_sp
 
 
 <* Maps to AdwSqueezer *>
-distinct Squeezer = void*;
+typedef Squeezer = void*;
 
 // Class to parent cast.
 fn gtk::Widget* Squeezer.as_gtk_Widget(&self) => (gtk::Widget*)(self);
@@ -3469,7 +3469,7 @@ extern fn void Squeezer.set_yalign(&self, float yalign) @extern("adw_squeezer_se
 
 
 <* Maps to AdwSqueezerPage *>
-distinct SqueezerPage = void*;
+typedef SqueezerPage = void*;
 
 // Class to parent cast.
 fn gobject::Object* SqueezerPage.as_gobject_Object(&self) => (gobject::Object*)(self);
@@ -3495,7 +3495,7 @@ extern fn void SqueezerPage.set_enabled(&self, bool enabled) @extern("adw_squeez
 
 
 <* Maps to AdwStatusPage *>
-distinct StatusPage = void*;
+typedef StatusPage = void*;
 
 // Class to parent cast.
 fn gtk::Widget* StatusPage.as_gtk_Widget(&self) => (gtk::Widget*)(self);
@@ -3545,7 +3545,7 @@ extern fn void StatusPage.set_title(&self, ZString title) @extern("adw_status_pa
 
 
 <* Maps to AdwStyleManager *>
-distinct StyleManager = void*;
+typedef StyleManager = void*;
 
 // Class to parent cast.
 fn gobject::Object* StyleManager.as_gobject_Object(&self) => (gobject::Object*)(self);
@@ -3595,7 +3595,7 @@ extern fn StyleManager* style_manager_get_for_display(gdk::Display* display) @ex
 
 
 <* Maps to AdwSwipeTracker *>
-distinct SwipeTracker = void*;
+typedef SwipeTracker = void*;
 
 // Class to parent cast.
 fn gobject::Object* SwipeTracker.as_gobject_Object(&self) => (gobject::Object*)(self);
@@ -3663,7 +3663,7 @@ extern fn void SwipeTracker.shift_position(&self, double delta) @extern("adw_swi
 
 
 <* Maps to AdwSwitchRow *>
-distinct SwitchRow = void*;
+typedef SwitchRow = void*;
 
 // Class to parent cast.
 fn ActionRow* SwitchRow.as_ActionRow(&self) => (ActionRow*)(self);
@@ -3689,7 +3689,7 @@ extern fn void SwitchRow.set_active(&self, bool is_active) @extern("adw_switch_r
 
 
 <* Maps to AdwTabBar *>
-distinct TabBar = void*;
+typedef TabBar = void*;
 
 // Class to parent cast.
 fn gtk::Widget* TabBar.as_gtk_Widget(&self) => (gtk::Widget*)(self);
@@ -3763,7 +3763,7 @@ extern fn void TabBar.setup_extra_drop_target(&self, gdk::DragAction actions, us
 
 
 <* Maps to AdwTabButton *>
-distinct TabButton = void*;
+typedef TabButton = void*;
 
 // Class to parent cast.
 fn gtk::Widget* TabButton.as_gtk_Widget(&self) => (gtk::Widget*)(self);
@@ -3789,7 +3789,7 @@ extern fn void TabButton.set_view(&self, TabView* view) @extern("adw_tab_button_
 
 
 <* Maps to AdwTabOverview *>
-distinct TabOverview = void*;
+typedef TabOverview = void*;
 
 // Class to parent cast.
 fn gtk::Widget* TabOverview.as_gtk_Widget(&self) => (gtk::Widget*)(self);
@@ -3878,7 +3878,7 @@ extern fn void TabOverview.setup_extra_drop_target(&self, gdk::DragAction action
 
 
 <* Maps to AdwTabPage *>
-distinct TabPage = void*;
+typedef TabPage = void*;
 
 // Class to parent cast.
 fn gobject::Object* TabPage.as_gobject_Object(&self) => (gobject::Object*)(self);
@@ -3982,7 +3982,7 @@ extern fn void TabPage.set_tooltip(&self, ZString tooltip) @extern("adw_tab_page
 
 
 <* Maps to AdwTabView *>
-distinct TabView = void*;
+typedef TabView = void*;
 
 // Class to parent cast.
 fn gtk::Widget* TabView.as_gtk_Widget(&self) => (gtk::Widget*)(self);
@@ -4119,7 +4119,7 @@ extern fn void TabView.transfer_page(&self, TabPage* page, TabView* other_view, 
 
 
 <* Maps to AdwTimedAnimation *>
-distinct TimedAnimation = void*;
+typedef TimedAnimation = void*;
 
 // Class to parent cast.
 fn Animation* TimedAnimation.as_Animation(&self) => (Animation*)(self);
@@ -4181,7 +4181,7 @@ extern fn void TimedAnimation.set_value_to(&self, double value) @extern("adw_tim
 
 
 <* Maps to AdwToast *>
-distinct Toast = void*;
+typedef Toast = void*;
 
 // Class to parent cast.
 fn gobject::Object* Toast.as_gobject_Object(&self) => (gobject::Object*)(self);
@@ -4261,7 +4261,7 @@ extern fn void Toast.set_use_markup(&self, bool use_markup) @extern("adw_toast_s
 
 
 <* Maps to AdwToastOverlay *>
-distinct ToastOverlay = void*;
+typedef ToastOverlay = void*;
 
 // Class to parent cast.
 fn gtk::Widget* ToastOverlay.as_gtk_Widget(&self) => (gtk::Widget*)(self);
@@ -4290,7 +4290,7 @@ extern fn void ToastOverlay.set_child(&self, gtk::Widget* child) @extern("adw_to
 
 
 <* Maps to AdwToolbarView *>
-distinct ToolbarView = void*;
+typedef ToolbarView = void*;
 
 // Class to parent cast.
 fn gtk::Widget* ToolbarView.as_gtk_Widget(&self) => (gtk::Widget*)(self);
@@ -4367,7 +4367,7 @@ extern fn void ToolbarView.set_top_bar_style(&self, ToolbarStyle style) @extern(
 
 
 <* Maps to AdwViewStack *>
-distinct ViewStack = void*;
+typedef ViewStack = void*;
 
 // Class to parent cast.
 fn gtk::Widget* ViewStack.as_gtk_Widget(&self) => (gtk::Widget*)(self);
@@ -4435,7 +4435,7 @@ extern fn void ViewStack.set_visible_child_name(&self, ZString name) @extern("ad
 
 
 <* Maps to AdwViewStackPage *>
-distinct ViewStackPage = void*;
+typedef ViewStackPage = void*;
 
 // Class to parent cast.
 fn gobject::Object* ViewStackPage.as_gobject_Object(&self) => (gobject::Object*)(self);
@@ -4497,7 +4497,7 @@ extern fn void ViewStackPage.set_visible(&self, bool visible) @extern("adw_view_
 
 
 <* Maps to AdwViewStackPages *>
-distinct ViewStackPages = void*;
+typedef ViewStackPages = void*;
 
 // Class to parent cast.
 fn gobject::Object* ViewStackPages.as_gobject_Object(&self) => (gobject::Object*)(self);
@@ -4520,7 +4520,7 @@ extern fn void ViewStackPages.set_selected_page(&self, ViewStackPage* page) @ext
 
 
 <* Maps to AdwViewSwitcher *>
-distinct ViewSwitcher = void*;
+typedef ViewSwitcher = void*;
 
 // Class to parent cast.
 fn gtk::Widget* ViewSwitcher.as_gtk_Widget(&self) => (gtk::Widget*)(self);
@@ -4552,7 +4552,7 @@ extern fn void ViewSwitcher.set_stack(&self, ViewStack* stack) @extern("adw_view
 
 
 <* Maps to AdwViewSwitcherBar *>
-distinct ViewSwitcherBar = void*;
+typedef ViewSwitcherBar = void*;
 
 // Class to parent cast.
 fn gtk::Widget* ViewSwitcherBar.as_gtk_Widget(&self) => (gtk::Widget*)(self);
@@ -4584,7 +4584,7 @@ extern fn void ViewSwitcherBar.set_stack(&self, ViewStack* stack) @extern("adw_v
 
 
 <* Maps to AdwViewSwitcherTitle *>
-distinct ViewSwitcherTitle = void*;
+typedef ViewSwitcherTitle = void*;
 
 // Class to parent cast.
 fn gtk::Widget* ViewSwitcherTitle.as_gtk_Widget(&self) => (gtk::Widget*)(self);
@@ -4631,7 +4631,7 @@ extern fn void ViewSwitcherTitle.set_view_switcher_enabled(&self, bool enabled) 
 
 
 <* Maps to AdwWindow *>
-distinct Window = void*;
+typedef Window = void*;
 
 // Class to parent cast.
 fn gtk::Window* Window.as_gtk_Window(&self) => (gtk::Window*)(self);
@@ -4669,7 +4669,7 @@ extern fn void Window.set_content(&self, gtk::Widget* content) @extern("adw_wind
 
 
 <* Maps to AdwWindowTitle *>
-distinct WindowTitle = void*;
+typedef WindowTitle = void*;
 
 // Class to parent cast.
 fn gtk::Widget* WindowTitle.as_gtk_Widget(&self) => (gtk::Widget*)(self);

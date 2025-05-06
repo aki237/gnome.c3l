@@ -3,7 +3,7 @@ module pango;
 import gobject;
 import glib;
 
-distinct Font = void*;
+typedef Font = void*;
 
 enum Direction {
   LTR,
@@ -15,8 +15,8 @@ enum Direction {
   NEUTRAL
 }
 
-def Glyph = uint;
-def GlyphUnit = int;
+alias Glyph = uint;
+alias GlyphUnit = int;
 
 struct GlyphGeometry {
   GlyphUnit width;
@@ -35,9 +35,9 @@ struct GlyphInfo {
   GlyphVisAttr attr;
 }
 
-distinct AttrList = void*;
+typedef AttrList = void*;
 
-distinct Context = void*;
+typedef Context = void*;
 
 fn gobject::Object* Context.as_gobject_Object(&self) => (gobject::Object*)(self);
 
@@ -48,13 +48,13 @@ enum EllipsizeMode: uint {
   END
 }
 
-distinct FontDescription = void*;
+typedef FontDescription = void*;
 
-distinct FontFace = void*;
+typedef FontFace = void*;
 
 fn gobject::Object* FontFace.as_gobject_Object(&self) => (gobject::Object*)(self);
 
-distinct FontFamily = void*;
+typedef FontFamily = void*;
 
 extern fn FontFace* FontFamily.get_face(&self, ZString name) @extern("pango_font_family_get_face");
 extern fn ZString FontFamily.get_name(&self) @extern("pango_font_family_get_name");
@@ -62,14 +62,14 @@ extern fn bool FontFamily.is_monospace(&self) @extern("pango_font_family_is_mono
 extern fn bool FontFamily.is_variable(&self) @extern("pango_font_family_is_variable");
 fn gobject::Object* FontFamily.as_gobject_Object(&self) => (gobject::Object*)(self);
 
-distinct FontMap = void*;
+typedef FontMap = void*;
 
-distinct Language = void*;
+typedef Language = void*;
 
-distinct Layout = void*;
+typedef Layout = void*;
 fn gobject::Object* Layout.as_gobject_Object(&self) => (gobject::Object*)(self);
 
-distinct TabArray = void*;
+typedef TabArray = void*;
 
 enum WrapMode {
   WORD,

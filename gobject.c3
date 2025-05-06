@@ -5,18 +5,18 @@ module gobject;
 import glib;
 
 
-distinct BindingFlags = int;
+typedef BindingFlags = int;
 const BindingFlags BINDING_FLAGS_BIDIRECTIONAL = 1;
 const BindingFlags BINDING_FLAGS_DEFAULT = 0;
 const BindingFlags BINDING_FLAGS_INVERT_BOOLEAN = 4;
 const BindingFlags BINDING_FLAGS_SYNC_CREATE = 2;
 
-distinct ConnectFlags = int;
+typedef ConnectFlags = int;
 const ConnectFlags CONNECT_FLAGS_AFTER = 1;
 const ConnectFlags CONNECT_FLAGS_DEFAULT = 0;
 const ConnectFlags CONNECT_FLAGS_SWAPPED = 2;
 
-distinct IOCondition = int;
+typedef IOCondition = int;
 const IOCondition IO_CONDITION_ERR = 8;
 const IOCondition IO_CONDITION_HUP = 16;
 const IOCondition IO_CONDITION_IN = 1;
@@ -24,7 +24,7 @@ const IOCondition IO_CONDITION_NVAL = 32;
 const IOCondition IO_CONDITION_OUT = 4;
 const IOCondition IO_CONDITION_PRI = 2;
 
-distinct ParamFlags = long;
+typedef ParamFlags = long;
 const ParamFlags PARAM_FLAGS_CONSTRUCT = 4;
 const ParamFlags PARAM_FLAGS_CONSTRUCT_ONLY = 8;
 const ParamFlags PARAM_FLAGS_DEPRECATED = 2147483648;
@@ -38,7 +38,7 @@ const ParamFlags PARAM_FLAGS_STATIC_NAME = 32;
 const ParamFlags PARAM_FLAGS_STATIC_NICK = 64;
 const ParamFlags PARAM_FLAGS_WRITABLE = 2;
 
-distinct SignalFlags = int;
+typedef SignalFlags = int;
 const SignalFlags SIGNAL_FLAGS_ACCUMULATOR_FIRST_RUN = 131072;
 const SignalFlags SIGNAL_FLAGS_ACTION = 32;
 const SignalFlags SIGNAL_FLAGS_DEPRECATED = 256;
@@ -50,7 +50,7 @@ const SignalFlags SIGNAL_FLAGS_RUN_CLEANUP = 4;
 const SignalFlags SIGNAL_FLAGS_RUN_FIRST = 1;
 const SignalFlags SIGNAL_FLAGS_RUN_LAST = 2;
 
-distinct SignalMatchType = int;
+typedef SignalMatchType = int;
 const SignalMatchType SIGNAL_MATCH_TYPE_CLOSURE = 4;
 const SignalMatchType SIGNAL_MATCH_TYPE_DATA = 16;
 const SignalMatchType SIGNAL_MATCH_TYPE_DETAIL = 2;
@@ -58,21 +58,21 @@ const SignalMatchType SIGNAL_MATCH_TYPE_FUNC = 8;
 const SignalMatchType SIGNAL_MATCH_TYPE_ID = 1;
 const SignalMatchType SIGNAL_MATCH_TYPE_UNBLOCKED = 32;
 
-distinct TypeDebugFlags = int;
+typedef TypeDebugFlags = int;
 const TypeDebugFlags TYPE_DEBUG_FLAGS_INSTANCE_COUNT = 4;
 const TypeDebugFlags TYPE_DEBUG_FLAGS_MASK = 7;
 const TypeDebugFlags TYPE_DEBUG_FLAGS_NONE = 0;
 const TypeDebugFlags TYPE_DEBUG_FLAGS_OBJECTS = 1;
 const TypeDebugFlags TYPE_DEBUG_FLAGS_SIGNALS = 2;
 
-distinct TypeFlags = int;
+typedef TypeFlags = int;
 const TypeFlags TYPE_FLAGS_ABSTRACT = 16;
 const TypeFlags TYPE_FLAGS_DEPRECATED = 128;
 const TypeFlags TYPE_FLAGS_FINAL = 64;
 const TypeFlags TYPE_FLAGS_NONE = 0;
 const TypeFlags TYPE_FLAGS_VALUE_ABSTRACT = 32;
 
-distinct TypeFundamentalFlags = int;
+typedef TypeFundamentalFlags = int;
 const TypeFundamentalFlags TYPE_FUNDAMENTAL_FLAGS_CLASSED = 1;
 const TypeFundamentalFlags TYPE_FUNDAMENTAL_FLAGS_DEEP_DERIVABLE = 8;
 const TypeFundamentalFlags TYPE_FUNDAMENTAL_FLAGS_DERIVABLE = 4;
@@ -88,128 +88,128 @@ union TypeCValue {
 }
 
 
-distinct CClosure = void*;
+typedef CClosure = void*;
 
-distinct Closure = void*;
+typedef Closure = void*;
 
-distinct ClosureNotifyData = void*;
+typedef ClosureNotifyData = void*;
 
-distinct EnumClass = void*;
+typedef EnumClass = void*;
 
-distinct EnumValue = void*;
+typedef EnumValue = void*;
 
-distinct FlagsClass = void*;
+typedef FlagsClass = void*;
 
-distinct FlagsValue = void*;
+typedef FlagsValue = void*;
 
-distinct InitiallyUnownedClass = void*;
+typedef InitiallyUnownedClass = void*;
 
-distinct InterfaceInfo = void*;
+typedef InterfaceInfo = void*;
 
-distinct ObjectClass = void*;
+typedef ObjectClass = void*;
 
-distinct ObjectConstructParam = void*;
+typedef ObjectConstructParam = void*;
 
-distinct ParamSpecClass = void*;
+typedef ParamSpecClass = void*;
 
-distinct ParamSpecPool = void*;
+typedef ParamSpecPool = void*;
 
-distinct ParamSpecTypeInfo = void*;
+typedef ParamSpecTypeInfo = void*;
 
-distinct Parameter = void*;
+typedef Parameter = void*;
 
-distinct SignalInvocationHint = void*;
+typedef SignalInvocationHint = void*;
 
-distinct SignalQuery = void*;
+typedef SignalQuery = void*;
 
-distinct TypeClass = void*;
+typedef TypeClass = void*;
 
-distinct TypeFundamentalInfo = void*;
+typedef TypeFundamentalInfo = void*;
 
-distinct TypeInfo = void*;
+typedef TypeInfo = void*;
 
-distinct TypeInstance = void*;
+typedef TypeInstance = void*;
 
-distinct TypeInterface = void*;
+typedef TypeInterface = void*;
 
-distinct TypeModuleClass = void*;
+typedef TypeModuleClass = void*;
 
-distinct TypePluginClass = void*;
+typedef TypePluginClass = void*;
 
-distinct TypeQuery = void*;
+typedef TypeQuery = void*;
 
-distinct TypeValueTable = void*;
+typedef TypeValueTable = void*;
 
-distinct Value = void*;
+typedef Value = void*;
 
-distinct ValueArray = void*;
+typedef ValueArray = void*;
 
-distinct WeakRef = void*;
+typedef WeakRef = void*;
 
 
-def BaseFinalizeFunc = fn void(TypeClass* g_class);
+alias BaseFinalizeFunc = fn void(TypeClass* g_class);
 
-def BaseInitFunc = fn void(TypeClass* g_class);
+alias BaseInitFunc = fn void(TypeClass* g_class);
 
-def BindingTransformFunc = fn bool(Binding* binding, Value* from_value, Value* to_value, void* user_data);
+alias BindingTransformFunc = fn bool(Binding* binding, Value* from_value, Value* to_value, void* user_data);
 
-def BoxedCopyFunc = fn void*(void* boxed);
+alias BoxedCopyFunc = fn void*(void* boxed);
 
-def BoxedFreeFunc = fn void(void* boxed);
+alias BoxedFreeFunc = fn void(void* boxed);
 
-def Callback = fn void();
+alias Callback = fn void();
 
-def ClassFinalizeFunc = fn void(TypeClass* g_class, void* class_data);
+alias ClassFinalizeFunc = fn void(TypeClass* g_class, void* class_data);
 
-def ClassInitFunc = fn void(TypeClass* g_class, void* class_data);
+alias ClassInitFunc = fn void(TypeClass* g_class, void* class_data);
 
-def ClosureMarshal = fn void(Closure* closure, Value* return_value, uint n_param_values, Value param_values, void* invocation_hint, void* marshal_data);
+alias ClosureMarshal = fn void(Closure* closure, Value* return_value, uint n_param_values, Value param_values, void* invocation_hint, void* marshal_data);
 
-def ClosureNotify = fn void(void* data, Closure* closure);
+alias ClosureNotify = fn void(void* data, Closure* closure);
 
-def InstanceInitFunc = fn void(TypeInstance* instance, TypeClass* g_class);
+alias InstanceInitFunc = fn void(TypeInstance* instance, TypeClass* g_class);
 
-def InterfaceFinalizeFunc = fn void(TypeInterface* g_iface, void* iface_data);
+alias InterfaceFinalizeFunc = fn void(TypeInterface* g_iface, void* iface_data);
 
-def InterfaceInitFunc = fn void(TypeInterface* g_iface, void* iface_data);
+alias InterfaceInitFunc = fn void(TypeInterface* g_iface, void* iface_data);
 
-def ObjectFinalizeFunc = fn void(Object* object);
+alias ObjectFinalizeFunc = fn void(Object* object);
 
-def ObjectGetPropertyFunc = fn void(Object* object, uint property_id, Value* value, ParamSpec* pspec);
+alias ObjectGetPropertyFunc = fn void(Object* object, uint property_id, Value* value, ParamSpec* pspec);
 
-def ObjectSetPropertyFunc = fn void(Object* object, uint property_id, Value* value, ParamSpec* pspec);
+alias ObjectSetPropertyFunc = fn void(Object* object, uint property_id, Value* value, ParamSpec* pspec);
 
-def SignalAccumulator = fn bool(SignalInvocationHint* ihint, Value* return_accu, Value* handler_return, void* data);
+alias SignalAccumulator = fn bool(SignalInvocationHint* ihint, Value* return_accu, Value* handler_return, void* data);
 
-def SignalEmissionHook = fn bool(SignalInvocationHint* ihint, uint n_param_values, Value param_values, void* data);
+alias SignalEmissionHook = fn bool(SignalInvocationHint* ihint, uint n_param_values, Value param_values, void* data);
 
-def ToggleNotify = fn void(void* data, Object* object, bool is_last_ref);
+alias ToggleNotify = fn void(void* data, Object* object, bool is_last_ref);
 
-def TypeClassCacheFunc = fn bool(void* cache_data, TypeClass* g_class);
+alias TypeClassCacheFunc = fn bool(void* cache_data, TypeClass* g_class);
 
-def TypeInterfaceCheckFunc = fn void(void* check_data, TypeInterface* g_iface);
+alias TypeInterfaceCheckFunc = fn void(void* check_data, TypeInterface* g_iface);
 
-def TypeValueCollectFunc = fn ZString*(Value* value, uint n_collect_values, TypeCValue collect_values, uint collect_flags);
+alias TypeValueCollectFunc = fn ZString*(Value* value, uint n_collect_values, TypeCValue collect_values, uint collect_flags);
 
-def TypeValueCopyFunc = fn void(Value* src_value, Value* dest_value);
+alias TypeValueCopyFunc = fn void(Value* src_value, Value* dest_value);
 
-def TypeValueFreeFunc = fn void(Value* value);
+alias TypeValueFreeFunc = fn void(Value* value);
 
-def TypeValueInitFunc = fn void(Value* value);
+alias TypeValueInitFunc = fn void(Value* value);
 
-def TypeValueLCopyFunc = fn ZString*(Value* value, uint n_collect_values, TypeCValue collect_values, uint collect_flags);
+alias TypeValueLCopyFunc = fn ZString*(Value* value, uint n_collect_values, TypeCValue collect_values, uint collect_flags);
 
-def TypeValuePeekPointerFunc = fn void*(Value* value);
+alias TypeValuePeekPointerFunc = fn void*(Value* value);
 
-def VaClosureMarshal = fn void(Closure* closure, Value* return_value, TypeInstance* instance, ZString args, void* marshal_data, int n_params, usz param_types);
+alias VaClosureMarshal = fn void(Closure* closure, Value* return_value, TypeInstance* instance, ZString args, void* marshal_data, int n_params, usz param_types);
 
-def ValueTransform = fn void(Value* src_value, Value* dest_value);
+alias ValueTransform = fn void(Value* src_value, Value* dest_value);
 
-def WeakNotify = fn void(void* data, Object* where_the_object_was);
+alias WeakNotify = fn void(void* data, Object* where_the_object_was);
 
 
 <* Maps to GBinding *>
-distinct Binding = void*;
+typedef Binding = void*;
 
 // Class to parent cast.
 fn Object* Binding.as_Object(&self) => (Object*)(self);
@@ -250,7 +250,7 @@ extern fn void Binding.unbind(&self, ) @extern("g_binding_unbind");
 
 
 <* Maps to GBindingGroup *>
-distinct BindingGroup = void*;
+typedef BindingGroup = void*;
 
 // Class to parent cast.
 fn Object* BindingGroup.as_Object(&self) => (Object*)(self);
@@ -285,7 +285,7 @@ extern fn void BindingGroup.set_source(&self, Object* source) @extern("g_binding
 
 
 <* Maps to GInitiallyUnowned *>
-distinct InitiallyUnowned = void*;
+typedef InitiallyUnowned = void*;
 
 // Class to parent cast.
 fn Object* InitiallyUnowned.as_Object(&self) => (Object*)(self);
@@ -302,7 +302,7 @@ fn Object* InitiallyUnowned.as_Object(&self) => (Object*)(self);
 
 
 <* Maps to GObject *>
-distinct Object = void*;
+typedef Object = void*;
 
 // Class to parent cast.
 
@@ -472,7 +472,7 @@ extern fn ParamSpec* object_interface_list_properties(TypeInterface* g_iface, ui
 
 
 <* Maps to GParamSpec *>
-distinct ParamSpec = void*;
+typedef ParamSpec = void*;
 
 // Class to parent cast.
 
@@ -537,7 +537,7 @@ extern fn bool param_spec_is_valid_name(ZString name) @extern("g_param_spec_is_v
 
 
 <* Maps to GParamSpecBoolean *>
-distinct ParamSpecBoolean = void*;
+typedef ParamSpecBoolean = void*;
 
 // Class to parent cast.
 fn ParamSpec* ParamSpecBoolean.as_ParamSpec(&self) => (ParamSpec*)(self);
@@ -554,7 +554,7 @@ fn ParamSpec* ParamSpecBoolean.as_ParamSpec(&self) => (ParamSpec*)(self);
 
 
 <* Maps to GParamSpecBoxed *>
-distinct ParamSpecBoxed = void*;
+typedef ParamSpecBoxed = void*;
 
 // Class to parent cast.
 fn ParamSpec* ParamSpecBoxed.as_ParamSpec(&self) => (ParamSpec*)(self);
@@ -571,7 +571,7 @@ fn ParamSpec* ParamSpecBoxed.as_ParamSpec(&self) => (ParamSpec*)(self);
 
 
 <* Maps to GParamSpecChar *>
-distinct ParamSpecChar = void*;
+typedef ParamSpecChar = void*;
 
 // Class to parent cast.
 fn ParamSpec* ParamSpecChar.as_ParamSpec(&self) => (ParamSpec*)(self);
@@ -588,7 +588,7 @@ fn ParamSpec* ParamSpecChar.as_ParamSpec(&self) => (ParamSpec*)(self);
 
 
 <* Maps to GParamSpecDouble *>
-distinct ParamSpecDouble = void*;
+typedef ParamSpecDouble = void*;
 
 // Class to parent cast.
 fn ParamSpec* ParamSpecDouble.as_ParamSpec(&self) => (ParamSpec*)(self);
@@ -605,7 +605,7 @@ fn ParamSpec* ParamSpecDouble.as_ParamSpec(&self) => (ParamSpec*)(self);
 
 
 <* Maps to GParamSpecEnum *>
-distinct ParamSpecEnum = void*;
+typedef ParamSpecEnum = void*;
 
 // Class to parent cast.
 fn ParamSpec* ParamSpecEnum.as_ParamSpec(&self) => (ParamSpec*)(self);
@@ -622,7 +622,7 @@ fn ParamSpec* ParamSpecEnum.as_ParamSpec(&self) => (ParamSpec*)(self);
 
 
 <* Maps to GParamSpecFlags *>
-distinct ParamSpecFlags = void*;
+typedef ParamSpecFlags = void*;
 
 // Class to parent cast.
 fn ParamSpec* ParamSpecFlags.as_ParamSpec(&self) => (ParamSpec*)(self);
@@ -639,7 +639,7 @@ fn ParamSpec* ParamSpecFlags.as_ParamSpec(&self) => (ParamSpec*)(self);
 
 
 <* Maps to GParamSpecFloat *>
-distinct ParamSpecFloat = void*;
+typedef ParamSpecFloat = void*;
 
 // Class to parent cast.
 fn ParamSpec* ParamSpecFloat.as_ParamSpec(&self) => (ParamSpec*)(self);
@@ -656,7 +656,7 @@ fn ParamSpec* ParamSpecFloat.as_ParamSpec(&self) => (ParamSpec*)(self);
 
 
 <* Maps to GParamSpecGType *>
-distinct ParamSpecGType = void*;
+typedef ParamSpecGType = void*;
 
 // Class to parent cast.
 fn ParamSpec* ParamSpecGType.as_ParamSpec(&self) => (ParamSpec*)(self);
@@ -673,7 +673,7 @@ fn ParamSpec* ParamSpecGType.as_ParamSpec(&self) => (ParamSpec*)(self);
 
 
 <* Maps to GParamSpecInt *>
-distinct ParamSpecInt = void*;
+typedef ParamSpecInt = void*;
 
 // Class to parent cast.
 fn ParamSpec* ParamSpecInt.as_ParamSpec(&self) => (ParamSpec*)(self);
@@ -690,7 +690,7 @@ fn ParamSpec* ParamSpecInt.as_ParamSpec(&self) => (ParamSpec*)(self);
 
 
 <* Maps to GParamSpecInt64 *>
-distinct ParamSpecInt64 = void*;
+typedef ParamSpecInt64 = void*;
 
 // Class to parent cast.
 fn ParamSpec* ParamSpecInt64.as_ParamSpec(&self) => (ParamSpec*)(self);
@@ -707,7 +707,7 @@ fn ParamSpec* ParamSpecInt64.as_ParamSpec(&self) => (ParamSpec*)(self);
 
 
 <* Maps to GParamSpecLong *>
-distinct ParamSpecLong = void*;
+typedef ParamSpecLong = void*;
 
 // Class to parent cast.
 fn ParamSpec* ParamSpecLong.as_ParamSpec(&self) => (ParamSpec*)(self);
@@ -724,7 +724,7 @@ fn ParamSpec* ParamSpecLong.as_ParamSpec(&self) => (ParamSpec*)(self);
 
 
 <* Maps to GParamSpecObject *>
-distinct ParamSpecObject = void*;
+typedef ParamSpecObject = void*;
 
 // Class to parent cast.
 fn ParamSpec* ParamSpecObject.as_ParamSpec(&self) => (ParamSpec*)(self);
@@ -741,7 +741,7 @@ fn ParamSpec* ParamSpecObject.as_ParamSpec(&self) => (ParamSpec*)(self);
 
 
 <* Maps to GParamSpecOverride *>
-distinct ParamSpecOverride = void*;
+typedef ParamSpecOverride = void*;
 
 // Class to parent cast.
 fn ParamSpec* ParamSpecOverride.as_ParamSpec(&self) => (ParamSpec*)(self);
@@ -758,7 +758,7 @@ fn ParamSpec* ParamSpecOverride.as_ParamSpec(&self) => (ParamSpec*)(self);
 
 
 <* Maps to GParamSpecParam *>
-distinct ParamSpecParam = void*;
+typedef ParamSpecParam = void*;
 
 // Class to parent cast.
 fn ParamSpec* ParamSpecParam.as_ParamSpec(&self) => (ParamSpec*)(self);
@@ -775,7 +775,7 @@ fn ParamSpec* ParamSpecParam.as_ParamSpec(&self) => (ParamSpec*)(self);
 
 
 <* Maps to GParamSpecPointer *>
-distinct ParamSpecPointer = void*;
+typedef ParamSpecPointer = void*;
 
 // Class to parent cast.
 fn ParamSpec* ParamSpecPointer.as_ParamSpec(&self) => (ParamSpec*)(self);
@@ -792,7 +792,7 @@ fn ParamSpec* ParamSpecPointer.as_ParamSpec(&self) => (ParamSpec*)(self);
 
 
 <* Maps to GParamSpecString *>
-distinct ParamSpecString = void*;
+typedef ParamSpecString = void*;
 
 // Class to parent cast.
 fn ParamSpec* ParamSpecString.as_ParamSpec(&self) => (ParamSpec*)(self);
@@ -809,7 +809,7 @@ fn ParamSpec* ParamSpecString.as_ParamSpec(&self) => (ParamSpec*)(self);
 
 
 <* Maps to GParamSpecUChar *>
-distinct ParamSpecUChar = void*;
+typedef ParamSpecUChar = void*;
 
 // Class to parent cast.
 fn ParamSpec* ParamSpecUChar.as_ParamSpec(&self) => (ParamSpec*)(self);
@@ -826,7 +826,7 @@ fn ParamSpec* ParamSpecUChar.as_ParamSpec(&self) => (ParamSpec*)(self);
 
 
 <* Maps to GParamSpecUInt *>
-distinct ParamSpecUInt = void*;
+typedef ParamSpecUInt = void*;
 
 // Class to parent cast.
 fn ParamSpec* ParamSpecUInt.as_ParamSpec(&self) => (ParamSpec*)(self);
@@ -843,7 +843,7 @@ fn ParamSpec* ParamSpecUInt.as_ParamSpec(&self) => (ParamSpec*)(self);
 
 
 <* Maps to GParamSpecUInt64 *>
-distinct ParamSpecUInt64 = void*;
+typedef ParamSpecUInt64 = void*;
 
 // Class to parent cast.
 fn ParamSpec* ParamSpecUInt64.as_ParamSpec(&self) => (ParamSpec*)(self);
@@ -860,7 +860,7 @@ fn ParamSpec* ParamSpecUInt64.as_ParamSpec(&self) => (ParamSpec*)(self);
 
 
 <* Maps to GParamSpecULong *>
-distinct ParamSpecULong = void*;
+typedef ParamSpecULong = void*;
 
 // Class to parent cast.
 fn ParamSpec* ParamSpecULong.as_ParamSpec(&self) => (ParamSpec*)(self);
@@ -877,7 +877,7 @@ fn ParamSpec* ParamSpecULong.as_ParamSpec(&self) => (ParamSpec*)(self);
 
 
 <* Maps to GParamSpecUnichar *>
-distinct ParamSpecUnichar = void*;
+typedef ParamSpecUnichar = void*;
 
 // Class to parent cast.
 fn ParamSpec* ParamSpecUnichar.as_ParamSpec(&self) => (ParamSpec*)(self);
@@ -894,7 +894,7 @@ fn ParamSpec* ParamSpecUnichar.as_ParamSpec(&self) => (ParamSpec*)(self);
 
 
 <* Maps to GParamSpecValueArray *>
-distinct ParamSpecValueArray = void*;
+typedef ParamSpecValueArray = void*;
 
 // Class to parent cast.
 fn ParamSpec* ParamSpecValueArray.as_ParamSpec(&self) => (ParamSpec*)(self);
@@ -911,7 +911,7 @@ fn ParamSpec* ParamSpecValueArray.as_ParamSpec(&self) => (ParamSpec*)(self);
 
 
 <* Maps to GParamSpecVariant *>
-distinct ParamSpecVariant = void*;
+typedef ParamSpecVariant = void*;
 
 // Class to parent cast.
 fn ParamSpec* ParamSpecVariant.as_ParamSpec(&self) => (ParamSpec*)(self);
@@ -928,7 +928,7 @@ fn ParamSpec* ParamSpecVariant.as_ParamSpec(&self) => (ParamSpec*)(self);
 
 
 <* Maps to GSignalGroup *>
-distinct SignalGroup = void*;
+typedef SignalGroup = void*;
 
 // Class to parent cast.
 fn Object* SignalGroup.as_Object(&self) => (Object*)(self);
@@ -978,7 +978,7 @@ extern fn void SignalGroup.unblock(&self, ) @extern("g_signal_group_unblock");
 
 
 <* Maps to GTypeModule *>
-distinct TypeModule = void*;
+typedef TypeModule = void*;
 
 // Class to parent cast.
 fn Object* TypeModule.as_Object(&self) => (Object*)(self);

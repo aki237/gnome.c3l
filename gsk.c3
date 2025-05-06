@@ -15,13 +15,13 @@ import gdk;
 import graphene;
 
 
-distinct PathForeachFlags = int;
+typedef PathForeachFlags = int;
 const PathForeachFlags PATH_FOREACH_FLAGS_CONIC = 4;
 const PathForeachFlags PATH_FOREACH_FLAGS_CUBIC = 2;
 const PathForeachFlags PATH_FOREACH_FLAGS_ONLY_LINES = 0;
 const PathForeachFlags PATH_FOREACH_FLAGS_QUAD = 1;
 
-distinct BlendMode = int;
+typedef BlendMode = int;
 const BlendMode BLEND_MODE_COLOR = 12;
 const BlendMode BLEND_MODE_COLOR_BURN = 7;
 const BlendMode BLEND_MODE_COLOR_DODGE = 6;
@@ -39,17 +39,17 @@ const BlendMode BLEND_MODE_SATURATION = 14;
 const BlendMode BLEND_MODE_SCREEN = 2;
 const BlendMode BLEND_MODE_SOFT_LIGHT = 9;
 
-distinct Corner = int;
+typedef Corner = int;
 const Corner CORNER_BOTTOM_LEFT = 3;
 const Corner CORNER_BOTTOM_RIGHT = 2;
 const Corner CORNER_TOP_LEFT = 0;
 const Corner CORNER_TOP_RIGHT = 1;
 
-distinct FillRule = int;
+typedef FillRule = int;
 const FillRule FILL_RULE_EVEN_ODD = 1;
 const FillRule FILL_RULE_WINDING = 0;
 
-distinct GLUniformType = int;
+typedef GLUniformType = int;
 const GLUniformType GL_UNIFORM_TYPE_BOOL = 4;
 const GLUniformType GL_UNIFORM_TYPE_FLOAT = 1;
 const GLUniformType GL_UNIFORM_TYPE_INT = 2;
@@ -59,29 +59,29 @@ const GLUniformType GL_UNIFORM_TYPE_VEC2 = 5;
 const GLUniformType GL_UNIFORM_TYPE_VEC3 = 6;
 const GLUniformType GL_UNIFORM_TYPE_VEC4 = 7;
 
-distinct LineCap = int;
+typedef LineCap = int;
 const LineCap LINE_CAP_BUTT = 0;
 const LineCap LINE_CAP_ROUND = 1;
 const LineCap LINE_CAP_SQUARE = 2;
 
-distinct LineJoin = int;
+typedef LineJoin = int;
 const LineJoin LINE_JOIN_BEVEL = 2;
 const LineJoin LINE_JOIN_MITER = 0;
 const LineJoin LINE_JOIN_ROUND = 1;
 
-distinct MaskMode = int;
+typedef MaskMode = int;
 const MaskMode MASK_MODE_ALPHA = 0;
 const MaskMode MASK_MODE_INVERTED_ALPHA = 1;
 const MaskMode MASK_MODE_INVERTED_LUMINANCE = 3;
 const MaskMode MASK_MODE_LUMINANCE = 2;
 
-distinct PathDirection = int;
+typedef PathDirection = int;
 const PathDirection PATH_DIRECTION_FROM_END = 3;
 const PathDirection PATH_DIRECTION_FROM_START = 0;
 const PathDirection PATH_DIRECTION_TO_END = 2;
 const PathDirection PATH_DIRECTION_TO_START = 1;
 
-distinct PathOperation = int;
+typedef PathOperation = int;
 const PathOperation PATH_OPERATION_CLOSE = 1;
 const PathOperation PATH_OPERATION_CONIC = 5;
 const PathOperation PATH_OPERATION_CUBIC = 4;
@@ -89,7 +89,7 @@ const PathOperation PATH_OPERATION_LINE = 2;
 const PathOperation PATH_OPERATION_MOVE = 0;
 const PathOperation PATH_OPERATION_QUAD = 3;
 
-distinct RenderNodeType = int;
+typedef RenderNodeType = int;
 const RenderNodeType RENDER_NODE_TYPE_BLEND_NODE = 20;
 const RenderNodeType RENDER_NODE_TYPE_BLUR_NODE = 23;
 const RenderNodeType RENDER_NODE_TYPE_BORDER_NODE = 9;
@@ -122,17 +122,17 @@ const RenderNodeType RENDER_NODE_TYPE_TEXTURE_SCALE_NODE = 26;
 const RenderNodeType RENDER_NODE_TYPE_TEXT_NODE = 22;
 const RenderNodeType RENDER_NODE_TYPE_TRANSFORM_NODE = 13;
 
-distinct ScalingFilter = int;
+typedef ScalingFilter = int;
 const ScalingFilter SCALING_FILTER_LINEAR = 0;
 const ScalingFilter SCALING_FILTER_NEAREST = 1;
 const ScalingFilter SCALING_FILTER_TRILINEAR = 2;
 
-distinct SerializationError = int;
+typedef SerializationError = int;
 const SerializationError SERIALIZATION_ERROR_INVALID_DATA = 2;
 const SerializationError SERIALIZATION_ERROR_UNSUPPORTED_FORMAT = 0;
 const SerializationError SERIALIZATION_ERROR_UNSUPPORTED_VERSION = 1;
 
-distinct TransformCategory = int;
+typedef TransformCategory = int;
 const TransformCategory TRANSFORM_CATEGORY_ANY = 1;
 const TransformCategory TRANSFORM_CATEGORY_IDENTITY = 6;
 const TransformCategory TRANSFORM_CATEGORY_TRANSFORM_CATEGORY_2D = 3;
@@ -143,48 +143,48 @@ const TransformCategory TRANSFORM_CATEGORY_UNKNOWN = 0;
 
 
 
-distinct BroadwayRendererClass = void*;
+typedef BroadwayRendererClass = void*;
 
-distinct CairoRendererClass = void*;
+typedef CairoRendererClass = void*;
 
-distinct ColorStop = void*;
+typedef ColorStop = void*;
 
-distinct GLRendererClass = void*;
+typedef GLRendererClass = void*;
 
-distinct GLShaderClass = void*;
+typedef GLShaderClass = void*;
 
-distinct ParseLocation = void*;
+typedef ParseLocation = void*;
 
-distinct Path = void*;
+typedef Path = void*;
 
-distinct PathBuilder = void*;
+typedef PathBuilder = void*;
 
-distinct PathMeasure = void*;
+typedef PathMeasure = void*;
 
-distinct PathPoint = void*;
+typedef PathPoint = void*;
 
-distinct RendererClass = void*;
+typedef RendererClass = void*;
 
-distinct RoundedRect = void*;
+typedef RoundedRect = void*;
 
-distinct ShaderArgsBuilder = void*;
+typedef ShaderArgsBuilder = void*;
 
-distinct Shadow = void*;
+typedef Shadow = void*;
 
-distinct Stroke = void*;
+typedef Stroke = void*;
 
-distinct Transform = void*;
+typedef Transform = void*;
 
-distinct VulkanRendererClass = void*;
+typedef VulkanRendererClass = void*;
 
 
-def ParseErrorFunc = fn void(ParseLocation* start, ParseLocation* end, glib::Error* error, void* user_data);
+alias ParseErrorFunc = fn void(ParseLocation* start, ParseLocation* end, glib::Error* error, void* user_data);
 
-def PathForeachFunc = fn bool(PathOperation op, graphene::Point* pts, usz n_pts, float weight, void* user_data);
+alias PathForeachFunc = fn bool(PathOperation op, graphene::Point* pts, usz n_pts, float weight, void* user_data);
 
 
 <* Maps to GskBlendNode *>
-distinct BlendNode = void*;
+typedef BlendNode = void*;
 
 // Class to parent cast.
 fn RenderNode* BlendNode.as_RenderNode(&self) => (RenderNode*)(self);
@@ -213,7 +213,7 @@ extern fn RenderNode* BlendNode.get_top_child(&self, ) @extern("gsk_blend_node_g
 
 
 <* Maps to GskBlurNode *>
-distinct BlurNode = void*;
+typedef BlurNode = void*;
 
 // Class to parent cast.
 fn RenderNode* BlurNode.as_RenderNode(&self) => (RenderNode*)(self);
@@ -239,7 +239,7 @@ extern fn float BlurNode.get_radius(&self, ) @extern("gsk_blur_node_get_radius")
 
 
 <* Maps to GskBorderNode *>
-distinct BorderNode = void*;
+typedef BorderNode = void*;
 
 // Class to parent cast.
 fn RenderNode* BorderNode.as_RenderNode(&self) => (RenderNode*)(self);
@@ -268,7 +268,7 @@ extern fn float BorderNode.get_widths(&self, ) @extern("gsk_border_node_get_widt
 
 
 <* Maps to GskBroadwayRenderer *>
-distinct BroadwayRenderer = void*;
+typedef BroadwayRenderer = void*;
 
 // Class to parent cast.
 fn Renderer* BroadwayRenderer.as_Renderer(&self) => (Renderer*)(self);
@@ -288,7 +288,7 @@ extern fn Renderer* broadway_renderer_new() @extern("gsk_broadway_renderer_new")
 
 
 <* Maps to GskCairoNode *>
-distinct CairoNode = void*;
+typedef CairoNode = void*;
 
 // Class to parent cast.
 fn RenderNode* CairoNode.as_RenderNode(&self) => (RenderNode*)(self);
@@ -314,7 +314,7 @@ extern fn cairo::Surface* CairoNode.get_surface(&self, ) @extern("gsk_cairo_node
 
 
 <* Maps to GskCairoRenderer *>
-distinct CairoRenderer = void*;
+typedef CairoRenderer = void*;
 
 // Class to parent cast.
 fn Renderer* CairoRenderer.as_Renderer(&self) => (Renderer*)(self);
@@ -334,7 +334,7 @@ extern fn Renderer* cairo_renderer_new() @extern("gsk_cairo_renderer_new");
 
 
 <* Maps to GskClipNode *>
-distinct ClipNode = void*;
+typedef ClipNode = void*;
 
 // Class to parent cast.
 fn RenderNode* ClipNode.as_RenderNode(&self) => (RenderNode*)(self);
@@ -360,7 +360,7 @@ extern fn graphene::Rect* ClipNode.get_clip(&self, ) @extern("gsk_clip_node_get_
 
 
 <* Maps to GskColorMatrixNode *>
-distinct ColorMatrixNode = void*;
+typedef ColorMatrixNode = void*;
 
 // Class to parent cast.
 fn RenderNode* ColorMatrixNode.as_RenderNode(&self) => (RenderNode*)(self);
@@ -389,7 +389,7 @@ extern fn graphene::Vec4* ColorMatrixNode.get_color_offset(&self, ) @extern("gsk
 
 
 <* Maps to GskColorNode *>
-distinct ColorNode = void*;
+typedef ColorNode = void*;
 
 // Class to parent cast.
 fn RenderNode* ColorNode.as_RenderNode(&self) => (RenderNode*)(self);
@@ -412,7 +412,7 @@ extern fn gdk::Rgba* ColorNode.get_color(&self, ) @extern("gsk_color_node_get_co
 
 
 <* Maps to GskConicGradientNode *>
-distinct ConicGradientNode = void*;
+typedef ConicGradientNode = void*;
 
 // Class to parent cast.
 fn RenderNode* ConicGradientNode.as_RenderNode(&self) => (RenderNode*)(self);
@@ -447,7 +447,7 @@ extern fn float ConicGradientNode.get_rotation(&self, ) @extern("gsk_conic_gradi
 
 
 <* Maps to GskContainerNode *>
-distinct ContainerNode = void*;
+typedef ContainerNode = void*;
 
 // Class to parent cast.
 fn RenderNode* ContainerNode.as_RenderNode(&self) => (RenderNode*)(self);
@@ -473,7 +473,7 @@ extern fn uint ContainerNode.get_n_children(&self, ) @extern("gsk_container_node
 
 
 <* Maps to GskCrossFadeNode *>
-distinct CrossFadeNode = void*;
+typedef CrossFadeNode = void*;
 
 // Class to parent cast.
 fn RenderNode* CrossFadeNode.as_RenderNode(&self) => (RenderNode*)(self);
@@ -502,7 +502,7 @@ extern fn RenderNode* CrossFadeNode.get_start_child(&self, ) @extern("gsk_cross_
 
 
 <* Maps to GskDebugNode *>
-distinct DebugNode = void*;
+typedef DebugNode = void*;
 
 // Class to parent cast.
 fn RenderNode* DebugNode.as_RenderNode(&self) => (RenderNode*)(self);
@@ -528,7 +528,7 @@ extern fn ZString DebugNode.get_message(&self, ) @extern("gsk_debug_node_get_mes
 
 
 <* Maps to GskFillNode *>
-distinct FillNode = void*;
+typedef FillNode = void*;
 
 // Class to parent cast.
 fn RenderNode* FillNode.as_RenderNode(&self) => (RenderNode*)(self);
@@ -557,7 +557,7 @@ extern fn Path* FillNode.get_path(&self, ) @extern("gsk_fill_node_get_path");
 
 
 <* Maps to GskGLRenderer *>
-distinct GLRenderer = void*;
+typedef GLRenderer = void*;
 
 // Class to parent cast.
 fn Renderer* GLRenderer.as_Renderer(&self) => (Renderer*)(self);
@@ -577,7 +577,7 @@ extern fn Renderer* gl_renderer_new() @extern("gsk_gl_renderer_new");
 
 
 <* Maps to GskGLShader *>
-distinct GLShader = void*;
+typedef GLShader = void*;
 
 // Class to parent cast.
 fn gobject::Object* GLShader.as_gobject_Object(&self) => (gobject::Object*)(self);
@@ -657,7 +657,7 @@ extern fn GLUniformType GLShader.get_uniform_type(&self, int idx) @extern("gsk_g
 
 
 <* Maps to GskGLShaderNode *>
-distinct GLShaderNode = void*;
+typedef GLShaderNode = void*;
 
 // Class to parent cast.
 fn RenderNode* GLShaderNode.as_RenderNode(&self) => (RenderNode*)(self);
@@ -689,7 +689,7 @@ extern fn GLShader* GLShaderNode.get_shader(&self, ) @extern("gsk_gl_shader_node
 
 
 <* Maps to GskInsetShadowNode *>
-distinct InsetShadowNode = void*;
+typedef InsetShadowNode = void*;
 
 // Class to parent cast.
 fn RenderNode* InsetShadowNode.as_RenderNode(&self) => (RenderNode*)(self);
@@ -727,7 +727,7 @@ extern fn float InsetShadowNode.get_spread(&self, ) @extern("gsk_inset_shadow_no
 
 
 <* Maps to GskLinearGradientNode *>
-distinct LinearGradientNode = void*;
+typedef LinearGradientNode = void*;
 
 // Class to parent cast.
 fn RenderNode* LinearGradientNode.as_RenderNode(&self) => (RenderNode*)(self);
@@ -759,7 +759,7 @@ extern fn graphene::Point* LinearGradientNode.get_start(&self, ) @extern("gsk_li
 
 
 <* Maps to GskMaskNode *>
-distinct MaskNode = void*;
+typedef MaskNode = void*;
 
 // Class to parent cast.
 fn RenderNode* MaskNode.as_RenderNode(&self) => (RenderNode*)(self);
@@ -788,7 +788,7 @@ extern fn RenderNode* MaskNode.get_source(&self, ) @extern("gsk_mask_node_get_so
 
 
 <* Maps to  *>
-distinct NglRenderer = void*;
+typedef NglRenderer = void*;
 
 // Class to parent cast.
 fn Renderer* NglRenderer.as_Renderer(&self) => (Renderer*)(self);
@@ -808,7 +808,7 @@ extern fn Renderer* ngl_renderer_new() @extern("gsk_ngl_renderer_new");
 
 
 <* Maps to GskOpacityNode *>
-distinct OpacityNode = void*;
+typedef OpacityNode = void*;
 
 // Class to parent cast.
 fn RenderNode* OpacityNode.as_RenderNode(&self) => (RenderNode*)(self);
@@ -834,7 +834,7 @@ extern fn float OpacityNode.get_opacity(&self, ) @extern("gsk_opacity_node_get_o
 
 
 <* Maps to GskOutsetShadowNode *>
-distinct OutsetShadowNode = void*;
+typedef OutsetShadowNode = void*;
 
 // Class to parent cast.
 fn RenderNode* OutsetShadowNode.as_RenderNode(&self) => (RenderNode*)(self);
@@ -872,7 +872,7 @@ extern fn float OutsetShadowNode.get_spread(&self, ) @extern("gsk_outset_shadow_
 
 
 <* Maps to GskRadialGradientNode *>
-distinct RadialGradientNode = void*;
+typedef RadialGradientNode = void*;
 
 // Class to parent cast.
 fn RenderNode* RadialGradientNode.as_RenderNode(&self) => (RenderNode*)(self);
@@ -913,7 +913,7 @@ extern fn float RadialGradientNode.get_vradius(&self, ) @extern("gsk_radial_grad
 
 
 <* Maps to GskRenderNode *>
-distinct RenderNode = void*;
+typedef RenderNode = void*;
 
 // Class to parent cast.
 
@@ -957,7 +957,7 @@ extern fn RenderNode* render_node_deserialize(glib::Bytes* bytes, ParseErrorFunc
 
 
 <* Maps to GskRenderer *>
-distinct Renderer = void*;
+typedef Renderer = void*;
 
 // Class to parent cast.
 fn gobject::Object* Renderer.as_gobject_Object(&self) => (gobject::Object*)(self);
@@ -998,7 +998,7 @@ extern fn void Renderer.unrealize(&self, ) @extern("gsk_renderer_unrealize");
 
 
 <* Maps to GskRepeatNode *>
-distinct RepeatNode = void*;
+typedef RepeatNode = void*;
 
 // Class to parent cast.
 fn RenderNode* RepeatNode.as_RenderNode(&self) => (RenderNode*)(self);
@@ -1024,7 +1024,7 @@ extern fn graphene::Rect* RepeatNode.get_child_bounds(&self, ) @extern("gsk_repe
 
 
 <* Maps to GskRepeatingLinearGradientNode *>
-distinct RepeatingLinearGradientNode = void*;
+typedef RepeatingLinearGradientNode = void*;
 
 // Class to parent cast.
 fn RenderNode* RepeatingLinearGradientNode.as_RenderNode(&self) => (RenderNode*)(self);
@@ -1044,7 +1044,7 @@ extern fn RepeatingLinearGradientNode* repeating_linear_gradient_node_new(graphe
 
 
 <* Maps to GskRepeatingRadialGradientNode *>
-distinct RepeatingRadialGradientNode = void*;
+typedef RepeatingRadialGradientNode = void*;
 
 // Class to parent cast.
 fn RenderNode* RepeatingRadialGradientNode.as_RenderNode(&self) => (RenderNode*)(self);
@@ -1064,7 +1064,7 @@ extern fn RepeatingRadialGradientNode* repeating_radial_gradient_node_new(graphe
 
 
 <* Maps to GskRoundedClipNode *>
-distinct RoundedClipNode = void*;
+typedef RoundedClipNode = void*;
 
 // Class to parent cast.
 fn RenderNode* RoundedClipNode.as_RenderNode(&self) => (RenderNode*)(self);
@@ -1090,7 +1090,7 @@ extern fn RoundedRect* RoundedClipNode.get_clip(&self, ) @extern("gsk_rounded_cl
 
 
 <* Maps to GskShadowNode *>
-distinct ShadowNode = void*;
+typedef ShadowNode = void*;
 
 // Class to parent cast.
 fn RenderNode* ShadowNode.as_RenderNode(&self) => (RenderNode*)(self);
@@ -1119,7 +1119,7 @@ extern fn Shadow* ShadowNode.get_shadow(&self, usz i) @extern("gsk_shadow_node_g
 
 
 <* Maps to GskStrokeNode *>
-distinct StrokeNode = void*;
+typedef StrokeNode = void*;
 
 // Class to parent cast.
 fn RenderNode* StrokeNode.as_RenderNode(&self) => (RenderNode*)(self);
@@ -1148,7 +1148,7 @@ extern fn Stroke* StrokeNode.get_stroke(&self, ) @extern("gsk_stroke_node_get_st
 
 
 <* Maps to GskSubsurfaceNode *>
-distinct SubsurfaceNode = void*;
+typedef SubsurfaceNode = void*;
 
 // Class to parent cast.
 fn RenderNode* SubsurfaceNode.as_RenderNode(&self) => (RenderNode*)(self);
@@ -1174,7 +1174,7 @@ extern fn void* subsurface_node_get_subsurface(DebugNode* node) @extern("gsk_sub
 
 
 <* Maps to GskTextNode *>
-distinct TextNode = void*;
+typedef TextNode = void*;
 
 // Class to parent cast.
 fn RenderNode* TextNode.as_RenderNode(&self) => (RenderNode*)(self);
@@ -1212,7 +1212,7 @@ extern fn bool TextNode.has_color_glyphs(&self, ) @extern("gsk_text_node_has_col
 
 
 <* Maps to GskTextureNode *>
-distinct TextureNode = void*;
+typedef TextureNode = void*;
 
 // Class to parent cast.
 fn RenderNode* TextureNode.as_RenderNode(&self) => (RenderNode*)(self);
@@ -1235,7 +1235,7 @@ extern fn gdk::Texture* TextureNode.get_texture(&self, ) @extern("gsk_texture_no
 
 
 <* Maps to GskTextureScaleNode *>
-distinct TextureScaleNode = void*;
+typedef TextureScaleNode = void*;
 
 // Class to parent cast.
 fn RenderNode* TextureScaleNode.as_RenderNode(&self) => (RenderNode*)(self);
@@ -1261,7 +1261,7 @@ extern fn gdk::Texture* TextureScaleNode.get_texture(&self, ) @extern("gsk_textu
 
 
 <* Maps to GskTransformNode *>
-distinct TransformNode = void*;
+typedef TransformNode = void*;
 
 // Class to parent cast.
 fn RenderNode* TransformNode.as_RenderNode(&self) => (RenderNode*)(self);
@@ -1287,7 +1287,7 @@ extern fn Transform* TransformNode.get_transform(&self, ) @extern("gsk_transform
 
 
 <* Maps to GskVulkanRenderer *>
-distinct VulkanRenderer = void*;
+typedef VulkanRenderer = void*;
 
 // Class to parent cast.
 fn Renderer* VulkanRenderer.as_Renderer(&self) => (Renderer*)(self);

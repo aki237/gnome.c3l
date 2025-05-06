@@ -9,13 +9,13 @@ import gmodule;
 import gobject;
 
 
-distinct AppInfoCreateFlags = int;
+typedef AppInfoCreateFlags = int;
 const AppInfoCreateFlags APP_INFO_CREATE_FLAGS_NEEDS_TERMINAL = 1;
 const AppInfoCreateFlags APP_INFO_CREATE_FLAGS_NONE = 0;
 const AppInfoCreateFlags APP_INFO_CREATE_FLAGS_SUPPORTS_STARTUP_NOTIFICATION = 4;
 const AppInfoCreateFlags APP_INFO_CREATE_FLAGS_SUPPORTS_URIS = 2;
 
-distinct ApplicationFlags = int;
+typedef ApplicationFlags = int;
 const ApplicationFlags APPLICATION_FLAGS_ALLOW_REPLACEMENT = 128;
 const ApplicationFlags APPLICATION_FLAGS_CAN_OVERRIDE_APP_ID = 64;
 const ApplicationFlags APPLICATION_FLAGS_DEFAULT_FLAGS = 0;
@@ -28,7 +28,7 @@ const ApplicationFlags APPLICATION_FLAGS_NON_UNIQUE = 32;
 const ApplicationFlags APPLICATION_FLAGS_REPLACE = 256;
 const ApplicationFlags APPLICATION_FLAGS_SEND_ENVIRONMENT = 16;
 
-distinct AskPasswordFlags = int;
+typedef AskPasswordFlags = int;
 const AskPasswordFlags ASK_PASSWORD_FLAGS_ANONYMOUS_SUPPORTED = 16;
 const AskPasswordFlags ASK_PASSWORD_FLAGS_NEED_DOMAIN = 4;
 const AskPasswordFlags ASK_PASSWORD_FLAGS_NEED_PASSWORD = 1;
@@ -36,31 +36,31 @@ const AskPasswordFlags ASK_PASSWORD_FLAGS_NEED_USERNAME = 2;
 const AskPasswordFlags ASK_PASSWORD_FLAGS_SAVING_SUPPORTED = 8;
 const AskPasswordFlags ASK_PASSWORD_FLAGS_TCRYPT = 32;
 
-distinct BusNameOwnerFlags = int;
+typedef BusNameOwnerFlags = int;
 const BusNameOwnerFlags BUS_NAME_OWNER_FLAGS_ALLOW_REPLACEMENT = 1;
 const BusNameOwnerFlags BUS_NAME_OWNER_FLAGS_DO_NOT_QUEUE = 4;
 const BusNameOwnerFlags BUS_NAME_OWNER_FLAGS_NONE = 0;
 const BusNameOwnerFlags BUS_NAME_OWNER_FLAGS_REPLACE = 2;
 
-distinct BusNameWatcherFlags = int;
+typedef BusNameWatcherFlags = int;
 const BusNameWatcherFlags BUS_NAME_WATCHER_FLAGS_AUTO_START = 1;
 const BusNameWatcherFlags BUS_NAME_WATCHER_FLAGS_NONE = 0;
 
-distinct ConverterFlags = int;
+typedef ConverterFlags = int;
 const ConverterFlags CONVERTER_FLAGS_FLUSH = 2;
 const ConverterFlags CONVERTER_FLAGS_INPUT_AT_END = 1;
 const ConverterFlags CONVERTER_FLAGS_NONE = 0;
 
-distinct DBusCallFlags = int;
+typedef DBusCallFlags = int;
 const DBusCallFlags D_BUS_CALL_FLAGS_ALLOW_INTERACTIVE_AUTHORIZATION = 2;
 const DBusCallFlags D_BUS_CALL_FLAGS_NONE = 0;
 const DBusCallFlags D_BUS_CALL_FLAGS_NO_AUTO_START = 1;
 
-distinct DBusCapabilityFlags = int;
+typedef DBusCapabilityFlags = int;
 const DBusCapabilityFlags D_BUS_CAPABILITY_FLAGS_NONE = 0;
 const DBusCapabilityFlags D_BUS_CAPABILITY_FLAGS_UNIX_FD_PASSING = 1;
 
-distinct DBusConnectionFlags = int;
+typedef DBusConnectionFlags = int;
 const DBusConnectionFlags D_BUS_CONNECTION_FLAGS_AUTHENTICATION_ALLOW_ANONYMOUS = 4;
 const DBusConnectionFlags D_BUS_CONNECTION_FLAGS_AUTHENTICATION_CLIENT = 1;
 const DBusConnectionFlags D_BUS_CONNECTION_FLAGS_AUTHENTICATION_REQUIRE_SAME_USER = 32;
@@ -70,26 +70,26 @@ const DBusConnectionFlags D_BUS_CONNECTION_FLAGS_DELAY_MESSAGE_PROCESSING = 16;
 const DBusConnectionFlags D_BUS_CONNECTION_FLAGS_MESSAGE_BUS_CONNECTION = 8;
 const DBusConnectionFlags D_BUS_CONNECTION_FLAGS_NONE = 0;
 
-distinct DBusInterfaceSkeletonFlags = int;
+typedef DBusInterfaceSkeletonFlags = int;
 const DBusInterfaceSkeletonFlags D_BUS_INTERFACE_SKELETON_FLAGS_HANDLE_METHOD_INVOCATIONS_IN_THREAD = 1;
 const DBusInterfaceSkeletonFlags D_BUS_INTERFACE_SKELETON_FLAGS_NONE = 0;
 
-distinct DBusMessageFlags = int;
+typedef DBusMessageFlags = int;
 const DBusMessageFlags D_BUS_MESSAGE_FLAGS_ALLOW_INTERACTIVE_AUTHORIZATION = 4;
 const DBusMessageFlags D_BUS_MESSAGE_FLAGS_NONE = 0;
 const DBusMessageFlags D_BUS_MESSAGE_FLAGS_NO_AUTO_START = 2;
 const DBusMessageFlags D_BUS_MESSAGE_FLAGS_NO_REPLY_EXPECTED = 1;
 
-distinct DBusObjectManagerClientFlags = int;
+typedef DBusObjectManagerClientFlags = int;
 const DBusObjectManagerClientFlags D_BUS_OBJECT_MANAGER_CLIENT_FLAGS_DO_NOT_AUTO_START = 1;
 const DBusObjectManagerClientFlags D_BUS_OBJECT_MANAGER_CLIENT_FLAGS_NONE = 0;
 
-distinct DBusPropertyInfoFlags = int;
+typedef DBusPropertyInfoFlags = int;
 const DBusPropertyInfoFlags D_BUS_PROPERTY_INFO_FLAGS_NONE = 0;
 const DBusPropertyInfoFlags D_BUS_PROPERTY_INFO_FLAGS_READABLE = 1;
 const DBusPropertyInfoFlags D_BUS_PROPERTY_INFO_FLAGS_WRITABLE = 2;
 
-distinct DBusProxyFlags = int;
+typedef DBusProxyFlags = int;
 const DBusProxyFlags D_BUS_PROXY_FLAGS_DO_NOT_AUTO_START = 4;
 const DBusProxyFlags D_BUS_PROXY_FLAGS_DO_NOT_AUTO_START_AT_CONSTRUCTION = 16;
 const DBusProxyFlags D_BUS_PROXY_FLAGS_DO_NOT_CONNECT_SIGNALS = 2;
@@ -98,35 +98,35 @@ const DBusProxyFlags D_BUS_PROXY_FLAGS_GET_INVALIDATED_PROPERTIES = 8;
 const DBusProxyFlags D_BUS_PROXY_FLAGS_NONE = 0;
 const DBusProxyFlags D_BUS_PROXY_FLAGS_NO_MATCH_RULE = 32;
 
-distinct DBusSendMessageFlags = int;
+typedef DBusSendMessageFlags = int;
 const DBusSendMessageFlags D_BUS_SEND_MESSAGE_FLAGS_NONE = 0;
 const DBusSendMessageFlags D_BUS_SEND_MESSAGE_FLAGS_PRESERVE_SERIAL = 1;
 
-distinct DBusServerFlags = int;
+typedef DBusServerFlags = int;
 const DBusServerFlags D_BUS_SERVER_FLAGS_AUTHENTICATION_ALLOW_ANONYMOUS = 2;
 const DBusServerFlags D_BUS_SERVER_FLAGS_AUTHENTICATION_REQUIRE_SAME_USER = 4;
 const DBusServerFlags D_BUS_SERVER_FLAGS_NONE = 0;
 const DBusServerFlags D_BUS_SERVER_FLAGS_RUN_IN_THREAD = 1;
 
-distinct DBusSignalFlags = int;
+typedef DBusSignalFlags = int;
 const DBusSignalFlags D_BUS_SIGNAL_FLAGS_MATCH_ARG0_NAMESPACE = 2;
 const DBusSignalFlags D_BUS_SIGNAL_FLAGS_MATCH_ARG0_PATH = 4;
 const DBusSignalFlags D_BUS_SIGNAL_FLAGS_NONE = 0;
 const DBusSignalFlags D_BUS_SIGNAL_FLAGS_NO_MATCH_RULE = 1;
 
-distinct DBusSubtreeFlags = int;
+typedef DBusSubtreeFlags = int;
 const DBusSubtreeFlags D_BUS_SUBTREE_FLAGS_DISPATCH_TO_UNENUMERATED_NODES = 1;
 const DBusSubtreeFlags D_BUS_SUBTREE_FLAGS_NONE = 0;
 
-distinct DriveStartFlags = int;
+typedef DriveStartFlags = int;
 const DriveStartFlags DRIVE_START_FLAGS_NONE = 0;
 
-distinct FileAttributeInfoFlags = int;
+typedef FileAttributeInfoFlags = int;
 const FileAttributeInfoFlags FILE_ATTRIBUTE_INFO_FLAGS_COPY_WHEN_MOVED = 2;
 const FileAttributeInfoFlags FILE_ATTRIBUTE_INFO_FLAGS_COPY_WITH_FILE = 1;
 const FileAttributeInfoFlags FILE_ATTRIBUTE_INFO_FLAGS_NONE = 0;
 
-distinct FileCopyFlags = int;
+typedef FileCopyFlags = int;
 const FileCopyFlags FILE_COPY_FLAGS_ALL_METADATA = 8;
 const FileCopyFlags FILE_COPY_FLAGS_BACKUP = 2;
 const FileCopyFlags FILE_COPY_FLAGS_NOFOLLOW_SYMLINKS = 4;
@@ -136,59 +136,59 @@ const FileCopyFlags FILE_COPY_FLAGS_OVERWRITE = 1;
 const FileCopyFlags FILE_COPY_FLAGS_TARGET_DEFAULT_MODIFIED_TIME = 64;
 const FileCopyFlags FILE_COPY_FLAGS_TARGET_DEFAULT_PERMS = 32;
 
-distinct FileCreateFlags = int;
+typedef FileCreateFlags = int;
 const FileCreateFlags FILE_CREATE_FLAGS_NONE = 0;
 const FileCreateFlags FILE_CREATE_FLAGS_PRIVATE = 1;
 const FileCreateFlags FILE_CREATE_FLAGS_REPLACE_DESTINATION = 2;
 
-distinct FileMeasureFlags = int;
+typedef FileMeasureFlags = int;
 const FileMeasureFlags FILE_MEASURE_FLAGS_APPARENT_SIZE = 4;
 const FileMeasureFlags FILE_MEASURE_FLAGS_NONE = 0;
 const FileMeasureFlags FILE_MEASURE_FLAGS_NO_XDEV = 8;
 const FileMeasureFlags FILE_MEASURE_FLAGS_REPORT_ANY_ERROR = 2;
 
-distinct FileMonitorFlags = int;
+typedef FileMonitorFlags = int;
 const FileMonitorFlags FILE_MONITOR_FLAGS_NONE = 0;
 const FileMonitorFlags FILE_MONITOR_FLAGS_SEND_MOVED = 2;
 const FileMonitorFlags FILE_MONITOR_FLAGS_WATCH_HARD_LINKS = 4;
 const FileMonitorFlags FILE_MONITOR_FLAGS_WATCH_MOUNTS = 1;
 const FileMonitorFlags FILE_MONITOR_FLAGS_WATCH_MOVES = 8;
 
-distinct FileQueryInfoFlags = int;
+typedef FileQueryInfoFlags = int;
 const FileQueryInfoFlags FILE_QUERY_INFO_FLAGS_NOFOLLOW_SYMLINKS = 1;
 const FileQueryInfoFlags FILE_QUERY_INFO_FLAGS_NONE = 0;
 
-distinct IOStreamSpliceFlags = int;
+typedef IOStreamSpliceFlags = int;
 const IOStreamSpliceFlags IO_STREAM_SPLICE_FLAGS_CLOSE_STREAM1 = 1;
 const IOStreamSpliceFlags IO_STREAM_SPLICE_FLAGS_CLOSE_STREAM2 = 2;
 const IOStreamSpliceFlags IO_STREAM_SPLICE_FLAGS_NONE = 0;
 const IOStreamSpliceFlags IO_STREAM_SPLICE_FLAGS_WAIT_FOR_BOTH = 4;
 
-distinct MountMountFlags = int;
+typedef MountMountFlags = int;
 const MountMountFlags MOUNT_MOUNT_FLAGS_NONE = 0;
 
-distinct MountUnmountFlags = int;
+typedef MountUnmountFlags = int;
 const MountUnmountFlags MOUNT_UNMOUNT_FLAGS_FORCE = 1;
 const MountUnmountFlags MOUNT_UNMOUNT_FLAGS_NONE = 0;
 
-distinct OutputStreamSpliceFlags = int;
+typedef OutputStreamSpliceFlags = int;
 const OutputStreamSpliceFlags OUTPUT_STREAM_SPLICE_FLAGS_CLOSE_SOURCE = 1;
 const OutputStreamSpliceFlags OUTPUT_STREAM_SPLICE_FLAGS_CLOSE_TARGET = 2;
 const OutputStreamSpliceFlags OUTPUT_STREAM_SPLICE_FLAGS_NONE = 0;
 
-distinct ResolverNameLookupFlags = int;
+typedef ResolverNameLookupFlags = int;
 const ResolverNameLookupFlags RESOLVER_NAME_LOOKUP_FLAGS_DEFAULT = 0;
 const ResolverNameLookupFlags RESOLVER_NAME_LOOKUP_FLAGS_IPV4_ONLY = 1;
 const ResolverNameLookupFlags RESOLVER_NAME_LOOKUP_FLAGS_IPV6_ONLY = 2;
 
-distinct ResourceFlags = int;
+typedef ResourceFlags = int;
 const ResourceFlags RESOURCE_FLAGS_COMPRESSED = 1;
 const ResourceFlags RESOURCE_FLAGS_NONE = 0;
 
-distinct ResourceLookupFlags = int;
+typedef ResourceLookupFlags = int;
 const ResourceLookupFlags RESOURCE_LOOKUP_FLAGS_NONE = 0;
 
-distinct SettingsBindFlags = int;
+typedef SettingsBindFlags = int;
 const SettingsBindFlags SETTINGS_BIND_FLAGS_DEFAULT = 0;
 const SettingsBindFlags SETTINGS_BIND_FLAGS_GET = 1;
 const SettingsBindFlags SETTINGS_BIND_FLAGS_GET_NO_CHANGES = 8;
@@ -196,13 +196,13 @@ const SettingsBindFlags SETTINGS_BIND_FLAGS_INVERT_BOOLEAN = 16;
 const SettingsBindFlags SETTINGS_BIND_FLAGS_NO_SENSITIVITY = 4;
 const SettingsBindFlags SETTINGS_BIND_FLAGS_SET = 2;
 
-distinct SocketMsgFlags = int;
+typedef SocketMsgFlags = int;
 const SocketMsgFlags SOCKET_MSG_FLAGS_DONTROUTE = 4;
 const SocketMsgFlags SOCKET_MSG_FLAGS_NONE = 0;
 const SocketMsgFlags SOCKET_MSG_FLAGS_OOB = 1;
 const SocketMsgFlags SOCKET_MSG_FLAGS_PEEK = 2;
 
-distinct SubprocessFlags = int;
+typedef SubprocessFlags = int;
 const SubprocessFlags SUBPROCESS_FLAGS_INHERIT_FDS = 128;
 const SubprocessFlags SUBPROCESS_FLAGS_NONE = 0;
 const SubprocessFlags SUBPROCESS_FLAGS_SEARCH_PATH_FROM_ENVP = 256;
@@ -214,10 +214,10 @@ const SubprocessFlags SUBPROCESS_FLAGS_STDIN_PIPE = 1;
 const SubprocessFlags SUBPROCESS_FLAGS_STDOUT_PIPE = 4;
 const SubprocessFlags SUBPROCESS_FLAGS_STDOUT_SILENCE = 8;
 
-distinct TestDBusFlags = int;
+typedef TestDBusFlags = int;
 const TestDBusFlags TEST_D_BUS_FLAGS_NONE = 0;
 
-distinct TlsCertificateFlags = int;
+typedef TlsCertificateFlags = int;
 const TlsCertificateFlags TLS_CERTIFICATE_FLAGS_BAD_IDENTITY = 2;
 const TlsCertificateFlags TLS_CERTIFICATE_FLAGS_EXPIRED = 8;
 const TlsCertificateFlags TLS_CERTIFICATE_FLAGS_GENERIC_ERROR = 64;
@@ -228,10 +228,10 @@ const TlsCertificateFlags TLS_CERTIFICATE_FLAGS_REVOKED = 16;
 const TlsCertificateFlags TLS_CERTIFICATE_FLAGS_UNKNOWN_CA = 1;
 const TlsCertificateFlags TLS_CERTIFICATE_FLAGS_VALIDATE_ALL = 127;
 
-distinct TlsDatabaseVerifyFlags = int;
+typedef TlsDatabaseVerifyFlags = int;
 const TlsDatabaseVerifyFlags TLS_DATABASE_VERIFY_FLAGS_NONE = 0;
 
-distinct TlsPasswordFlags = int;
+typedef TlsPasswordFlags = int;
 const TlsPasswordFlags TLS_PASSWORD_FLAGS_FINAL_TRY = 8;
 const TlsPasswordFlags TLS_PASSWORD_FLAGS_MANY_TRIES = 4;
 const TlsPasswordFlags TLS_PASSWORD_FLAGS_NONE = 0;
@@ -240,19 +240,19 @@ const TlsPasswordFlags TLS_PASSWORD_FLAGS_PKCS11_SECURITY_OFFICER = 32;
 const TlsPasswordFlags TLS_PASSWORD_FLAGS_PKCS11_USER = 16;
 const TlsPasswordFlags TLS_PASSWORD_FLAGS_RETRY = 2;
 
-distinct BusType = int;
+typedef BusType = int;
 const BusType BUS_TYPE_NONE = 0;
 const BusType BUS_TYPE_SESSION = 2;
 const BusType BUS_TYPE_STARTER = -1;
 const BusType BUS_TYPE_SYSTEM = 1;
 
-distinct ConverterResult = int;
+typedef ConverterResult = int;
 const ConverterResult CONVERTER_RESULT_CONVERTED = 1;
 const ConverterResult CONVERTER_RESULT_ERROR = 0;
 const ConverterResult CONVERTER_RESULT_FINISHED = 2;
 const ConverterResult CONVERTER_RESULT_FLUSHED = 3;
 
-distinct CredentialsType = int;
+typedef CredentialsType = int;
 const CredentialsType CREDENTIALS_TYPE_APPLE_XUCRED = 6;
 const CredentialsType CREDENTIALS_TYPE_FREEBSD_CMSGCRED = 2;
 const CredentialsType CREDENTIALS_TYPE_INVALID = 0;
@@ -262,7 +262,7 @@ const CredentialsType CREDENTIALS_TYPE_OPENBSD_SOCKPEERCRED = 3;
 const CredentialsType CREDENTIALS_TYPE_SOLARIS_UCRED = 4;
 const CredentialsType CREDENTIALS_TYPE_WIN32_PID = 7;
 
-distinct DBusError = int;
+typedef DBusError = int;
 const DBusError D_BUS_ERROR_ACCESS_DENIED = 9;
 const DBusError D_BUS_ERROR_ADDRESS_IN_USE = 14;
 const DBusError D_BUS_ERROR_ADT_AUDIT_DATA_UNKNOWN = 39;
@@ -309,11 +309,11 @@ const DBusError D_BUS_ERROR_UNKNOWN_METHOD = 19;
 const DBusError D_BUS_ERROR_UNKNOWN_OBJECT = 41;
 const DBusError D_BUS_ERROR_UNKNOWN_PROPERTY = 43;
 
-distinct DBusMessageByteOrder = int;
+typedef DBusMessageByteOrder = int;
 const DBusMessageByteOrder D_BUS_MESSAGE_BYTE_ORDER_BIG_ENDIAN = 66;
 const DBusMessageByteOrder D_BUS_MESSAGE_BYTE_ORDER_LITTLE_ENDIAN = 108;
 
-distinct DBusMessageHeaderField = int;
+typedef DBusMessageHeaderField = int;
 const DBusMessageHeaderField D_BUS_MESSAGE_HEADER_FIELD_DESTINATION = 6;
 const DBusMessageHeaderField D_BUS_MESSAGE_HEADER_FIELD_ERROR_NAME = 4;
 const DBusMessageHeaderField D_BUS_MESSAGE_HEADER_FIELD_INTERFACE = 2;
@@ -325,43 +325,43 @@ const DBusMessageHeaderField D_BUS_MESSAGE_HEADER_FIELD_REPLY_SERIAL = 5;
 const DBusMessageHeaderField D_BUS_MESSAGE_HEADER_FIELD_SENDER = 7;
 const DBusMessageHeaderField D_BUS_MESSAGE_HEADER_FIELD_SIGNATURE = 8;
 
-distinct DBusMessageType = int;
+typedef DBusMessageType = int;
 const DBusMessageType D_BUS_MESSAGE_TYPE_ERROR = 3;
 const DBusMessageType D_BUS_MESSAGE_TYPE_INVALID = 0;
 const DBusMessageType D_BUS_MESSAGE_TYPE_METHOD_CALL = 1;
 const DBusMessageType D_BUS_MESSAGE_TYPE_METHOD_RETURN = 2;
 const DBusMessageType D_BUS_MESSAGE_TYPE_SIGNAL = 4;
 
-distinct DataStreamByteOrder = int;
+typedef DataStreamByteOrder = int;
 const DataStreamByteOrder DATA_STREAM_BYTE_ORDER_BIG_ENDIAN = 0;
 const DataStreamByteOrder DATA_STREAM_BYTE_ORDER_HOST_ENDIAN = 2;
 const DataStreamByteOrder DATA_STREAM_BYTE_ORDER_LITTLE_ENDIAN = 1;
 
-distinct DataStreamNewlineType = int;
+typedef DataStreamNewlineType = int;
 const DataStreamNewlineType DATA_STREAM_NEWLINE_TYPE_ANY = 3;
 const DataStreamNewlineType DATA_STREAM_NEWLINE_TYPE_CR = 1;
 const DataStreamNewlineType DATA_STREAM_NEWLINE_TYPE_CR_LF = 2;
 const DataStreamNewlineType DATA_STREAM_NEWLINE_TYPE_LF = 0;
 
-distinct DriveStartStopType = int;
+typedef DriveStartStopType = int;
 const DriveStartStopType DRIVE_START_STOP_TYPE_MULTIDISK = 3;
 const DriveStartStopType DRIVE_START_STOP_TYPE_NETWORK = 2;
 const DriveStartStopType DRIVE_START_STOP_TYPE_PASSWORD = 4;
 const DriveStartStopType DRIVE_START_STOP_TYPE_SHUTDOWN = 1;
 const DriveStartStopType DRIVE_START_STOP_TYPE_UNKNOWN = 0;
 
-distinct EmblemOrigin = int;
+typedef EmblemOrigin = int;
 const EmblemOrigin EMBLEM_ORIGIN_DEVICE = 1;
 const EmblemOrigin EMBLEM_ORIGIN_LIVEMETADATA = 2;
 const EmblemOrigin EMBLEM_ORIGIN_TAG = 3;
 const EmblemOrigin EMBLEM_ORIGIN_UNKNOWN = 0;
 
-distinct FileAttributeStatus = int;
+typedef FileAttributeStatus = int;
 const FileAttributeStatus FILE_ATTRIBUTE_STATUS_ERROR_SETTING = 2;
 const FileAttributeStatus FILE_ATTRIBUTE_STATUS_SET = 1;
 const FileAttributeStatus FILE_ATTRIBUTE_STATUS_UNSET = 0;
 
-distinct FileAttributeType = int;
+typedef FileAttributeType = int;
 const FileAttributeType FILE_ATTRIBUTE_TYPE_BOOLEAN = 3;
 const FileAttributeType FILE_ATTRIBUTE_TYPE_BYTE_STRING = 2;
 const FileAttributeType FILE_ATTRIBUTE_TYPE_INT32 = 5;
@@ -373,7 +373,7 @@ const FileAttributeType FILE_ATTRIBUTE_TYPE_STRINGV = 9;
 const FileAttributeType FILE_ATTRIBUTE_TYPE_UINT32 = 4;
 const FileAttributeType FILE_ATTRIBUTE_TYPE_UINT64 = 6;
 
-distinct FileMonitorEvent = int;
+typedef FileMonitorEvent = int;
 const FileMonitorEvent FILE_MONITOR_EVENT_ATTRIBUTE_CHANGED = 4;
 const FileMonitorEvent FILE_MONITOR_EVENT_CHANGED = 0;
 const FileMonitorEvent FILE_MONITOR_EVENT_CHANGES_DONE_HINT = 1;
@@ -386,7 +386,7 @@ const FileMonitorEvent FILE_MONITOR_EVENT_PRE_UNMOUNT = 5;
 const FileMonitorEvent FILE_MONITOR_EVENT_RENAMED = 8;
 const FileMonitorEvent FILE_MONITOR_EVENT_UNMOUNTED = 6;
 
-distinct FileType = int;
+typedef FileType = int;
 const FileType FILE_TYPE_DIRECTORY = 2;
 const FileType FILE_TYPE_MOUNTABLE = 6;
 const FileType FILE_TYPE_REGULAR = 1;
@@ -395,12 +395,12 @@ const FileType FILE_TYPE_SPECIAL = 4;
 const FileType FILE_TYPE_SYMBOLIC_LINK = 3;
 const FileType FILE_TYPE_UNKNOWN = 0;
 
-distinct FilesystemPreviewType = int;
+typedef FilesystemPreviewType = int;
 const FilesystemPreviewType FILESYSTEM_PREVIEW_TYPE_IF_ALWAYS = 0;
 const FilesystemPreviewType FILESYSTEM_PREVIEW_TYPE_IF_LOCAL = 1;
 const FilesystemPreviewType FILESYSTEM_PREVIEW_TYPE_NEVER = 2;
 
-distinct IOErrorEnum = int;
+typedef IOErrorEnum = int;
 const IOErrorEnum IO_ERROR_ENUM_ADDRESS_IN_USE = 33;
 const IOErrorEnum IO_ERROR_ENUM_ALREADY_MOUNTED = 17;
 const IOErrorEnum IO_ERROR_ENUM_BROKEN_PIPE = 44;
@@ -452,59 +452,59 @@ const IOErrorEnum IO_ERROR_ENUM_WOULD_MERGE = 29;
 const IOErrorEnum IO_ERROR_ENUM_WOULD_RECURSE = 25;
 const IOErrorEnum IO_ERROR_ENUM_WRONG_ETAG = 23;
 
-distinct IOModuleScopeFlags = int;
+typedef IOModuleScopeFlags = int;
 const IOModuleScopeFlags IO_MODULE_SCOPE_FLAGS_BLOCK_DUPLICATES = 1;
 const IOModuleScopeFlags IO_MODULE_SCOPE_FLAGS_NONE = 0;
 
-distinct MemoryMonitorWarningLevel = int;
+typedef MemoryMonitorWarningLevel = int;
 const MemoryMonitorWarningLevel MEMORY_MONITOR_WARNING_LEVEL_CRITICAL = 255;
 const MemoryMonitorWarningLevel MEMORY_MONITOR_WARNING_LEVEL_LOW = 50;
 const MemoryMonitorWarningLevel MEMORY_MONITOR_WARNING_LEVEL_MEDIUM = 100;
 
-distinct MountOperationResult = int;
+typedef MountOperationResult = int;
 const MountOperationResult MOUNT_OPERATION_RESULT_ABORTED = 1;
 const MountOperationResult MOUNT_OPERATION_RESULT_HANDLED = 0;
 const MountOperationResult MOUNT_OPERATION_RESULT_UNHANDLED = 2;
 
-distinct NetworkConnectivity = int;
+typedef NetworkConnectivity = int;
 const NetworkConnectivity NETWORK_CONNECTIVITY_FULL = 4;
 const NetworkConnectivity NETWORK_CONNECTIVITY_LIMITED = 2;
 const NetworkConnectivity NETWORK_CONNECTIVITY_LOCAL = 1;
 const NetworkConnectivity NETWORK_CONNECTIVITY_PORTAL = 3;
 
-distinct NotificationPriority = int;
+typedef NotificationPriority = int;
 const NotificationPriority NOTIFICATION_PRIORITY_HIGH = 2;
 const NotificationPriority NOTIFICATION_PRIORITY_LOW = 1;
 const NotificationPriority NOTIFICATION_PRIORITY_NORMAL = 0;
 const NotificationPriority NOTIFICATION_PRIORITY_URGENT = 3;
 
-distinct PasswordSave = int;
+typedef PasswordSave = int;
 const PasswordSave PASSWORD_SAVE_FOR_SESSION = 1;
 const PasswordSave PASSWORD_SAVE_NEVER = 0;
 const PasswordSave PASSWORD_SAVE_PERMANENTLY = 2;
 
-distinct PollableReturn = int;
+typedef PollableReturn = int;
 const PollableReturn POLLABLE_RETURN_FAILED = 0;
 const PollableReturn POLLABLE_RETURN_OK = 1;
 const PollableReturn POLLABLE_RETURN_WOULD_BLOCK = -27;
 
-distinct ResolverError = int;
+typedef ResolverError = int;
 const ResolverError RESOLVER_ERROR_INTERNAL = 2;
 const ResolverError RESOLVER_ERROR_NOT_FOUND = 0;
 const ResolverError RESOLVER_ERROR_TEMPORARY_FAILURE = 1;
 
-distinct ResolverRecordType = int;
+typedef ResolverRecordType = int;
 const ResolverRecordType RESOLVER_RECORD_TYPE_MX = 2;
 const ResolverRecordType RESOLVER_RECORD_TYPE_NS = 5;
 const ResolverRecordType RESOLVER_RECORD_TYPE_SOA = 4;
 const ResolverRecordType RESOLVER_RECORD_TYPE_SRV = 1;
 const ResolverRecordType RESOLVER_RECORD_TYPE_TXT = 3;
 
-distinct ResourceError = int;
+typedef ResourceError = int;
 const ResourceError RESOURCE_ERROR_INTERNAL = 1;
 const ResourceError RESOURCE_ERROR_NOT_FOUND = 0;
 
-distinct SocketClientEvent = int;
+typedef SocketClientEvent = int;
 const SocketClientEvent SOCKET_CLIENT_EVENT_COMPLETE = 8;
 const SocketClientEvent SOCKET_CLIENT_EVENT_CONNECTED = 3;
 const SocketClientEvent SOCKET_CLIENT_EVENT_CONNECTING = 2;
@@ -515,56 +515,56 @@ const SocketClientEvent SOCKET_CLIENT_EVENT_RESOLVING = 0;
 const SocketClientEvent SOCKET_CLIENT_EVENT_TLS_HANDSHAKED = 7;
 const SocketClientEvent SOCKET_CLIENT_EVENT_TLS_HANDSHAKING = 6;
 
-distinct SocketFamily = int;
+typedef SocketFamily = int;
 const SocketFamily SOCKET_FAMILY_INVALID = 0;
 const SocketFamily SOCKET_FAMILY_IPV4 = 2;
 const SocketFamily SOCKET_FAMILY_IPV6 = 10;
 const SocketFamily SOCKET_FAMILY_UNIX = 1;
 
-distinct SocketListenerEvent = int;
+typedef SocketListenerEvent = int;
 const SocketListenerEvent SOCKET_LISTENER_EVENT_BINDING = 0;
 const SocketListenerEvent SOCKET_LISTENER_EVENT_BOUND = 1;
 const SocketListenerEvent SOCKET_LISTENER_EVENT_LISTENED = 3;
 const SocketListenerEvent SOCKET_LISTENER_EVENT_LISTENING = 2;
 
-distinct SocketProtocol = int;
+typedef SocketProtocol = int;
 const SocketProtocol SOCKET_PROTOCOL_DEFAULT = 0;
 const SocketProtocol SOCKET_PROTOCOL_SCTP = 132;
 const SocketProtocol SOCKET_PROTOCOL_TCP = 6;
 const SocketProtocol SOCKET_PROTOCOL_UDP = 17;
 const SocketProtocol SOCKET_PROTOCOL_UNKNOWN = -1;
 
-distinct SocketType = int;
+typedef SocketType = int;
 const SocketType SOCKET_TYPE_DATAGRAM = 2;
 const SocketType SOCKET_TYPE_INVALID = 0;
 const SocketType SOCKET_TYPE_SEQPACKET = 3;
 const SocketType SOCKET_TYPE_STREAM = 1;
 
-distinct TlsAuthenticationMode = int;
+typedef TlsAuthenticationMode = int;
 const TlsAuthenticationMode TLS_AUTHENTICATION_MODE_NONE = 0;
 const TlsAuthenticationMode TLS_AUTHENTICATION_MODE_REQUESTED = 1;
 const TlsAuthenticationMode TLS_AUTHENTICATION_MODE_REQUIRED = 2;
 
-distinct TlsCertificateRequestFlags = int;
+typedef TlsCertificateRequestFlags = int;
 const TlsCertificateRequestFlags TLS_CERTIFICATE_REQUEST_FLAGS_NONE = 0;
 
-distinct TlsChannelBindingError = int;
+typedef TlsChannelBindingError = int;
 const TlsChannelBindingError TLS_CHANNEL_BINDING_ERROR_GENERAL_ERROR = 4;
 const TlsChannelBindingError TLS_CHANNEL_BINDING_ERROR_INVALID_STATE = 1;
 const TlsChannelBindingError TLS_CHANNEL_BINDING_ERROR_NOT_AVAILABLE = 2;
 const TlsChannelBindingError TLS_CHANNEL_BINDING_ERROR_NOT_IMPLEMENTED = 0;
 const TlsChannelBindingError TLS_CHANNEL_BINDING_ERROR_NOT_SUPPORTED = 3;
 
-distinct TlsChannelBindingType = int;
+typedef TlsChannelBindingType = int;
 const TlsChannelBindingType TLS_CHANNEL_BINDING_TYPE_EXPORTER = 2;
 const TlsChannelBindingType TLS_CHANNEL_BINDING_TYPE_SERVER_END_POINT = 1;
 const TlsChannelBindingType TLS_CHANNEL_BINDING_TYPE_UNIQUE = 0;
 
-distinct TlsDatabaseLookupFlags = int;
+typedef TlsDatabaseLookupFlags = int;
 const TlsDatabaseLookupFlags TLS_DATABASE_LOOKUP_FLAGS_KEYPAIR = 1;
 const TlsDatabaseLookupFlags TLS_DATABASE_LOOKUP_FLAGS_NONE = 0;
 
-distinct TlsError = int;
+typedef TlsError = int;
 const TlsError TLS_ERROR_BAD_CERTIFICATE = 2;
 const TlsError TLS_ERROR_BAD_CERTIFICATE_PASSWORD = 8;
 const TlsError TLS_ERROR_CERTIFICATE_REQUIRED = 5;
@@ -575,12 +575,12 @@ const TlsError TLS_ERROR_MISC = 1;
 const TlsError TLS_ERROR_NOT_TLS = 3;
 const TlsError TLS_ERROR_UNAVAILABLE = 0;
 
-distinct TlsInteractionResult = int;
+typedef TlsInteractionResult = int;
 const TlsInteractionResult TLS_INTERACTION_RESULT_FAILED = 2;
 const TlsInteractionResult TLS_INTERACTION_RESULT_HANDLED = 1;
 const TlsInteractionResult TLS_INTERACTION_RESULT_UNHANDLED = 0;
 
-distinct TlsProtocolVersion = int;
+typedef TlsProtocolVersion = int;
 const TlsProtocolVersion TLS_PROTOCOL_VERSION_DTLS_1_0 = 201;
 const TlsProtocolVersion TLS_PROTOCOL_VERSION_DTLS_1_2 = 202;
 const TlsProtocolVersion TLS_PROTOCOL_VERSION_SSL_3_0 = 1;
@@ -590,543 +590,543 @@ const TlsProtocolVersion TLS_PROTOCOL_VERSION_TLS_1_2 = 4;
 const TlsProtocolVersion TLS_PROTOCOL_VERSION_TLS_1_3 = 5;
 const TlsProtocolVersion TLS_PROTOCOL_VERSION_UNKNOWN = 0;
 
-distinct TlsRehandshakeMode = int;
+typedef TlsRehandshakeMode = int;
 const TlsRehandshakeMode TLS_REHANDSHAKE_MODE_NEVER = 0;
 const TlsRehandshakeMode TLS_REHANDSHAKE_MODE_SAFELY = 1;
 const TlsRehandshakeMode TLS_REHANDSHAKE_MODE_UNSAFELY = 2;
 
-distinct UnixSocketAddressType = int;
+typedef UnixSocketAddressType = int;
 const UnixSocketAddressType UNIX_SOCKET_ADDRESS_TYPE_ABSTRACT = 3;
 const UnixSocketAddressType UNIX_SOCKET_ADDRESS_TYPE_ABSTRACT_PADDED = 4;
 const UnixSocketAddressType UNIX_SOCKET_ADDRESS_TYPE_ANONYMOUS = 1;
 const UnixSocketAddressType UNIX_SOCKET_ADDRESS_TYPE_INVALID = 0;
 const UnixSocketAddressType UNIX_SOCKET_ADDRESS_TYPE_PATH = 2;
 
-distinct ZlibCompressorFormat = int;
+typedef ZlibCompressorFormat = int;
 const ZlibCompressorFormat ZLIB_COMPRESSOR_FORMAT_GZIP = 1;
 const ZlibCompressorFormat ZLIB_COMPRESSOR_FORMAT_RAW = 2;
 const ZlibCompressorFormat ZLIB_COMPRESSOR_FORMAT_ZLIB = 0;
 
 
 
-distinct ActionEntry = void*;
+typedef ActionEntry = void*;
 
-distinct ActionGroupInterface = void*;
+typedef ActionGroupInterface = void*;
 
-distinct ActionInterface = void*;
+typedef ActionInterface = void*;
 
-distinct ActionMapInterface = void*;
+typedef ActionMapInterface = void*;
 
-distinct AppInfoIface = void*;
+typedef AppInfoIface = void*;
 
-distinct AppLaunchContextClass = void*;
+typedef AppLaunchContextClass = void*;
 
-distinct AppLaunchContextPrivate = void*;
+typedef AppLaunchContextPrivate = void*;
 
-distinct ApplicationClass = void*;
+typedef ApplicationClass = void*;
 
-distinct ApplicationCommandLineClass = void*;
+typedef ApplicationCommandLineClass = void*;
 
-distinct ApplicationCommandLinePrivate = void*;
+typedef ApplicationCommandLinePrivate = void*;
 
-distinct ApplicationPrivate = void*;
+typedef ApplicationPrivate = void*;
 
-distinct AsyncInitableIface = void*;
+typedef AsyncInitableIface = void*;
 
-distinct AsyncResultIface = void*;
+typedef AsyncResultIface = void*;
 
-distinct BufferedInputStreamClass = void*;
+typedef BufferedInputStreamClass = void*;
 
-distinct BufferedInputStreamPrivate = void*;
+typedef BufferedInputStreamPrivate = void*;
 
-distinct BufferedOutputStreamClass = void*;
+typedef BufferedOutputStreamClass = void*;
 
-distinct BufferedOutputStreamPrivate = void*;
+typedef BufferedOutputStreamPrivate = void*;
 
-distinct CancellableClass = void*;
+typedef CancellableClass = void*;
 
-distinct CancellablePrivate = void*;
+typedef CancellablePrivate = void*;
 
-distinct CharsetConverterClass = void*;
+typedef CharsetConverterClass = void*;
 
-distinct ConverterIface = void*;
+typedef ConverterIface = void*;
 
-distinct ConverterInputStreamClass = void*;
+typedef ConverterInputStreamClass = void*;
 
-distinct ConverterInputStreamPrivate = void*;
+typedef ConverterInputStreamPrivate = void*;
 
-distinct ConverterOutputStreamClass = void*;
+typedef ConverterOutputStreamClass = void*;
 
-distinct ConverterOutputStreamPrivate = void*;
+typedef ConverterOutputStreamPrivate = void*;
 
-distinct CredentialsClass = void*;
+typedef CredentialsClass = void*;
 
-distinct DBusAnnotationInfo = void*;
+typedef DBusAnnotationInfo = void*;
 
-distinct DBusArgInfo = void*;
+typedef DBusArgInfo = void*;
 
-distinct DBusErrorEntry = void*;
+typedef DBusErrorEntry = void*;
 
-distinct DBusInterfaceIface = void*;
+typedef DBusInterfaceIface = void*;
 
-distinct DBusInterfaceInfo = void*;
+typedef DBusInterfaceInfo = void*;
 
-distinct DBusInterfaceSkeletonClass = void*;
+typedef DBusInterfaceSkeletonClass = void*;
 
-distinct DBusInterfaceSkeletonPrivate = void*;
+typedef DBusInterfaceSkeletonPrivate = void*;
 
-distinct DBusInterfaceVTable = void*;
+typedef DBusInterfaceVTable = void*;
 
-distinct DBusMethodInfo = void*;
+typedef DBusMethodInfo = void*;
 
-distinct DBusNodeInfo = void*;
+typedef DBusNodeInfo = void*;
 
-distinct DBusObjectIface = void*;
+typedef DBusObjectIface = void*;
 
-distinct DBusObjectManagerClientClass = void*;
+typedef DBusObjectManagerClientClass = void*;
 
-distinct DBusObjectManagerClientPrivate = void*;
+typedef DBusObjectManagerClientPrivate = void*;
 
-distinct DBusObjectManagerIface = void*;
+typedef DBusObjectManagerIface = void*;
 
-distinct DBusObjectManagerServerClass = void*;
+typedef DBusObjectManagerServerClass = void*;
 
-distinct DBusObjectManagerServerPrivate = void*;
+typedef DBusObjectManagerServerPrivate = void*;
 
-distinct DBusObjectProxyClass = void*;
+typedef DBusObjectProxyClass = void*;
 
-distinct DBusObjectProxyPrivate = void*;
+typedef DBusObjectProxyPrivate = void*;
 
-distinct DBusObjectSkeletonClass = void*;
+typedef DBusObjectSkeletonClass = void*;
 
-distinct DBusObjectSkeletonPrivate = void*;
+typedef DBusObjectSkeletonPrivate = void*;
 
-distinct DBusPropertyInfo = void*;
+typedef DBusPropertyInfo = void*;
 
-distinct DBusProxyClass = void*;
+typedef DBusProxyClass = void*;
 
-distinct DBusProxyPrivate = void*;
+typedef DBusProxyPrivate = void*;
 
-distinct DBusSignalInfo = void*;
+typedef DBusSignalInfo = void*;
 
-distinct DBusSubtreeVTable = void*;
+typedef DBusSubtreeVTable = void*;
 
-distinct DataInputStreamClass = void*;
+typedef DataInputStreamClass = void*;
 
-distinct DataInputStreamPrivate = void*;
+typedef DataInputStreamPrivate = void*;
 
-distinct DataOutputStreamClass = void*;
+typedef DataOutputStreamClass = void*;
 
-distinct DataOutputStreamPrivate = void*;
+typedef DataOutputStreamPrivate = void*;
 
-distinct DatagramBasedInterface = void*;
+typedef DatagramBasedInterface = void*;
 
-distinct DebugControllerDBusClass = void*;
+typedef DebugControllerDBusClass = void*;
 
-distinct DebugControllerInterface = void*;
+typedef DebugControllerInterface = void*;
 
-distinct DesktopAppInfoClass = void*;
+typedef DesktopAppInfoClass = void*;
 
-distinct DesktopAppInfoLookupIface = void*;
+typedef DesktopAppInfoLookupIface = void*;
 
-distinct DriveIface = void*;
+typedef DriveIface = void*;
 
-distinct DtlsClientConnectionInterface = void*;
+typedef DtlsClientConnectionInterface = void*;
 
-distinct DtlsConnectionInterface = void*;
+typedef DtlsConnectionInterface = void*;
 
-distinct DtlsServerConnectionInterface = void*;
+typedef DtlsServerConnectionInterface = void*;
 
-distinct EmblemClass = void*;
+typedef EmblemClass = void*;
 
-distinct EmblemedIconClass = void*;
+typedef EmblemedIconClass = void*;
 
-distinct EmblemedIconPrivate = void*;
+typedef EmblemedIconPrivate = void*;
 
-distinct FileAttributeInfo = void*;
+typedef FileAttributeInfo = void*;
 
-distinct FileAttributeInfoList = void*;
+typedef FileAttributeInfoList = void*;
 
-distinct FileAttributeMatcher = void*;
+typedef FileAttributeMatcher = void*;
 
-distinct FileDescriptorBasedIface = void*;
+typedef FileDescriptorBasedIface = void*;
 
-distinct FileEnumeratorClass = void*;
+typedef FileEnumeratorClass = void*;
 
-distinct FileEnumeratorPrivate = void*;
+typedef FileEnumeratorPrivate = void*;
 
-distinct FileIOStreamClass = void*;
+typedef FileIOStreamClass = void*;
 
-distinct FileIOStreamPrivate = void*;
+typedef FileIOStreamPrivate = void*;
 
-distinct FileIconClass = void*;
+typedef FileIconClass = void*;
 
-distinct FileIface = void*;
+typedef FileIface = void*;
 
-distinct FileInfoClass = void*;
+typedef FileInfoClass = void*;
 
-distinct FileInputStreamClass = void*;
+typedef FileInputStreamClass = void*;
 
-distinct FileInputStreamPrivate = void*;
+typedef FileInputStreamPrivate = void*;
 
-distinct FileMonitorClass = void*;
+typedef FileMonitorClass = void*;
 
-distinct FileMonitorPrivate = void*;
+typedef FileMonitorPrivate = void*;
 
-distinct FileOutputStreamClass = void*;
+typedef FileOutputStreamClass = void*;
 
-distinct FileOutputStreamPrivate = void*;
+typedef FileOutputStreamPrivate = void*;
 
-distinct FilenameCompleterClass = void*;
+typedef FilenameCompleterClass = void*;
 
-distinct FilterInputStreamClass = void*;
+typedef FilterInputStreamClass = void*;
 
-distinct FilterOutputStreamClass = void*;
+typedef FilterOutputStreamClass = void*;
 
-distinct IOExtension = void*;
+typedef IOExtension = void*;
 
-distinct IOExtensionPoint = void*;
+typedef IOExtensionPoint = void*;
 
-distinct IOModuleClass = void*;
+typedef IOModuleClass = void*;
 
-distinct IOModuleScope = void*;
+typedef IOModuleScope = void*;
 
-distinct IOSchedulerJob = void*;
+typedef IOSchedulerJob = void*;
 
-distinct IOStreamAdapter = void*;
+typedef IOStreamAdapter = void*;
 
-distinct IOStreamClass = void*;
+typedef IOStreamClass = void*;
 
-distinct IOStreamPrivate = void*;
+typedef IOStreamPrivate = void*;
 
-distinct IconIface = void*;
+typedef IconIface = void*;
 
-distinct InetAddressClass = void*;
+typedef InetAddressClass = void*;
 
-distinct InetAddressMaskClass = void*;
+typedef InetAddressMaskClass = void*;
 
-distinct InetAddressMaskPrivate = void*;
+typedef InetAddressMaskPrivate = void*;
 
-distinct InetAddressPrivate = void*;
+typedef InetAddressPrivate = void*;
 
-distinct InetSocketAddressClass = void*;
+typedef InetSocketAddressClass = void*;
 
-distinct InetSocketAddressPrivate = void*;
+typedef InetSocketAddressPrivate = void*;
 
-distinct InitableIface = void*;
+typedef InitableIface = void*;
 
-distinct InputMessage = void*;
+typedef InputMessage = void*;
 
-distinct InputStreamClass = void*;
+typedef InputStreamClass = void*;
 
-distinct InputStreamPrivate = void*;
+typedef InputStreamPrivate = void*;
 
-distinct InputVector = void*;
+typedef InputVector = void*;
 
-distinct ListModelInterface = void*;
+typedef ListModelInterface = void*;
 
-distinct ListStoreClass = void*;
+typedef ListStoreClass = void*;
 
-distinct LoadableIconIface = void*;
+typedef LoadableIconIface = void*;
 
-distinct MemoryInputStreamClass = void*;
+typedef MemoryInputStreamClass = void*;
 
-distinct MemoryInputStreamPrivate = void*;
+typedef MemoryInputStreamPrivate = void*;
 
-distinct MemoryMonitorInterface = void*;
+typedef MemoryMonitorInterface = void*;
 
-distinct MemoryOutputStreamClass = void*;
+typedef MemoryOutputStreamClass = void*;
 
-distinct MemoryOutputStreamPrivate = void*;
+typedef MemoryOutputStreamPrivate = void*;
 
-distinct MenuAttributeIterClass = void*;
+typedef MenuAttributeIterClass = void*;
 
-distinct MenuAttributeIterPrivate = void*;
+typedef MenuAttributeIterPrivate = void*;
 
-distinct MenuLinkIterClass = void*;
+typedef MenuLinkIterClass = void*;
 
-distinct MenuLinkIterPrivate = void*;
+typedef MenuLinkIterPrivate = void*;
 
-distinct MenuModelClass = void*;
+typedef MenuModelClass = void*;
 
-distinct MenuModelPrivate = void*;
+typedef MenuModelPrivate = void*;
 
-distinct MountIface = void*;
+typedef MountIface = void*;
 
-distinct MountOperationClass = void*;
+typedef MountOperationClass = void*;
 
-distinct MountOperationPrivate = void*;
+typedef MountOperationPrivate = void*;
 
-distinct NativeSocketAddressClass = void*;
+typedef NativeSocketAddressClass = void*;
 
-distinct NativeSocketAddressPrivate = void*;
+typedef NativeSocketAddressPrivate = void*;
 
-distinct NativeVolumeMonitorClass = void*;
+typedef NativeVolumeMonitorClass = void*;
 
-distinct NetworkAddressClass = void*;
+typedef NetworkAddressClass = void*;
 
-distinct NetworkAddressPrivate = void*;
+typedef NetworkAddressPrivate = void*;
 
-distinct NetworkMonitorInterface = void*;
+typedef NetworkMonitorInterface = void*;
 
-distinct NetworkServiceClass = void*;
+typedef NetworkServiceClass = void*;
 
-distinct NetworkServicePrivate = void*;
+typedef NetworkServicePrivate = void*;
 
-distinct OutputMessage = void*;
+typedef OutputMessage = void*;
 
-distinct OutputStreamClass = void*;
+typedef OutputStreamClass = void*;
 
-distinct OutputStreamPrivate = void*;
+typedef OutputStreamPrivate = void*;
 
-distinct OutputVector = void*;
+typedef OutputVector = void*;
 
-distinct PermissionClass = void*;
+typedef PermissionClass = void*;
 
-distinct PermissionPrivate = void*;
+typedef PermissionPrivate = void*;
 
-distinct PollableInputStreamInterface = void*;
+typedef PollableInputStreamInterface = void*;
 
-distinct PollableOutputStreamInterface = void*;
+typedef PollableOutputStreamInterface = void*;
 
-distinct PowerProfileMonitorInterface = void*;
+typedef PowerProfileMonitorInterface = void*;
 
-distinct ProxyAddressClass = void*;
+typedef ProxyAddressClass = void*;
 
-distinct ProxyAddressEnumeratorClass = void*;
+typedef ProxyAddressEnumeratorClass = void*;
 
-distinct ProxyAddressEnumeratorPrivate = void*;
+typedef ProxyAddressEnumeratorPrivate = void*;
 
-distinct ProxyAddressPrivate = void*;
+typedef ProxyAddressPrivate = void*;
 
-distinct ProxyInterface = void*;
+typedef ProxyInterface = void*;
 
-distinct ProxyResolverInterface = void*;
+typedef ProxyResolverInterface = void*;
 
-distinct RemoteActionGroupInterface = void*;
+typedef RemoteActionGroupInterface = void*;
 
-distinct ResolverClass = void*;
+typedef ResolverClass = void*;
 
-distinct ResolverPrivate = void*;
+typedef ResolverPrivate = void*;
 
-distinct Resource = void*;
+typedef Resource = void*;
 
-distinct SeekableIface = void*;
+typedef SeekableIface = void*;
 
-distinct SettingsBackendClass = void*;
+typedef SettingsBackendClass = void*;
 
-distinct SettingsBackendPrivate = void*;
+typedef SettingsBackendPrivate = void*;
 
-distinct SettingsClass = void*;
+typedef SettingsClass = void*;
 
-distinct SettingsPrivate = void*;
+typedef SettingsPrivate = void*;
 
-distinct SettingsSchema = void*;
+typedef SettingsSchema = void*;
 
-distinct SettingsSchemaKey = void*;
+typedef SettingsSchemaKey = void*;
 
-distinct SettingsSchemaSource = void*;
+typedef SettingsSchemaSource = void*;
 
-distinct SimpleActionGroupClass = void*;
+typedef SimpleActionGroupClass = void*;
 
-distinct SimpleActionGroupPrivate = void*;
+typedef SimpleActionGroupPrivate = void*;
 
-distinct SimpleAsyncResultClass = void*;
+typedef SimpleAsyncResultClass = void*;
 
-distinct SimpleProxyResolverClass = void*;
+typedef SimpleProxyResolverClass = void*;
 
-distinct SimpleProxyResolverPrivate = void*;
+typedef SimpleProxyResolverPrivate = void*;
 
-distinct SocketAddressClass = void*;
+typedef SocketAddressClass = void*;
 
-distinct SocketAddressEnumeratorClass = void*;
+typedef SocketAddressEnumeratorClass = void*;
 
-distinct SocketClass = void*;
+typedef SocketClass = void*;
 
-distinct SocketClientClass = void*;
+typedef SocketClientClass = void*;
 
-distinct SocketClientPrivate = void*;
+typedef SocketClientPrivate = void*;
 
-distinct SocketConnectableIface = void*;
+typedef SocketConnectableIface = void*;
 
-distinct SocketConnectionClass = void*;
+typedef SocketConnectionClass = void*;
 
-distinct SocketConnectionPrivate = void*;
+typedef SocketConnectionPrivate = void*;
 
-distinct SocketControlMessageClass = void*;
+typedef SocketControlMessageClass = void*;
 
-distinct SocketControlMessagePrivate = void*;
+typedef SocketControlMessagePrivate = void*;
 
-distinct SocketListenerClass = void*;
+typedef SocketListenerClass = void*;
 
-distinct SocketListenerPrivate = void*;
+typedef SocketListenerPrivate = void*;
 
-distinct SocketPrivate = void*;
+typedef SocketPrivate = void*;
 
-distinct SocketServiceClass = void*;
+typedef SocketServiceClass = void*;
 
-distinct SocketServicePrivate = void*;
+typedef SocketServicePrivate = void*;
 
-distinct SrvTarget = void*;
+typedef SrvTarget = void*;
 
-distinct StaticResource = void*;
+typedef StaticResource = void*;
 
-distinct TaskClass = void*;
+typedef TaskClass = void*;
 
-distinct TcpConnectionClass = void*;
+typedef TcpConnectionClass = void*;
 
-distinct TcpConnectionPrivate = void*;
+typedef TcpConnectionPrivate = void*;
 
-distinct TcpWrapperConnectionClass = void*;
+typedef TcpWrapperConnectionClass = void*;
 
-distinct TcpWrapperConnectionPrivate = void*;
+typedef TcpWrapperConnectionPrivate = void*;
 
-distinct ThemedIconClass = void*;
+typedef ThemedIconClass = void*;
 
-distinct ThreadedResolverClass = void*;
+typedef ThreadedResolverClass = void*;
 
-distinct ThreadedSocketServiceClass = void*;
+typedef ThreadedSocketServiceClass = void*;
 
-distinct ThreadedSocketServicePrivate = void*;
+typedef ThreadedSocketServicePrivate = void*;
 
-distinct TlsBackendInterface = void*;
+typedef TlsBackendInterface = void*;
 
-distinct TlsCertificateClass = void*;
+typedef TlsCertificateClass = void*;
 
-distinct TlsCertificatePrivate = void*;
+typedef TlsCertificatePrivate = void*;
 
-distinct TlsClientConnectionInterface = void*;
+typedef TlsClientConnectionInterface = void*;
 
-distinct TlsConnectionClass = void*;
+typedef TlsConnectionClass = void*;
 
-distinct TlsConnectionPrivate = void*;
+typedef TlsConnectionPrivate = void*;
 
-distinct TlsDatabaseClass = void*;
+typedef TlsDatabaseClass = void*;
 
-distinct TlsDatabasePrivate = void*;
+typedef TlsDatabasePrivate = void*;
 
-distinct TlsFileDatabaseInterface = void*;
+typedef TlsFileDatabaseInterface = void*;
 
-distinct TlsInteractionClass = void*;
+typedef TlsInteractionClass = void*;
 
-distinct TlsInteractionPrivate = void*;
+typedef TlsInteractionPrivate = void*;
 
-distinct TlsPasswordClass = void*;
+typedef TlsPasswordClass = void*;
 
-distinct TlsPasswordPrivate = void*;
+typedef TlsPasswordPrivate = void*;
 
-distinct TlsServerConnectionInterface = void*;
+typedef TlsServerConnectionInterface = void*;
 
-distinct UnixConnectionClass = void*;
+typedef UnixConnectionClass = void*;
 
-distinct UnixConnectionPrivate = void*;
+typedef UnixConnectionPrivate = void*;
 
-distinct UnixCredentialsMessageClass = void*;
+typedef UnixCredentialsMessageClass = void*;
 
-distinct UnixCredentialsMessagePrivate = void*;
+typedef UnixCredentialsMessagePrivate = void*;
 
-distinct UnixFDListClass = void*;
+typedef UnixFDListClass = void*;
 
-distinct UnixFDListPrivate = void*;
+typedef UnixFDListPrivate = void*;
 
-distinct UnixFDMessageClass = void*;
+typedef UnixFDMessageClass = void*;
 
-distinct UnixFDMessagePrivate = void*;
+typedef UnixFDMessagePrivate = void*;
 
-distinct UnixInputStreamClass = void*;
+typedef UnixInputStreamClass = void*;
 
-distinct UnixInputStreamPrivate = void*;
+typedef UnixInputStreamPrivate = void*;
 
-distinct UnixMountEntry = void*;
+typedef UnixMountEntry = void*;
 
-distinct UnixMountMonitorClass = void*;
+typedef UnixMountMonitorClass = void*;
 
-distinct UnixMountPoint = void*;
+typedef UnixMountPoint = void*;
 
-distinct UnixOutputStreamClass = void*;
+typedef UnixOutputStreamClass = void*;
 
-distinct UnixOutputStreamPrivate = void*;
+typedef UnixOutputStreamPrivate = void*;
 
-distinct UnixSocketAddressClass = void*;
+typedef UnixSocketAddressClass = void*;
 
-distinct UnixSocketAddressPrivate = void*;
+typedef UnixSocketAddressPrivate = void*;
 
-distinct VfsClass = void*;
+typedef VfsClass = void*;
 
-distinct VolumeIface = void*;
+typedef VolumeIface = void*;
 
-distinct VolumeMonitorClass = void*;
+typedef VolumeMonitorClass = void*;
 
-distinct ZlibCompressorClass = void*;
+typedef ZlibCompressorClass = void*;
 
-distinct ZlibDecompressorClass = void*;
+typedef ZlibDecompressorClass = void*;
 
 
-def AsyncReadyCallback = fn void(gobject::Object* source_object, AsyncResult* res, void* data);
+alias AsyncReadyCallback = fn void(gobject::Object* source_object, AsyncResult* res, void* data);
 
-def BusAcquiredCallback = fn void(DBusConnection* connection, ZString name, void* user_data);
+alias BusAcquiredCallback = fn void(DBusConnection* connection, ZString name, void* user_data);
 
-def BusNameAcquiredCallback = fn void(DBusConnection* connection, ZString name, void* user_data);
+alias BusNameAcquiredCallback = fn void(DBusConnection* connection, ZString name, void* user_data);
 
-def BusNameAppearedCallback = fn void(DBusConnection* connection, ZString name, ZString name_owner, void* user_data);
+alias BusNameAppearedCallback = fn void(DBusConnection* connection, ZString name, ZString name_owner, void* user_data);
 
-def BusNameLostCallback = fn void(DBusConnection* connection, ZString name, void* user_data);
+alias BusNameLostCallback = fn void(DBusConnection* connection, ZString name, void* user_data);
 
-def BusNameVanishedCallback = fn void(DBusConnection* connection, ZString name, void* user_data);
+alias BusNameVanishedCallback = fn void(DBusConnection* connection, ZString name, void* user_data);
 
-def CancellableSourceFunc = fn bool(Cancellable* cancellable, void* data);
+alias CancellableSourceFunc = fn bool(Cancellable* cancellable, void* data);
 
-def DBusInterfaceGetPropertyFunc = fn glib::Variant*(DBusConnection* connection, ZString sender, ZString object_path, ZString interface_name, ZString property_name, glib::Error* error, void* user_data);
+alias DBusInterfaceGetPropertyFunc = fn glib::Variant*(DBusConnection* connection, ZString sender, ZString object_path, ZString interface_name, ZString property_name, glib::Error* error, void* user_data);
 
-def DBusInterfaceMethodCallFunc = fn void(DBusConnection* connection, ZString sender, ZString object_path, ZString interface_name, ZString method_name, glib::Variant* parameters, DBusMethodInvocation* invocation, void* user_data);
+alias DBusInterfaceMethodCallFunc = fn void(DBusConnection* connection, ZString sender, ZString object_path, ZString interface_name, ZString method_name, glib::Variant* parameters, DBusMethodInvocation* invocation, void* user_data);
 
-def DBusInterfaceSetPropertyFunc = fn bool(DBusConnection* connection, ZString sender, ZString object_path, ZString interface_name, ZString property_name, glib::Variant* value, glib::Error* error, void* user_data);
+alias DBusInterfaceSetPropertyFunc = fn bool(DBusConnection* connection, ZString sender, ZString object_path, ZString interface_name, ZString property_name, glib::Variant* value, glib::Error* error, void* user_data);
 
-def DBusMessageFilterFunction = fn DBusMessage*(DBusConnection* connection, DBusMessage* message, bool incoming, void* user_data);
+alias DBusMessageFilterFunction = fn DBusMessage*(DBusConnection* connection, DBusMessage* message, bool incoming, void* user_data);
 
-def DBusProxyTypeFunc = fn usz(DBusObjectManagerClient* manager, ZString object_path, ZString interface_name, void* data);
+alias DBusProxyTypeFunc = fn usz(DBusObjectManagerClient* manager, ZString object_path, ZString interface_name, void* data);
 
-def DBusSignalCallback = fn void(DBusConnection* connection, ZString sender_name, ZString object_path, ZString interface_name, ZString signal_name, glib::Variant* parameters, void* user_data);
+alias DBusSignalCallback = fn void(DBusConnection* connection, ZString sender_name, ZString object_path, ZString interface_name, ZString signal_name, glib::Variant* parameters, void* user_data);
 
-def DBusSubtreeDispatchFunc = fn DBusInterfaceVTable*(DBusConnection* connection, ZString sender, ZString object_path, ZString interface_name, ZString node, void* out_user_data, void* user_data);
+alias DBusSubtreeDispatchFunc = fn DBusInterfaceVTable*(DBusConnection* connection, ZString sender, ZString object_path, ZString interface_name, ZString node, void* out_user_data, void* user_data);
 
-def DBusSubtreeEnumerateFunc = fn ZString(DBusConnection* connection, ZString sender, ZString object_path, void* user_data);
+alias DBusSubtreeEnumerateFunc = fn ZString(DBusConnection* connection, ZString sender, ZString object_path, void* user_data);
 
-def DBusSubtreeIntrospectFunc = fn DBusInterfaceInfo*(DBusConnection* connection, ZString sender, ZString object_path, ZString node, void* user_data);
+alias DBusSubtreeIntrospectFunc = fn DBusInterfaceInfo*(DBusConnection* connection, ZString sender, ZString object_path, ZString node, void* user_data);
 
-def DatagramBasedSourceFunc = fn bool(DatagramBased* datagram_based, glib::IOCondition condition, void* data);
+alias DatagramBasedSourceFunc = fn bool(DatagramBased* datagram_based, glib::IOCondition condition, void* data);
 
-def DesktopAppLaunchCallback = fn void(DesktopAppInfo* appinfo, glib::Pid pid, void* user_data);
+alias DesktopAppLaunchCallback = fn void(DesktopAppInfo* appinfo, glib::Pid pid, void* user_data);
 
-def FileMeasureProgressCallback = fn void(bool reporting, ulong current_size, ulong num_dirs, ulong num_files, void* data);
+alias FileMeasureProgressCallback = fn void(bool reporting, ulong current_size, ulong num_dirs, ulong num_files, void* data);
 
-def FileProgressCallback = fn void(long current_num_bytes, long total_num_bytes, void* data);
+alias FileProgressCallback = fn void(long current_num_bytes, long total_num_bytes, void* data);
 
-def FileReadMoreCallback = fn bool(ZString file_contents, long file_size, void* callback_data);
+alias FileReadMoreCallback = fn bool(ZString file_contents, long file_size, void* callback_data);
 
-def IOSchedulerJobFunc = fn bool(IOSchedulerJob* job, Cancellable* cancellable, void* data);
+alias IOSchedulerJobFunc = fn bool(IOSchedulerJob* job, Cancellable* cancellable, void* data);
 
-def PollableSourceFunc = fn bool(gobject::Object* pollable_stream, void* data);
+alias PollableSourceFunc = fn bool(gobject::Object* pollable_stream, void* data);
 
-def ReallocFunc = fn void*(void* data, usz size);
+alias ReallocFunc = fn void*(void* data, usz size);
 
-def SettingsBindGetMapping = fn bool(gobject::Value* value, glib::Variant* variant, void* user_data);
+alias SettingsBindGetMapping = fn bool(gobject::Value* value, glib::Variant* variant, void* user_data);
 
-def SettingsBindSetMapping = fn glib::Variant*(gobject::Value* value, glib::VariantType* expected_type, void* user_data);
+alias SettingsBindSetMapping = fn glib::Variant*(gobject::Value* value, glib::VariantType* expected_type, void* user_data);
 
-def SettingsGetMapping = fn bool(glib::Variant* value, void* result, void* user_data);
+alias SettingsGetMapping = fn bool(glib::Variant* value, void* result, void* user_data);
 
-def SimpleAsyncThreadFunc = fn void(SimpleAsyncResult* res, gobject::Object* object, Cancellable* cancellable);
+alias SimpleAsyncThreadFunc = fn void(SimpleAsyncResult* res, gobject::Object* object, Cancellable* cancellable);
 
-def SocketSourceFunc = fn bool(Socket* socket, glib::IOCondition condition, void* data);
+alias SocketSourceFunc = fn bool(Socket* socket, glib::IOCondition condition, void* data);
 
-def TaskThreadFunc = fn void(Task* task, gobject::Object* source_object, void* task_data, Cancellable* cancellable);
+alias TaskThreadFunc = fn void(Task* task, gobject::Object* source_object, void* task_data, Cancellable* cancellable);
 
-def VfsFileLookupFunc = fn File*(Vfs* vfs, ZString identifier, void* user_data);
+alias VfsFileLookupFunc = fn File*(Vfs* vfs, ZString identifier, void* user_data);
 
 
 <* Maps to GAppInfoMonitor *>
-distinct AppInfoMonitor = void*;
+typedef AppInfoMonitor = void*;
 
 // Class to parent cast.
 fn gobject::Object* AppInfoMonitor.as_gobject_Object(&self) => (gobject::Object*)(self);
@@ -1146,7 +1146,7 @@ extern fn AppInfoMonitor* app_info_monitor_get() @extern("g_app_info_monitor_get
 
 
 <* Maps to GAppLaunchContext *>
-distinct AppLaunchContext = void*;
+typedef AppLaunchContext = void*;
 
 // Class to parent cast.
 fn gobject::Object* AppLaunchContext.as_gobject_Object(&self) => (gobject::Object*)(self);
@@ -1184,7 +1184,7 @@ extern fn void AppLaunchContext.unsetenv(&self, ZString variable) @extern("g_app
 
 
 <* Maps to GApplication *>
-distinct Application = void*;
+typedef Application = void*;
 
 // Class to parent cast.
 fn gobject::Object* Application.as_gobject_Object(&self) => (gobject::Object*)(self);
@@ -1318,7 +1318,7 @@ extern fn bool application_id_is_valid(ZString application_id) @extern("g_applic
 
 
 <* Maps to GApplicationCommandLine *>
-distinct ApplicationCommandLine = void*;
+typedef ApplicationCommandLine = void*;
 
 // Class to parent cast.
 fn gobject::Object* ApplicationCommandLine.as_gobject_Object(&self) => (gobject::Object*)(self);
@@ -1383,7 +1383,7 @@ extern fn void ApplicationCommandLine.set_exit_status(&self, int exit_status) @e
 
 
 <* Maps to GBufferedInputStream *>
-distinct BufferedInputStream = void*;
+typedef BufferedInputStream = void*;
 
 // Class to parent cast.
 fn FilterInputStream* BufferedInputStream.as_FilterInputStream(&self) => (FilterInputStream*)(self);
@@ -1433,7 +1433,7 @@ extern fn void BufferedInputStream.set_buffer_size(&self, usz size) @extern("g_b
 
 
 <* Maps to GBufferedOutputStream *>
-distinct BufferedOutputStream = void*;
+typedef BufferedOutputStream = void*;
 
 // Class to parent cast.
 fn FilterOutputStream* BufferedOutputStream.as_FilterOutputStream(&self) => (FilterOutputStream*)(self);
@@ -1468,7 +1468,7 @@ extern fn void BufferedOutputStream.set_buffer_size(&self, usz size) @extern("g_
 
 
 <* Maps to GBytesIcon *>
-distinct BytesIcon = void*;
+typedef BytesIcon = void*;
 
 // Class to parent cast.
 fn gobject::Object* BytesIcon.as_gobject_Object(&self) => (gobject::Object*)(self);
@@ -1491,7 +1491,7 @@ extern fn glib::Bytes* BytesIcon.get_bytes(&self, ) @extern("g_bytes_icon_get_by
 
 
 <* Maps to GCancellable *>
-distinct Cancellable = void*;
+typedef Cancellable = void*;
 
 // Class to parent cast.
 fn gobject::Object* Cancellable.as_gobject_Object(&self) => (gobject::Object*)(self);
@@ -1550,7 +1550,7 @@ extern fn Cancellable* cancellable_get_current() @extern("g_cancellable_get_curr
 
 
 <* Maps to GCharsetConverter *>
-distinct CharsetConverter = void*;
+typedef CharsetConverter = void*;
 
 // Class to parent cast.
 fn gobject::Object* CharsetConverter.as_gobject_Object(&self) => (gobject::Object*)(self);
@@ -1579,7 +1579,7 @@ extern fn void CharsetConverter.set_use_fallback(&self, bool use_fallback) @exte
 
 
 <* Maps to GConverterInputStream *>
-distinct ConverterInputStream = void*;
+typedef ConverterInputStream = void*;
 
 // Class to parent cast.
 fn FilterInputStream* ConverterInputStream.as_FilterInputStream(&self) => (FilterInputStream*)(self);
@@ -1602,7 +1602,7 @@ extern fn Converter* ConverterInputStream.get_converter(&self, ) @extern("g_conv
 
 
 <* Maps to GConverterOutputStream *>
-distinct ConverterOutputStream = void*;
+typedef ConverterOutputStream = void*;
 
 // Class to parent cast.
 fn FilterOutputStream* ConverterOutputStream.as_FilterOutputStream(&self) => (FilterOutputStream*)(self);
@@ -1625,7 +1625,7 @@ extern fn Converter* ConverterOutputStream.get_converter(&self, ) @extern("g_con
 
 
 <* Maps to GCredentials *>
-distinct Credentials = void*;
+typedef Credentials = void*;
 
 // Class to parent cast.
 fn gobject::Object* Credentials.as_gobject_Object(&self) => (gobject::Object*)(self);
@@ -1666,7 +1666,7 @@ extern fn ZString* Credentials.to_string(&self, ) @extern("g_credentials_to_stri
 
 
 <* Maps to GDBusActionGroup *>
-distinct DBusActionGroup = void*;
+typedef DBusActionGroup = void*;
 
 // Class to parent cast.
 fn gobject::Object* DBusActionGroup.as_gobject_Object(&self) => (gobject::Object*)(self);
@@ -1686,7 +1686,7 @@ extern fn DBusActionGroup* d_bus_action_group_get(DBusConnection* connection, ZS
 
 
 <* Maps to GDBusAuthObserver *>
-distinct DBusAuthObserver = void*;
+typedef DBusAuthObserver = void*;
 
 // Class to parent cast.
 fn gobject::Object* DBusAuthObserver.as_gobject_Object(&self) => (gobject::Object*)(self);
@@ -1712,7 +1712,7 @@ extern fn bool DBusAuthObserver.authorize_authenticated_peer(&self, IOStream* st
 
 
 <* Maps to GDBusConnection *>
-distinct DBusConnection = void*;
+typedef DBusConnection = void*;
 
 // Class to parent cast.
 fn gobject::Object* DBusConnection.as_gobject_Object(&self) => (gobject::Object*)(self);
@@ -1870,7 +1870,7 @@ extern fn void d_bus_connection_new_for_address(ZString address, DBusConnectionF
 
 
 <* Maps to GDBusInterfaceSkeleton *>
-distinct DBusInterfaceSkeleton = void*;
+typedef DBusInterfaceSkeleton = void*;
 
 // Class to parent cast.
 fn gobject::Object* DBusInterfaceSkeleton.as_gobject_Object(&self) => (gobject::Object*)(self);
@@ -1926,7 +1926,7 @@ extern fn void DBusInterfaceSkeleton.unexport_from_connection(&self, DBusConnect
 
 
 <* Maps to GDBusMenuModel *>
-distinct DBusMenuModel = void*;
+typedef DBusMenuModel = void*;
 
 // Class to parent cast.
 fn MenuModel* DBusMenuModel.as_MenuModel(&self) => (MenuModel*)(self);
@@ -1946,7 +1946,7 @@ extern fn DBusMenuModel* d_bus_menu_model_get(DBusConnection* connection, ZStrin
 
 
 <* Maps to GDBusMessage *>
-distinct DBusMessage = void*;
+typedef DBusMessage = void*;
 
 // Class to parent cast.
 fn gobject::Object* DBusMessage.as_gobject_Object(&self) => (gobject::Object*)(self);
@@ -2113,7 +2113,7 @@ extern fn isz d_bus_message_bytes_needed(char blob, usz blob_len) @extern("g_dbu
 
 
 <* Maps to GDBusMethodInvocation *>
-distinct DBusMethodInvocation = void*;
+typedef DBusMethodInvocation = void*;
 
 // Class to parent cast.
 fn gobject::Object* DBusMethodInvocation.as_gobject_Object(&self) => (gobject::Object*)(self);
@@ -2184,7 +2184,7 @@ extern fn void DBusMethodInvocation.take_error(&self, glib::Error* error) @exter
 
 
 <* Maps to GDBusObjectManagerClient *>
-distinct DBusObjectManagerClient = void*;
+typedef DBusObjectManagerClient = void*;
 
 // Class to parent cast.
 fn gobject::Object* DBusObjectManagerClient.as_gobject_Object(&self) => (gobject::Object*)(self);
@@ -2231,7 +2231,7 @@ extern fn void d_bus_object_manager_client_new_for_bus(BusType bus_type, DBusObj
 
 
 <* Maps to GDBusObjectManagerServer *>
-distinct DBusObjectManagerServer = void*;
+typedef DBusObjectManagerServer = void*;
 
 // Class to parent cast.
 fn gobject::Object* DBusObjectManagerServer.as_gobject_Object(&self) => (gobject::Object*)(self);
@@ -2269,7 +2269,7 @@ extern fn bool DBusObjectManagerServer.unexport(&self, ZString object_path) @ext
 
 
 <* Maps to GDBusObjectProxy *>
-distinct DBusObjectProxy = void*;
+typedef DBusObjectProxy = void*;
 
 // Class to parent cast.
 fn gobject::Object* DBusObjectProxy.as_gobject_Object(&self) => (gobject::Object*)(self);
@@ -2292,7 +2292,7 @@ extern fn DBusConnection* DBusObjectProxy.get_connection(&self, ) @extern("g_dbu
 
 
 <* Maps to GDBusObjectSkeleton *>
-distinct DBusObjectSkeleton = void*;
+typedef DBusObjectSkeleton = void*;
 
 // Class to parent cast.
 fn gobject::Object* DBusObjectSkeleton.as_gobject_Object(&self) => (gobject::Object*)(self);
@@ -2327,7 +2327,7 @@ extern fn void DBusObjectSkeleton.set_object_path(&self, ZString object_path) @e
 
 
 <* Maps to GDBusProxy *>
-distinct DBusProxy = void*;
+typedef DBusProxy = void*;
 
 // Class to parent cast.
 fn gobject::Object* DBusProxy.as_gobject_Object(&self) => (gobject::Object*)(self);
@@ -2419,7 +2419,7 @@ extern fn void d_bus_proxy_new_for_bus(BusType bus_type, DBusProxyFlags flags, D
 
 
 <* Maps to GDBusServer *>
-distinct DBusServer = void*;
+typedef DBusServer = void*;
 
 // Class to parent cast.
 fn gobject::Object* DBusServer.as_gobject_Object(&self) => (gobject::Object*)(self);
@@ -2457,7 +2457,7 @@ extern fn void DBusServer.stop(&self, ) @extern("g_dbus_server_stop");
 
 
 <* Maps to GDataInputStream *>
-distinct DataInputStream = void*;
+typedef DataInputStream = void*;
 
 // Class to parent cast.
 fn BufferedInputStream* DataInputStream.as_BufferedInputStream(&self) => (BufferedInputStream*)(self);
@@ -2543,7 +2543,7 @@ extern fn void DataInputStream.set_newline_type(&self, DataStreamNewlineType typ
 
 
 <* Maps to GDataOutputStream *>
-distinct DataOutputStream = void*;
+typedef DataOutputStream = void*;
 
 // Class to parent cast.
 fn FilterOutputStream* DataOutputStream.as_FilterOutputStream(&self) => (FilterOutputStream*)(self);
@@ -2593,7 +2593,7 @@ extern fn void DataOutputStream.set_byte_order(&self, DataStreamByteOrder order)
 
 
 <* Maps to GDebugControllerDBus *>
-distinct DebugControllerDBus = void*;
+typedef DebugControllerDBus = void*;
 
 // Class to parent cast.
 fn gobject::Object* DebugControllerDBus.as_gobject_Object(&self) => (gobject::Object*)(self);
@@ -2616,7 +2616,7 @@ extern fn void DebugControllerDBus.stop(&self, ) @extern("g_debug_controller_dbu
 
 
 <* Maps to GDesktopAppInfo *>
-distinct DesktopAppInfo = void*;
+typedef DesktopAppInfo = void*;
 
 // Class to parent cast.
 fn gobject::Object* DesktopAppInfo.as_gobject_Object(&self) => (gobject::Object*)(self);
@@ -2705,7 +2705,7 @@ extern fn void desktop_app_info_set_desktop_env(ZString desktop_env) @extern("g_
 
 
 <* Maps to GEmblem *>
-distinct Emblem = void*;
+typedef Emblem = void*;
 
 // Class to parent cast.
 fn gobject::Object* Emblem.as_gobject_Object(&self) => (gobject::Object*)(self);
@@ -2734,7 +2734,7 @@ extern fn EmblemOrigin Emblem.get_origin(&self, ) @extern("g_emblem_get_origin")
 
 
 <* Maps to GEmblemedIcon *>
-distinct EmblemedIcon = void*;
+typedef EmblemedIcon = void*;
 
 // Class to parent cast.
 fn gobject::Object* EmblemedIcon.as_gobject_Object(&self) => (gobject::Object*)(self);
@@ -2766,7 +2766,7 @@ extern fn Icon* EmblemedIcon.get_icon(&self, ) @extern("g_emblemed_icon_get_icon
 
 
 <* Maps to GFileEnumerator *>
-distinct FileEnumerator = void*;
+typedef FileEnumerator = void*;
 
 // Class to parent cast.
 fn gobject::Object* FileEnumerator.as_gobject_Object(&self) => (gobject::Object*)(self);
@@ -2819,7 +2819,7 @@ extern fn void FileEnumerator.set_pending(&self, bool pending) @extern("g_file_e
 
 
 <* Maps to GFileIOStream *>
-distinct FileIOStream = void*;
+typedef FileIOStream = void*;
 
 // Class to parent cast.
 fn IOStream* FileIOStream.as_IOStream(&self) => (IOStream*)(self);
@@ -2848,7 +2848,7 @@ extern fn FileInfo* FileIOStream.query_info_finish(&self, AsyncResult* result) @
 
 
 <* Maps to GFileIcon *>
-distinct FileIcon = void*;
+typedef FileIcon = void*;
 
 // Class to parent cast.
 fn gobject::Object* FileIcon.as_gobject_Object(&self) => (gobject::Object*)(self);
@@ -2871,7 +2871,7 @@ extern fn File* FileIcon.get_file(&self, ) @extern("g_file_icon_get_file");
 
 
 <* Maps to GFileInfo *>
-distinct FileInfo = void*;
+typedef FileInfo = void*;
 
 // Class to parent cast.
 fn gobject::Object* FileInfo.as_gobject_Object(&self) => (gobject::Object*)(self);
@@ -3101,7 +3101,7 @@ extern fn void FileInfo.unset_attribute_mask(&self, ) @extern("g_file_info_unset
 
 
 <* Maps to GFileInputStream *>
-distinct FileInputStream = void*;
+typedef FileInputStream = void*;
 
 // Class to parent cast.
 fn InputStream* FileInputStream.as_InputStream(&self) => (InputStream*)(self);
@@ -3127,7 +3127,7 @@ extern fn FileInfo* FileInputStream.query_info_finish(&self, AsyncResult* result
 
 
 <* Maps to GFileMonitor *>
-distinct FileMonitor = void*;
+typedef FileMonitor = void*;
 
 // Class to parent cast.
 fn gobject::Object* FileMonitor.as_gobject_Object(&self) => (gobject::Object*)(self);
@@ -3156,7 +3156,7 @@ extern fn void FileMonitor.set_rate_limit(&self, int limit_msecs) @extern("g_fil
 
 
 <* Maps to GFileOutputStream *>
-distinct FileOutputStream = void*;
+typedef FileOutputStream = void*;
 
 // Class to parent cast.
 fn OutputStream* FileOutputStream.as_OutputStream(&self) => (OutputStream*)(self);
@@ -3185,7 +3185,7 @@ extern fn FileInfo* FileOutputStream.query_info_finish(&self, AsyncResult* resul
 
 
 <* Maps to GFilenameCompleter *>
-distinct FilenameCompleter = void*;
+typedef FilenameCompleter = void*;
 
 // Class to parent cast.
 fn gobject::Object* FilenameCompleter.as_gobject_Object(&self) => (gobject::Object*)(self);
@@ -3214,7 +3214,7 @@ extern fn void FilenameCompleter.set_dirs_only(&self, bool dirs_only) @extern("g
 
 
 <* Maps to GFilterInputStream *>
-distinct FilterInputStream = void*;
+typedef FilterInputStream = void*;
 
 // Class to parent cast.
 fn InputStream* FilterInputStream.as_InputStream(&self) => (InputStream*)(self);
@@ -3240,7 +3240,7 @@ extern fn void FilterInputStream.set_close_base_stream(&self, bool close_base) @
 
 
 <* Maps to GFilterOutputStream *>
-distinct FilterOutputStream = void*;
+typedef FilterOutputStream = void*;
 
 // Class to parent cast.
 fn OutputStream* FilterOutputStream.as_OutputStream(&self) => (OutputStream*)(self);
@@ -3266,7 +3266,7 @@ extern fn void FilterOutputStream.set_close_base_stream(&self, bool close_base) 
 
 
 <* Maps to GIOModule *>
-distinct IOModule = void*;
+typedef IOModule = void*;
 
 // Class to parent cast.
 fn gobject::TypeModule* IOModule.as_gobject_TypeModule(&self) => (gobject::TypeModule*)(self);
@@ -3295,7 +3295,7 @@ extern fn ZString io_module_query() @extern("g_io_module_query");
 
 
 <* Maps to GIOStream *>
-distinct IOStream = void*;
+typedef IOStream = void*;
 
 // Class to parent cast.
 fn gobject::Object* IOStream.as_gobject_Object(&self) => (gobject::Object*)(self);
@@ -3345,7 +3345,7 @@ extern fn bool io_stream_splice_finish(AsyncResult* result) @extern("g_io_stream
 
 
 <* Maps to GInetAddress *>
-distinct InetAddress = void*;
+typedef InetAddress = void*;
 
 // Class to parent cast.
 fn gobject::Object* InetAddress.as_gobject_Object(&self) => (gobject::Object*)(self);
@@ -3419,7 +3419,7 @@ extern fn ZString* InetAddress.to_string(&self, ) @extern("g_inet_address_to_str
 
 
 <* Maps to GInetAddressMask *>
-distinct InetAddressMask = void*;
+typedef InetAddressMask = void*;
 
 // Class to parent cast.
 fn gobject::Object* InetAddressMask.as_gobject_Object(&self) => (gobject::Object*)(self);
@@ -3460,7 +3460,7 @@ extern fn ZString* InetAddressMask.to_string(&self, ) @extern("g_inet_address_ma
 
 
 <* Maps to GInetSocketAddress *>
-distinct InetSocketAddress = void*;
+typedef InetSocketAddress = void*;
 
 // Class to parent cast.
 fn SocketAddress* InetSocketAddress.as_SocketAddress(&self) => (SocketAddress*)(self);
@@ -3495,7 +3495,7 @@ extern fn uint InetSocketAddress.get_scope_id(&self, ) @extern("g_inet_socket_ad
 
 
 <* Maps to GInputStream *>
-distinct InputStream = void*;
+typedef InputStream = void*;
 
 // Class to parent cast.
 fn gobject::Object* InputStream.as_gobject_Object(&self) => (gobject::Object*)(self);
@@ -3569,7 +3569,7 @@ extern fn isz InputStream.skip_finish(&self, AsyncResult* result) @extern("g_inp
 
 
 <* Maps to GListStore *>
-distinct ListStore = void*;
+typedef ListStore = void*;
 
 // Class to parent cast.
 fn gobject::Object* ListStore.as_gobject_Object(&self) => (gobject::Object*)(self);
@@ -3619,7 +3619,7 @@ extern fn void ListStore.splice(&self, uint position, uint n_removals, gobject::
 
 
 <* Maps to GMemoryInputStream *>
-distinct MemoryInputStream = void*;
+typedef MemoryInputStream = void*;
 
 // Class to parent cast.
 fn InputStream* MemoryInputStream.as_InputStream(&self) => (InputStream*)(self);
@@ -3651,7 +3651,7 @@ extern fn void MemoryInputStream.add_data(&self, char data, isz len, glib::Destr
 
 
 <* Maps to GMemoryOutputStream *>
-distinct MemoryOutputStream = void*;
+typedef MemoryOutputStream = void*;
 
 // Class to parent cast.
 fn OutputStream* MemoryOutputStream.as_OutputStream(&self) => (OutputStream*)(self);
@@ -3689,7 +3689,7 @@ extern fn void* MemoryOutputStream.steal_data(&self, ) @extern("g_memory_output_
 
 
 <* Maps to GMenu *>
-distinct Menu = void*;
+typedef Menu = void*;
 
 // Class to parent cast.
 fn MenuModel* Menu.as_MenuModel(&self) => (MenuModel*)(self);
@@ -3754,7 +3754,7 @@ extern fn void Menu.remove_all(&self, ) @extern("g_menu_remove_all");
 
 
 <* Maps to GMenuAttributeIter *>
-distinct MenuAttributeIter = void*;
+typedef MenuAttributeIter = void*;
 
 // Class to parent cast.
 fn gobject::Object* MenuAttributeIter.as_gobject_Object(&self) => (gobject::Object*)(self);
@@ -3783,7 +3783,7 @@ extern fn bool MenuAttributeIter.next(&self, ) @extern("g_menu_attribute_iter_ne
 
 
 <* Maps to GMenuItem *>
-distinct MenuItem = void*;
+typedef MenuItem = void*;
 
 // Class to parent cast.
 fn gobject::Object* MenuItem.as_gobject_Object(&self) => (gobject::Object*)(self);
@@ -3851,7 +3851,7 @@ extern fn void MenuItem.set_submenu(&self, MenuModel* submenu) @extern("g_menu_i
 
 
 <* Maps to GMenuLinkIter *>
-distinct MenuLinkIter = void*;
+typedef MenuLinkIter = void*;
 
 // Class to parent cast.
 fn gobject::Object* MenuLinkIter.as_gobject_Object(&self) => (gobject::Object*)(self);
@@ -3880,7 +3880,7 @@ extern fn bool MenuLinkIter.next(&self, ) @extern("g_menu_link_iter_next");
 
 
 <* Maps to GMenuModel *>
-distinct MenuModel = void*;
+typedef MenuModel = void*;
 
 // Class to parent cast.
 fn gobject::Object* MenuModel.as_gobject_Object(&self) => (gobject::Object*)(self);
@@ -3921,7 +3921,7 @@ extern fn MenuLinkIter* MenuModel.iterate_item_links(&self, int item_index) @ext
 
 
 <* Maps to GMountOperation *>
-distinct MountOperation = void*;
+typedef MountOperation = void*;
 
 // Class to parent cast.
 fn gobject::Object* MountOperation.as_gobject_Object(&self) => (gobject::Object*)(self);
@@ -3998,7 +3998,7 @@ extern fn void MountOperation.set_username(&self, ZString username) @extern("g_m
 
 
 <* Maps to GNativeSocketAddress *>
-distinct NativeSocketAddress = void*;
+typedef NativeSocketAddress = void*;
 
 // Class to parent cast.
 fn SocketAddress* NativeSocketAddress.as_SocketAddress(&self) => (SocketAddress*)(self);
@@ -4018,7 +4018,7 @@ extern fn SocketAddress* native_socket_address_new(void* native, usz len) @exter
 
 
 <* Maps to GNativeVolumeMonitor *>
-distinct NativeVolumeMonitor = void*;
+typedef NativeVolumeMonitor = void*;
 
 // Class to parent cast.
 fn VolumeMonitor* NativeVolumeMonitor.as_VolumeMonitor(&self) => (VolumeMonitor*)(self);
@@ -4035,7 +4035,7 @@ fn VolumeMonitor* NativeVolumeMonitor.as_VolumeMonitor(&self) => (VolumeMonitor*
 
 
 <* Maps to GNetworkAddress *>
-distinct NetworkAddress = void*;
+typedef NetworkAddress = void*;
 
 // Class to parent cast.
 fn gobject::Object* NetworkAddress.as_gobject_Object(&self) => (gobject::Object*)(self);
@@ -4073,7 +4073,7 @@ extern fn NetworkAddress* network_address_parse_uri(ZString uri, ushort default_
 
 
 <* Maps to GNetworkService *>
-distinct NetworkService = void*;
+typedef NetworkService = void*;
 
 // Class to parent cast.
 fn gobject::Object* NetworkService.as_gobject_Object(&self) => (gobject::Object*)(self);
@@ -4108,7 +4108,7 @@ extern fn void NetworkService.set_scheme(&self, ZString scheme) @extern("g_netwo
 
 
 <* Maps to GNotification *>
-distinct Notification = void*;
+typedef Notification = void*;
 
 // Class to parent cast.
 fn gobject::Object* Notification.as_gobject_Object(&self) => (gobject::Object*)(self);
@@ -4164,7 +4164,7 @@ extern fn void Notification.set_urgent(&self, bool urgent) @extern("g_notificati
 
 
 <* Maps to GOutputStream *>
-distinct OutputStream = void*;
+typedef OutputStream = void*;
 
 // Class to parent cast.
 fn gobject::Object* OutputStream.as_gobject_Object(&self) => (gobject::Object*)(self);
@@ -4274,7 +4274,7 @@ extern fn bool OutputStream.writev_finish(&self, AsyncResult* result, usz* bytes
 
 
 <* Maps to GPermission *>
-distinct Permission = void*;
+typedef Permission = void*;
 
 // Class to parent cast.
 fn gobject::Object* Permission.as_gobject_Object(&self) => (gobject::Object*)(self);
@@ -4321,7 +4321,7 @@ extern fn bool Permission.release_finish(&self, AsyncResult* result) @extern("g_
 
 
 <* Maps to GPropertyAction *>
-distinct PropertyAction = void*;
+typedef PropertyAction = void*;
 
 // Class to parent cast.
 fn gobject::Object* PropertyAction.as_gobject_Object(&self) => (gobject::Object*)(self);
@@ -4341,7 +4341,7 @@ extern fn PropertyAction* property_action_new(ZString name, gobject::Object* obj
 
 
 <* Maps to GProxyAddress *>
-distinct ProxyAddress = void*;
+typedef ProxyAddress = void*;
 
 // Class to parent cast.
 fn InetSocketAddress* ProxyAddress.as_InetSocketAddress(&self) => (InetSocketAddress*)(self);
@@ -4382,7 +4382,7 @@ extern fn ZString ProxyAddress.get_username(&self, ) @extern("g_proxy_address_ge
 
 
 <* Maps to GProxyAddressEnumerator *>
-distinct ProxyAddressEnumerator = void*;
+typedef ProxyAddressEnumerator = void*;
 
 // Class to parent cast.
 fn SocketAddressEnumerator* ProxyAddressEnumerator.as_SocketAddressEnumerator(&self) => (SocketAddressEnumerator*)(self);
@@ -4399,7 +4399,7 @@ fn SocketAddressEnumerator* ProxyAddressEnumerator.as_SocketAddressEnumerator(&s
 
 
 <* Maps to GResolver *>
-distinct Resolver = void*;
+typedef Resolver = void*;
 
 // Class to parent cast.
 fn gobject::Object* Resolver.as_gobject_Object(&self) => (gobject::Object*)(self);
@@ -4479,7 +4479,7 @@ extern fn Resolver* resolver_get_default() @extern("g_resolver_get_default");
 
 
 <* Maps to GSettings *>
-distinct Settings = void*;
+typedef Settings = void*;
 
 // Class to parent cast.
 fn gobject::Object* Settings.as_gobject_Object(&self) => (gobject::Object*)(self);
@@ -4652,7 +4652,7 @@ extern fn void settings_unbind(gobject::Object* object, ZString property) @exter
 
 
 <* Maps to GSettingsBackend *>
-distinct SettingsBackend = void*;
+typedef SettingsBackend = void*;
 
 // Class to parent cast.
 fn gobject::Object* SettingsBackend.as_gobject_Object(&self) => (gobject::Object*)(self);
@@ -4693,7 +4693,7 @@ extern fn SettingsBackend* settings_backend_get_default() @extern("g_settings_ba
 
 
 <* Maps to GSimpleAction *>
-distinct SimpleAction = void*;
+typedef SimpleAction = void*;
 
 // Class to parent cast.
 fn gobject::Object* SimpleAction.as_gobject_Object(&self) => (gobject::Object*)(self);
@@ -4725,7 +4725,7 @@ extern fn void SimpleAction.set_state_hint(&self, glib::Variant* state_hint) @ex
 
 
 <* Maps to GSimpleActionGroup *>
-distinct SimpleActionGroup = void*;
+typedef SimpleActionGroup = void*;
 
 // Class to parent cast.
 fn gobject::Object* SimpleActionGroup.as_gobject_Object(&self) => (gobject::Object*)(self);
@@ -4757,7 +4757,7 @@ extern fn void SimpleActionGroup.remove(&self, ZString action_name) @extern("g_s
 
 
 <* Maps to GSimpleAsyncResult *>
-distinct SimpleAsyncResult = void*;
+typedef SimpleAsyncResult = void*;
 
 // Class to parent cast.
 fn gobject::Object* SimpleAsyncResult.as_gobject_Object(&self) => (gobject::Object*)(self);
@@ -4840,7 +4840,7 @@ extern fn bool simple_async_result_is_valid(AsyncResult* result, gobject::Object
 
 
 <* Maps to GSimpleIOStream *>
-distinct SimpleIOStream = void*;
+typedef SimpleIOStream = void*;
 
 // Class to parent cast.
 fn IOStream* SimpleIOStream.as_IOStream(&self) => (IOStream*)(self);
@@ -4860,7 +4860,7 @@ extern fn IOStream* simple_io_stream_new(InputStream* input_stream, OutputStream
 
 
 <* Maps to GSimplePermission *>
-distinct SimplePermission = void*;
+typedef SimplePermission = void*;
 
 // Class to parent cast.
 fn Permission* SimplePermission.as_Permission(&self) => (Permission*)(self);
@@ -4880,7 +4880,7 @@ extern fn Permission* simple_permission_new(bool allowed) @extern("g_simple_perm
 
 
 <* Maps to GSimpleProxyResolver *>
-distinct SimpleProxyResolver = void*;
+typedef SimpleProxyResolver = void*;
 
 // Class to parent cast.
 fn gobject::Object* SimpleProxyResolver.as_gobject_Object(&self) => (gobject::Object*)(self);
@@ -4909,7 +4909,7 @@ extern fn ProxyResolver* simple_proxy_resolver_new(ZString default_proxy, ZStrin
 
 
 <* Maps to GSocket *>
-distinct Socket = void*;
+typedef Socket = void*;
 
 // Class to parent cast.
 fn gobject::Object* Socket.as_gobject_Object(&self) => (gobject::Object*)(self);
@@ -5106,7 +5106,7 @@ extern fn bool Socket.speaks_ipv4(&self, ) @extern("g_socket_speaks_ipv4");
 
 
 <* Maps to GSocketAddress *>
-distinct SocketAddress = void*;
+typedef SocketAddress = void*;
 
 // Class to parent cast.
 fn gobject::Object* SocketAddress.as_gobject_Object(&self) => (gobject::Object*)(self);
@@ -5135,7 +5135,7 @@ extern fn bool SocketAddress.to_native(&self, void* dest, usz destlen) @extern("
 
 
 <* Maps to GSocketAddressEnumerator *>
-distinct SocketAddressEnumerator = void*;
+typedef SocketAddressEnumerator = void*;
 
 // Class to parent cast.
 fn gobject::Object* SocketAddressEnumerator.as_gobject_Object(&self) => (gobject::Object*)(self);
@@ -5161,7 +5161,7 @@ extern fn SocketAddress* SocketAddressEnumerator.next_finish(&self, AsyncResult*
 
 
 <* Maps to GSocketClient *>
-distinct SocketClient = void*;
+typedef SocketClient = void*;
 
 // Class to parent cast.
 fn gobject::Object* SocketClient.as_gobject_Object(&self) => (gobject::Object*)(self);
@@ -5274,7 +5274,7 @@ extern fn void SocketClient.set_tls_validation_flags(&self, TlsCertificateFlags 
 
 
 <* Maps to GSocketConnection *>
-distinct SocketConnection = void*;
+typedef SocketConnection = void*;
 
 // Class to parent cast.
 fn IOStream* SocketConnection.as_IOStream(&self) => (IOStream*)(self);
@@ -5318,7 +5318,7 @@ extern fn void socket_connection_factory_register_type(usz g_type, SocketFamily 
 
 
 <* Maps to GSocketControlMessage *>
-distinct SocketControlMessage = void*;
+typedef SocketControlMessage = void*;
 
 // Class to parent cast.
 fn gobject::Object* SocketControlMessage.as_gobject_Object(&self) => (gobject::Object*)(self);
@@ -5350,7 +5350,7 @@ extern fn SocketControlMessage* socket_control_message_deserialize(int level, in
 
 
 <* Maps to GSocketListener *>
-distinct SocketListener = void*;
+typedef SocketListener = void*;
 
 // Class to parent cast.
 fn gobject::Object* SocketListener.as_gobject_Object(&self) => (gobject::Object*)(self);
@@ -5406,7 +5406,7 @@ extern fn void SocketListener.set_backlog(&self, int listen_backlog) @extern("g_
 
 
 <* Maps to GSocketService *>
-distinct SocketService = void*;
+typedef SocketService = void*;
 
 // Class to parent cast.
 fn SocketListener* SocketService.as_SocketListener(&self) => (SocketListener*)(self);
@@ -5435,7 +5435,7 @@ extern fn void SocketService.stop(&self, ) @extern("g_socket_service_stop");
 
 
 <* Maps to GSubprocess *>
-distinct Subprocess = void*;
+typedef Subprocess = void*;
 
 // Class to parent cast.
 fn gobject::Object* Subprocess.as_gobject_Object(&self) => (gobject::Object*)(self);
@@ -5530,7 +5530,7 @@ extern fn bool Subprocess.wait_finish(&self, AsyncResult* result) @extern("g_sub
 
 
 <* Maps to GSubprocessLauncher *>
-distinct SubprocessLauncher = void*;
+typedef SubprocessLauncher = void*;
 
 // Class to parent cast.
 fn gobject::Object* SubprocessLauncher.as_gobject_Object(&self) => (gobject::Object*)(self);
@@ -5601,7 +5601,7 @@ extern fn void SubprocessLauncher.unsetenv(&self, ZString variable) @extern("g_s
 
 
 <* Maps to GTask *>
-distinct Task = void*;
+typedef Task = void*;
 
 // Class to parent cast.
 fn gobject::Object* Task.as_gobject_Object(&self) => (gobject::Object*)(self);
@@ -5732,7 +5732,7 @@ extern fn void task_report_new_error(gobject::Object* source_object, AsyncReadyC
 
 
 <* Maps to GTcpConnection *>
-distinct TcpConnection = void*;
+typedef TcpConnection = void*;
 
 // Class to parent cast.
 fn SocketConnection* TcpConnection.as_SocketConnection(&self) => (SocketConnection*)(self);
@@ -5755,7 +5755,7 @@ extern fn void TcpConnection.set_graceful_disconnect(&self, bool graceful_discon
 
 
 <* Maps to GTcpWrapperConnection *>
-distinct TcpWrapperConnection = void*;
+typedef TcpWrapperConnection = void*;
 
 // Class to parent cast.
 fn TcpConnection* TcpWrapperConnection.as_TcpConnection(&self) => (TcpConnection*)(self);
@@ -5778,7 +5778,7 @@ extern fn IOStream* TcpWrapperConnection.get_base_io_stream(&self, ) @extern("g_
 
 
 <* Maps to GTestDBus *>
-distinct TestDBus = void*;
+typedef TestDBus = void*;
 
 // Class to parent cast.
 fn gobject::Object* TestDBus.as_gobject_Object(&self) => (gobject::Object*)(self);
@@ -5819,7 +5819,7 @@ extern fn void test_d_bus_unset() @extern("g_test_dbus_unset");
 
 
 <* Maps to GThemedIcon *>
-distinct ThemedIcon = void*;
+typedef ThemedIcon = void*;
 
 // Class to parent cast.
 fn gobject::Object* ThemedIcon.as_gobject_Object(&self) => (gobject::Object*)(self);
@@ -5854,7 +5854,7 @@ extern fn void ThemedIcon.prepend_name(&self, ZString iconname) @extern("g_theme
 
 
 <* Maps to GThreadedResolver *>
-distinct ThreadedResolver = void*;
+typedef ThreadedResolver = void*;
 
 // Class to parent cast.
 fn Resolver* ThreadedResolver.as_Resolver(&self) => (Resolver*)(self);
@@ -5871,7 +5871,7 @@ fn Resolver* ThreadedResolver.as_Resolver(&self) => (Resolver*)(self);
 
 
 <* Maps to GThreadedSocketService *>
-distinct ThreadedSocketService = void*;
+typedef ThreadedSocketService = void*;
 
 // Class to parent cast.
 fn SocketService* ThreadedSocketService.as_SocketService(&self) => (SocketService*)(self);
@@ -5891,7 +5891,7 @@ extern fn SocketService* threaded_socket_service_new(int max_threads) @extern("g
 
 
 <* Maps to GTlsCertificate *>
-distinct TlsCertificate = void*;
+typedef TlsCertificate = void*;
 
 // Class to parent cast.
 fn gobject::Object* TlsCertificate.as_gobject_Object(&self) => (gobject::Object*)(self);
@@ -5956,7 +5956,7 @@ extern fn glib::List* tls_certificate_list_new_from_file(ZString file) @extern("
 
 
 <* Maps to GTlsConnection *>
-distinct TlsConnection = void*;
+typedef TlsConnection = void*;
 
 // Class to parent cast.
 fn IOStream* TlsConnection.as_IOStream(&self) => (IOStream*)(self);
@@ -6042,7 +6042,7 @@ extern fn void TlsConnection.set_use_system_certdb(&self, bool use_system_certdb
 
 
 <* Maps to GTlsDatabase *>
-distinct TlsDatabase = void*;
+typedef TlsDatabase = void*;
 
 // Class to parent cast.
 fn gobject::Object* TlsDatabase.as_gobject_Object(&self) => (gobject::Object*)(self);
@@ -6098,7 +6098,7 @@ extern fn TlsCertificateFlags TlsDatabase.verify_chain_finish(&self, AsyncResult
 
 
 <* Maps to GTlsInteraction *>
-distinct TlsInteraction = void*;
+typedef TlsInteraction = void*;
 
 // Class to parent cast.
 fn gobject::Object* TlsInteraction.as_gobject_Object(&self) => (gobject::Object*)(self);
@@ -6139,7 +6139,7 @@ extern fn TlsInteractionResult TlsInteraction.request_certificate_finish(&self, 
 
 
 <* Maps to GTlsPassword *>
-distinct TlsPassword = void*;
+typedef TlsPassword = void*;
 
 // Class to parent cast.
 fn gobject::Object* TlsPassword.as_gobject_Object(&self) => (gobject::Object*)(self);
@@ -6186,7 +6186,7 @@ extern fn void TlsPassword.set_warning(&self, ZString warning) @extern("g_tls_pa
 
 
 <* Maps to GUnixConnection *>
-distinct UnixConnection = void*;
+typedef UnixConnection = void*;
 
 // Class to parent cast.
 fn SocketConnection* UnixConnection.as_SocketConnection(&self) => (SocketConnection*)(self);
@@ -6227,7 +6227,7 @@ extern fn bool UnixConnection.send_fd(&self, int fd, Cancellable* cancellable) @
 
 
 <* Maps to GUnixCredentialsMessage *>
-distinct UnixCredentialsMessage = void*;
+typedef UnixCredentialsMessage = void*;
 
 // Class to parent cast.
 fn SocketControlMessage* UnixCredentialsMessage.as_SocketControlMessage(&self) => (SocketControlMessage*)(self);
@@ -6256,7 +6256,7 @@ extern fn bool unix_credentials_message_is_supported() @extern("g_unix_credentia
 
 
 <* Maps to GUnixFDList *>
-distinct UnixFDList = void*;
+typedef UnixFDList = void*;
 
 // Class to parent cast.
 fn gobject::Object* UnixFDList.as_gobject_Object(&self) => (gobject::Object*)(self);
@@ -6294,7 +6294,7 @@ extern fn int UnixFDList.steal_fds(&self, int* length) @extern("g_unix_fd_list_s
 
 
 <* Maps to GUnixFDMessage *>
-distinct UnixFDMessage = void*;
+typedef UnixFDMessage = void*;
 
 // Class to parent cast.
 fn SocketControlMessage* UnixFDMessage.as_SocketControlMessage(&self) => (SocketControlMessage*)(self);
@@ -6326,7 +6326,7 @@ extern fn int UnixFDMessage.steal_fds(&self, int* length) @extern("g_unix_fd_mes
 
 
 <* Maps to GUnixInputStream *>
-distinct UnixInputStream = void*;
+typedef UnixInputStream = void*;
 
 // Class to parent cast.
 fn InputStream* UnixInputStream.as_InputStream(&self) => (InputStream*)(self);
@@ -6355,7 +6355,7 @@ extern fn void UnixInputStream.set_close_fd(&self, bool close_fd) @extern("g_uni
 
 
 <* Maps to GUnixMountMonitor *>
-distinct UnixMountMonitor = void*;
+typedef UnixMountMonitor = void*;
 
 // Class to parent cast.
 fn gobject::Object* UnixMountMonitor.as_gobject_Object(&self) => (gobject::Object*)(self);
@@ -6381,7 +6381,7 @@ extern fn UnixMountMonitor* unix_mount_monitor_get() @extern("g_unix_mount_monit
 
 
 <* Maps to GUnixOutputStream *>
-distinct UnixOutputStream = void*;
+typedef UnixOutputStream = void*;
 
 // Class to parent cast.
 fn OutputStream* UnixOutputStream.as_OutputStream(&self) => (OutputStream*)(self);
@@ -6410,7 +6410,7 @@ extern fn void UnixOutputStream.set_close_fd(&self, bool close_fd) @extern("g_un
 
 
 <* Maps to GUnixSocketAddress *>
-distinct UnixSocketAddress = void*;
+typedef UnixSocketAddress = void*;
 
 // Class to parent cast.
 fn SocketAddress* UnixSocketAddress.as_SocketAddress(&self) => (SocketAddress*)(self);
@@ -6451,7 +6451,7 @@ extern fn bool unix_socket_address_abstract_names_supported() @extern("g_unix_so
 
 
 <* Maps to GVfs *>
-distinct Vfs = void*;
+typedef Vfs = void*;
 
 // Class to parent cast.
 fn gobject::Object* Vfs.as_gobject_Object(&self) => (gobject::Object*)(self);
@@ -6495,7 +6495,7 @@ extern fn Vfs* vfs_get_local() @extern("g_vfs_get_local");
 
 
 <* Maps to GVolumeMonitor *>
-distinct VolumeMonitor = void*;
+typedef VolumeMonitor = void*;
 
 // Class to parent cast.
 fn gobject::Object* VolumeMonitor.as_gobject_Object(&self) => (gobject::Object*)(self);
@@ -6533,7 +6533,7 @@ extern fn VolumeMonitor* volume_monitor_get() @extern("g_volume_monitor_get");
 
 
 <* Maps to GZlibCompressor *>
-distinct ZlibCompressor = void*;
+typedef ZlibCompressor = void*;
 
 // Class to parent cast.
 fn gobject::Object* ZlibCompressor.as_gobject_Object(&self) => (gobject::Object*)(self);
@@ -6559,7 +6559,7 @@ extern fn void ZlibCompressor.set_file_info(&self, FileInfo* file_info) @extern(
 
 
 <* Maps to GZlibDecompressor *>
-distinct ZlibDecompressor = void*;
+typedef ZlibDecompressor = void*;
 
 // Class to parent cast.
 fn gobject::Object* ZlibDecompressor.as_gobject_Object(&self) => (gobject::Object*)(self);

@@ -1,11 +1,11 @@
 module cairo;
 
-distinct Context = void*;
-distinct Region = void*;
-distinct Surface = void*;
-distinct FontOptions = void*;
+typedef Context = void*;
+typedef Region = void*;
+typedef Surface = void*;
+typedef FontOptions = void*;
 
-distinct Content = uint;
+typedef Content = uint;
 
 const Content CONTENT_COLOR        = 0x1000;
 const Content CONTENT_ALPHA        = 0x2000;

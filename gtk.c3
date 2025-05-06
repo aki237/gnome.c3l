@@ -21,16 +21,16 @@ import gdk;
 import gsk;
 
 
-distinct ApplicationInhibitFlags = int;
+typedef ApplicationInhibitFlags = int;
 const ApplicationInhibitFlags APPLICATION_INHIBIT_FLAGS_IDLE = 8;
 const ApplicationInhibitFlags APPLICATION_INHIBIT_FLAGS_LOGOUT = 1;
 const ApplicationInhibitFlags APPLICATION_INHIBIT_FLAGS_SUSPEND = 4;
 const ApplicationInhibitFlags APPLICATION_INHIBIT_FLAGS_SWITCH = 2;
 
-distinct BuilderClosureFlags = int;
+typedef BuilderClosureFlags = int;
 const BuilderClosureFlags BUILDER_CLOSURE_FLAGS_SWAPPED = 1;
 
-distinct CellRendererState = int;
+typedef CellRendererState = int;
 const CellRendererState CELL_RENDERER_STATE_EXPANDABLE = 32;
 const CellRendererState CELL_RENDERER_STATE_EXPANDED = 64;
 const CellRendererState CELL_RENDERER_STATE_FOCUSED = 16;
@@ -39,7 +39,7 @@ const CellRendererState CELL_RENDERER_STATE_PRELIT = 2;
 const CellRendererState CELL_RENDERER_STATE_SELECTED = 1;
 const CellRendererState CELL_RENDERER_STATE_SORTED = 8;
 
-distinct DebugFlags = int;
+typedef DebugFlags = int;
 const DebugFlags DEBUG_FLAGS_A11Y = 131072;
 const DebugFlags DEBUG_FLAGS_ACTIONS = 4096;
 const DebugFlags DEBUG_FLAGS_BUILDER = 128;
@@ -61,12 +61,12 @@ const DebugFlags DEBUG_FLAGS_SNAPSHOT = 16384;
 const DebugFlags DEBUG_FLAGS_TEXT = 1;
 const DebugFlags DEBUG_FLAGS_TREE = 2;
 
-distinct DialogFlags = int;
+typedef DialogFlags = int;
 const DialogFlags DIALOG_FLAGS_DESTROY_WITH_PARENT = 2;
 const DialogFlags DIALOG_FLAGS_MODAL = 1;
 const DialogFlags DIALOG_FLAGS_USE_HEADER_BAR = 4;
 
-distinct EventControllerScrollFlags = int;
+typedef EventControllerScrollFlags = int;
 const EventControllerScrollFlags EVENT_CONTROLLER_SCROLL_FLAGS_BOTH_AXES = 3;
 const EventControllerScrollFlags EVENT_CONTROLLER_SCROLL_FLAGS_DISCRETE = 4;
 const EventControllerScrollFlags EVENT_CONTROLLER_SCROLL_FLAGS_HORIZONTAL = 2;
@@ -74,19 +74,19 @@ const EventControllerScrollFlags EVENT_CONTROLLER_SCROLL_FLAGS_KINETIC = 8;
 const EventControllerScrollFlags EVENT_CONTROLLER_SCROLL_FLAGS_NONE = 0;
 const EventControllerScrollFlags EVENT_CONTROLLER_SCROLL_FLAGS_VERTICAL = 1;
 
-distinct FontChooserLevel = int;
+typedef FontChooserLevel = int;
 const FontChooserLevel FONT_CHOOSER_LEVEL_FAMILY = 0;
 const FontChooserLevel FONT_CHOOSER_LEVEL_FEATURES = 8;
 const FontChooserLevel FONT_CHOOSER_LEVEL_SIZE = 2;
 const FontChooserLevel FONT_CHOOSER_LEVEL_STYLE = 1;
 const FontChooserLevel FONT_CHOOSER_LEVEL_VARIATIONS = 4;
 
-distinct IconLookupFlags = int;
+typedef IconLookupFlags = int;
 const IconLookupFlags ICON_LOOKUP_FLAGS_FORCE_REGULAR = 1;
 const IconLookupFlags ICON_LOOKUP_FLAGS_FORCE_SYMBOLIC = 2;
 const IconLookupFlags ICON_LOOKUP_FLAGS_PRELOAD = 4;
 
-distinct InputHints = int;
+typedef InputHints = int;
 const InputHints INPUT_HINTS_EMOJI = 512;
 const InputHints INPUT_HINTS_INHIBIT_OSK = 128;
 const InputHints INPUT_HINTS_LOWERCASE = 8;
@@ -101,21 +101,21 @@ const InputHints INPUT_HINTS_UPPERCASE_WORDS = 32;
 const InputHints INPUT_HINTS_VERTICAL_WRITING = 256;
 const InputHints INPUT_HINTS_WORD_COMPLETION = 4;
 
-distinct ListScrollFlags = int;
+typedef ListScrollFlags = int;
 const ListScrollFlags LIST_SCROLL_FLAGS_FOCUS = 1;
 const ListScrollFlags LIST_SCROLL_FLAGS_NONE = 0;
 const ListScrollFlags LIST_SCROLL_FLAGS_SELECT = 2;
 
-distinct PickFlags = int;
+typedef PickFlags = int;
 const PickFlags PICK_FLAGS_DEFAULT = 0;
 const PickFlags PICK_FLAGS_INSENSITIVE = 1;
 const PickFlags PICK_FLAGS_NON_TARGETABLE = 2;
 
-distinct PopoverMenuFlags = int;
+typedef PopoverMenuFlags = int;
 const PopoverMenuFlags POPOVER_MENU_FLAGS_NESTED = 1;
 const PopoverMenuFlags POPOVER_MENU_FLAGS_SLIDING = 0;
 
-distinct PrintCapabilities = int;
+typedef PrintCapabilities = int;
 const PrintCapabilities PRINT_CAPABILITIES_COLLATE = 4;
 const PrintCapabilities PRINT_CAPABILITIES_COPIES = 2;
 const PrintCapabilities PRINT_CAPABILITIES_GENERATE_PDF = 32;
@@ -127,10 +127,10 @@ const PrintCapabilities PRINT_CAPABILITIES_PREVIEW = 128;
 const PrintCapabilities PRINT_CAPABILITIES_REVERSE = 8;
 const PrintCapabilities PRINT_CAPABILITIES_SCALE = 16;
 
-distinct ShortcutActionFlags = int;
+typedef ShortcutActionFlags = int;
 const ShortcutActionFlags SHORTCUT_ACTION_FLAGS_EXCLUSIVE = 1;
 
-distinct StateFlags = int;
+typedef StateFlags = int;
 const StateFlags STATE_FLAGS_ACTIVE = 1;
 const StateFlags STATE_FLAGS_BACKDROP = 64;
 const StateFlags STATE_FLAGS_CHECKED = 2048;
@@ -148,50 +148,50 @@ const StateFlags STATE_FLAGS_PRELIGHT = 2;
 const StateFlags STATE_FLAGS_SELECTED = 4;
 const StateFlags STATE_FLAGS_VISITED = 1024;
 
-distinct StyleContextPrintFlags = int;
+typedef StyleContextPrintFlags = int;
 const StyleContextPrintFlags STYLE_CONTEXT_PRINT_FLAGS_NONE = 0;
 const StyleContextPrintFlags STYLE_CONTEXT_PRINT_FLAGS_RECURSE = 1;
 const StyleContextPrintFlags STYLE_CONTEXT_PRINT_FLAGS_SHOW_CHANGE = 4;
 const StyleContextPrintFlags STYLE_CONTEXT_PRINT_FLAGS_SHOW_STYLE = 2;
 
-distinct TextBufferNotifyFlags = int;
+typedef TextBufferNotifyFlags = int;
 const TextBufferNotifyFlags TEXT_BUFFER_NOTIFY_FLAGS_AFTER_DELETE = 8;
 const TextBufferNotifyFlags TEXT_BUFFER_NOTIFY_FLAGS_AFTER_INSERT = 2;
 const TextBufferNotifyFlags TEXT_BUFFER_NOTIFY_FLAGS_BEFORE_DELETE = 4;
 const TextBufferNotifyFlags TEXT_BUFFER_NOTIFY_FLAGS_BEFORE_INSERT = 1;
 
-distinct TextSearchFlags = int;
+typedef TextSearchFlags = int;
 const TextSearchFlags TEXT_SEARCH_FLAGS_CASE_INSENSITIVE = 4;
 const TextSearchFlags TEXT_SEARCH_FLAGS_TEXT_ONLY = 2;
 const TextSearchFlags TEXT_SEARCH_FLAGS_VISIBLE_ONLY = 1;
 
-distinct TreeModelFlags = int;
+typedef TreeModelFlags = int;
 const TreeModelFlags TREE_MODEL_FLAGS_ITERS_PERSIST = 1;
 const TreeModelFlags TREE_MODEL_FLAGS_LIST_ONLY = 2;
 
-distinct AccessibleAnnouncementPriority = int;
+typedef AccessibleAnnouncementPriority = int;
 const AccessibleAnnouncementPriority ACCESSIBLE_ANNOUNCEMENT_PRIORITY_HIGH = 2;
 const AccessibleAnnouncementPriority ACCESSIBLE_ANNOUNCEMENT_PRIORITY_LOW = 0;
 const AccessibleAnnouncementPriority ACCESSIBLE_ANNOUNCEMENT_PRIORITY_MEDIUM = 1;
 
-distinct AccessibleAutocomplete = int;
+typedef AccessibleAutocomplete = int;
 const AccessibleAutocomplete ACCESSIBLE_AUTOCOMPLETE_BOTH = 3;
 const AccessibleAutocomplete ACCESSIBLE_AUTOCOMPLETE_INLINE = 1;
 const AccessibleAutocomplete ACCESSIBLE_AUTOCOMPLETE_LIST = 2;
 const AccessibleAutocomplete ACCESSIBLE_AUTOCOMPLETE_NONE = 0;
 
-distinct AccessibleInvalidState = int;
+typedef AccessibleInvalidState = int;
 const AccessibleInvalidState ACCESSIBLE_INVALID_STATE_FALSE = 0;
 const AccessibleInvalidState ACCESSIBLE_INVALID_STATE_GRAMMAR = 2;
 const AccessibleInvalidState ACCESSIBLE_INVALID_STATE_SPELLING = 3;
 const AccessibleInvalidState ACCESSIBLE_INVALID_STATE_TRUE = 1;
 
-distinct AccessiblePlatformState = int;
+typedef AccessiblePlatformState = int;
 const AccessiblePlatformState ACCESSIBLE_PLATFORM_STATE_ACTIVE = 2;
 const AccessiblePlatformState ACCESSIBLE_PLATFORM_STATE_FOCUSABLE = 0;
 const AccessiblePlatformState ACCESSIBLE_PLATFORM_STATE_FOCUSED = 1;
 
-distinct AccessibleProperty = int;
+typedef AccessibleProperty = int;
 const AccessibleProperty ACCESSIBLE_PROPERTY_AUTOCOMPLETE = 0;
 const AccessibleProperty ACCESSIBLE_PROPERTY_DESCRIPTION = 1;
 const AccessibleProperty ACCESSIBLE_PROPERTY_HAS_POPUP = 2;
@@ -213,7 +213,7 @@ const AccessibleProperty ACCESSIBLE_PROPERTY_VALUE_MIN = 16;
 const AccessibleProperty ACCESSIBLE_PROPERTY_VALUE_NOW = 17;
 const AccessibleProperty ACCESSIBLE_PROPERTY_VALUE_TEXT = 18;
 
-distinct AccessibleRelation = int;
+typedef AccessibleRelation = int;
 const AccessibleRelation ACCESSIBLE_RELATION_ACTIVE_DESCENDANT = 0;
 const AccessibleRelation ACCESSIBLE_RELATION_COL_COUNT = 1;
 const AccessibleRelation ACCESSIBLE_RELATION_COL_INDEX = 2;
@@ -233,7 +233,7 @@ const AccessibleRelation ACCESSIBLE_RELATION_ROW_INDEX_TEXT = 15;
 const AccessibleRelation ACCESSIBLE_RELATION_ROW_SPAN = 16;
 const AccessibleRelation ACCESSIBLE_RELATION_SET_SIZE = 17;
 
-distinct AccessibleRole = int;
+typedef AccessibleRole = int;
 const AccessibleRole ACCESSIBLE_ROLE_ALERT = 0;
 const AccessibleRole ACCESSIBLE_ROLE_ALERT_DIALOG = 1;
 const AccessibleRole ACCESSIBLE_ROLE_APPLICATION = 79;
@@ -320,13 +320,13 @@ const AccessibleRole ACCESSIBLE_ROLE_TREE_ITEM = 75;
 const AccessibleRole ACCESSIBLE_ROLE_WIDGET = 76;
 const AccessibleRole ACCESSIBLE_ROLE_WINDOW = 77;
 
-distinct AccessibleSort = int;
+typedef AccessibleSort = int;
 const AccessibleSort ACCESSIBLE_SORT_ASCENDING = 1;
 const AccessibleSort ACCESSIBLE_SORT_DESCENDING = 2;
 const AccessibleSort ACCESSIBLE_SORT_NONE = 0;
 const AccessibleSort ACCESSIBLE_SORT_OTHER = 3;
 
-distinct AccessibleState = int;
+typedef AccessibleState = int;
 const AccessibleState ACCESSIBLE_STATE_BUSY = 0;
 const AccessibleState ACCESSIBLE_STATE_CHECKED = 1;
 const AccessibleState ACCESSIBLE_STATE_DISABLED = 2;
@@ -337,23 +337,23 @@ const AccessibleState ACCESSIBLE_STATE_PRESSED = 6;
 const AccessibleState ACCESSIBLE_STATE_SELECTED = 7;
 const AccessibleState ACCESSIBLE_STATE_VISITED = 8;
 
-distinct AccessibleTextContentChange = int;
+typedef AccessibleTextContentChange = int;
 const AccessibleTextContentChange ACCESSIBLE_TEXT_CONTENT_CHANGE_INSERT = 0;
 const AccessibleTextContentChange ACCESSIBLE_TEXT_CONTENT_CHANGE_REMOVE = 1;
 
-distinct AccessibleTextGranularity = int;
+typedef AccessibleTextGranularity = int;
 const AccessibleTextGranularity ACCESSIBLE_TEXT_GRANULARITY_CHARACTER = 0;
 const AccessibleTextGranularity ACCESSIBLE_TEXT_GRANULARITY_LINE = 3;
 const AccessibleTextGranularity ACCESSIBLE_TEXT_GRANULARITY_PARAGRAPH = 4;
 const AccessibleTextGranularity ACCESSIBLE_TEXT_GRANULARITY_SENTENCE = 2;
 const AccessibleTextGranularity ACCESSIBLE_TEXT_GRANULARITY_WORD = 1;
 
-distinct AccessibleTristate = int;
+typedef AccessibleTristate = int;
 const AccessibleTristate ACCESSIBLE_TRISTATE_FALSE = 0;
 const AccessibleTristate ACCESSIBLE_TRISTATE_MIXED = 2;
 const AccessibleTristate ACCESSIBLE_TRISTATE_TRUE = 1;
 
-distinct Align = int;
+typedef Align = int;
 const Align ALIGN_BASELINE = 4;
 const Align ALIGN_BASELINE_CENTER = 5;
 const Align ALIGN_BASELINE_FILL = 4;
@@ -362,14 +362,14 @@ const Align ALIGN_END = 2;
 const Align ALIGN_FILL = 0;
 const Align ALIGN_START = 1;
 
-distinct ArrowType = int;
+typedef ArrowType = int;
 const ArrowType ARROW_TYPE_DOWN = 1;
 const ArrowType ARROW_TYPE_LEFT = 2;
 const ArrowType ARROW_TYPE_NONE = 4;
 const ArrowType ARROW_TYPE_RIGHT = 3;
 const ArrowType ARROW_TYPE_UP = 0;
 
-distinct AssistantPageType = int;
+typedef AssistantPageType = int;
 const AssistantPageType ASSISTANT_PAGE_TYPE_CONFIRM = 2;
 const AssistantPageType ASSISTANT_PAGE_TYPE_CONTENT = 0;
 const AssistantPageType ASSISTANT_PAGE_TYPE_CUSTOM = 5;
@@ -377,12 +377,12 @@ const AssistantPageType ASSISTANT_PAGE_TYPE_INTRO = 1;
 const AssistantPageType ASSISTANT_PAGE_TYPE_PROGRESS = 4;
 const AssistantPageType ASSISTANT_PAGE_TYPE_SUMMARY = 3;
 
-distinct BaselinePosition = int;
+typedef BaselinePosition = int;
 const BaselinePosition BASELINE_POSITION_BOTTOM = 2;
 const BaselinePosition BASELINE_POSITION_CENTER = 1;
 const BaselinePosition BASELINE_POSITION_TOP = 0;
 
-distinct BorderStyle = int;
+typedef BorderStyle = int;
 const BorderStyle BORDER_STYLE_DASHED = 6;
 const BorderStyle BORDER_STYLE_DOTTED = 5;
 const BorderStyle BORDER_STYLE_DOUBLE = 7;
@@ -394,7 +394,7 @@ const BorderStyle BORDER_STYLE_OUTSET = 4;
 const BorderStyle BORDER_STYLE_RIDGE = 9;
 const BorderStyle BORDER_STYLE_SOLID = 2;
 
-distinct BuilderError = int;
+typedef BuilderError = int;
 const BuilderError BUILDER_ERROR_DUPLICATE_ID = 8;
 const BuilderError BUILDER_ERROR_INVALID_ATTRIBUTE = 3;
 const BuilderError BUILDER_ERROR_INVALID_FUNCTION = 14;
@@ -411,7 +411,7 @@ const BuilderError BUILDER_ERROR_TEMPLATE_MISMATCH = 10;
 const BuilderError BUILDER_ERROR_UNHANDLED_TAG = 1;
 const BuilderError BUILDER_ERROR_VERSION_MISMATCH = 7;
 
-distinct ButtonsType = int;
+typedef ButtonsType = int;
 const ButtonsType BUTTONS_TYPE_CANCEL = 3;
 const ButtonsType BUTTONS_TYPE_CLOSE = 2;
 const ButtonsType BUTTONS_TYPE_NONE = 0;
@@ -419,21 +419,21 @@ const ButtonsType BUTTONS_TYPE_OK = 1;
 const ButtonsType BUTTONS_TYPE_OK_CANCEL = 5;
 const ButtonsType BUTTONS_TYPE_YES_NO = 4;
 
-distinct CellRendererAccelMode = int;
+typedef CellRendererAccelMode = int;
 const CellRendererAccelMode CELL_RENDERER_ACCEL_MODE_GTK = 0;
 const CellRendererAccelMode CELL_RENDERER_ACCEL_MODE_OTHER = 1;
 
-distinct CellRendererMode = int;
+typedef CellRendererMode = int;
 const CellRendererMode CELL_RENDERER_MODE_ACTIVATABLE = 1;
 const CellRendererMode CELL_RENDERER_MODE_EDITABLE = 2;
 const CellRendererMode CELL_RENDERER_MODE_INERT = 0;
 
-distinct Collation = int;
+typedef Collation = int;
 const Collation COLLATION_FILENAME = 2;
 const Collation COLLATION_NONE = 0;
 const Collation COLLATION_UNICODE = 1;
 
-distinct ConstraintAttribute = int;
+typedef ConstraintAttribute = int;
 const ConstraintAttribute CONSTRAINT_ATTRIBUTE_BASELINE = 11;
 const ConstraintAttribute CONSTRAINT_ATTRIBUTE_BOTTOM = 4;
 const ConstraintAttribute CONSTRAINT_ATTRIBUTE_CENTER_X = 9;
@@ -447,18 +447,18 @@ const ConstraintAttribute CONSTRAINT_ATTRIBUTE_START = 5;
 const ConstraintAttribute CONSTRAINT_ATTRIBUTE_TOP = 3;
 const ConstraintAttribute CONSTRAINT_ATTRIBUTE_WIDTH = 7;
 
-distinct ConstraintRelation = int;
+typedef ConstraintRelation = int;
 const ConstraintRelation CONSTRAINT_RELATION_EQ = 0;
 const ConstraintRelation CONSTRAINT_RELATION_GE = 1;
 const ConstraintRelation CONSTRAINT_RELATION_LE = -1;
 
-distinct ConstraintStrength = int;
+typedef ConstraintStrength = int;
 const ConstraintStrength CONSTRAINT_STRENGTH_MEDIUM = 1000;
 const ConstraintStrength CONSTRAINT_STRENGTH_REQUIRED = 1001001000;
 const ConstraintStrength CONSTRAINT_STRENGTH_STRONG = 1000000000;
 const ConstraintStrength CONSTRAINT_STRENGTH_WEAK = 1;
 
-distinct ConstraintVflParserError = int;
+typedef ConstraintVflParserError = int;
 const ConstraintVflParserError CONSTRAINT_VFL_PARSER_ERROR_ATTRIBUTE = 1;
 const ConstraintVflParserError CONSTRAINT_VFL_PARSER_ERROR_METRIC = 3;
 const ConstraintVflParserError CONSTRAINT_VFL_PARSER_ERROR_PRIORITY = 4;
@@ -466,31 +466,31 @@ const ConstraintVflParserError CONSTRAINT_VFL_PARSER_ERROR_RELATION = 5;
 const ConstraintVflParserError CONSTRAINT_VFL_PARSER_ERROR_SYMBOL = 0;
 const ConstraintVflParserError CONSTRAINT_VFL_PARSER_ERROR_VIEW = 2;
 
-distinct ContentFit = int;
+typedef ContentFit = int;
 const ContentFit CONTENT_FIT_CONTAIN = 1;
 const ContentFit CONTENT_FIT_COVER = 2;
 const ContentFit CONTENT_FIT_FILL = 0;
 const ContentFit CONTENT_FIT_SCALE_DOWN = 3;
 
-distinct CornerType = int;
+typedef CornerType = int;
 const CornerType CORNER_TYPE_BOTTOM_LEFT = 1;
 const CornerType CORNER_TYPE_BOTTOM_RIGHT = 3;
 const CornerType CORNER_TYPE_TOP_LEFT = 0;
 const CornerType CORNER_TYPE_TOP_RIGHT = 2;
 
-distinct CssParserError = int;
+typedef CssParserError = int;
 const CssParserError CSS_PARSER_ERROR_FAILED = 0;
 const CssParserError CSS_PARSER_ERROR_IMPORT = 2;
 const CssParserError CSS_PARSER_ERROR_NAME = 3;
 const CssParserError CSS_PARSER_ERROR_SYNTAX = 1;
 const CssParserError CSS_PARSER_ERROR_UNKNOWN_VALUE = 4;
 
-distinct CssParserWarning = int;
+typedef CssParserWarning = int;
 const CssParserWarning CSS_PARSER_WARNING_DEPRECATED = 0;
 const CssParserWarning CSS_PARSER_WARNING_SYNTAX = 1;
 const CssParserWarning CSS_PARSER_WARNING_UNIMPLEMENTED = 2;
 
-distinct DeleteType = int;
+typedef DeleteType = int;
 const DeleteType DELETE_TYPE_CHARS = 0;
 const DeleteType DELETE_TYPE_DISPLAY_LINES = 3;
 const DeleteType DELETE_TYPE_DISPLAY_LINE_ENDS = 4;
@@ -500,12 +500,12 @@ const DeleteType DELETE_TYPE_WHITESPACE = 7;
 const DeleteType DELETE_TYPE_WORDS = 2;
 const DeleteType DELETE_TYPE_WORD_ENDS = 1;
 
-distinct DialogError = int;
+typedef DialogError = int;
 const DialogError DIALOG_ERROR_CANCELLED = 1;
 const DialogError DIALOG_ERROR_DISMISSED = 2;
 const DialogError DIALOG_ERROR_FAILED = 0;
 
-distinct DirectionType = int;
+typedef DirectionType = int;
 const DirectionType DIRECTION_TYPE_DOWN = 3;
 const DirectionType DIRECTION_TYPE_LEFT = 4;
 const DirectionType DIRECTION_TYPE_RIGHT = 5;
@@ -513,7 +513,7 @@ const DirectionType DIRECTION_TYPE_TAB_BACKWARD = 1;
 const DirectionType DIRECTION_TYPE_TAB_FORWARD = 0;
 const DirectionType DIRECTION_TYPE_UP = 2;
 
-distinct EditableProperties = int;
+typedef EditableProperties = int;
 const EditableProperties EDITABLE_PROPERTIES_NUM_PROPERTIES = 8;
 const EditableProperties EDITABLE_PROPERTIES_PROP_CURSOR_POSITION = 1;
 const EditableProperties EDITABLE_PROPERTIES_PROP_EDITABLE = 3;
@@ -524,60 +524,60 @@ const EditableProperties EDITABLE_PROPERTIES_PROP_TEXT = 0;
 const EditableProperties EDITABLE_PROPERTIES_PROP_WIDTH_CHARS = 4;
 const EditableProperties EDITABLE_PROPERTIES_PROP_XALIGN = 6;
 
-distinct EntryIconPosition = int;
+typedef EntryIconPosition = int;
 const EntryIconPosition ENTRY_ICON_POSITION_PRIMARY = 0;
 const EntryIconPosition ENTRY_ICON_POSITION_SECONDARY = 1;
 
-distinct EventSequenceState = int;
+typedef EventSequenceState = int;
 const EventSequenceState EVENT_SEQUENCE_STATE_CLAIMED = 1;
 const EventSequenceState EVENT_SEQUENCE_STATE_DENIED = 2;
 const EventSequenceState EVENT_SEQUENCE_STATE_NONE = 0;
 
-distinct FileChooserAction = int;
+typedef FileChooserAction = int;
 const FileChooserAction FILE_CHOOSER_ACTION_OPEN = 0;
 const FileChooserAction FILE_CHOOSER_ACTION_SAVE = 1;
 const FileChooserAction FILE_CHOOSER_ACTION_SELECT_FOLDER = 2;
 
-distinct FileChooserError = int;
+typedef FileChooserError = int;
 const FileChooserError FILE_CHOOSER_ERROR_ALREADY_EXISTS = 2;
 const FileChooserError FILE_CHOOSER_ERROR_BAD_FILENAME = 1;
 const FileChooserError FILE_CHOOSER_ERROR_INCOMPLETE_HOSTNAME = 3;
 const FileChooserError FILE_CHOOSER_ERROR_NONEXISTENT = 0;
 
-distinct FilterChange = int;
+typedef FilterChange = int;
 const FilterChange FILTER_CHANGE_DIFFERENT = 0;
 const FilterChange FILTER_CHANGE_LESS_STRICT = 1;
 const FilterChange FILTER_CHANGE_MORE_STRICT = 2;
 
-distinct FilterMatch = int;
+typedef FilterMatch = int;
 const FilterMatch FILTER_MATCH_ALL = 2;
 const FilterMatch FILTER_MATCH_NONE = 1;
 const FilterMatch FILTER_MATCH_SOME = 0;
 
-distinct FontLevel = int;
+typedef FontLevel = int;
 const FontLevel FONT_LEVEL_FACE = 1;
 const FontLevel FONT_LEVEL_FAMILY = 0;
 const FontLevel FONT_LEVEL_FEATURES = 3;
 const FontLevel FONT_LEVEL_FONT = 2;
 
-distinct FontRendering = int;
+typedef FontRendering = int;
 const FontRendering FONT_RENDERING_AUTOMATIC = 0;
 const FontRendering FONT_RENDERING_MANUAL = 1;
 
-distinct GraphicsOffloadEnabled = int;
+typedef GraphicsOffloadEnabled = int;
 const GraphicsOffloadEnabled GRAPHICS_OFFLOAD_ENABLED_DISABLED = 1;
 const GraphicsOffloadEnabled GRAPHICS_OFFLOAD_ENABLED_ENABLED = 0;
 
-distinct IconSize = int;
+typedef IconSize = int;
 const IconSize ICON_SIZE_INHERIT = 0;
 const IconSize ICON_SIZE_LARGE = 2;
 const IconSize ICON_SIZE_NORMAL = 1;
 
-distinct IconThemeError = int;
+typedef IconThemeError = int;
 const IconThemeError ICON_THEME_ERROR_FAILED = 1;
 const IconThemeError ICON_THEME_ERROR_NOT_FOUND = 0;
 
-distinct IconViewDropPosition = int;
+typedef IconViewDropPosition = int;
 const IconViewDropPosition ICON_VIEW_DROP_POSITION_DROP_ABOVE = 4;
 const IconViewDropPosition ICON_VIEW_DROP_POSITION_DROP_BELOW = 5;
 const IconViewDropPosition ICON_VIEW_DROP_POSITION_DROP_INTO = 1;
@@ -585,13 +585,13 @@ const IconViewDropPosition ICON_VIEW_DROP_POSITION_DROP_LEFT = 2;
 const IconViewDropPosition ICON_VIEW_DROP_POSITION_DROP_RIGHT = 3;
 const IconViewDropPosition ICON_VIEW_DROP_POSITION_NO_DROP = 0;
 
-distinct ImageType = int;
+typedef ImageType = int;
 const ImageType IMAGE_TYPE_EMPTY = 0;
 const ImageType IMAGE_TYPE_GICON = 2;
 const ImageType IMAGE_TYPE_ICON_NAME = 1;
 const ImageType IMAGE_TYPE_PAINTABLE = 3;
 
-distinct InputPurpose = int;
+typedef InputPurpose = int;
 const InputPurpose INPUT_PURPOSE_ALPHA = 1;
 const InputPurpose INPUT_PURPOSE_DIGITS = 2;
 const InputPurpose INPUT_PURPOSE_EMAIL = 6;
@@ -604,23 +604,23 @@ const InputPurpose INPUT_PURPOSE_PIN = 9;
 const InputPurpose INPUT_PURPOSE_TERMINAL = 10;
 const InputPurpose INPUT_PURPOSE_URL = 5;
 
-distinct InscriptionOverflow = int;
+typedef InscriptionOverflow = int;
 const InscriptionOverflow INSCRIPTION_OVERFLOW_CLIP = 0;
 const InscriptionOverflow INSCRIPTION_OVERFLOW_ELLIPSIZE_END = 3;
 const InscriptionOverflow INSCRIPTION_OVERFLOW_ELLIPSIZE_MIDDLE = 2;
 const InscriptionOverflow INSCRIPTION_OVERFLOW_ELLIPSIZE_START = 1;
 
-distinct Justification = int;
+typedef Justification = int;
 const Justification JUSTIFICATION_CENTER = 2;
 const Justification JUSTIFICATION_FILL = 3;
 const Justification JUSTIFICATION_LEFT = 0;
 const Justification JUSTIFICATION_RIGHT = 1;
 
-distinct LevelBarMode = int;
+typedef LevelBarMode = int;
 const LevelBarMode LEVEL_BAR_MODE_CONTINUOUS = 0;
 const LevelBarMode LEVEL_BAR_MODE_DISCRETE = 1;
 
-distinct License = int;
+typedef License = int;
 const License LICENSE_AGPL_3_0 = 13;
 const License LICENSE_AGPL_3_0_ONLY = 14;
 const License LICENSE_APACHE_2_0 = 16;
@@ -641,19 +641,19 @@ const License LICENSE_MIT_X11 = 7;
 const License LICENSE_MPL_2_0 = 17;
 const License LICENSE_UNKNOWN = 0;
 
-distinct ListTabBehavior = int;
+typedef ListTabBehavior = int;
 const ListTabBehavior LIST_TAB_BEHAVIOR_ALL = 0;
 const ListTabBehavior LIST_TAB_BEHAVIOR_CELL = 2;
 const ListTabBehavior LIST_TAB_BEHAVIOR_ITEM = 1;
 
-distinct MessageType = int;
+typedef MessageType = int;
 const MessageType MESSAGE_TYPE_ERROR = 3;
 const MessageType MESSAGE_TYPE_INFO = 0;
 const MessageType MESSAGE_TYPE_OTHER = 4;
 const MessageType MESSAGE_TYPE_QUESTION = 2;
 const MessageType MESSAGE_TYPE_WARNING = 1;
 
-distinct MovementStep = int;
+typedef MovementStep = int;
 const MovementStep MOVEMENT_STEP_BUFFER_ENDS = 8;
 const MovementStep MOVEMENT_STEP_DISPLAY_LINES = 3;
 const MovementStep MOVEMENT_STEP_DISPLAY_LINE_ENDS = 4;
@@ -665,16 +665,16 @@ const MovementStep MOVEMENT_STEP_PARAGRAPH_ENDS = 6;
 const MovementStep MOVEMENT_STEP_VISUAL_POSITIONS = 1;
 const MovementStep MOVEMENT_STEP_WORDS = 2;
 
-distinct NaturalWrapMode = int;
+typedef NaturalWrapMode = int;
 const NaturalWrapMode NATURAL_WRAP_MODE_INHERIT = 0;
 const NaturalWrapMode NATURAL_WRAP_MODE_NONE = 1;
 const NaturalWrapMode NATURAL_WRAP_MODE_WORD = 2;
 
-distinct NotebookTab = int;
+typedef NotebookTab = int;
 const NotebookTab NOTEBOOK_TAB_FIRST = 0;
 const NotebookTab NOTEBOOK_TAB_LAST = 1;
 
-distinct NumberUpLayout = int;
+typedef NumberUpLayout = int;
 const NumberUpLayout NUMBER_UP_LAYOUT_BTLR = 6;
 const NumberUpLayout NUMBER_UP_LAYOUT_BTRL = 7;
 const NumberUpLayout NUMBER_UP_LAYOUT_LRBT = 1;
@@ -684,93 +684,93 @@ const NumberUpLayout NUMBER_UP_LAYOUT_RLTB = 2;
 const NumberUpLayout NUMBER_UP_LAYOUT_TBLR = 4;
 const NumberUpLayout NUMBER_UP_LAYOUT_TBRL = 5;
 
-distinct Ordering = int;
+typedef Ordering = int;
 const Ordering ORDERING_EQUAL = 0;
 const Ordering ORDERING_LARGER = 1;
 const Ordering ORDERING_SMALLER = -1;
 
-distinct Orientation = int;
+typedef Orientation = int;
 const Orientation ORIENTATION_HORIZONTAL = 0;
 const Orientation ORIENTATION_VERTICAL = 1;
 
-distinct Overflow = int;
+typedef Overflow = int;
 const Overflow OVERFLOW_HIDDEN = 1;
 const Overflow OVERFLOW_VISIBLE = 0;
 
-distinct PackType = int;
+typedef PackType = int;
 const PackType PACK_TYPE_END = 1;
 const PackType PACK_TYPE_START = 0;
 
-distinct PadActionType = int;
+typedef PadActionType = int;
 const PadActionType PAD_ACTION_TYPE_BUTTON = 0;
 const PadActionType PAD_ACTION_TYPE_RING = 1;
 const PadActionType PAD_ACTION_TYPE_STRIP = 2;
 
-distinct PageOrientation = int;
+typedef PageOrientation = int;
 const PageOrientation PAGE_ORIENTATION_LANDSCAPE = 1;
 const PageOrientation PAGE_ORIENTATION_PORTRAIT = 0;
 const PageOrientation PAGE_ORIENTATION_REVERSE_LANDSCAPE = 3;
 const PageOrientation PAGE_ORIENTATION_REVERSE_PORTRAIT = 2;
 
-distinct PageSet = int;
+typedef PageSet = int;
 const PageSet PAGE_SET_ALL = 0;
 const PageSet PAGE_SET_EVEN = 1;
 const PageSet PAGE_SET_ODD = 2;
 
-distinct PanDirection = int;
+typedef PanDirection = int;
 const PanDirection PAN_DIRECTION_DOWN = 3;
 const PanDirection PAN_DIRECTION_LEFT = 0;
 const PanDirection PAN_DIRECTION_RIGHT = 1;
 const PanDirection PAN_DIRECTION_UP = 2;
 
-distinct PolicyType = int;
+typedef PolicyType = int;
 const PolicyType POLICY_TYPE_ALWAYS = 0;
 const PolicyType POLICY_TYPE_AUTOMATIC = 1;
 const PolicyType POLICY_TYPE_EXTERNAL = 3;
 const PolicyType POLICY_TYPE_NEVER = 2;
 
-distinct PositionType = int;
+typedef PositionType = int;
 const PositionType POSITION_TYPE_BOTTOM = 3;
 const PositionType POSITION_TYPE_LEFT = 0;
 const PositionType POSITION_TYPE_RIGHT = 1;
 const PositionType POSITION_TYPE_TOP = 2;
 
-distinct PrintDuplex = int;
+typedef PrintDuplex = int;
 const PrintDuplex PRINT_DUPLEX_HORIZONTAL = 1;
 const PrintDuplex PRINT_DUPLEX_SIMPLEX = 0;
 const PrintDuplex PRINT_DUPLEX_VERTICAL = 2;
 
-distinct PrintError = int;
+typedef PrintError = int;
 const PrintError PRINT_ERROR_GENERAL = 0;
 const PrintError PRINT_ERROR_INTERNAL_ERROR = 1;
 const PrintError PRINT_ERROR_INVALID_FILE = 3;
 const PrintError PRINT_ERROR_NOMEM = 2;
 
-distinct PrintOperationAction = int;
+typedef PrintOperationAction = int;
 const PrintOperationAction PRINT_OPERATION_ACTION_EXPORT = 3;
 const PrintOperationAction PRINT_OPERATION_ACTION_PREVIEW = 2;
 const PrintOperationAction PRINT_OPERATION_ACTION_PRINT = 1;
 const PrintOperationAction PRINT_OPERATION_ACTION_PRINT_DIALOG = 0;
 
-distinct PrintOperationResult = int;
+typedef PrintOperationResult = int;
 const PrintOperationResult PRINT_OPERATION_RESULT_APPLY = 1;
 const PrintOperationResult PRINT_OPERATION_RESULT_CANCEL = 2;
 const PrintOperationResult PRINT_OPERATION_RESULT_ERROR = 0;
 const PrintOperationResult PRINT_OPERATION_RESULT_IN_PROGRESS = 3;
 
-distinct PrintPages = int;
+typedef PrintPages = int;
 const PrintPages PRINT_PAGES_ALL = 0;
 const PrintPages PRINT_PAGES_CURRENT = 1;
 const PrintPages PRINT_PAGES_RANGES = 2;
 const PrintPages PRINT_PAGES_SELECTION = 3;
 
-distinct PrintQuality = int;
+typedef PrintQuality = int;
 const PrintQuality PRINT_QUALITY_DRAFT = 3;
 const PrintQuality PRINT_QUALITY_HIGH = 2;
 const PrintQuality PRINT_QUALITY_LOW = 0;
 const PrintQuality PRINT_QUALITY_NORMAL = 1;
 
-distinct PrintStatus = int;
+typedef PrintStatus = int;
 const PrintStatus PRINT_STATUS_FINISHED = 7;
 const PrintStatus PRINT_STATUS_FINISHED_ABORTED = 8;
 const PrintStatus PRINT_STATUS_GENERATING_DATA = 2;
@@ -781,17 +781,17 @@ const PrintStatus PRINT_STATUS_PREPARING = 1;
 const PrintStatus PRINT_STATUS_PRINTING = 6;
 const PrintStatus PRINT_STATUS_SENDING_DATA = 3;
 
-distinct PropagationLimit = int;
+typedef PropagationLimit = int;
 const PropagationLimit PROPAGATION_LIMIT_NONE = 0;
 const PropagationLimit PROPAGATION_LIMIT_SAME_NATIVE = 1;
 
-distinct PropagationPhase = int;
+typedef PropagationPhase = int;
 const PropagationPhase PROPAGATION_PHASE_BUBBLE = 2;
 const PropagationPhase PROPAGATION_PHASE_CAPTURE = 1;
 const PropagationPhase PROPAGATION_PHASE_NONE = 0;
 const PropagationPhase PROPAGATION_PHASE_TARGET = 3;
 
-distinct RecentManagerError = int;
+typedef RecentManagerError = int;
 const RecentManagerError RECENT_MANAGER_ERROR_INVALID_ENCODING = 2;
 const RecentManagerError RECENT_MANAGER_ERROR_INVALID_URI = 1;
 const RecentManagerError RECENT_MANAGER_ERROR_NOT_FOUND = 0;
@@ -800,7 +800,7 @@ const RecentManagerError RECENT_MANAGER_ERROR_READ = 4;
 const RecentManagerError RECENT_MANAGER_ERROR_UNKNOWN = 6;
 const RecentManagerError RECENT_MANAGER_ERROR_WRITE = 5;
 
-distinct ResponseType = int;
+typedef ResponseType = int;
 const ResponseType RESPONSE_TYPE_ACCEPT = -3;
 const ResponseType RESPONSE_TYPE_APPLY = -10;
 const ResponseType RESPONSE_TYPE_CANCEL = -6;
@@ -813,7 +813,7 @@ const ResponseType RESPONSE_TYPE_OK = -5;
 const ResponseType RESPONSE_TYPE_REJECT = -2;
 const ResponseType RESPONSE_TYPE_YES = -8;
 
-distinct RevealerTransitionType = int;
+typedef RevealerTransitionType = int;
 const RevealerTransitionType REVEALER_TRANSITION_TYPE_CROSSFADE = 1;
 const RevealerTransitionType REVEALER_TRANSITION_TYPE_NONE = 0;
 const RevealerTransitionType REVEALER_TRANSITION_TYPE_SLIDE_DOWN = 5;
@@ -825,7 +825,7 @@ const RevealerTransitionType REVEALER_TRANSITION_TYPE_SWING_LEFT = 7;
 const RevealerTransitionType REVEALER_TRANSITION_TYPE_SWING_RIGHT = 6;
 const RevealerTransitionType REVEALER_TRANSITION_TYPE_SWING_UP = 8;
 
-distinct ScrollStep = int;
+typedef ScrollStep = int;
 const ScrollStep SCROLL_STEP_ENDS = 2;
 const ScrollStep SCROLL_STEP_HORIZONTAL_ENDS = 5;
 const ScrollStep SCROLL_STEP_HORIZONTAL_PAGES = 4;
@@ -833,7 +833,7 @@ const ScrollStep SCROLL_STEP_HORIZONTAL_STEPS = 3;
 const ScrollStep SCROLL_STEP_PAGES = 1;
 const ScrollStep SCROLL_STEP_STEPS = 0;
 
-distinct ScrollType = int;
+typedef ScrollType = int;
 const ScrollType SCROLL_TYPE_END = 15;
 const ScrollType SCROLL_TYPE_JUMP = 1;
 const ScrollType SCROLL_TYPE_NONE = 0;
@@ -851,27 +851,27 @@ const ScrollType SCROLL_TYPE_STEP_LEFT = 10;
 const ScrollType SCROLL_TYPE_STEP_RIGHT = 11;
 const ScrollType SCROLL_TYPE_STEP_UP = 6;
 
-distinct ScrollablePolicy = int;
+typedef ScrollablePolicy = int;
 const ScrollablePolicy SCROLLABLE_POLICY_MINIMUM = 0;
 const ScrollablePolicy SCROLLABLE_POLICY_NATURAL = 1;
 
-distinct SelectionMode = int;
+typedef SelectionMode = int;
 const SelectionMode SELECTION_MODE_BROWSE = 2;
 const SelectionMode SELECTION_MODE_MULTIPLE = 3;
 const SelectionMode SELECTION_MODE_NONE = 0;
 const SelectionMode SELECTION_MODE_SINGLE = 1;
 
-distinct SensitivityType = int;
+typedef SensitivityType = int;
 const SensitivityType SENSITIVITY_TYPE_AUTO = 0;
 const SensitivityType SENSITIVITY_TYPE_OFF = 2;
 const SensitivityType SENSITIVITY_TYPE_ON = 1;
 
-distinct ShortcutScope = int;
+typedef ShortcutScope = int;
 const ShortcutScope SHORTCUT_SCOPE_GLOBAL = 2;
 const ShortcutScope SHORTCUT_SCOPE_LOCAL = 0;
 const ShortcutScope SHORTCUT_SCOPE_MANAGED = 1;
 
-distinct ShortcutType = int;
+typedef ShortcutType = int;
 const ShortcutType SHORTCUT_TYPE_ACCELERATOR = 0;
 const ShortcutType SHORTCUT_TYPE_GESTURE = 7;
 const ShortcutType SHORTCUT_TYPE_GESTURE_PINCH = 1;
@@ -883,37 +883,37 @@ const ShortcutType SHORTCUT_TYPE_GESTURE_SWIPE_RIGHT = 9;
 const ShortcutType SHORTCUT_TYPE_GESTURE_TWO_FINGER_SWIPE_LEFT = 5;
 const ShortcutType SHORTCUT_TYPE_GESTURE_TWO_FINGER_SWIPE_RIGHT = 6;
 
-distinct SizeGroupMode = int;
+typedef SizeGroupMode = int;
 const SizeGroupMode SIZE_GROUP_MODE_BOTH = 3;
 const SizeGroupMode SIZE_GROUP_MODE_HORIZONTAL = 1;
 const SizeGroupMode SIZE_GROUP_MODE_NONE = 0;
 const SizeGroupMode SIZE_GROUP_MODE_VERTICAL = 2;
 
-distinct SizeRequestMode = int;
+typedef SizeRequestMode = int;
 const SizeRequestMode SIZE_REQUEST_MODE_CONSTANT_SIZE = 2;
 const SizeRequestMode SIZE_REQUEST_MODE_HEIGHT_FOR_WIDTH = 0;
 const SizeRequestMode SIZE_REQUEST_MODE_WIDTH_FOR_HEIGHT = 1;
 
-distinct SortType = int;
+typedef SortType = int;
 const SortType SORT_TYPE_ASCENDING = 0;
 const SortType SORT_TYPE_DESCENDING = 1;
 
-distinct SorterChange = int;
+typedef SorterChange = int;
 const SorterChange SORTER_CHANGE_DIFFERENT = 0;
 const SorterChange SORTER_CHANGE_INVERTED = 1;
 const SorterChange SORTER_CHANGE_LESS_STRICT = 2;
 const SorterChange SORTER_CHANGE_MORE_STRICT = 3;
 
-distinct SorterOrder = int;
+typedef SorterOrder = int;
 const SorterOrder SORTER_ORDER_NONE = 1;
 const SorterOrder SORTER_ORDER_PARTIAL = 0;
 const SorterOrder SORTER_ORDER_TOTAL = 2;
 
-distinct SpinButtonUpdatePolicy = int;
+typedef SpinButtonUpdatePolicy = int;
 const SpinButtonUpdatePolicy SPIN_BUTTON_UPDATE_POLICY_ALWAYS = 0;
 const SpinButtonUpdatePolicy SPIN_BUTTON_UPDATE_POLICY_IF_VALID = 1;
 
-distinct SpinType = int;
+typedef SpinType = int;
 const SpinType SPIN_TYPE_END = 5;
 const SpinType SPIN_TYPE_HOME = 4;
 const SpinType SPIN_TYPE_PAGE_BACKWARD = 3;
@@ -922,7 +922,7 @@ const SpinType SPIN_TYPE_STEP_BACKWARD = 1;
 const SpinType SPIN_TYPE_STEP_FORWARD = 0;
 const SpinType SPIN_TYPE_USER_DEFINED = 6;
 
-distinct StackTransitionType = int;
+typedef StackTransitionType = int;
 const StackTransitionType STACK_TRANSITION_TYPE_CROSSFADE = 1;
 const StackTransitionType STACK_TRANSITION_TYPE_NONE = 0;
 const StackTransitionType STACK_TRANSITION_TYPE_OVER_DOWN = 9;
@@ -947,38 +947,38 @@ const StackTransitionType STACK_TRANSITION_TYPE_UNDER_LEFT = 14;
 const StackTransitionType STACK_TRANSITION_TYPE_UNDER_RIGHT = 15;
 const StackTransitionType STACK_TRANSITION_TYPE_UNDER_UP = 12;
 
-distinct StringFilterMatchMode = int;
+typedef StringFilterMatchMode = int;
 const StringFilterMatchMode STRING_FILTER_MATCH_MODE_EXACT = 0;
 const StringFilterMatchMode STRING_FILTER_MATCH_MODE_PREFIX = 2;
 const StringFilterMatchMode STRING_FILTER_MATCH_MODE_SUBSTRING = 1;
 
-distinct SymbolicColor = int;
+typedef SymbolicColor = int;
 const SymbolicColor SYMBOLIC_COLOR_ERROR = 1;
 const SymbolicColor SYMBOLIC_COLOR_FOREGROUND = 0;
 const SymbolicColor SYMBOLIC_COLOR_SUCCESS = 3;
 const SymbolicColor SYMBOLIC_COLOR_WARNING = 2;
 
-distinct SystemSetting = int;
+typedef SystemSetting = int;
 const SystemSetting SYSTEM_SETTING_DISPLAY = 3;
 const SystemSetting SYSTEM_SETTING_DPI = 0;
 const SystemSetting SYSTEM_SETTING_FONT_CONFIG = 2;
 const SystemSetting SYSTEM_SETTING_FONT_NAME = 1;
 const SystemSetting SYSTEM_SETTING_ICON_THEME = 4;
 
-distinct TextDirection = int;
+typedef TextDirection = int;
 const TextDirection TEXT_DIRECTION_LTR = 1;
 const TextDirection TEXT_DIRECTION_NONE = 0;
 const TextDirection TEXT_DIRECTION_RTL = 2;
 
-distinct TextExtendSelection = int;
+typedef TextExtendSelection = int;
 const TextExtendSelection TEXT_EXTEND_SELECTION_LINE = 1;
 const TextExtendSelection TEXT_EXTEND_SELECTION_WORD = 0;
 
-distinct TextViewLayer = int;
+typedef TextViewLayer = int;
 const TextViewLayer TEXT_VIEW_LAYER_ABOVE_TEXT = 1;
 const TextViewLayer TEXT_VIEW_LAYER_BELOW_TEXT = 0;
 
-distinct TextWindowType = int;
+typedef TextWindowType = int;
 const TextWindowType TEXT_WINDOW_TYPE_BOTTOM = 6;
 const TextWindowType TEXT_WINDOW_TYPE_LEFT = 3;
 const TextWindowType TEXT_WINDOW_TYPE_RIGHT = 4;
@@ -986,30 +986,30 @@ const TextWindowType TEXT_WINDOW_TYPE_TEXT = 2;
 const TextWindowType TEXT_WINDOW_TYPE_TOP = 5;
 const TextWindowType TEXT_WINDOW_TYPE_WIDGET = 1;
 
-distinct TreeViewColumnSizing = int;
+typedef TreeViewColumnSizing = int;
 const TreeViewColumnSizing TREE_VIEW_COLUMN_SIZING_AUTOSIZE = 1;
 const TreeViewColumnSizing TREE_VIEW_COLUMN_SIZING_FIXED = 2;
 const TreeViewColumnSizing TREE_VIEW_COLUMN_SIZING_GROW_ONLY = 0;
 
-distinct TreeViewDropPosition = int;
+typedef TreeViewDropPosition = int;
 const TreeViewDropPosition TREE_VIEW_DROP_POSITION_AFTER = 1;
 const TreeViewDropPosition TREE_VIEW_DROP_POSITION_BEFORE = 0;
 const TreeViewDropPosition TREE_VIEW_DROP_POSITION_INTO_OR_AFTER = 3;
 const TreeViewDropPosition TREE_VIEW_DROP_POSITION_INTO_OR_BEFORE = 2;
 
-distinct TreeViewGridLines = int;
+typedef TreeViewGridLines = int;
 const TreeViewGridLines TREE_VIEW_GRID_LINES_BOTH = 3;
 const TreeViewGridLines TREE_VIEW_GRID_LINES_HORIZONTAL = 1;
 const TreeViewGridLines TREE_VIEW_GRID_LINES_NONE = 0;
 const TreeViewGridLines TREE_VIEW_GRID_LINES_VERTICAL = 2;
 
-distinct Unit = int;
+typedef Unit = int;
 const Unit UNIT_INCH = 2;
 const Unit UNIT_MM = 3;
 const Unit UNIT_NONE = 0;
 const Unit UNIT_POINTS = 1;
 
-distinct WrapMode = int;
+typedef WrapMode = int;
 const WrapMode WRAP_MODE_CHAR = 1;
 const WrapMode WRAP_MODE_NONE = 0;
 const WrapMode WRAP_MODE_WORD = 2;
@@ -1017,598 +1017,598 @@ const WrapMode WRAP_MODE_WORD_CHAR = 3;
 
 
 
-distinct ATContextClass = void*;
+typedef ATContextClass = void*;
 
-distinct AccessibleInterface = void*;
+typedef AccessibleInterface = void*;
 
-distinct AccessibleList = void*;
+typedef AccessibleList = void*;
 
-distinct AccessibleRangeInterface = void*;
+typedef AccessibleRangeInterface = void*;
 
-distinct AccessibleTextInterface = void*;
+typedef AccessibleTextInterface = void*;
 
-distinct AccessibleTextRange = void*;
+typedef AccessibleTextRange = void*;
 
-distinct ActionableInterface = void*;
+typedef ActionableInterface = void*;
 
-distinct ActivateActionClass = void*;
+typedef ActivateActionClass = void*;
 
-distinct AdjustmentClass = void*;
+typedef AdjustmentClass = void*;
 
-distinct AlertDialogClass = void*;
+typedef AlertDialogClass = void*;
 
-distinct AlternativeTriggerClass = void*;
+typedef AlternativeTriggerClass = void*;
 
-distinct AnyFilterClass = void*;
+typedef AnyFilterClass = void*;
 
-distinct ApplicationClass = void*;
+typedef ApplicationClass = void*;
 
-distinct ApplicationWindowClass = void*;
+typedef ApplicationWindowClass = void*;
 
-distinct BinLayoutClass = void*;
+typedef BinLayoutClass = void*;
 
-distinct Bitset = void*;
+typedef Bitset = void*;
 
-distinct BitsetIter = void*;
+typedef BitsetIter = void*;
 
-distinct BookmarkListClass = void*;
+typedef BookmarkListClass = void*;
 
-distinct BoolFilterClass = void*;
+typedef BoolFilterClass = void*;
 
-distinct Border = void*;
+typedef Border = void*;
 
-distinct BoxClass = void*;
+typedef BoxClass = void*;
 
-distinct BoxLayoutClass = void*;
+typedef BoxLayoutClass = void*;
 
-distinct BuildableIface = void*;
+typedef BuildableIface = void*;
 
-distinct BuildableParseContext = void*;
+typedef BuildableParseContext = void*;
 
-distinct BuildableParser = void*;
+typedef BuildableParser = void*;
 
-distinct BuilderCScopeClass = void*;
+typedef BuilderCScopeClass = void*;
 
-distinct BuilderClass = void*;
+typedef BuilderClass = void*;
 
-distinct BuilderListItemFactoryClass = void*;
+typedef BuilderListItemFactoryClass = void*;
 
-distinct BuilderScopeInterface = void*;
+typedef BuilderScopeInterface = void*;
 
-distinct ButtonClass = void*;
+typedef ButtonClass = void*;
 
-distinct ButtonPrivate = void*;
+typedef ButtonPrivate = void*;
 
-distinct CallbackActionClass = void*;
+typedef CallbackActionClass = void*;
 
-distinct CellAreaClass = void*;
+typedef CellAreaClass = void*;
 
-distinct CellAreaContextClass = void*;
+typedef CellAreaContextClass = void*;
 
-distinct CellAreaContextPrivate = void*;
+typedef CellAreaContextPrivate = void*;
 
-distinct CellEditableIface = void*;
+typedef CellEditableIface = void*;
 
-distinct CellLayoutIface = void*;
+typedef CellLayoutIface = void*;
 
-distinct CellRendererClass = void*;
+typedef CellRendererClass = void*;
 
-distinct CellRendererClassPrivate = void*;
+typedef CellRendererClassPrivate = void*;
 
-distinct CellRendererPrivate = void*;
+typedef CellRendererPrivate = void*;
 
-distinct CellRendererTextClass = void*;
+typedef CellRendererTextClass = void*;
 
-distinct CenterBoxClass = void*;
+typedef CenterBoxClass = void*;
 
-distinct CenterLayoutClass = void*;
+typedef CenterLayoutClass = void*;
 
-distinct CheckButtonClass = void*;
+typedef CheckButtonClass = void*;
 
-distinct ColorChooserInterface = void*;
+typedef ColorChooserInterface = void*;
 
-distinct ColorDialogButtonClass = void*;
+typedef ColorDialogButtonClass = void*;
 
-distinct ColorDialogClass = void*;
+typedef ColorDialogClass = void*;
 
-distinct ColumnViewCellClass = void*;
+typedef ColumnViewCellClass = void*;
 
-distinct ColumnViewClass = void*;
+typedef ColumnViewClass = void*;
 
-distinct ColumnViewColumnClass = void*;
+typedef ColumnViewColumnClass = void*;
 
-distinct ColumnViewRowClass = void*;
+typedef ColumnViewRowClass = void*;
 
-distinct ColumnViewSorterClass = void*;
+typedef ColumnViewSorterClass = void*;
 
-distinct ComboBoxClass = void*;
+typedef ComboBoxClass = void*;
 
-distinct ConstraintClass = void*;
+typedef ConstraintClass = void*;
 
-distinct ConstraintGuideClass = void*;
+typedef ConstraintGuideClass = void*;
 
-distinct ConstraintLayoutChildClass = void*;
+typedef ConstraintLayoutChildClass = void*;
 
-distinct ConstraintLayoutClass = void*;
+typedef ConstraintLayoutClass = void*;
 
-distinct ConstraintTargetInterface = void*;
+typedef ConstraintTargetInterface = void*;
 
-distinct CssLocation = void*;
+typedef CssLocation = void*;
 
-distinct CssProviderClass = void*;
+typedef CssProviderClass = void*;
 
-distinct CssProviderPrivate = void*;
+typedef CssProviderPrivate = void*;
 
-distinct CssSection = void*;
+typedef CssSection = void*;
 
-distinct CssStyleChange = void*;
+typedef CssStyleChange = void*;
 
-distinct CustomFilterClass = void*;
+typedef CustomFilterClass = void*;
 
-distinct CustomLayoutClass = void*;
+typedef CustomLayoutClass = void*;
 
-distinct CustomSorterClass = void*;
+typedef CustomSorterClass = void*;
 
-distinct DialogClass = void*;
+typedef DialogClass = void*;
 
-distinct DirectoryListClass = void*;
+typedef DirectoryListClass = void*;
 
-distinct DragIconClass = void*;
+typedef DragIconClass = void*;
 
-distinct DragSourceClass = void*;
+typedef DragSourceClass = void*;
 
-distinct DrawingAreaClass = void*;
+typedef DrawingAreaClass = void*;
 
-distinct DropControllerMotionClass = void*;
+typedef DropControllerMotionClass = void*;
 
-distinct DropDownClass = void*;
+typedef DropDownClass = void*;
 
-distinct DropTargetAsyncClass = void*;
+typedef DropTargetAsyncClass = void*;
 
-distinct DropTargetClass = void*;
+typedef DropTargetClass = void*;
 
-distinct EditableInterface = void*;
+typedef EditableInterface = void*;
 
-distinct EditableLabelClass = void*;
+typedef EditableLabelClass = void*;
 
-distinct EmojiChooserClass = void*;
+typedef EmojiChooserClass = void*;
 
-distinct EntryBufferClass = void*;
+typedef EntryBufferClass = void*;
 
-distinct EntryClass = void*;
+typedef EntryClass = void*;
 
-distinct EventControllerClass = void*;
+typedef EventControllerClass = void*;
 
-distinct EventControllerFocusClass = void*;
+typedef EventControllerFocusClass = void*;
 
-distinct EventControllerKeyClass = void*;
+typedef EventControllerKeyClass = void*;
 
-distinct EventControllerLegacyClass = void*;
+typedef EventControllerLegacyClass = void*;
 
-distinct EventControllerMotionClass = void*;
+typedef EventControllerMotionClass = void*;
 
-distinct EventControllerScrollClass = void*;
+typedef EventControllerScrollClass = void*;
 
-distinct EveryFilterClass = void*;
+typedef EveryFilterClass = void*;
 
-distinct ExpressionWatch = void*;
+typedef ExpressionWatch = void*;
 
-distinct FileChooserNativeClass = void*;
+typedef FileChooserNativeClass = void*;
 
-distinct FileDialogClass = void*;
+typedef FileDialogClass = void*;
 
-distinct FileLauncherClass = void*;
+typedef FileLauncherClass = void*;
 
-distinct FilterClass = void*;
+typedef FilterClass = void*;
 
-distinct FilterListModelClass = void*;
+typedef FilterListModelClass = void*;
 
-distinct FixedClass = void*;
+typedef FixedClass = void*;
 
-distinct FixedLayoutChildClass = void*;
+typedef FixedLayoutChildClass = void*;
 
-distinct FixedLayoutClass = void*;
+typedef FixedLayoutClass = void*;
 
-distinct FlattenListModelClass = void*;
+typedef FlattenListModelClass = void*;
 
-distinct FlowBoxChildClass = void*;
+typedef FlowBoxChildClass = void*;
 
-distinct FontChooserIface = void*;
+typedef FontChooserIface = void*;
 
-distinct FontDialogButtonClass = void*;
+typedef FontDialogButtonClass = void*;
 
-distinct FontDialogClass = void*;
+typedef FontDialogClass = void*;
 
-distinct FrameClass = void*;
+typedef FrameClass = void*;
 
-distinct GLAreaClass = void*;
+typedef GLAreaClass = void*;
 
-distinct GestureClass = void*;
+typedef GestureClass = void*;
 
-distinct GestureClickClass = void*;
+typedef GestureClickClass = void*;
 
-distinct GestureDragClass = void*;
+typedef GestureDragClass = void*;
 
-distinct GestureLongPressClass = void*;
+typedef GestureLongPressClass = void*;
 
-distinct GesturePanClass = void*;
+typedef GesturePanClass = void*;
 
-distinct GestureRotateClass = void*;
+typedef GestureRotateClass = void*;
 
-distinct GestureSingleClass = void*;
+typedef GestureSingleClass = void*;
 
-distinct GestureStylusClass = void*;
+typedef GestureStylusClass = void*;
 
-distinct GestureSwipeClass = void*;
+typedef GestureSwipeClass = void*;
 
-distinct GestureZoomClass = void*;
+typedef GestureZoomClass = void*;
 
-distinct GraphicsOffloadClass = void*;
+typedef GraphicsOffloadClass = void*;
 
-distinct GridClass = void*;
+typedef GridClass = void*;
 
-distinct GridLayoutChildClass = void*;
+typedef GridLayoutChildClass = void*;
 
-distinct GridLayoutClass = void*;
+typedef GridLayoutClass = void*;
 
-distinct GridViewClass = void*;
+typedef GridViewClass = void*;
 
-distinct IMContextClass = void*;
+typedef IMContextClass = void*;
 
-distinct IMContextSimpleClass = void*;
+typedef IMContextSimpleClass = void*;
 
-distinct IMContextSimplePrivate = void*;
+typedef IMContextSimplePrivate = void*;
 
-distinct IMMulticontextClass = void*;
+typedef IMMulticontextClass = void*;
 
-distinct IMMulticontextPrivate = void*;
+typedef IMMulticontextPrivate = void*;
 
-distinct InscriptionClass = void*;
+typedef InscriptionClass = void*;
 
-distinct KeyvalTriggerClass = void*;
+typedef KeyvalTriggerClass = void*;
 
-distinct LayoutChildClass = void*;
+typedef LayoutChildClass = void*;
 
-distinct LayoutManagerClass = void*;
+typedef LayoutManagerClass = void*;
 
-distinct ListBaseClass = void*;
+typedef ListBaseClass = void*;
 
-distinct ListBoxRowClass = void*;
+typedef ListBoxRowClass = void*;
 
-distinct ListHeaderClass = void*;
+typedef ListHeaderClass = void*;
 
-distinct ListItemClass = void*;
+typedef ListItemClass = void*;
 
-distinct ListItemFactoryClass = void*;
+typedef ListItemFactoryClass = void*;
 
-distinct ListStoreClass = void*;
+typedef ListStoreClass = void*;
 
-distinct ListStorePrivate = void*;
+typedef ListStorePrivate = void*;
 
-distinct ListViewClass = void*;
+typedef ListViewClass = void*;
 
-distinct MapListModelClass = void*;
+typedef MapListModelClass = void*;
 
-distinct MediaControlsClass = void*;
+typedef MediaControlsClass = void*;
 
-distinct MediaFileClass = void*;
+typedef MediaFileClass = void*;
 
-distinct MediaStreamClass = void*;
+typedef MediaStreamClass = void*;
 
-distinct MessageDialogClass = void*;
+typedef MessageDialogClass = void*;
 
-distinct MnemonicActionClass = void*;
+typedef MnemonicActionClass = void*;
 
-distinct MnemonicTriggerClass = void*;
+typedef MnemonicTriggerClass = void*;
 
-distinct MountOperationClass = void*;
+typedef MountOperationClass = void*;
 
-distinct MountOperationPrivate = void*;
+typedef MountOperationPrivate = void*;
 
-distinct MultiFilterClass = void*;
+typedef MultiFilterClass = void*;
 
-distinct MultiSelectionClass = void*;
+typedef MultiSelectionClass = void*;
 
-distinct MultiSorterClass = void*;
+typedef MultiSorterClass = void*;
 
-distinct NamedActionClass = void*;
+typedef NamedActionClass = void*;
 
-distinct NativeDialogClass = void*;
+typedef NativeDialogClass = void*;
 
-distinct NativeInterface = void*;
+typedef NativeInterface = void*;
 
-distinct NeverTriggerClass = void*;
+typedef NeverTriggerClass = void*;
 
-distinct NoSelectionClass = void*;
+typedef NoSelectionClass = void*;
 
-distinct NothingActionClass = void*;
+typedef NothingActionClass = void*;
 
-distinct NumericSorterClass = void*;
+typedef NumericSorterClass = void*;
 
-distinct OrientableIface = void*;
+typedef OrientableIface = void*;
 
-distinct OverlayLayoutChildClass = void*;
+typedef OverlayLayoutChildClass = void*;
 
-distinct OverlayLayoutClass = void*;
+typedef OverlayLayoutClass = void*;
 
-distinct PadActionEntry = void*;
+typedef PadActionEntry = void*;
 
-distinct PadControllerClass = void*;
+typedef PadControllerClass = void*;
 
-distinct PageRange = void*;
+typedef PageRange = void*;
 
-distinct PaperSize = void*;
+typedef PaperSize = void*;
 
-distinct PasswordEntryBufferClass = void*;
+typedef PasswordEntryBufferClass = void*;
 
-distinct PasswordEntryClass = void*;
+typedef PasswordEntryClass = void*;
 
-distinct PictureClass = void*;
+typedef PictureClass = void*;
 
-distinct PopoverClass = void*;
+typedef PopoverClass = void*;
 
-distinct PrintBackend = void*;
+typedef PrintBackend = void*;
 
-distinct PrintDialogClass = void*;
+typedef PrintDialogClass = void*;
 
-distinct PrintOperationClass = void*;
+typedef PrintOperationClass = void*;
 
-distinct PrintOperationPreviewIface = void*;
+typedef PrintOperationPreviewIface = void*;
 
-distinct PrintOperationPrivate = void*;
+typedef PrintOperationPrivate = void*;
 
-distinct PrintSetup = void*;
+typedef PrintSetup = void*;
 
-distinct RangeClass = void*;
+typedef RangeClass = void*;
 
-distinct RecentData = void*;
+typedef RecentData = void*;
 
-distinct RecentInfo = void*;
+typedef RecentInfo = void*;
 
-distinct RecentManagerClass = void*;
+typedef RecentManagerClass = void*;
 
-distinct RecentManagerPrivate = void*;
+typedef RecentManagerPrivate = void*;
 
-distinct RequestedSize = void*;
+typedef RequestedSize = void*;
 
-distinct Requisition = void*;
+typedef Requisition = void*;
 
-distinct RootInterface = void*;
+typedef RootInterface = void*;
 
-distinct ScaleButtonClass = void*;
+typedef ScaleButtonClass = void*;
 
-distinct ScaleClass = void*;
+typedef ScaleClass = void*;
 
-distinct ScrollInfo = void*;
+typedef ScrollInfo = void*;
 
-distinct ScrollableInterface = void*;
+typedef ScrollableInterface = void*;
 
-distinct SectionModelInterface = void*;
+typedef SectionModelInterface = void*;
 
-distinct SelectionFilterModelClass = void*;
+typedef SelectionFilterModelClass = void*;
 
-distinct SelectionModelInterface = void*;
+typedef SelectionModelInterface = void*;
 
-distinct ShortcutActionClass = void*;
+typedef ShortcutActionClass = void*;
 
-distinct ShortcutClass = void*;
+typedef ShortcutClass = void*;
 
-distinct ShortcutControllerClass = void*;
+typedef ShortcutControllerClass = void*;
 
-distinct ShortcutLabelClass = void*;
+typedef ShortcutLabelClass = void*;
 
-distinct ShortcutManagerInterface = void*;
+typedef ShortcutManagerInterface = void*;
 
-distinct ShortcutTriggerClass = void*;
+typedef ShortcutTriggerClass = void*;
 
-distinct ShortcutsGroupClass = void*;
+typedef ShortcutsGroupClass = void*;
 
-distinct ShortcutsSectionClass = void*;
+typedef ShortcutsSectionClass = void*;
 
-distinct ShortcutsShortcutClass = void*;
+typedef ShortcutsShortcutClass = void*;
 
-distinct SignalActionClass = void*;
+typedef SignalActionClass = void*;
 
-distinct SignalListItemFactoryClass = void*;
+typedef SignalListItemFactoryClass = void*;
 
-distinct SingleSelectionClass = void*;
+typedef SingleSelectionClass = void*;
 
-distinct SliceListModelClass = void*;
+typedef SliceListModelClass = void*;
 
-distinct SnapshotClass = void*;
+typedef SnapshotClass = void*;
 
-distinct SortListModelClass = void*;
+typedef SortListModelClass = void*;
 
-distinct SorterClass = void*;
+typedef SorterClass = void*;
 
-distinct StringFilterClass = void*;
+typedef StringFilterClass = void*;
 
-distinct StringListClass = void*;
+typedef StringListClass = void*;
 
-distinct StringObjectClass = void*;
+typedef StringObjectClass = void*;
 
-distinct StringSorterClass = void*;
+typedef StringSorterClass = void*;
 
-distinct StyleContextClass = void*;
+typedef StyleContextClass = void*;
 
-distinct SymbolicPaintableInterface = void*;
+typedef SymbolicPaintableInterface = void*;
 
-distinct TextBufferClass = void*;
+typedef TextBufferClass = void*;
 
-distinct TextBufferPrivate = void*;
+typedef TextBufferPrivate = void*;
 
-distinct TextChildAnchorClass = void*;
+typedef TextChildAnchorClass = void*;
 
-distinct TextIter = void*;
+typedef TextIter = void*;
 
-distinct TextMarkClass = void*;
+typedef TextMarkClass = void*;
 
-distinct TextTagClass = void*;
+typedef TextTagClass = void*;
 
-distinct TextTagPrivate = void*;
+typedef TextTagPrivate = void*;
 
-distinct TextViewClass = void*;
+typedef TextViewClass = void*;
 
-distinct TextViewPrivate = void*;
+typedef TextViewPrivate = void*;
 
-distinct ToggleButtonClass = void*;
+typedef ToggleButtonClass = void*;
 
-distinct TreeDragDestIface = void*;
+typedef TreeDragDestIface = void*;
 
-distinct TreeDragSourceIface = void*;
+typedef TreeDragSourceIface = void*;
 
-distinct TreeExpanderClass = void*;
+typedef TreeExpanderClass = void*;
 
-distinct TreeIter = void*;
+typedef TreeIter = void*;
 
-distinct TreeListModelClass = void*;
+typedef TreeListModelClass = void*;
 
-distinct TreeListRowClass = void*;
+typedef TreeListRowClass = void*;
 
-distinct TreeListRowSorterClass = void*;
+typedef TreeListRowSorterClass = void*;
 
-distinct TreeModelFilterClass = void*;
+typedef TreeModelFilterClass = void*;
 
-distinct TreeModelFilterPrivate = void*;
+typedef TreeModelFilterPrivate = void*;
 
-distinct TreeModelIface = void*;
+typedef TreeModelIface = void*;
 
-distinct TreeModelSortClass = void*;
+typedef TreeModelSortClass = void*;
 
-distinct TreeModelSortPrivate = void*;
+typedef TreeModelSortPrivate = void*;
 
-distinct TreePath = void*;
+typedef TreePath = void*;
 
-distinct TreeRowReference = void*;
+typedef TreeRowReference = void*;
 
-distinct TreeSortableIface = void*;
+typedef TreeSortableIface = void*;
 
-distinct TreeStoreClass = void*;
+typedef TreeStoreClass = void*;
 
-distinct TreeStorePrivate = void*;
+typedef TreeStorePrivate = void*;
 
-distinct TreeViewClass = void*;
+typedef TreeViewClass = void*;
 
-distinct UriLauncherClass = void*;
+typedef UriLauncherClass = void*;
 
-distinct VideoClass = void*;
+typedef VideoClass = void*;
 
-distinct WidgetClass = void*;
+typedef WidgetClass = void*;
 
-distinct WidgetClassPrivate = void*;
+typedef WidgetClassPrivate = void*;
 
-distinct WidgetPaintableClass = void*;
+typedef WidgetPaintableClass = void*;
 
-distinct WidgetPrivate = void*;
+typedef WidgetPrivate = void*;
 
-distinct WindowClass = void*;
+typedef WindowClass = void*;
 
-distinct WindowControlsClass = void*;
+typedef WindowControlsClass = void*;
 
-distinct WindowGroupClass = void*;
+typedef WindowGroupClass = void*;
 
-distinct WindowGroupPrivate = void*;
+typedef WindowGroupPrivate = void*;
 
-distinct WindowHandleClass = void*;
+typedef WindowHandleClass = void*;
 
 
-def AssistantPageFunc = fn int(int current_page, void* data);
+alias AssistantPageFunc = fn int(int current_page, void* data);
 
-def CellAllocCallback = fn bool(CellRenderer* renderer, gdk::Rectangle* cell_area, gdk::Rectangle* cell_background, void* data);
+alias CellAllocCallback = fn bool(CellRenderer* renderer, gdk::Rectangle* cell_area, gdk::Rectangle* cell_background, void* data);
 
-def CellCallback = fn bool(CellRenderer* renderer, void* data);
+alias CellCallback = fn bool(CellRenderer* renderer, void* data);
 
-def CellLayoutDataFunc = fn void(CellLayout* cell_layout, CellRenderer* cell, TreeModel* tree_model, TreeIter* iter, void* data);
+alias CellLayoutDataFunc = fn void(CellLayout* cell_layout, CellRenderer* cell, TreeModel* tree_model, TreeIter* iter, void* data);
 
-def CustomAllocateFunc = fn void(Widget* widget, int width, int height, int baseline);
+alias CustomAllocateFunc = fn void(Widget* widget, int width, int height, int baseline);
 
-def CustomFilterFunc = fn bool(gobject::Object* item, void* user_data);
+alias CustomFilterFunc = fn bool(gobject::Object* item, void* user_data);
 
-def CustomMeasureFunc = fn void(Widget* widget, Orientation orientation, int for_size, int* minimum, int* natural, int* minimum_baseline, int* natural_baseline);
+alias CustomMeasureFunc = fn void(Widget* widget, Orientation orientation, int for_size, int* minimum, int* natural, int* minimum_baseline, int* natural_baseline);
 
-def CustomRequestModeFunc = fn SizeRequestMode(Widget* widget);
+alias CustomRequestModeFunc = fn SizeRequestMode(Widget* widget);
 
-def DrawingAreaDrawFunc = fn void(DrawingArea* drawing_area, cairo::Context* cr, int width, int height, void* user_data);
+alias DrawingAreaDrawFunc = fn void(DrawingArea* drawing_area, cairo::Context* cr, int width, int height, void* user_data);
 
-def EntryCompletionMatchFunc = fn bool(EntryCompletion* completion, ZString key, TreeIter* iter, void* user_data);
+alias EntryCompletionMatchFunc = fn bool(EntryCompletion* completion, ZString key, TreeIter* iter, void* user_data);
 
-def ExpressionNotify = fn void(void* user_data);
+alias ExpressionNotify = fn void(void* user_data);
 
-def FlowBoxCreateWidgetFunc = fn Widget*(gobject::Object* item, void* user_data);
+alias FlowBoxCreateWidgetFunc = fn Widget*(gobject::Object* item, void* user_data);
 
-def FlowBoxFilterFunc = fn bool(FlowBoxChild* child, void* user_data);
+alias FlowBoxFilterFunc = fn bool(FlowBoxChild* child, void* user_data);
 
-def FlowBoxForeachFunc = fn void(FlowBox* box, FlowBoxChild* child, void* user_data);
+alias FlowBoxForeachFunc = fn void(FlowBox* box, FlowBoxChild* child, void* user_data);
 
-def FlowBoxSortFunc = fn int(FlowBoxChild* child1, FlowBoxChild* child2, void* user_data);
+alias FlowBoxSortFunc = fn int(FlowBoxChild* child1, FlowBoxChild* child2, void* user_data);
 
-def FontFilterFunc = fn bool(pango::FontFamily* family, pango::FontFace* face, void* data);
+alias FontFilterFunc = fn bool(pango::FontFamily* family, pango::FontFace* face, void* data);
 
-def IconViewForeachFunc = fn void(IconView* icon_view, TreePath* path, void* data);
+alias IconViewForeachFunc = fn void(IconView* icon_view, TreePath* path, void* data);
 
-def ListBoxCreateWidgetFunc = fn Widget*(gobject::Object* item, void* user_data);
+alias ListBoxCreateWidgetFunc = fn Widget*(gobject::Object* item, void* user_data);
 
-def ListBoxFilterFunc = fn bool(ListBoxRow* row, void* user_data);
+alias ListBoxFilterFunc = fn bool(ListBoxRow* row, void* user_data);
 
-def ListBoxForeachFunc = fn void(ListBox* box, ListBoxRow* row, void* user_data);
+alias ListBoxForeachFunc = fn void(ListBox* box, ListBoxRow* row, void* user_data);
 
-def ListBoxSortFunc = fn int(ListBoxRow* row1, ListBoxRow* row2, void* user_data);
+alias ListBoxSortFunc = fn int(ListBoxRow* row1, ListBoxRow* row2, void* user_data);
 
-def ListBoxUpdateHeaderFunc = fn void(ListBoxRow* row, ListBoxRow* before, void* user_data);
+alias ListBoxUpdateHeaderFunc = fn void(ListBoxRow* row, ListBoxRow* before, void* user_data);
 
-def MapListModelMapFunc = fn gobject::Object*(gobject::Object* item, void* user_data);
+alias MapListModelMapFunc = fn gobject::Object*(gobject::Object* item, void* user_data);
 
-def MenuButtonCreatePopupFunc = fn void(MenuButton* menu_button, void* user_data);
+alias MenuButtonCreatePopupFunc = fn void(MenuButton* menu_button, void* user_data);
 
-def PageSetupDoneFunc = fn void(PageSetup* page_setup, void* data);
+alias PageSetupDoneFunc = fn void(PageSetup* page_setup, void* data);
 
-def PrintJobCompleteFunc = fn void(PrintJob* print_job, void* user_data, glib::Error* error);
+alias PrintJobCompleteFunc = fn void(PrintJob* print_job, void* user_data, glib::Error* error);
 
-def PrintSettingsFunc = fn void(ZString key, ZString value, void* user_data);
+alias PrintSettingsFunc = fn void(ZString key, ZString value, void* user_data);
 
-def PrinterFunc = fn bool(Printer* printer, void* data);
+alias PrinterFunc = fn bool(Printer* printer, void* data);
 
-def ScaleFormatValueFunc = fn ZString*(Scale* scale, double value, void* user_data);
+alias ScaleFormatValueFunc = fn ZString*(Scale* scale, double value, void* user_data);
 
-def ShortcutFunc = fn bool(Widget* widget, glib::Variant* args, void* user_data);
+alias ShortcutFunc = fn bool(Widget* widget, glib::Variant* args, void* user_data);
 
-def TextBufferCommitNotify = fn void(TextBuffer* buffer, TextBufferNotifyFlags flags, uint position, uint length, void* user_data);
+alias TextBufferCommitNotify = fn void(TextBuffer* buffer, TextBufferNotifyFlags flags, uint position, uint length, void* user_data);
 
-def TextCharPredicate = fn bool(uint ch, void* user_data);
+alias TextCharPredicate = fn bool(uint ch, void* user_data);
 
-def TextTagTableForeach = fn void(TextTag* tag, void* data);
+alias TextTagTableForeach = fn void(TextTag* tag, void* data);
 
-def TickCallback = fn bool(Widget* widget, gdk::FrameClock* frame_clock, void* user_data);
+alias TickCallback = fn bool(Widget* widget, gdk::FrameClock* frame_clock, void* user_data);
 
-def TreeCellDataFunc = fn void(TreeViewColumn* tree_column, CellRenderer* cell, TreeModel* tree_model, TreeIter* iter, void* data);
+alias TreeCellDataFunc = fn void(TreeViewColumn* tree_column, CellRenderer* cell, TreeModel* tree_model, TreeIter* iter, void* data);
 
-def TreeIterCompareFunc = fn int(TreeModel* model, TreeIter* a, TreeIter* b, void* user_data);
+alias TreeIterCompareFunc = fn int(TreeModel* model, TreeIter* a, TreeIter* b, void* user_data);
 
-def TreeListModelCreateModelFunc = fn gio::ListModel*(gobject::Object* item, void* user_data);
+alias TreeListModelCreateModelFunc = fn gio::ListModel*(gobject::Object* item, void* user_data);
 
-def TreeModelFilterModifyFunc = fn void(TreeModel* model, TreeIter* iter, gobject::Value* value, int column, void* data);
+alias TreeModelFilterModifyFunc = fn void(TreeModel* model, TreeIter* iter, gobject::Value* value, int column, void* data);
 
-def TreeModelFilterVisibleFunc = fn bool(TreeModel* model, TreeIter* iter, void* data);
+alias TreeModelFilterVisibleFunc = fn bool(TreeModel* model, TreeIter* iter, void* data);
 
-def TreeModelForeachFunc = fn bool(TreeModel* model, TreePath* path, TreeIter* iter, void* data);
+alias TreeModelForeachFunc = fn bool(TreeModel* model, TreePath* path, TreeIter* iter, void* data);
 
-def TreeSelectionForeachFunc = fn void(TreeModel* model, TreePath* path, TreeIter* iter, void* data);
+alias TreeSelectionForeachFunc = fn void(TreeModel* model, TreePath* path, TreeIter* iter, void* data);
 
-def TreeSelectionFunc = fn bool(TreeSelection* selection, TreeModel* model, TreePath* path, bool path_currently_selected, void* data);
+alias TreeSelectionFunc = fn bool(TreeSelection* selection, TreeModel* model, TreePath* path, bool path_currently_selected, void* data);
 
-def TreeViewColumnDropFunc = fn bool(TreeView* tree_view, TreeViewColumn* column, TreeViewColumn* prev_column, TreeViewColumn* next_column, void* data);
+alias TreeViewColumnDropFunc = fn bool(TreeView* tree_view, TreeViewColumn* column, TreeViewColumn* prev_column, TreeViewColumn* next_column, void* data);
 
-def TreeViewMappingFunc = fn void(TreeView* tree_view, TreePath* path, void* user_data);
+alias TreeViewMappingFunc = fn void(TreeView* tree_view, TreePath* path, void* user_data);
 
-def TreeViewRowSeparatorFunc = fn bool(TreeModel* model, TreeIter* iter, void* data);
+alias TreeViewRowSeparatorFunc = fn bool(TreeModel* model, TreeIter* iter, void* data);
 
-def TreeViewSearchEqualFunc = fn bool(TreeModel* model, int column, ZString key, TreeIter* iter, void* search_data);
+alias TreeViewSearchEqualFunc = fn bool(TreeModel* model, int column, ZString key, TreeIter* iter, void* search_data);
 
-def WidgetActionActivateFunc = fn void(Widget* widget, ZString action_name, glib::Variant* parameter);
+alias WidgetActionActivateFunc = fn void(Widget* widget, ZString action_name, glib::Variant* parameter);
 
 
 <* Maps to GtkATContext *>
-distinct ATContext = void*;
+typedef ATContext = void*;
 
 // Class to parent cast.
 fn gobject::Object* ATContext.as_gobject_Object(&self) => (gobject::Object*)(self);
@@ -1634,7 +1634,7 @@ extern fn AccessibleRole ATContext.get_accessible_role(&self, ) @extern("gtk_at_
 
 
 <* Maps to GtkAboutDialog *>
-distinct AboutDialog = void*;
+typedef AboutDialog = void*;
 
 // Class to parent cast.
 fn Window* AboutDialog.as_Window(&self) => (Window*)(self);
@@ -1753,7 +1753,7 @@ extern fn void AboutDialog.set_wrap_license(&self, bool wrap_license) @extern("g
 
 
 <* Maps to GtkActionBar *>
-distinct ActionBar = void*;
+typedef ActionBar = void*;
 
 // Class to parent cast.
 fn Widget* ActionBar.as_Widget(&self) => (Widget*)(self);
@@ -1794,7 +1794,7 @@ extern fn void ActionBar.set_revealed(&self, bool revealed) @extern("gtk_action_
 
 
 <* Maps to GtkActivateAction *>
-distinct ActivateAction = void*;
+typedef ActivateAction = void*;
 
 // Class to parent cast.
 fn ShortcutAction* ActivateAction.as_ShortcutAction(&self) => (ShortcutAction*)(self);
@@ -1814,7 +1814,7 @@ extern fn ActivateAction* activate_action_get() @extern("gtk_activate_action_get
 
 
 <* Maps to GtkAdjustment *>
-distinct Adjustment = void*;
+typedef Adjustment = void*;
 
 // Class to parent cast.
 fn gobject::InitiallyUnowned* Adjustment.as_gobject_InitiallyUnowned(&self) => (gobject::InitiallyUnowned*)(self);
@@ -1879,7 +1879,7 @@ extern fn void Adjustment.set_value(&self, double value) @extern("gtk_adjustment
 
 
 <* Maps to GtkAlertDialog *>
-distinct AlertDialog = void*;
+typedef AlertDialog = void*;
 
 // Class to parent cast.
 fn gobject::Object* AlertDialog.as_gobject_Object(&self) => (gobject::Object*)(self);
@@ -1944,7 +1944,7 @@ extern fn void AlertDialog.show(&self, Window* parent) @extern("gtk_alert_dialog
 
 
 <* Maps to GtkAlternativeTrigger *>
-distinct AlternativeTrigger = void*;
+typedef AlternativeTrigger = void*;
 
 // Class to parent cast.
 fn ShortcutTrigger* AlternativeTrigger.as_ShortcutTrigger(&self) => (ShortcutTrigger*)(self);
@@ -1970,7 +1970,7 @@ extern fn ShortcutTrigger* AlternativeTrigger.get_second(&self, ) @extern("gtk_a
 
 
 <* Maps to GtkAnyFilter *>
-distinct AnyFilter = void*;
+typedef AnyFilter = void*;
 
 // Class to parent cast.
 fn MultiFilter* AnyFilter.as_MultiFilter(&self) => (MultiFilter*)(self);
@@ -1990,7 +1990,7 @@ extern fn AnyFilter* any_filter_new() @extern("gtk_any_filter_new");
 
 
 <* Maps to GtkAppChooserButton *>
-distinct AppChooserButton = void*;
+typedef AppChooserButton = void*;
 
 // Class to parent cast.
 fn Widget* AppChooserButton.as_Widget(&self) => (Widget*)(self);
@@ -2043,7 +2043,7 @@ extern fn void AppChooserButton.set_show_dialog_item(&self, bool setting) @exter
 
 
 <* Maps to GtkAppChooserDialog *>
-distinct AppChooserDialog = void*;
+typedef AppChooserDialog = void*;
 
 // Class to parent cast.
 fn Dialog* AppChooserDialog.as_Dialog(&self) => (Dialog*)(self);
@@ -2075,7 +2075,7 @@ extern fn void AppChooserDialog.set_heading(&self, ZString heading) @extern("gtk
 
 
 <* Maps to GtkAppChooserWidget *>
-distinct AppChooserWidget = void*;
+typedef AppChooserWidget = void*;
 
 // Class to parent cast.
 fn Widget* AppChooserWidget.as_Widget(&self) => (Widget*)(self);
@@ -2131,7 +2131,7 @@ extern fn void AppChooserWidget.set_show_recommended(&self, bool setting) @exter
 
 
 <* Maps to GtkApplication *>
-distinct Application = void*;
+typedef Application = void*;
 
 // Class to parent cast.
 fn gio::Application* Application.as_gio_Application(&self) => (gio::Application*)(self);
@@ -2193,7 +2193,7 @@ extern fn void Application.uninhibit(&self, uint cookie) @extern("gtk_applicatio
 
 
 <* Maps to GtkApplicationWindow *>
-distinct ApplicationWindow = void*;
+typedef ApplicationWindow = void*;
 
 // Class to parent cast.
 fn Window* ApplicationWindow.as_Window(&self) => (Window*)(self);
@@ -2228,7 +2228,7 @@ extern fn void ApplicationWindow.set_show_menubar(&self, bool show_menubar) @ext
 
 
 <* Maps to GtkAspectFrame *>
-distinct AspectFrame = void*;
+typedef AspectFrame = void*;
 
 // Class to parent cast.
 fn Widget* AspectFrame.as_Widget(&self) => (Widget*)(self);
@@ -2278,7 +2278,7 @@ extern fn void AspectFrame.set_yalign(&self, float yalign) @extern("gtk_aspect_f
 
 
 <* Maps to GtkAssistant *>
-distinct Assistant = void*;
+typedef Assistant = void*;
 
 // Class to parent cast.
 fn Window* Assistant.as_Window(&self) => (Window*)(self);
@@ -2367,7 +2367,7 @@ extern fn void Assistant.update_buttons_state(&self, ) @extern("gtk_assistant_up
 
 
 <* Maps to GtkAssistantPage *>
-distinct AssistantPage = void*;
+typedef AssistantPage = void*;
 
 // Class to parent cast.
 fn gobject::Object* AssistantPage.as_gobject_Object(&self) => (gobject::Object*)(self);
@@ -2387,7 +2387,7 @@ extern fn Widget* AssistantPage.get_child(&self, ) @extern("gtk_assistant_page_g
 
 
 <* Maps to GtkBinLayout *>
-distinct BinLayout = void*;
+typedef BinLayout = void*;
 
 // Class to parent cast.
 fn LayoutManager* BinLayout.as_LayoutManager(&self) => (LayoutManager*)(self);
@@ -2407,7 +2407,7 @@ extern fn LayoutManager* bin_layout_new() @extern("gtk_bin_layout_new");
 
 
 <* Maps to GtkBookmarkList *>
-distinct BookmarkList = void*;
+typedef BookmarkList = void*;
 
 // Class to parent cast.
 fn gobject::Object* BookmarkList.as_gobject_Object(&self) => (gobject::Object*)(self);
@@ -2445,7 +2445,7 @@ extern fn void BookmarkList.set_io_priority(&self, int io_priority) @extern("gtk
 
 
 <* Maps to GtkBoolFilter *>
-distinct BoolFilter = void*;
+typedef BoolFilter = void*;
 
 // Class to parent cast.
 fn Filter* BoolFilter.as_Filter(&self) => (Filter*)(self);
@@ -2477,7 +2477,7 @@ extern fn void BoolFilter.set_invert(&self, bool invert) @extern("gtk_bool_filte
 
 
 <* Maps to GtkBox *>
-distinct Box = void*;
+typedef Box = void*;
 
 // Class to parent cast.
 fn Widget* Box.as_Widget(&self) => (Widget*)(self);
@@ -2536,7 +2536,7 @@ extern fn void Box.set_spacing(&self, int spacing) @extern("gtk_box_set_spacing"
 
 
 <* Maps to GtkBoxLayout *>
-distinct BoxLayout = void*;
+typedef BoxLayout = void*;
 
 // Class to parent cast.
 fn LayoutManager* BoxLayout.as_LayoutManager(&self) => (LayoutManager*)(self);
@@ -2580,7 +2580,7 @@ extern fn void BoxLayout.set_spacing(&self, uint spacing) @extern("gtk_box_layou
 
 
 <* Maps to GtkBuilder *>
-distinct Builder = void*;
+typedef Builder = void*;
 
 // Class to parent cast.
 fn gobject::Object* Builder.as_gobject_Object(&self) => (gobject::Object*)(self);
@@ -2669,7 +2669,7 @@ extern fn bool Builder.value_from_string_type(&self, usz type, ZString string, g
 
 
 <* Maps to GtkBuilderCScope *>
-distinct BuilderCScope = void*;
+typedef BuilderCScope = void*;
 
 // Class to parent cast.
 fn gobject::Object* BuilderCScope.as_gobject_Object(&self) => (gobject::Object*)(self);
@@ -2698,7 +2698,7 @@ extern fn gobject::Callback BuilderCScope.lookup_callback_symbol(&self, ZString 
 
 
 <* Maps to GtkBuilderListItemFactory *>
-distinct BuilderListItemFactory = void*;
+typedef BuilderListItemFactory = void*;
 
 // Class to parent cast.
 fn ListItemFactory* BuilderListItemFactory.as_ListItemFactory(&self) => (ListItemFactory*)(self);
@@ -2730,7 +2730,7 @@ extern fn BuilderScope* BuilderListItemFactory.get_scope(&self, ) @extern("gtk_b
 
 
 <* Maps to GtkButton *>
-distinct Button = void*;
+typedef Button = void*;
 
 // Class to parent cast.
 fn Widget* Button.as_Widget(&self) => (Widget*)(self);
@@ -2795,7 +2795,7 @@ extern fn void Button.set_use_underline(&self, bool use_underline) @extern("gtk_
 
 
 <* Maps to GtkCClosureExpression *>
-distinct CClosureExpression = void*;
+typedef CClosureExpression = void*;
 
 // Class to parent cast.
 fn Expression* CClosureExpression.as_Expression(&self) => (Expression*)(self);
@@ -2815,7 +2815,7 @@ extern fn CClosureExpression* c_closure_expression_new(usz value_type, gobject::
 
 
 <* Maps to GtkCalendar *>
-distinct Calendar = void*;
+typedef Calendar = void*;
 
 // Class to parent cast.
 fn Widget* Calendar.as_Widget(&self) => (Widget*)(self);
@@ -2889,7 +2889,7 @@ extern fn void Calendar.unmark_day(&self, uint day) @extern("gtk_calendar_unmark
 
 
 <* Maps to GtkCallbackAction *>
-distinct CallbackAction = void*;
+typedef CallbackAction = void*;
 
 // Class to parent cast.
 fn ShortcutAction* CallbackAction.as_ShortcutAction(&self) => (ShortcutAction*)(self);
@@ -2909,7 +2909,7 @@ extern fn CallbackAction* callback_action_new(ShortcutFunc callback, void* data,
 
 
 <* Maps to GtkCellArea *>
-distinct CellArea = void*;
+typedef CellArea = void*;
 
 // Class to parent cast.
 fn gobject::InitiallyUnowned* CellArea.as_gobject_InitiallyUnowned(&self) => (gobject::InitiallyUnowned*)(self);
@@ -3058,7 +3058,7 @@ extern fn void CellArea.stop_editing(&self, bool canceled) @extern("gtk_cell_are
 
 
 <* Maps to GtkCellAreaBox *>
-distinct CellAreaBox = void*;
+typedef CellAreaBox = void*;
 
 // Class to parent cast.
 fn CellArea* CellAreaBox.as_CellArea(&self) => (CellArea*)(self);
@@ -3090,7 +3090,7 @@ extern fn void CellAreaBox.set_spacing(&self, int spacing) @extern("gtk_cell_are
 
 
 <* Maps to GtkCellAreaContext *>
-distinct CellAreaContext = void*;
+typedef CellAreaContext = void*;
 
 // Class to parent cast.
 fn gobject::Object* CellAreaContext.as_gobject_Object(&self) => (gobject::Object*)(self);
@@ -3137,7 +3137,7 @@ extern fn void CellAreaContext.reset(&self, ) @extern("gtk_cell_area_context_res
 
 
 <* Maps to GtkCellRenderer *>
-distinct CellRenderer = void*;
+typedef CellRenderer = void*;
 
 // Class to parent cast.
 fn gobject::InitiallyUnowned* CellRenderer.as_gobject_InitiallyUnowned(&self) => (gobject::InitiallyUnowned*)(self);
@@ -3235,7 +3235,7 @@ extern fn void CellRenderer.stop_editing(&self, bool canceled) @extern("gtk_cell
 
 
 <* Maps to GtkCellRendererAccel *>
-distinct CellRendererAccel = void*;
+typedef CellRendererAccel = void*;
 
 // Class to parent cast.
 fn CellRendererText* CellRendererAccel.as_CellRendererText(&self) => (CellRendererText*)(self);
@@ -3255,7 +3255,7 @@ extern fn CellRenderer* cell_renderer_accel_new() @extern("gtk_cell_renderer_acc
 
 
 <* Maps to GtkCellRendererCombo *>
-distinct CellRendererCombo = void*;
+typedef CellRendererCombo = void*;
 
 // Class to parent cast.
 fn CellRendererText* CellRendererCombo.as_CellRendererText(&self) => (CellRendererText*)(self);
@@ -3275,7 +3275,7 @@ extern fn CellRenderer* cell_renderer_combo_new() @extern("gtk_cell_renderer_com
 
 
 <* Maps to GtkCellRendererPixbuf *>
-distinct CellRendererPixbuf = void*;
+typedef CellRendererPixbuf = void*;
 
 // Class to parent cast.
 fn CellRenderer* CellRendererPixbuf.as_CellRenderer(&self) => (CellRenderer*)(self);
@@ -3295,7 +3295,7 @@ extern fn CellRenderer* cell_renderer_pixbuf_new() @extern("gtk_cell_renderer_pi
 
 
 <* Maps to GtkCellRendererProgress *>
-distinct CellRendererProgress = void*;
+typedef CellRendererProgress = void*;
 
 // Class to parent cast.
 fn CellRenderer* CellRendererProgress.as_CellRenderer(&self) => (CellRenderer*)(self);
@@ -3315,7 +3315,7 @@ extern fn CellRenderer* cell_renderer_progress_new() @extern("gtk_cell_renderer_
 
 
 <* Maps to GtkCellRendererSpin *>
-distinct CellRendererSpin = void*;
+typedef CellRendererSpin = void*;
 
 // Class to parent cast.
 fn CellRendererText* CellRendererSpin.as_CellRendererText(&self) => (CellRendererText*)(self);
@@ -3335,7 +3335,7 @@ extern fn CellRenderer* cell_renderer_spin_new() @extern("gtk_cell_renderer_spin
 
 
 <* Maps to GtkCellRendererSpinner *>
-distinct CellRendererSpinner = void*;
+typedef CellRendererSpinner = void*;
 
 // Class to parent cast.
 fn CellRenderer* CellRendererSpinner.as_CellRenderer(&self) => (CellRenderer*)(self);
@@ -3355,7 +3355,7 @@ extern fn CellRenderer* cell_renderer_spinner_new() @extern("gtk_cell_renderer_s
 
 
 <* Maps to GtkCellRendererText *>
-distinct CellRendererText = void*;
+typedef CellRendererText = void*;
 
 // Class to parent cast.
 fn CellRenderer* CellRendererText.as_CellRenderer(&self) => (CellRenderer*)(self);
@@ -3378,7 +3378,7 @@ extern fn void CellRendererText.set_fixed_height_from_font(&self, int number_of_
 
 
 <* Maps to GtkCellRendererToggle *>
-distinct CellRendererToggle = void*;
+typedef CellRendererToggle = void*;
 
 // Class to parent cast.
 fn CellRenderer* CellRendererToggle.as_CellRenderer(&self) => (CellRenderer*)(self);
@@ -3416,7 +3416,7 @@ extern fn void CellRendererToggle.set_radio(&self, bool radio) @extern("gtk_cell
 
 
 <* Maps to GtkCellView *>
-distinct CellView = void*;
+typedef CellView = void*;
 
 // Class to parent cast.
 fn Widget* CellView.as_Widget(&self) => (Widget*)(self);
@@ -3472,7 +3472,7 @@ extern fn void CellView.set_model(&self, TreeModel* model) @extern("gtk_cell_vie
 
 
 <* Maps to GtkCenterBox *>
-distinct CenterBox = void*;
+typedef CenterBox = void*;
 
 // Class to parent cast.
 fn Widget* CenterBox.as_Widget(&self) => (Widget*)(self);
@@ -3522,7 +3522,7 @@ extern fn void CenterBox.set_start_widget(&self, Widget* child) @extern("gtk_cen
 
 
 <* Maps to GtkCenterLayout *>
-distinct CenterLayout = void*;
+typedef CenterLayout = void*;
 
 // Class to parent cast.
 fn LayoutManager* CenterLayout.as_LayoutManager(&self) => (LayoutManager*)(self);
@@ -3578,7 +3578,7 @@ extern fn void CenterLayout.set_start_widget(&self, Widget* widget) @extern("gtk
 
 
 <* Maps to GtkCheckButton *>
-distinct CheckButton = void*;
+typedef CheckButton = void*;
 
 // Class to parent cast.
 fn Widget* CheckButton.as_Widget(&self) => (Widget*)(self);
@@ -3637,7 +3637,7 @@ extern fn void CheckButton.set_use_underline(&self, bool setting) @extern("gtk_c
 
 
 <* Maps to GtkClosureExpression *>
-distinct ClosureExpression = void*;
+typedef ClosureExpression = void*;
 
 // Class to parent cast.
 fn Expression* ClosureExpression.as_Expression(&self) => (Expression*)(self);
@@ -3657,7 +3657,7 @@ extern fn ClosureExpression* closure_expression_new(usz value_type, gobject::Clo
 
 
 <* Maps to GtkColorButton *>
-distinct ColorButton = void*;
+typedef ColorButton = void*;
 
 // Class to parent cast.
 fn Widget* ColorButton.as_Widget(&self) => (Widget*)(self);
@@ -3692,7 +3692,7 @@ extern fn void ColorButton.set_title(&self, ZString title) @extern("gtk_color_bu
 
 
 <* Maps to GtkColorChooserDialog *>
-distinct ColorChooserDialog = void*;
+typedef ColorChooserDialog = void*;
 
 // Class to parent cast.
 fn Dialog* ColorChooserDialog.as_Dialog(&self) => (Dialog*)(self);
@@ -3712,7 +3712,7 @@ extern fn Widget* color_chooser_dialog_new(ZString title, Window* parent) @exter
 
 
 <* Maps to GtkColorChooserWidget *>
-distinct ColorChooserWidget = void*;
+typedef ColorChooserWidget = void*;
 
 // Class to parent cast.
 fn Widget* ColorChooserWidget.as_Widget(&self) => (Widget*)(self);
@@ -3732,7 +3732,7 @@ extern fn Widget* color_chooser_widget_new() @extern("gtk_color_chooser_widget_n
 
 
 <* Maps to GtkColorDialog *>
-distinct ColorDialog = void*;
+typedef ColorDialog = void*;
 
 // Class to parent cast.
 fn gobject::Object* ColorDialog.as_gobject_Object(&self) => (gobject::Object*)(self);
@@ -3776,7 +3776,7 @@ extern fn void ColorDialog.set_with_alpha(&self, bool with_alpha) @extern("gtk_c
 
 
 <* Maps to GtkColorDialogButton *>
-distinct ColorDialogButton = void*;
+typedef ColorDialogButton = void*;
 
 // Class to parent cast.
 fn Widget* ColorDialogButton.as_Widget(&self) => (Widget*)(self);
@@ -3808,7 +3808,7 @@ extern fn void ColorDialogButton.set_rgba(&self, gdk::Rgba* color) @extern("gtk_
 
 
 <* Maps to GtkColumnView *>
-distinct ColumnView = void*;
+typedef ColumnView = void*;
 
 // Class to parent cast.
 fn Widget* ColumnView.as_Widget(&self) => (Widget*)(self);
@@ -3903,7 +3903,7 @@ extern fn void ColumnView.sort_by_column(&self, ColumnViewColumn* column, SortTy
 
 
 <* Maps to GtkColumnViewCell *>
-distinct ColumnViewCell = void*;
+typedef ColumnViewCell = void*;
 
 // Class to parent cast.
 fn ListItem* ColumnViewCell.as_ListItem(&self) => (ListItem*)(self);
@@ -3941,7 +3941,7 @@ extern fn void ColumnViewCell.set_focusable(&self, bool focusable) @extern("gtk_
 
 
 <* Maps to GtkColumnViewColumn *>
-distinct ColumnViewColumn = void*;
+typedef ColumnViewColumn = void*;
 
 // Class to parent cast.
 fn gobject::Object* ColumnViewColumn.as_gobject_Object(&self) => (gobject::Object*)(self);
@@ -4018,7 +4018,7 @@ extern fn void ColumnViewColumn.set_visible(&self, bool visible) @extern("gtk_co
 
 
 <* Maps to GtkColumnViewRow *>
-distinct ColumnViewRow = void*;
+typedef ColumnViewRow = void*;
 
 // Class to parent cast.
 fn gobject::Object* ColumnViewRow.as_gobject_Object(&self) => (gobject::Object*)(self);
@@ -4074,7 +4074,7 @@ extern fn void ColumnViewRow.set_selectable(&self, bool selectable) @extern("gtk
 
 
 <* Maps to GtkColumnViewSorter *>
-distinct ColumnViewSorter = void*;
+typedef ColumnViewSorter = void*;
 
 // Class to parent cast.
 fn Sorter* ColumnViewSorter.as_Sorter(&self) => (Sorter*)(self);
@@ -4103,7 +4103,7 @@ extern fn SortType ColumnViewSorter.get_primary_sort_order(&self, ) @extern("gtk
 
 
 <* Maps to GtkComboBox *>
-distinct ComboBox = void*;
+typedef ComboBox = void*;
 
 // Class to parent cast.
 fn Widget* ComboBox.as_Widget(&self) => (Widget*)(self);
@@ -4204,7 +4204,7 @@ extern fn void ComboBox.set_row_separator_func(&self, TreeViewRowSeparatorFunc f
 
 
 <* Maps to GtkComboBoxText *>
-distinct ComboBoxText = void*;
+typedef ComboBoxText = void*;
 
 // Class to parent cast.
 fn ComboBox* ComboBoxText.as_ComboBox(&self) => (ComboBox*)(self);
@@ -4254,7 +4254,7 @@ extern fn void ComboBoxText.remove_all(&self, ) @extern("gtk_combo_box_text_remo
 
 
 <* Maps to GtkConstantExpression *>
-distinct ConstantExpression = void*;
+typedef ConstantExpression = void*;
 
 // Class to parent cast.
 fn Expression* ConstantExpression.as_Expression(&self) => (Expression*)(self);
@@ -4280,7 +4280,7 @@ extern fn gobject::Value* ConstantExpression.get_value(&self, ) @extern("gtk_con
 
 
 <* Maps to GtkConstraint *>
-distinct Constraint = void*;
+typedef Constraint = void*;
 
 // Class to parent cast.
 fn gobject::Object* Constraint.as_gobject_Object(&self) => (gobject::Object*)(self);
@@ -4336,7 +4336,7 @@ extern fn bool Constraint.is_required(&self, ) @extern("gtk_constraint_is_requir
 
 
 <* Maps to GtkConstraintGuide *>
-distinct ConstraintGuide = void*;
+typedef ConstraintGuide = void*;
 
 // Class to parent cast.
 fn gobject::Object* ConstraintGuide.as_gobject_Object(&self) => (gobject::Object*)(self);
@@ -4386,7 +4386,7 @@ extern fn void ConstraintGuide.set_strength(&self, ConstraintStrength strength) 
 
 
 <* Maps to GtkConstraintLayout *>
-distinct ConstraintLayout = void*;
+typedef ConstraintLayout = void*;
 
 // Class to parent cast.
 fn LayoutManager* ConstraintLayout.as_LayoutManager(&self) => (LayoutManager*)(self);
@@ -4433,7 +4433,7 @@ extern fn void ConstraintLayout.remove_guide(&self, ConstraintGuide* guide) @ext
 
 
 <* Maps to GtkConstraintLayoutChild *>
-distinct ConstraintLayoutChild = void*;
+typedef ConstraintLayoutChild = void*;
 
 // Class to parent cast.
 fn LayoutChild* ConstraintLayoutChild.as_LayoutChild(&self) => (LayoutChild*)(self);
@@ -4450,7 +4450,7 @@ fn LayoutChild* ConstraintLayoutChild.as_LayoutChild(&self) => (LayoutChild*)(se
 
 
 <* Maps to GtkCssProvider *>
-distinct CssProvider = void*;
+typedef CssProvider = void*;
 
 // Class to parent cast.
 fn gobject::Object* CssProvider.as_gobject_Object(&self) => (gobject::Object*)(self);
@@ -4494,7 +4494,7 @@ extern fn ZString* CssProvider.to_string(&self, ) @extern("gtk_css_provider_to_s
 
 
 <* Maps to GtkCustomFilter *>
-distinct CustomFilter = void*;
+typedef CustomFilter = void*;
 
 // Class to parent cast.
 fn Filter* CustomFilter.as_Filter(&self) => (Filter*)(self);
@@ -4517,7 +4517,7 @@ extern fn void CustomFilter.set_filter_func(&self, CustomFilterFunc match_func, 
 
 
 <* Maps to GtkCustomLayout *>
-distinct CustomLayout = void*;
+typedef CustomLayout = void*;
 
 // Class to parent cast.
 fn LayoutManager* CustomLayout.as_LayoutManager(&self) => (LayoutManager*)(self);
@@ -4537,7 +4537,7 @@ extern fn LayoutManager* custom_layout_new(CustomRequestModeFunc request_mode, C
 
 
 <* Maps to GtkCustomSorter *>
-distinct CustomSorter = void*;
+typedef CustomSorter = void*;
 
 // Class to parent cast.
 fn Sorter* CustomSorter.as_Sorter(&self) => (Sorter*)(self);
@@ -4560,7 +4560,7 @@ extern fn void CustomSorter.set_sort_func(&self, glib::CompareDataFunc sort_func
 
 
 <* Maps to GtkDialog *>
-distinct Dialog = void*;
+typedef Dialog = void*;
 
 // Class to parent cast.
 fn Window* Dialog.as_Window(&self) => (Window*)(self);
@@ -4613,7 +4613,7 @@ extern fn void Dialog.set_response_sensitive(&self, int response_id, bool settin
 
 
 <* Maps to GtkDirectoryList *>
-distinct DirectoryList = void*;
+typedef DirectoryList = void*;
 
 // Class to parent cast.
 fn gobject::Object* DirectoryList.as_gobject_Object(&self) => (gobject::Object*)(self);
@@ -4663,7 +4663,7 @@ extern fn void DirectoryList.set_monitored(&self, bool monitored) @extern("gtk_d
 
 
 <* Maps to GtkDragIcon *>
-distinct DragIcon = void*;
+typedef DragIcon = void*;
 
 // Class to parent cast.
 fn Widget* DragIcon.as_Widget(&self) => (Widget*)(self);
@@ -4695,7 +4695,7 @@ extern fn void drag_icon_set_from_paintable(gdk::Drag* drag, gdk::Paintable* pai
 
 
 <* Maps to GtkDragSource *>
-distinct DragSource = void*;
+typedef DragSource = void*;
 
 // Class to parent cast.
 fn GestureSingle* DragSource.as_GestureSingle(&self) => (GestureSingle*)(self);
@@ -4736,7 +4736,7 @@ extern fn void DragSource.set_icon(&self, gdk::Paintable* paintable, int hot_x, 
 
 
 <* Maps to GtkDrawingArea *>
-distinct DrawingArea = void*;
+typedef DrawingArea = void*;
 
 // Class to parent cast.
 fn Widget* DrawingArea.as_Widget(&self) => (Widget*)(self);
@@ -4771,7 +4771,7 @@ extern fn void DrawingArea.set_draw_func(&self, DrawingAreaDrawFunc draw_func, v
 
 
 <* Maps to GtkDropControllerMotion *>
-distinct DropControllerMotion = void*;
+typedef DropControllerMotion = void*;
 
 // Class to parent cast.
 fn EventController* DropControllerMotion.as_EventController(&self) => (EventController*)(self);
@@ -4800,7 +4800,7 @@ extern fn bool DropControllerMotion.is_pointer(&self, ) @extern("gtk_drop_contro
 
 
 <* Maps to GtkDropDown *>
-distinct DropDown = void*;
+typedef DropDown = void*;
 
 // Class to parent cast.
 fn Widget* DropDown.as_Widget(&self) => (Widget*)(self);
@@ -4880,7 +4880,7 @@ extern fn void DropDown.set_show_arrow(&self, bool show_arrow) @extern("gtk_drop
 
 
 <* Maps to GtkDropTarget *>
-distinct DropTarget = void*;
+typedef DropTarget = void*;
 
 // Class to parent cast.
 fn EventController* DropTarget.as_EventController(&self) => (EventController*)(self);
@@ -4933,7 +4933,7 @@ extern fn void DropTarget.set_preload(&self, bool preload) @extern("gtk_drop_tar
 
 
 <* Maps to GtkDropTargetAsync *>
-distinct DropTargetAsync = void*;
+typedef DropTargetAsync = void*;
 
 // Class to parent cast.
 fn EventController* DropTargetAsync.as_EventController(&self) => (EventController*)(self);
@@ -4968,7 +4968,7 @@ extern fn void DropTargetAsync.set_formats(&self, gdk::ContentFormats* formats) 
 
 
 <* Maps to GtkEditableLabel *>
-distinct EditableLabel = void*;
+typedef EditableLabel = void*;
 
 // Class to parent cast.
 fn Widget* EditableLabel.as_Widget(&self) => (Widget*)(self);
@@ -4997,7 +4997,7 @@ extern fn void EditableLabel.stop_editing(&self, bool commit) @extern("gtk_edita
 
 
 <* Maps to GtkEmojiChooser *>
-distinct EmojiChooser = void*;
+typedef EmojiChooser = void*;
 
 // Class to parent cast.
 fn Popover* EmojiChooser.as_Popover(&self) => (Popover*)(self);
@@ -5017,7 +5017,7 @@ extern fn Widget* emoji_chooser_new() @extern("gtk_emoji_chooser_new");
 
 
 <* Maps to GtkEntry *>
-distinct Entry = void*;
+typedef Entry = void*;
 
 // Class to parent cast.
 fn Widget* Entry.as_Widget(&self) => (Widget*)(self);
@@ -5214,7 +5214,7 @@ extern fn void Entry.unset_invisible_char(&self, ) @extern("gtk_entry_unset_invi
 
 
 <* Maps to GtkEntryBuffer *>
-distinct EntryBuffer = void*;
+typedef EntryBuffer = void*;
 
 // Class to parent cast.
 fn gobject::Object* EntryBuffer.as_gobject_Object(&self) => (gobject::Object*)(self);
@@ -5264,7 +5264,7 @@ extern fn void EntryBuffer.set_text(&self, ZString chars, int n_chars) @extern("
 
 
 <* Maps to GtkEntryCompletion *>
-distinct EntryCompletion = void*;
+typedef EntryCompletion = void*;
 
 // Class to parent cast.
 fn gobject::Object* EntryCompletion.as_gobject_Object(&self) => (gobject::Object*)(self);
@@ -5353,7 +5353,7 @@ extern fn void EntryCompletion.set_text_column(&self, int column) @extern("gtk_e
 
 
 <* Maps to GtkEventController *>
-distinct EventController = void*;
+typedef EventController = void*;
 
 // Class to parent cast.
 fn gobject::Object* EventController.as_gobject_Object(&self) => (gobject::Object*)(self);
@@ -5409,7 +5409,7 @@ extern fn void EventController.set_static_name(&self, ZString name) @extern("gtk
 
 
 <* Maps to GtkEventControllerFocus *>
-distinct EventControllerFocus = void*;
+typedef EventControllerFocus = void*;
 
 // Class to parent cast.
 fn EventController* EventControllerFocus.as_EventController(&self) => (EventController*)(self);
@@ -5435,7 +5435,7 @@ extern fn bool EventControllerFocus.is_focus(&self, ) @extern("gtk_event_control
 
 
 <* Maps to GtkEventControllerKey *>
-distinct EventControllerKey = void*;
+typedef EventControllerKey = void*;
 
 // Class to parent cast.
 fn EventController* EventControllerKey.as_EventController(&self) => (EventController*)(self);
@@ -5467,7 +5467,7 @@ extern fn void EventControllerKey.set_im_context(&self, IMContext* im_context) @
 
 
 <* Maps to GtkEventControllerLegacy *>
-distinct EventControllerLegacy = void*;
+typedef EventControllerLegacy = void*;
 
 // Class to parent cast.
 fn EventController* EventControllerLegacy.as_EventController(&self) => (EventController*)(self);
@@ -5487,7 +5487,7 @@ extern fn EventController* event_controller_legacy_new() @extern("gtk_event_cont
 
 
 <* Maps to GtkEventControllerMotion *>
-distinct EventControllerMotion = void*;
+typedef EventControllerMotion = void*;
 
 // Class to parent cast.
 fn EventController* EventControllerMotion.as_EventController(&self) => (EventController*)(self);
@@ -5513,7 +5513,7 @@ extern fn bool EventControllerMotion.is_pointer(&self, ) @extern("gtk_event_cont
 
 
 <* Maps to GtkEventControllerScroll *>
-distinct EventControllerScroll = void*;
+typedef EventControllerScroll = void*;
 
 // Class to parent cast.
 fn EventController* EventControllerScroll.as_EventController(&self) => (EventController*)(self);
@@ -5542,7 +5542,7 @@ extern fn void EventControllerScroll.set_flags(&self, EventControllerScrollFlags
 
 
 <* Maps to GtkEveryFilter *>
-distinct EveryFilter = void*;
+typedef EveryFilter = void*;
 
 // Class to parent cast.
 fn MultiFilter* EveryFilter.as_MultiFilter(&self) => (MultiFilter*)(self);
@@ -5562,7 +5562,7 @@ extern fn EveryFilter* every_filter_new() @extern("gtk_every_filter_new");
 
 
 <* Maps to GtkExpander *>
-distinct Expander = void*;
+typedef Expander = void*;
 
 // Class to parent cast.
 fn Widget* Expander.as_Widget(&self) => (Widget*)(self);
@@ -5627,7 +5627,7 @@ extern fn void Expander.set_use_underline(&self, bool use_underline) @extern("gt
 
 
 <* Maps to GtkExpression *>
-distinct Expression = void*;
+typedef Expression = void*;
 
 // Class to parent cast.
 
@@ -5665,7 +5665,7 @@ extern fn ExpressionWatch* Expression.watch(&self, gobject::Object* this_, Expre
 
 
 <* Maps to GtkFileChooserDialog *>
-distinct FileChooserDialog = void*;
+typedef FileChooserDialog = void*;
 
 // Class to parent cast.
 fn Dialog* FileChooserDialog.as_Dialog(&self) => (Dialog*)(self);
@@ -5685,7 +5685,7 @@ extern fn Widget* file_chooser_dialog_new(ZString title, Window* parent, FileCho
 
 
 <* Maps to GtkFileChooserNative *>
-distinct FileChooserNative = void*;
+typedef FileChooserNative = void*;
 
 // Class to parent cast.
 fn NativeDialog* FileChooserNative.as_NativeDialog(&self) => (NativeDialog*)(self);
@@ -5717,7 +5717,7 @@ extern fn void FileChooserNative.set_cancel_label(&self, ZString cancel_label) @
 
 
 <* Maps to GtkFileChooserWidget *>
-distinct FileChooserWidget = void*;
+typedef FileChooserWidget = void*;
 
 // Class to parent cast.
 fn Widget* FileChooserWidget.as_Widget(&self) => (Widget*)(self);
@@ -5737,7 +5737,7 @@ extern fn Widget* file_chooser_widget_new(FileChooserAction action) @extern("gtk
 
 
 <* Maps to GtkFileDialog *>
-distinct FileDialog = void*;
+typedef FileDialog = void*;
 
 // Class to parent cast.
 fn gobject::Object* FileDialog.as_gobject_Object(&self) => (gobject::Object*)(self);
@@ -5835,7 +5835,7 @@ extern fn void FileDialog.set_title(&self, ZString title) @extern("gtk_file_dial
 
 
 <* Maps to GtkFileFilter *>
-distinct FileFilter = void*;
+typedef FileFilter = void*;
 
 // Class to parent cast.
 fn Filter* FileFilter.as_Filter(&self) => (Filter*)(self);
@@ -5882,7 +5882,7 @@ extern fn glib::Variant* FileFilter.to_gvariant(&self, ) @extern("gtk_file_filte
 
 
 <* Maps to GtkFileLauncher *>
-distinct FileLauncher = void*;
+typedef FileLauncher = void*;
 
 // Class to parent cast.
 fn gobject::Object* FileLauncher.as_gobject_Object(&self) => (gobject::Object*)(self);
@@ -5932,7 +5932,7 @@ extern fn void FileLauncher.set_writable(&self, bool writable) @extern("gtk_file
 
 
 <* Maps to GtkFilter *>
-distinct Filter = void*;
+typedef Filter = void*;
 
 // Class to parent cast.
 fn gobject::Object* Filter.as_gobject_Object(&self) => (gobject::Object*)(self);
@@ -5958,7 +5958,7 @@ extern fn bool Filter.match(&self, gobject::Object* item) @extern("gtk_filter_ma
 
 
 <* Maps to GtkFilterListModel *>
-distinct FilterListModel = void*;
+typedef FilterListModel = void*;
 
 // Class to parent cast.
 fn gobject::Object* FilterListModel.as_gobject_Object(&self) => (gobject::Object*)(self);
@@ -5999,7 +5999,7 @@ extern fn void FilterListModel.set_model(&self, gio::ListModel* model) @extern("
 
 
 <* Maps to GtkFixed *>
-distinct Fixed = void*;
+typedef Fixed = void*;
 
 // Class to parent cast.
 fn Widget* Fixed.as_Widget(&self) => (Widget*)(self);
@@ -6037,7 +6037,7 @@ extern fn void Fixed.set_child_transform(&self, Widget* widget, gsk::Transform* 
 
 
 <* Maps to GtkFixedLayout *>
-distinct FixedLayout = void*;
+typedef FixedLayout = void*;
 
 // Class to parent cast.
 fn LayoutManager* FixedLayout.as_LayoutManager(&self) => (LayoutManager*)(self);
@@ -6057,7 +6057,7 @@ extern fn LayoutManager* fixed_layout_new() @extern("gtk_fixed_layout_new");
 
 
 <* Maps to GtkFixedLayoutChild *>
-distinct FixedLayoutChild = void*;
+typedef FixedLayoutChild = void*;
 
 // Class to parent cast.
 fn LayoutChild* FixedLayoutChild.as_LayoutChild(&self) => (LayoutChild*)(self);
@@ -6080,7 +6080,7 @@ extern fn void FixedLayoutChild.set_transform(&self, gsk::Transform* transform) 
 
 
 <* Maps to GtkFlattenListModel *>
-distinct FlattenListModel = void*;
+typedef FlattenListModel = void*;
 
 // Class to parent cast.
 fn gobject::Object* FlattenListModel.as_gobject_Object(&self) => (gobject::Object*)(self);
@@ -6109,7 +6109,7 @@ extern fn void FlattenListModel.set_model(&self, gio::ListModel* model) @extern(
 
 
 <* Maps to GtkFlowBox *>
-distinct FlowBox = void*;
+typedef FlowBox = void*;
 
 // Class to parent cast.
 fn Widget* FlowBox.as_Widget(&self) => (Widget*)(self);
@@ -6231,7 +6231,7 @@ extern fn void FlowBox.unselect_child(&self, FlowBoxChild* child) @extern("gtk_f
 
 
 <* Maps to GtkFlowBoxChild *>
-distinct FlowBoxChild = void*;
+typedef FlowBoxChild = void*;
 
 // Class to parent cast.
 fn Widget* FlowBoxChild.as_Widget(&self) => (Widget*)(self);
@@ -6266,7 +6266,7 @@ extern fn void FlowBoxChild.set_child(&self, Widget* child) @extern("gtk_flow_bo
 
 
 <* Maps to GtkFontButton *>
-distinct FontButton = void*;
+typedef FontButton = void*;
 
 // Class to parent cast.
 fn Widget* FontButton.as_Widget(&self) => (Widget*)(self);
@@ -6313,7 +6313,7 @@ extern fn void FontButton.set_use_size(&self, bool use_size) @extern("gtk_font_b
 
 
 <* Maps to GtkFontChooserDialog *>
-distinct FontChooserDialog = void*;
+typedef FontChooserDialog = void*;
 
 // Class to parent cast.
 fn Dialog* FontChooserDialog.as_Dialog(&self) => (Dialog*)(self);
@@ -6333,7 +6333,7 @@ extern fn Widget* font_chooser_dialog_new(ZString title, Window* parent) @extern
 
 
 <* Maps to GtkFontChooserWidget *>
-distinct FontChooserWidget = void*;
+typedef FontChooserWidget = void*;
 
 // Class to parent cast.
 fn Widget* FontChooserWidget.as_Widget(&self) => (Widget*)(self);
@@ -6353,7 +6353,7 @@ extern fn Widget* font_chooser_widget_new() @extern("gtk_font_chooser_widget_new
 
 
 <* Maps to GtkFontDialog *>
-distinct FontDialog = void*;
+typedef FontDialog = void*;
 
 // Class to parent cast.
 fn gobject::Object* FontDialog.as_gobject_Object(&self) => (gobject::Object*)(self);
@@ -6427,7 +6427,7 @@ extern fn void FontDialog.set_title(&self, ZString title) @extern("gtk_font_dial
 
 
 <* Maps to GtkFontDialogButton *>
-distinct FontDialogButton = void*;
+typedef FontDialogButton = void*;
 
 // Class to parent cast.
 fn Widget* FontDialogButton.as_Widget(&self) => (Widget*)(self);
@@ -6489,7 +6489,7 @@ extern fn void FontDialogButton.set_use_size(&self, bool use_size) @extern("gtk_
 
 
 <* Maps to GtkFrame *>
-distinct Frame = void*;
+typedef Frame = void*;
 
 // Class to parent cast.
 fn Widget* Frame.as_Widget(&self) => (Widget*)(self);
@@ -6533,7 +6533,7 @@ extern fn void Frame.set_label_widget(&self, Widget* label_widget) @extern("gtk_
 
 
 <* Maps to GtkGLArea *>
-distinct GLArea = void*;
+typedef GLArea = void*;
 
 // Class to parent cast.
 fn Widget* GLArea.as_Widget(&self) => (Widget*)(self);
@@ -6610,7 +6610,7 @@ extern fn void GLArea.set_use_es(&self, bool use_es) @extern("gtk_gl_area_set_us
 
 
 <* Maps to GtkGesture *>
-distinct Gesture = void*;
+typedef Gesture = void*;
 
 // Class to parent cast.
 fn EventController* Gesture.as_EventController(&self) => (EventController*)(self);
@@ -6678,7 +6678,7 @@ extern fn void Gesture.ungroup(&self, ) @extern("gtk_gesture_ungroup");
 
 
 <* Maps to GtkGestureClick *>
-distinct GestureClick = void*;
+typedef GestureClick = void*;
 
 // Class to parent cast.
 fn GestureSingle* GestureClick.as_GestureSingle(&self) => (GestureSingle*)(self);
@@ -6698,7 +6698,7 @@ extern fn Gesture* gesture_click_new() @extern("gtk_gesture_click_new");
 
 
 <* Maps to GtkGestureDrag *>
-distinct GestureDrag = void*;
+typedef GestureDrag = void*;
 
 // Class to parent cast.
 fn GestureSingle* GestureDrag.as_GestureSingle(&self) => (GestureSingle*)(self);
@@ -6724,7 +6724,7 @@ extern fn bool GestureDrag.get_start_point(&self, double* x, double* y) @extern(
 
 
 <* Maps to GtkGestureLongPress *>
-distinct GestureLongPress = void*;
+typedef GestureLongPress = void*;
 
 // Class to parent cast.
 fn GestureSingle* GestureLongPress.as_GestureSingle(&self) => (GestureSingle*)(self);
@@ -6750,7 +6750,7 @@ extern fn void GestureLongPress.set_delay_factor(&self, double delay_factor) @ex
 
 
 <* Maps to GtkGesturePan *>
-distinct GesturePan = void*;
+typedef GesturePan = void*;
 
 // Class to parent cast.
 fn GestureDrag* GesturePan.as_GestureDrag(&self) => (GestureDrag*)(self);
@@ -6776,7 +6776,7 @@ extern fn void GesturePan.set_orientation(&self, Orientation orientation) @exter
 
 
 <* Maps to GtkGestureRotate *>
-distinct GestureRotate = void*;
+typedef GestureRotate = void*;
 
 // Class to parent cast.
 fn Gesture* GestureRotate.as_Gesture(&self) => (Gesture*)(self);
@@ -6799,7 +6799,7 @@ extern fn double GestureRotate.get_angle_delta(&self, ) @extern("gtk_gesture_rot
 
 
 <* Maps to GtkGestureSingle *>
-distinct GestureSingle = void*;
+typedef GestureSingle = void*;
 
 // Class to parent cast.
 fn Gesture* GestureSingle.as_Gesture(&self) => (Gesture*)(self);
@@ -6840,7 +6840,7 @@ extern fn void GestureSingle.set_touch_only(&self, bool touch_only) @extern("gtk
 
 
 <* Maps to GtkGestureStylus *>
-distinct GestureStylus = void*;
+typedef GestureStylus = void*;
 
 // Class to parent cast.
 fn GestureSingle* GestureStylus.as_GestureSingle(&self) => (GestureSingle*)(self);
@@ -6878,7 +6878,7 @@ extern fn void GestureStylus.set_stylus_only(&self, bool stylus_only) @extern("g
 
 
 <* Maps to GtkGestureSwipe *>
-distinct GestureSwipe = void*;
+typedef GestureSwipe = void*;
 
 // Class to parent cast.
 fn GestureSingle* GestureSwipe.as_GestureSingle(&self) => (GestureSingle*)(self);
@@ -6901,7 +6901,7 @@ extern fn bool GestureSwipe.get_velocity(&self, double* velocity_x, double* velo
 
 
 <* Maps to GtkGestureZoom *>
-distinct GestureZoom = void*;
+typedef GestureZoom = void*;
 
 // Class to parent cast.
 fn Gesture* GestureZoom.as_Gesture(&self) => (Gesture*)(self);
@@ -6924,7 +6924,7 @@ extern fn double GestureZoom.get_scale_delta(&self, ) @extern("gtk_gesture_zoom_
 
 
 <* Maps to GtkGraphicsOffload *>
-distinct GraphicsOffload = void*;
+typedef GraphicsOffload = void*;
 
 // Class to parent cast.
 fn Widget* GraphicsOffload.as_Widget(&self) => (Widget*)(self);
@@ -6962,7 +6962,7 @@ extern fn void GraphicsOffload.set_enabled(&self, GraphicsOffloadEnabled enabled
 
 
 <* Maps to GtkGrid *>
-distinct Grid = void*;
+typedef Grid = void*;
 
 // Class to parent cast.
 fn Widget* Grid.as_Widget(&self) => (Widget*)(self);
@@ -7048,7 +7048,7 @@ extern fn void Grid.set_row_spacing(&self, uint spacing) @extern("gtk_grid_set_r
 
 
 <* Maps to GtkGridLayout *>
-distinct GridLayout = void*;
+typedef GridLayout = void*;
 
 // Class to parent cast.
 fn LayoutManager* GridLayout.as_LayoutManager(&self) => (LayoutManager*)(self);
@@ -7104,7 +7104,7 @@ extern fn void GridLayout.set_row_spacing(&self, uint spacing) @extern("gtk_grid
 
 
 <* Maps to GtkGridLayoutChild *>
-distinct GridLayoutChild = void*;
+typedef GridLayoutChild = void*;
 
 // Class to parent cast.
 fn LayoutChild* GridLayoutChild.as_LayoutChild(&self) => (LayoutChild*)(self);
@@ -7145,7 +7145,7 @@ extern fn void GridLayoutChild.set_row_span(&self, int span) @extern("gtk_grid_l
 
 
 <* Maps to GtkGridView *>
-distinct GridView = void*;
+typedef GridView = void*;
 
 // Class to parent cast.
 fn ListBase* GridView.as_ListBase(&self) => (ListBase*)(self);
@@ -7210,7 +7210,7 @@ extern fn void GridView.set_tab_behavior(&self, ListTabBehavior tab_behavior) @e
 
 
 <* Maps to GtkHeaderBar *>
-distinct HeaderBar = void*;
+typedef HeaderBar = void*;
 
 // Class to parent cast.
 fn Widget* HeaderBar.as_Widget(&self) => (Widget*)(self);
@@ -7257,7 +7257,7 @@ extern fn void HeaderBar.set_title_widget(&self, Widget* title_widget) @extern("
 
 
 <* Maps to GtkIMContext *>
-distinct IMContext = void*;
+typedef IMContext = void*;
 
 // Class to parent cast.
 fn gobject::Object* IMContext.as_gobject_Object(&self) => (gobject::Object*)(self);
@@ -7319,7 +7319,7 @@ extern fn void IMContext.set_use_preedit(&self, bool use_preedit) @extern("gtk_i
 
 
 <* Maps to GtkIMContextSimple *>
-distinct IMContextSimple = void*;
+typedef IMContextSimple = void*;
 
 // Class to parent cast.
 fn IMContext* IMContextSimple.as_IMContext(&self) => (IMContext*)(self);
@@ -7345,7 +7345,7 @@ extern fn void IMContextSimple.add_table(&self, ushort data, int max_seq_len, in
 
 
 <* Maps to GtkIMMulticontext *>
-distinct IMMulticontext = void*;
+typedef IMMulticontext = void*;
 
 // Class to parent cast.
 fn IMContext* IMMulticontext.as_IMContext(&self) => (IMContext*)(self);
@@ -7371,7 +7371,7 @@ extern fn void IMMulticontext.set_context_id(&self, ZString context_id) @extern(
 
 
 <* Maps to GtkIconPaintable *>
-distinct IconPaintable = void*;
+typedef IconPaintable = void*;
 
 // Class to parent cast.
 fn gobject::Object* IconPaintable.as_gobject_Object(&self) => (gobject::Object*)(self);
@@ -7400,7 +7400,7 @@ extern fn bool IconPaintable.is_symbolic(&self, ) @extern("gtk_icon_paintable_is
 
 
 <* Maps to GtkIconTheme *>
-distinct IconTheme = void*;
+typedef IconTheme = void*;
 
 // Class to parent cast.
 fn gobject::Object* IconTheme.as_gobject_Object(&self) => (gobject::Object*)(self);
@@ -7468,7 +7468,7 @@ extern fn IconTheme* icon_theme_get_for_display(gdk::Display* display) @extern("
 
 
 <* Maps to GtkIconView *>
-distinct IconView = void*;
+typedef IconView = void*;
 
 // Class to parent cast.
 fn Widget* IconView.as_Widget(&self) => (Widget*)(self);
@@ -7674,7 +7674,7 @@ extern fn void IconView.unset_model_drag_source(&self, ) @extern("gtk_icon_view_
 
 
 <* Maps to GtkImage *>
-distinct Image = void*;
+typedef Image = void*;
 
 // Class to parent cast.
 fn Widget* Image.as_Widget(&self) => (Widget*)(self);
@@ -7757,7 +7757,7 @@ extern fn void Image.set_pixel_size(&self, int pixel_size) @extern("gtk_image_se
 
 
 <* Maps to GtkInfoBar *>
-distinct InfoBar = void*;
+typedef InfoBar = void*;
 
 // Class to parent cast.
 fn Widget* InfoBar.as_Widget(&self) => (Widget*)(self);
@@ -7825,7 +7825,7 @@ extern fn void InfoBar.set_show_close_button(&self, bool setting) @extern("gtk_i
 
 
 <* Maps to GtkInscription *>
-distinct Inscription = void*;
+typedef Inscription = void*;
 
 // Class to parent cast.
 fn Widget* Inscription.as_Widget(&self) => (Widget*)(self);
@@ -7908,7 +7908,7 @@ extern fn void Inscription.set_yalign(&self, float yalign) @extern("gtk_inscript
 
 
 <* Maps to GtkKeyvalTrigger *>
-distinct KeyvalTrigger = void*;
+typedef KeyvalTrigger = void*;
 
 // Class to parent cast.
 fn ShortcutTrigger* KeyvalTrigger.as_ShortcutTrigger(&self) => (ShortcutTrigger*)(self);
@@ -7934,7 +7934,7 @@ extern fn gdk::ModifierType KeyvalTrigger.get_modifiers(&self, ) @extern("gtk_ke
 
 
 <* Maps to GtkLabel *>
-distinct Label = void*;
+typedef Label = void*;
 
 // Class to parent cast.
 fn Widget* Label.as_Widget(&self) => (Widget*)(self);
@@ -8104,7 +8104,7 @@ extern fn void Label.set_yalign(&self, float yalign) @extern("gtk_label_set_yali
 
 
 <* Maps to GtkLayoutChild *>
-distinct LayoutChild = void*;
+typedef LayoutChild = void*;
 
 // Class to parent cast.
 fn gobject::Object* LayoutChild.as_gobject_Object(&self) => (gobject::Object*)(self);
@@ -8127,7 +8127,7 @@ extern fn LayoutManager* LayoutChild.get_layout_manager(&self, ) @extern("gtk_la
 
 
 <* Maps to GtkLayoutManager *>
-distinct LayoutManager = void*;
+typedef LayoutManager = void*;
 
 // Class to parent cast.
 fn gobject::Object* LayoutManager.as_gobject_Object(&self) => (gobject::Object*)(self);
@@ -8162,7 +8162,7 @@ extern fn void LayoutManager.measure(&self, Widget* widget, Orientation orientat
 
 
 <* Maps to GtkLevelBar *>
-distinct LevelBar = void*;
+typedef LevelBar = void*;
 
 // Class to parent cast.
 fn Widget* LevelBar.as_Widget(&self) => (Widget*)(self);
@@ -8224,7 +8224,7 @@ extern fn void LevelBar.set_value(&self, double value) @extern("gtk_level_bar_se
 
 
 <* Maps to GtkLinkButton *>
-distinct LinkButton = void*;
+typedef LinkButton = void*;
 
 // Class to parent cast.
 fn Button* LinkButton.as_Button(&self) => (Button*)(self);
@@ -8259,7 +8259,7 @@ extern fn void LinkButton.set_visited(&self, bool visited) @extern("gtk_link_but
 
 
 <* Maps to GtkListBase *>
-distinct ListBase = void*;
+typedef ListBase = void*;
 
 // Class to parent cast.
 fn Widget* ListBase.as_Widget(&self) => (Widget*)(self);
@@ -8276,7 +8276,7 @@ fn Widget* ListBase.as_Widget(&self) => (Widget*)(self);
 
 
 <* Maps to GtkListBox *>
-distinct ListBox = void*;
+typedef ListBox = void*;
 
 // Class to parent cast.
 fn Widget* ListBox.as_Widget(&self) => (Widget*)(self);
@@ -8392,7 +8392,7 @@ extern fn void ListBox.unselect_row(&self, ListBoxRow* row) @extern("gtk_list_bo
 
 
 <* Maps to GtkListBoxRow *>
-distinct ListBoxRow = void*;
+typedef ListBoxRow = void*;
 
 // Class to parent cast.
 fn Widget* ListBoxRow.as_Widget(&self) => (Widget*)(self);
@@ -8445,7 +8445,7 @@ extern fn void ListBoxRow.set_selectable(&self, bool selectable) @extern("gtk_li
 
 
 <* Maps to GtkListHeader *>
-distinct ListHeader = void*;
+typedef ListHeader = void*;
 
 // Class to parent cast.
 fn gobject::Object* ListHeader.as_gobject_Object(&self) => (gobject::Object*)(self);
@@ -8480,7 +8480,7 @@ extern fn void ListHeader.set_child(&self, Widget* child) @extern("gtk_list_head
 
 
 <* Maps to GtkListItem *>
-distinct ListItem = void*;
+typedef ListItem = void*;
 
 // Class to parent cast.
 fn gobject::Object* ListItem.as_gobject_Object(&self) => (gobject::Object*)(self);
@@ -8542,7 +8542,7 @@ extern fn void ListItem.set_selectable(&self, bool selectable) @extern("gtk_list
 
 
 <* Maps to GtkListItemFactory *>
-distinct ListItemFactory = void*;
+typedef ListItemFactory = void*;
 
 // Class to parent cast.
 fn gobject::Object* ListItemFactory.as_gobject_Object(&self) => (gobject::Object*)(self);
@@ -8559,7 +8559,7 @@ fn gobject::Object* ListItemFactory.as_gobject_Object(&self) => (gobject::Object
 
 
 <* Maps to GtkListStore *>
-distinct ListStore = void*;
+typedef ListStore = void*;
 
 // Class to parent cast.
 fn gobject::Object* ListStore.as_gobject_Object(&self) => (gobject::Object*)(self);
@@ -8639,7 +8639,7 @@ extern fn void ListStore.swap(&self, TreeIter* a, TreeIter* b) @extern("gtk_list
 
 
 <* Maps to GtkListView *>
-distinct ListView = void*;
+typedef ListView = void*;
 
 // Class to parent cast.
 fn ListBase* ListView.as_ListBase(&self) => (ListBase*)(self);
@@ -8704,7 +8704,7 @@ extern fn void ListView.set_tab_behavior(&self, ListTabBehavior tab_behavior) @e
 
 
 <* Maps to GtkLockButton *>
-distinct LockButton = void*;
+typedef LockButton = void*;
 
 // Class to parent cast.
 fn Button* LockButton.as_Button(&self) => (Button*)(self);
@@ -8730,7 +8730,7 @@ extern fn void LockButton.set_permission(&self, gio::Permission* permission) @ex
 
 
 <* Maps to GtkMapListModel *>
-distinct MapListModel = void*;
+typedef MapListModel = void*;
 
 // Class to parent cast.
 fn gobject::Object* MapListModel.as_gobject_Object(&self) => (gobject::Object*)(self);
@@ -8762,7 +8762,7 @@ extern fn void MapListModel.set_model(&self, gio::ListModel* model) @extern("gtk
 
 
 <* Maps to GtkMediaControls *>
-distinct MediaControls = void*;
+typedef MediaControls = void*;
 
 // Class to parent cast.
 fn Widget* MediaControls.as_Widget(&self) => (Widget*)(self);
@@ -8788,7 +8788,7 @@ extern fn void MediaControls.set_media_stream(&self, MediaStream* stream) @exter
 
 
 <* Maps to GtkMediaFile *>
-distinct MediaFile = void*;
+typedef MediaFile = void*;
 
 // Class to parent cast.
 fn MediaStream* MediaFile.as_MediaStream(&self) => (MediaStream*)(self);
@@ -8841,7 +8841,7 @@ extern fn void MediaFile.set_resource(&self, ZString resource_path) @extern("gtk
 
 
 <* Maps to GtkMediaStream *>
-distinct MediaStream = void*;
+typedef MediaStream = void*;
 
 // Class to parent cast.
 fn gobject::Object* MediaStream.as_gobject_Object(&self) => (gobject::Object*)(self);
@@ -8960,7 +8960,7 @@ extern fn void MediaStream.update(&self, long timestamp) @extern("gtk_media_stre
 
 
 <* Maps to GtkMenuButton *>
-distinct MenuButton = void*;
+typedef MenuButton = void*;
 
 // Class to parent cast.
 fn Widget* MenuButton.as_Widget(&self) => (Widget*)(self);
@@ -9061,7 +9061,7 @@ extern fn void MenuButton.set_use_underline(&self, bool use_underline) @extern("
 
 
 <* Maps to GtkMessageDialog *>
-distinct MessageDialog = void*;
+typedef MessageDialog = void*;
 
 // Class to parent cast.
 fn Dialog* MessageDialog.as_Dialog(&self) => (Dialog*)(self);
@@ -9096,7 +9096,7 @@ extern fn void MessageDialog.set_markup(&self, ZString str) @extern("gtk_message
 
 
 <* Maps to GtkMnemonicAction *>
-distinct MnemonicAction = void*;
+typedef MnemonicAction = void*;
 
 // Class to parent cast.
 fn ShortcutAction* MnemonicAction.as_ShortcutAction(&self) => (ShortcutAction*)(self);
@@ -9116,7 +9116,7 @@ extern fn MnemonicAction* mnemonic_action_get() @extern("gtk_mnemonic_action_get
 
 
 <* Maps to GtkMnemonicTrigger *>
-distinct MnemonicTrigger = void*;
+typedef MnemonicTrigger = void*;
 
 // Class to parent cast.
 fn ShortcutTrigger* MnemonicTrigger.as_ShortcutTrigger(&self) => (ShortcutTrigger*)(self);
@@ -9139,7 +9139,7 @@ extern fn uint MnemonicTrigger.get_keyval(&self, ) @extern("gtk_mnemonic_trigger
 
 
 <* Maps to GtkMountOperation *>
-distinct MountOperation = void*;
+typedef MountOperation = void*;
 
 // Class to parent cast.
 fn gio::MountOperation* MountOperation.as_gio_MountOperation(&self) => (gio::MountOperation*)(self);
@@ -9174,7 +9174,7 @@ extern fn void MountOperation.set_parent(&self, Window* parent) @extern("gtk_mou
 
 
 <* Maps to GtkMultiFilter *>
-distinct MultiFilter = void*;
+typedef MultiFilter = void*;
 
 // Class to parent cast.
 fn Filter* MultiFilter.as_Filter(&self) => (Filter*)(self);
@@ -9197,7 +9197,7 @@ extern fn void MultiFilter.remove(&self, uint position) @extern("gtk_multi_filte
 
 
 <* Maps to GtkMultiSelection *>
-distinct MultiSelection = void*;
+typedef MultiSelection = void*;
 
 // Class to parent cast.
 fn gobject::Object* MultiSelection.as_gobject_Object(&self) => (gobject::Object*)(self);
@@ -9223,7 +9223,7 @@ extern fn void MultiSelection.set_model(&self, gio::ListModel* model) @extern("g
 
 
 <* Maps to GtkMultiSorter *>
-distinct MultiSorter = void*;
+typedef MultiSorter = void*;
 
 // Class to parent cast.
 fn Sorter* MultiSorter.as_Sorter(&self) => (Sorter*)(self);
@@ -9249,7 +9249,7 @@ extern fn void MultiSorter.remove(&self, uint position) @extern("gtk_multi_sorte
 
 
 <* Maps to GtkNamedAction *>
-distinct NamedAction = void*;
+typedef NamedAction = void*;
 
 // Class to parent cast.
 fn ShortcutAction* NamedAction.as_ShortcutAction(&self) => (ShortcutAction*)(self);
@@ -9272,7 +9272,7 @@ extern fn ZString NamedAction.get_action_name(&self, ) @extern("gtk_named_action
 
 
 <* Maps to GtkNativeDialog *>
-distinct NativeDialog = void*;
+typedef NativeDialog = void*;
 
 // Class to parent cast.
 fn gobject::Object* NativeDialog.as_gobject_Object(&self) => (gobject::Object*)(self);
@@ -9319,7 +9319,7 @@ extern fn void NativeDialog.show(&self, ) @extern("gtk_native_dialog_show");
 
 
 <* Maps to GtkNeverTrigger *>
-distinct NeverTrigger = void*;
+typedef NeverTrigger = void*;
 
 // Class to parent cast.
 fn ShortcutTrigger* NeverTrigger.as_ShortcutTrigger(&self) => (ShortcutTrigger*)(self);
@@ -9339,7 +9339,7 @@ extern fn NeverTrigger* never_trigger_get() @extern("gtk_never_trigger_get");
 
 
 <* Maps to GtkNoSelection *>
-distinct NoSelection = void*;
+typedef NoSelection = void*;
 
 // Class to parent cast.
 fn gobject::Object* NoSelection.as_gobject_Object(&self) => (gobject::Object*)(self);
@@ -9365,7 +9365,7 @@ extern fn void NoSelection.set_model(&self, gio::ListModel* model) @extern("gtk_
 
 
 <* Maps to GtkNotebook *>
-distinct Notebook = void*;
+typedef Notebook = void*;
 
 // Class to parent cast.
 fn Widget* Notebook.as_Widget(&self) => (Widget*)(self);
@@ -9517,7 +9517,7 @@ extern fn void Notebook.set_tab_reorderable(&self, Widget* child, bool reorderab
 
 
 <* Maps to GtkNotebookPage *>
-distinct NotebookPage = void*;
+typedef NotebookPage = void*;
 
 // Class to parent cast.
 fn gobject::Object* NotebookPage.as_gobject_Object(&self) => (gobject::Object*)(self);
@@ -9537,7 +9537,7 @@ extern fn Widget* NotebookPage.get_child(&self, ) @extern("gtk_notebook_page_get
 
 
 <* Maps to GtkNothingAction *>
-distinct NothingAction = void*;
+typedef NothingAction = void*;
 
 // Class to parent cast.
 fn ShortcutAction* NothingAction.as_ShortcutAction(&self) => (ShortcutAction*)(self);
@@ -9557,7 +9557,7 @@ extern fn NothingAction* nothing_action_get() @extern("gtk_nothing_action_get");
 
 
 <* Maps to GtkNumericSorter *>
-distinct NumericSorter = void*;
+typedef NumericSorter = void*;
 
 // Class to parent cast.
 fn Sorter* NumericSorter.as_Sorter(&self) => (Sorter*)(self);
@@ -9589,7 +9589,7 @@ extern fn void NumericSorter.set_sort_order(&self, SortType sort_order) @extern(
 
 
 <* Maps to GtkObjectExpression *>
-distinct ObjectExpression = void*;
+typedef ObjectExpression = void*;
 
 // Class to parent cast.
 fn Expression* ObjectExpression.as_Expression(&self) => (Expression*)(self);
@@ -9612,7 +9612,7 @@ extern fn gobject::Object* ObjectExpression.get_object(&self, ) @extern("gtk_obj
 
 
 <* Maps to GtkOverlay *>
-distinct Overlay = void*;
+typedef Overlay = void*;
 
 // Class to parent cast.
 fn Widget* Overlay.as_Widget(&self) => (Widget*)(self);
@@ -9656,7 +9656,7 @@ extern fn void Overlay.set_measure_overlay(&self, Widget* widget, bool measure) 
 
 
 <* Maps to GtkOverlayLayout *>
-distinct OverlayLayout = void*;
+typedef OverlayLayout = void*;
 
 // Class to parent cast.
 fn LayoutManager* OverlayLayout.as_LayoutManager(&self) => (LayoutManager*)(self);
@@ -9676,7 +9676,7 @@ extern fn LayoutManager* overlay_layout_new() @extern("gtk_overlay_layout_new");
 
 
 <* Maps to GtkOverlayLayoutChild *>
-distinct OverlayLayoutChild = void*;
+typedef OverlayLayoutChild = void*;
 
 // Class to parent cast.
 fn LayoutChild* OverlayLayoutChild.as_LayoutChild(&self) => (LayoutChild*)(self);
@@ -9705,7 +9705,7 @@ extern fn void OverlayLayoutChild.set_measure(&self, bool measure) @extern("gtk_
 
 
 <* Maps to GtkPadController *>
-distinct PadController = void*;
+typedef PadController = void*;
 
 // Class to parent cast.
 fn EventController* PadController.as_EventController(&self) => (EventController*)(self);
@@ -9731,7 +9731,7 @@ extern fn void PadController.set_action_entries(&self, PadActionEntry entries, i
 
 
 <* Maps to GtkPageSetup *>
-distinct PageSetup = void*;
+typedef PageSetup = void*;
 
 // Class to parent cast.
 fn gobject::Object* PageSetup.as_gobject_Object(&self) => (gobject::Object*)(self);
@@ -9829,7 +9829,7 @@ extern fn void PageSetup.to_key_file(&self, glib::KeyFile* key_file, ZString gro
 
 
 <* Maps to GtkPageSetupUnixDialog *>
-distinct PageSetupUnixDialog = void*;
+typedef PageSetupUnixDialog = void*;
 
 // Class to parent cast.
 fn Dialog* PageSetupUnixDialog.as_Dialog(&self) => (Dialog*)(self);
@@ -9861,7 +9861,7 @@ extern fn void PageSetupUnixDialog.set_print_settings(&self, PrintSettings* prin
 
 
 <* Maps to GtkPaned *>
-distinct Paned = void*;
+typedef Paned = void*;
 
 // Class to parent cast.
 fn Widget* Paned.as_Widget(&self) => (Widget*)(self);
@@ -9929,7 +9929,7 @@ extern fn void Paned.set_wide_handle(&self, bool wide) @extern("gtk_paned_set_wi
 
 
 <* Maps to GtkParamSpecExpression *>
-distinct ParamSpecExpression = void*;
+typedef ParamSpecExpression = void*;
 
 // Class to parent cast.
 fn gobject::ParamSpec* ParamSpecExpression.as_gobject_ParamSpec(&self) => (gobject::ParamSpec*)(self);
@@ -9946,7 +9946,7 @@ fn gobject::ParamSpec* ParamSpecExpression.as_gobject_ParamSpec(&self) => (gobje
 
 
 <* Maps to GtkPasswordEntry *>
-distinct PasswordEntry = void*;
+typedef PasswordEntry = void*;
 
 // Class to parent cast.
 fn Widget* PasswordEntry.as_Widget(&self) => (Widget*)(self);
@@ -9978,7 +9978,7 @@ extern fn void PasswordEntry.set_show_peek_icon(&self, bool show_peek_icon) @ext
 
 
 <* Maps to GtkPasswordEntryBuffer *>
-distinct PasswordEntryBuffer = void*;
+typedef PasswordEntryBuffer = void*;
 
 // Class to parent cast.
 fn EntryBuffer* PasswordEntryBuffer.as_EntryBuffer(&self) => (EntryBuffer*)(self);
@@ -9998,7 +9998,7 @@ extern fn EntryBuffer* password_entry_buffer_new() @extern("gtk_password_entry_b
 
 
 <* Maps to GtkPicture *>
-distinct Picture = void*;
+typedef Picture = void*;
 
 // Class to parent cast.
 fn Widget* Picture.as_Widget(&self) => (Widget*)(self);
@@ -10078,7 +10078,7 @@ extern fn void Picture.set_resource(&self, ZString resource_path) @extern("gtk_p
 
 
 <* Maps to GtkPopover *>
-distinct Popover = void*;
+typedef Popover = void*;
 
 // Class to parent cast.
 fn Widget* Popover.as_Widget(&self) => (Widget*)(self);
@@ -10158,7 +10158,7 @@ extern fn void Popover.set_position(&self, PositionType position) @extern("gtk_p
 
 
 <* Maps to GtkPopoverMenu *>
-distinct PopoverMenu = void*;
+typedef PopoverMenu = void*;
 
 // Class to parent cast.
 fn Popover* PopoverMenu.as_Popover(&self) => (Popover*)(self);
@@ -10199,7 +10199,7 @@ extern fn void PopoverMenu.set_menu_model(&self, gio::MenuModel* model) @extern(
 
 
 <* Maps to GtkPopoverMenuBar *>
-distinct PopoverMenuBar = void*;
+typedef PopoverMenuBar = void*;
 
 // Class to parent cast.
 fn Widget* PopoverMenuBar.as_Widget(&self) => (Widget*)(self);
@@ -10231,7 +10231,7 @@ extern fn void PopoverMenuBar.set_menu_model(&self, gio::MenuModel* model) @exte
 
 
 <* Maps to GtkPrintContext *>
-distinct PrintContext = void*;
+typedef PrintContext = void*;
 
 // Class to parent cast.
 fn gobject::Object* PrintContext.as_gobject_Object(&self) => (gobject::Object*)(self);
@@ -10281,7 +10281,7 @@ extern fn void PrintContext.set_cairo_context(&self, cairo::Context* cr, double 
 
 
 <* Maps to GtkPrintDialog *>
-distinct PrintDialog = void*;
+typedef PrintDialog = void*;
 
 // Class to parent cast.
 fn gobject::Object* PrintDialog.as_gobject_Object(&self) => (gobject::Object*)(self);
@@ -10349,7 +10349,7 @@ extern fn PrintSetup* PrintDialog.setup_finish(&self, gio::AsyncResult* result) 
 
 
 <* Maps to GtkPrintJob *>
-distinct PrintJob = void*;
+typedef PrintJob = void*;
 
 // Class to parent cast.
 fn gobject::Object* PrintJob.as_gobject_Object(&self) => (gobject::Object*)(self);
@@ -10459,7 +10459,7 @@ extern fn void PrintJob.set_track_print_status(&self, bool track_status) @extern
 
 
 <* Maps to GtkPrintOperation *>
-distinct PrintOperation = void*;
+typedef PrintOperation = void*;
 
 // Class to parent cast.
 fn gobject::Object* PrintOperation.as_gobject_Object(&self) => (gobject::Object*)(self);
@@ -10566,7 +10566,7 @@ extern fn void PrintOperation.set_use_full_page(&self, bool full_page) @extern("
 
 
 <* Maps to GtkPrintSettings *>
-distinct PrintSettings = void*;
+typedef PrintSettings = void*;
 
 // Class to parent cast.
 fn gobject::Object* PrintSettings.as_gobject_Object(&self) => (gobject::Object*)(self);
@@ -10811,7 +10811,7 @@ extern fn void PrintSettings.unset(&self, ZString key) @extern("gtk_print_settin
 
 
 <* Maps to GtkPrintUnixDialog *>
-distinct PrintUnixDialog = void*;
+typedef PrintUnixDialog = void*;
 
 // Class to parent cast.
 fn Dialog* PrintUnixDialog.as_Dialog(&self) => (Dialog*)(self);
@@ -10882,7 +10882,7 @@ extern fn void PrintUnixDialog.set_support_selection(&self, bool support_selecti
 
 
 <* Maps to GtkPrinter *>
-distinct Printer = void*;
+typedef Printer = void*;
 
 // Class to parent cast.
 fn gobject::Object* Printer.as_gobject_Object(&self) => (gobject::Object*)(self);
@@ -10968,7 +10968,7 @@ extern fn void Printer.request_details(&self, ) @extern("gtk_printer_request_det
 
 
 <* Maps to GtkProgressBar *>
-distinct ProgressBar = void*;
+typedef ProgressBar = void*;
 
 // Class to parent cast.
 fn Widget* ProgressBar.as_Widget(&self) => (Widget*)(self);
@@ -11027,7 +11027,7 @@ extern fn void ProgressBar.set_text(&self, ZString text) @extern("gtk_progress_b
 
 
 <* Maps to GtkPropertyExpression *>
-distinct PropertyExpression = void*;
+typedef PropertyExpression = void*;
 
 // Class to parent cast.
 fn Expression* PropertyExpression.as_Expression(&self) => (Expression*)(self);
@@ -11056,7 +11056,7 @@ extern fn gobject::ParamSpec* PropertyExpression.get_pspec(&self, ) @extern("gtk
 
 
 <* Maps to GtkRange *>
-distinct Range = void*;
+typedef Range = void*;
 
 // Class to parent cast.
 fn Widget* Range.as_Widget(&self) => (Widget*)(self);
@@ -11139,7 +11139,7 @@ extern fn void Range.set_value(&self, double value) @extern("gtk_range_set_value
 
 
 <* Maps to GtkRecentManager *>
-distinct RecentManager = void*;
+typedef RecentManager = void*;
 
 // Class to parent cast.
 fn gobject::Object* RecentManager.as_gobject_Object(&self) => (gobject::Object*)(self);
@@ -11186,7 +11186,7 @@ extern fn RecentManager* recent_manager_get_default() @extern("gtk_recent_manage
 
 
 <* Maps to GtkRevealer *>
-distinct Revealer = void*;
+typedef Revealer = void*;
 
 // Class to parent cast.
 fn Widget* Revealer.as_Widget(&self) => (Widget*)(self);
@@ -11233,7 +11233,7 @@ extern fn void Revealer.set_transition_type(&self, RevealerTransitionType transi
 
 
 <* Maps to GtkScale *>
-distinct Scale = void*;
+typedef Scale = void*;
 
 // Class to parent cast.
 fn Range* Scale.as_Range(&self) => (Range*)(self);
@@ -11295,7 +11295,7 @@ extern fn void Scale.set_value_pos(&self, PositionType pos) @extern("gtk_scale_s
 
 
 <* Maps to GtkScaleButton *>
-distinct ScaleButton = void*;
+typedef ScaleButton = void*;
 
 // Class to parent cast.
 fn Widget* ScaleButton.as_Widget(&self) => (Widget*)(self);
@@ -11348,7 +11348,7 @@ extern fn void ScaleButton.set_value(&self, double value) @extern("gtk_scale_but
 
 
 <* Maps to GtkScrollbar *>
-distinct Scrollbar = void*;
+typedef Scrollbar = void*;
 
 // Class to parent cast.
 fn Widget* Scrollbar.as_Widget(&self) => (Widget*)(self);
@@ -11374,7 +11374,7 @@ extern fn void Scrollbar.set_adjustment(&self, Adjustment* adjustment) @extern("
 
 
 <* Maps to GtkScrolledWindow *>
-distinct ScrolledWindow = void*;
+typedef ScrolledWindow = void*;
 
 // Class to parent cast.
 fn Widget* ScrolledWindow.as_Widget(&self) => (Widget*)(self);
@@ -11487,7 +11487,7 @@ extern fn void ScrolledWindow.unset_placement(&self, ) @extern("gtk_scrolled_win
 
 
 <* Maps to GtkSearchBar *>
-distinct SearchBar = void*;
+typedef SearchBar = void*;
 
 // Class to parent cast.
 fn Widget* SearchBar.as_Widget(&self) => (Widget*)(self);
@@ -11534,7 +11534,7 @@ extern fn void SearchBar.set_show_close_button(&self, bool visible) @extern("gtk
 
 
 <* Maps to GtkSearchEntry *>
-distinct SearchEntry = void*;
+typedef SearchEntry = void*;
 
 // Class to parent cast.
 fn Widget* SearchEntry.as_Widget(&self) => (Widget*)(self);
@@ -11584,7 +11584,7 @@ extern fn void SearchEntry.set_search_delay(&self, uint delay) @extern("gtk_sear
 
 
 <* Maps to GtkSelectionFilterModel *>
-distinct SelectionFilterModel = void*;
+typedef SelectionFilterModel = void*;
 
 // Class to parent cast.
 fn gobject::Object* SelectionFilterModel.as_gobject_Object(&self) => (gobject::Object*)(self);
@@ -11610,7 +11610,7 @@ extern fn void SelectionFilterModel.set_model(&self, SelectionModel* model) @ext
 
 
 <* Maps to GtkSeparator *>
-distinct Separator = void*;
+typedef Separator = void*;
 
 // Class to parent cast.
 fn Widget* Separator.as_Widget(&self) => (Widget*)(self);
@@ -11630,7 +11630,7 @@ extern fn Widget* separator_new(Orientation orientation) @extern("gtk_separator_
 
 
 <* Maps to GtkSettings *>
-distinct Settings = void*;
+typedef Settings = void*;
 
 // Class to parent cast.
 fn gobject::Object* Settings.as_gobject_Object(&self) => (gobject::Object*)(self);
@@ -11656,7 +11656,7 @@ extern fn Settings* settings_get_for_display(gdk::Display* display) @extern("gtk
 
 
 <* Maps to GtkShortcut *>
-distinct Shortcut = void*;
+typedef Shortcut = void*;
 
 // Class to parent cast.
 fn gobject::Object* Shortcut.as_gobject_Object(&self) => (gobject::Object*)(self);
@@ -11697,7 +11697,7 @@ extern fn void Shortcut.set_trigger(&self, ShortcutTrigger* trigger) @extern("gt
 
 
 <* Maps to GtkShortcutAction *>
-distinct ShortcutAction = void*;
+typedef ShortcutAction = void*;
 
 // Class to parent cast.
 fn gobject::Object* ShortcutAction.as_gobject_Object(&self) => (gobject::Object*)(self);
@@ -11726,7 +11726,7 @@ extern fn ZString* ShortcutAction.to_string(&self, ) @extern("gtk_shortcut_actio
 
 
 <* Maps to GtkShortcutController *>
-distinct ShortcutController = void*;
+typedef ShortcutController = void*;
 
 // Class to parent cast.
 fn EventController* ShortcutController.as_EventController(&self) => (EventController*)(self);
@@ -11767,7 +11767,7 @@ extern fn void ShortcutController.set_scope(&self, ShortcutScope scope) @extern(
 
 
 <* Maps to GtkShortcutLabel *>
-distinct ShortcutLabel = void*;
+typedef ShortcutLabel = void*;
 
 // Class to parent cast.
 fn Widget* ShortcutLabel.as_Widget(&self) => (Widget*)(self);
@@ -11799,7 +11799,7 @@ extern fn void ShortcutLabel.set_disabled_text(&self, ZString disabled_text) @ex
 
 
 <* Maps to GtkShortcutTrigger *>
-distinct ShortcutTrigger = void*;
+typedef ShortcutTrigger = void*;
 
 // Class to parent cast.
 fn gobject::Object* ShortcutTrigger.as_gobject_Object(&self) => (gobject::Object*)(self);
@@ -11843,7 +11843,7 @@ extern fn gdk::KeyMatch ShortcutTrigger.trigger(&self, gdk::Event* event, bool e
 
 
 <* Maps to GtkShortcutsGroup *>
-distinct ShortcutsGroup = void*;
+typedef ShortcutsGroup = void*;
 
 // Class to parent cast.
 fn Box* ShortcutsGroup.as_Box(&self) => (Box*)(self);
@@ -11863,7 +11863,7 @@ extern fn void ShortcutsGroup.add_shortcut(&self, ShortcutsShortcut* shortcut) @
 
 
 <* Maps to GtkShortcutsSection *>
-distinct ShortcutsSection = void*;
+typedef ShortcutsSection = void*;
 
 // Class to parent cast.
 fn Box* ShortcutsSection.as_Box(&self) => (Box*)(self);
@@ -11883,7 +11883,7 @@ extern fn void ShortcutsSection.add_group(&self, ShortcutsGroup* group) @extern(
 
 
 <* Maps to GtkShortcutsShortcut *>
-distinct ShortcutsShortcut = void*;
+typedef ShortcutsShortcut = void*;
 
 // Class to parent cast.
 fn Widget* ShortcutsShortcut.as_Widget(&self) => (Widget*)(self);
@@ -11900,7 +11900,7 @@ fn Widget* ShortcutsShortcut.as_Widget(&self) => (Widget*)(self);
 
 
 <* Maps to GtkShortcutsWindow *>
-distinct ShortcutsWindow = void*;
+typedef ShortcutsWindow = void*;
 
 // Class to parent cast.
 fn Window* ShortcutsWindow.as_Window(&self) => (Window*)(self);
@@ -11920,7 +11920,7 @@ extern fn void ShortcutsWindow.add_section(&self, ShortcutsSection* section) @ex
 
 
 <* Maps to GtkSignalAction *>
-distinct SignalAction = void*;
+typedef SignalAction = void*;
 
 // Class to parent cast.
 fn ShortcutAction* SignalAction.as_ShortcutAction(&self) => (ShortcutAction*)(self);
@@ -11943,7 +11943,7 @@ extern fn ZString SignalAction.get_signal_name(&self, ) @extern("gtk_signal_acti
 
 
 <* Maps to GtkSignalListItemFactory *>
-distinct SignalListItemFactory = void*;
+typedef SignalListItemFactory = void*;
 
 // Class to parent cast.
 fn ListItemFactory* SignalListItemFactory.as_ListItemFactory(&self) => (ListItemFactory*)(self);
@@ -11963,7 +11963,7 @@ extern fn ListItemFactory* signal_list_item_factory_new() @extern("gtk_signal_li
 
 
 <* Maps to GtkSingleSelection *>
-distinct SingleSelection = void*;
+typedef SingleSelection = void*;
 
 // Class to parent cast.
 fn gobject::Object* SingleSelection.as_gobject_Object(&self) => (gobject::Object*)(self);
@@ -12010,7 +12010,7 @@ extern fn void SingleSelection.set_selected(&self, uint position) @extern("gtk_s
 
 
 <* Maps to GtkSizeGroup *>
-distinct SizeGroup = void*;
+typedef SizeGroup = void*;
 
 // Class to parent cast.
 fn gobject::Object* SizeGroup.as_gobject_Object(&self) => (gobject::Object*)(self);
@@ -12045,7 +12045,7 @@ extern fn void SizeGroup.set_mode(&self, SizeGroupMode mode) @extern("gtk_size_g
 
 
 <* Maps to GtkSliceListModel *>
-distinct SliceListModel = void*;
+typedef SliceListModel = void*;
 
 // Class to parent cast.
 fn gobject::Object* SliceListModel.as_gobject_Object(&self) => (gobject::Object*)(self);
@@ -12083,7 +12083,7 @@ extern fn void SliceListModel.set_size(&self, uint size) @extern("gtk_slice_list
 
 
 <* Maps to  *>
-distinct Snapshot = void*;
+typedef Snapshot = void*;
 
 // Class to parent cast.
 fn gdk::Snapshot* Snapshot.as_gdk_Snapshot(&self) => (gdk::Snapshot*)(self);
@@ -12259,7 +12259,7 @@ extern fn void Snapshot.translate_3d(&self, graphene::Point3D* point) @extern("g
 
 
 <* Maps to GtkSortListModel *>
-distinct SortListModel = void*;
+typedef SortListModel = void*;
 
 // Class to parent cast.
 fn gobject::Object* SortListModel.as_gobject_Object(&self) => (gobject::Object*)(self);
@@ -12306,7 +12306,7 @@ extern fn void SortListModel.set_sorter(&self, Sorter* sorter) @extern("gtk_sort
 
 
 <* Maps to GtkSorter *>
-distinct Sorter = void*;
+typedef Sorter = void*;
 
 // Class to parent cast.
 fn gobject::Object* Sorter.as_gobject_Object(&self) => (gobject::Object*)(self);
@@ -12332,7 +12332,7 @@ extern fn SorterOrder Sorter.get_order(&self, ) @extern("gtk_sorter_get_order");
 
 
 <* Maps to GtkSpinButton *>
-distinct SpinButton = void*;
+typedef SpinButton = void*;
 
 // Class to parent cast.
 fn Widget* SpinButton.as_Widget(&self) => (Widget*)(self);
@@ -12433,7 +12433,7 @@ extern fn void SpinButton.update(&self, ) @extern("gtk_spin_button_update");
 
 
 <* Maps to GtkSpinner *>
-distinct Spinner = void*;
+typedef Spinner = void*;
 
 // Class to parent cast.
 fn Widget* Spinner.as_Widget(&self) => (Widget*)(self);
@@ -12465,7 +12465,7 @@ extern fn void Spinner.stop(&self, ) @extern("gtk_spinner_stop");
 
 
 <* Maps to GtkStack *>
-distinct Stack = void*;
+typedef Stack = void*;
 
 // Class to parent cast.
 fn Widget* Stack.as_Widget(&self) => (Widget*)(self);
@@ -12554,7 +12554,7 @@ extern fn void Stack.set_visible_child_name(&self, ZString name) @extern("gtk_st
 
 
 <* Maps to GtkStackPage *>
-distinct StackPage = void*;
+typedef StackPage = void*;
 
 // Class to parent cast.
 fn gobject::Object* StackPage.as_gobject_Object(&self) => (gobject::Object*)(self);
@@ -12610,7 +12610,7 @@ extern fn void StackPage.set_visible(&self, bool visible) @extern("gtk_stack_pag
 
 
 <* Maps to GtkStackSidebar *>
-distinct StackSidebar = void*;
+typedef StackSidebar = void*;
 
 // Class to parent cast.
 fn Widget* StackSidebar.as_Widget(&self) => (Widget*)(self);
@@ -12636,7 +12636,7 @@ extern fn void StackSidebar.set_stack(&self, Stack* stack) @extern("gtk_stack_si
 
 
 <* Maps to GtkStackSwitcher *>
-distinct StackSwitcher = void*;
+typedef StackSwitcher = void*;
 
 // Class to parent cast.
 fn Widget* StackSwitcher.as_Widget(&self) => (Widget*)(self);
@@ -12662,7 +12662,7 @@ extern fn void StackSwitcher.set_stack(&self, Stack* stack) @extern("gtk_stack_s
 
 
 <* Maps to GtkStatusbar *>
-distinct Statusbar = void*;
+typedef Statusbar = void*;
 
 // Class to parent cast.
 fn Widget* Statusbar.as_Widget(&self) => (Widget*)(self);
@@ -12697,7 +12697,7 @@ extern fn void Statusbar.remove_all(&self, uint context_id) @extern("gtk_statusb
 
 
 <* Maps to GtkStringFilter *>
-distinct StringFilter = void*;
+typedef StringFilter = void*;
 
 // Class to parent cast.
 fn Filter* StringFilter.as_Filter(&self) => (Filter*)(self);
@@ -12741,7 +12741,7 @@ extern fn void StringFilter.set_search(&self, ZString search) @extern("gtk_strin
 
 
 <* Maps to GtkStringList *>
-distinct StringList = void*;
+typedef StringList = void*;
 
 // Class to parent cast.
 fn gobject::Object* StringList.as_gobject_Object(&self) => (gobject::Object*)(self);
@@ -12776,7 +12776,7 @@ extern fn void StringList.take(&self, ZString* string) @extern("gtk_string_list_
 
 
 <* Maps to GtkStringObject *>
-distinct StringObject = void*;
+typedef StringObject = void*;
 
 // Class to parent cast.
 fn gobject::Object* StringObject.as_gobject_Object(&self) => (gobject::Object*)(self);
@@ -12799,7 +12799,7 @@ extern fn ZString StringObject.get_string(&self, ) @extern("gtk_string_object_ge
 
 
 <* Maps to GtkStringSorter *>
-distinct StringSorter = void*;
+typedef StringSorter = void*;
 
 // Class to parent cast.
 fn Sorter* StringSorter.as_Sorter(&self) => (Sorter*)(self);
@@ -12837,7 +12837,7 @@ extern fn void StringSorter.set_ignore_case(&self, bool ignore_case) @extern("gt
 
 
 <* Maps to GtkStyleContext *>
-distinct StyleContext = void*;
+typedef StyleContext = void*;
 
 // Class to parent cast.
 fn gobject::Object* StyleContext.as_gobject_Object(&self) => (gobject::Object*)(self);
@@ -12917,7 +12917,7 @@ extern fn void style_context_remove_provider_for_display(gdk::Display* display, 
 
 
 <* Maps to GtkSwitch *>
-distinct Switch = void*;
+typedef Switch = void*;
 
 // Class to parent cast.
 fn Widget* Switch.as_Widget(&self) => (Widget*)(self);
@@ -12949,7 +12949,7 @@ extern fn void Switch.set_state(&self, bool state) @extern("gtk_switch_set_state
 
 
 <* Maps to GtkText *>
-distinct Text = void*;
+typedef Text = void*;
 
 // Class to parent cast.
 fn Widget* Text.as_Widget(&self) => (Widget*)(self);
@@ -13074,7 +13074,7 @@ extern fn void Text.unset_invisible_char(&self, ) @extern("gtk_text_unset_invisi
 
 
 <* Maps to GtkTextBuffer *>
-distinct TextBuffer = void*;
+typedef TextBuffer = void*;
 
 // Class to parent cast.
 fn gobject::Object* TextBuffer.as_gobject_Object(&self) => (gobject::Object*)(self);
@@ -13310,7 +13310,7 @@ extern fn void TextBuffer.undo(&self, ) @extern("gtk_text_buffer_undo");
 
 
 <* Maps to GtkTextChildAnchor *>
-distinct TextChildAnchor = void*;
+typedef TextChildAnchor = void*;
 
 // Class to parent cast.
 fn gobject::Object* TextChildAnchor.as_gobject_Object(&self) => (gobject::Object*)(self);
@@ -13339,7 +13339,7 @@ extern fn Widget* TextChildAnchor.get_widgets(&self, uint* out_len) @extern("gtk
 
 
 <* Maps to GtkTextMark *>
-distinct TextMark = void*;
+typedef TextMark = void*;
 
 // Class to parent cast.
 fn gobject::Object* TextMark.as_gobject_Object(&self) => (gobject::Object*)(self);
@@ -13377,7 +13377,7 @@ extern fn void TextMark.set_visible(&self, bool setting) @extern("gtk_text_mark_
 
 
 <* Maps to GtkTextTag *>
-distinct TextTag = void*;
+typedef TextTag = void*;
 
 // Class to parent cast.
 fn gobject::Object* TextTag.as_gobject_Object(&self) => (gobject::Object*)(self);
@@ -13406,7 +13406,7 @@ extern fn void TextTag.set_priority(&self, int priority) @extern("gtk_text_tag_s
 
 
 <* Maps to GtkTextTagTable *>
-distinct TextTagTable = void*;
+typedef TextTagTable = void*;
 
 // Class to parent cast.
 fn gobject::Object* TextTagTable.as_gobject_Object(&self) => (gobject::Object*)(self);
@@ -13441,7 +13441,7 @@ extern fn void TextTagTable.remove(&self, TextTag* tag) @extern("gtk_text_tag_ta
 
 
 <* Maps to GtkTextView *>
-distinct TextView = void*;
+typedef TextView = void*;
 
 // Class to parent cast.
 fn Widget* TextView.as_Widget(&self) => (Widget*)(self);
@@ -13677,7 +13677,7 @@ extern fn void TextView.window_to_buffer_coords(&self, TextWindowType win, int w
 
 
 <* Maps to GtkToggleButton *>
-distinct ToggleButton = void*;
+typedef ToggleButton = void*;
 
 // Class to parent cast.
 fn Button* ToggleButton.as_Button(&self) => (Button*)(self);
@@ -13715,7 +13715,7 @@ extern fn void ToggleButton.toggled(&self, ) @extern("gtk_toggle_button_toggled"
 
 
 <* Maps to GtkTooltip *>
-distinct Tooltip = void*;
+typedef Tooltip = void*;
 
 // Class to parent cast.
 fn gobject::Object* Tooltip.as_gobject_Object(&self) => (gobject::Object*)(self);
@@ -13753,7 +13753,7 @@ extern fn void Tooltip.set_tip_area(&self, gdk::Rectangle* rect) @extern("gtk_to
 
 
 <* Maps to GtkTreeExpander *>
-distinct TreeExpander = void*;
+typedef TreeExpander = void*;
 
 // Class to parent cast.
 fn Widget* TreeExpander.as_Widget(&self) => (Widget*)(self);
@@ -13806,7 +13806,7 @@ extern fn void TreeExpander.set_list_row(&self, TreeListRow* list_row) @extern("
 
 
 <* Maps to GtkTreeListModel *>
-distinct TreeListModel = void*;
+typedef TreeListModel = void*;
 
 // Class to parent cast.
 fn gobject::Object* TreeListModel.as_gobject_Object(&self) => (gobject::Object*)(self);
@@ -13844,7 +13844,7 @@ extern fn void TreeListModel.set_autoexpand(&self, bool autoexpand) @extern("gtk
 
 
 <* Maps to GtkTreeListRow *>
-distinct TreeListRow = void*;
+typedef TreeListRow = void*;
 
 // Class to parent cast.
 fn gobject::Object* TreeListRow.as_gobject_Object(&self) => (gobject::Object*)(self);
@@ -13888,7 +13888,7 @@ extern fn void TreeListRow.set_expanded(&self, bool expanded) @extern("gtk_tree_
 
 
 <* Maps to GtkTreeListRowSorter *>
-distinct TreeListRowSorter = void*;
+typedef TreeListRowSorter = void*;
 
 // Class to parent cast.
 fn Sorter* TreeListRowSorter.as_Sorter(&self) => (Sorter*)(self);
@@ -13914,7 +13914,7 @@ extern fn void TreeListRowSorter.set_sorter(&self, Sorter* sorter) @extern("gtk_
 
 
 <* Maps to GtkTreeModelFilter *>
-distinct TreeModelFilter = void*;
+typedef TreeModelFilter = void*;
 
 // Class to parent cast.
 fn gobject::Object* TreeModelFilter.as_gobject_Object(&self) => (gobject::Object*)(self);
@@ -13961,7 +13961,7 @@ extern fn void TreeModelFilter.set_visible_func(&self, TreeModelFilterVisibleFun
 
 
 <* Maps to GtkTreeModelSort *>
-distinct TreeModelSort = void*;
+typedef TreeModelSort = void*;
 
 // Class to parent cast.
 fn gobject::Object* TreeModelSort.as_gobject_Object(&self) => (gobject::Object*)(self);
@@ -14005,7 +14005,7 @@ extern fn void TreeModelSort.reset_default_sort_func(&self, ) @extern("gtk_tree_
 
 
 <* Maps to GtkTreeSelection *>
-distinct TreeSelection = void*;
+typedef TreeSelection = void*;
 
 // Class to parent cast.
 fn gobject::Object* TreeSelection.as_gobject_Object(&self) => (gobject::Object*)(self);
@@ -14082,7 +14082,7 @@ extern fn void TreeSelection.unselect_range(&self, TreePath* start_path, TreePat
 
 
 <* Maps to GtkTreeStore *>
-distinct TreeStore = void*;
+typedef TreeStore = void*;
 
 // Class to parent cast.
 fn gobject::Object* TreeStore.as_gobject_Object(&self) => (gobject::Object*)(self);
@@ -14168,7 +14168,7 @@ extern fn void TreeStore.swap(&self, TreeIter* a, TreeIter* b) @extern("gtk_tree
 
 
 <* Maps to GtkTreeView *>
-distinct TreeView = void*;
+typedef TreeView = void*;
 
 // Class to parent cast.
 fn Widget* TreeView.as_Widget(&self) => (Widget*)(self);
@@ -14458,7 +14458,7 @@ extern fn void TreeView.unset_rows_drag_source(&self, ) @extern("gtk_tree_view_u
 
 
 <* Maps to GtkTreeViewColumn *>
-distinct TreeViewColumn = void*;
+typedef TreeViewColumn = void*;
 
 // Class to parent cast.
 fn gobject::InitiallyUnowned* TreeViewColumn.as_gobject_InitiallyUnowned(&self) => (gobject::InitiallyUnowned*)(self);
@@ -14634,7 +14634,7 @@ extern fn void TreeViewColumn.set_widget(&self, Widget* widget) @extern("gtk_tre
 
 
 <* Maps to GtkUriLauncher *>
-distinct UriLauncher = void*;
+typedef UriLauncher = void*;
 
 // Class to parent cast.
 fn gobject::Object* UriLauncher.as_gobject_Object(&self) => (gobject::Object*)(self);
@@ -14666,7 +14666,7 @@ extern fn void UriLauncher.set_uri(&self, ZString uri) @extern("gtk_uri_launcher
 
 
 <* Maps to GtkVideo *>
-distinct Video = void*;
+typedef Video = void*;
 
 // Class to parent cast.
 fn Widget* Video.as_Widget(&self) => (Widget*)(self);
@@ -14734,7 +14734,7 @@ extern fn void Video.set_resource(&self, ZString resource_path) @extern("gtk_vid
 
 
 <* Maps to GtkViewport *>
-distinct Viewport = void*;
+typedef Viewport = void*;
 
 // Class to parent cast.
 fn Widget* Viewport.as_Widget(&self) => (Widget*)(self);
@@ -14769,7 +14769,7 @@ extern fn void Viewport.set_scroll_to_focus(&self, bool scroll_to_focus) @extern
 
 
 <* Maps to GtkVolumeButton *>
-distinct VolumeButton = void*;
+typedef VolumeButton = void*;
 
 // Class to parent cast.
 fn ScaleButton* VolumeButton.as_ScaleButton(&self) => (ScaleButton*)(self);
@@ -14789,7 +14789,7 @@ extern fn Widget* volume_button_new() @extern("gtk_volume_button_new");
 
 
 <* Maps to GtkWidget *>
-distinct Widget = void*;
+typedef Widget = void*;
 
 // Class to parent cast.
 fn gobject::InitiallyUnowned* Widget.as_gobject_InitiallyUnowned(&self) => (gobject::InitiallyUnowned*)(self);
@@ -15298,7 +15298,7 @@ extern fn void widget_set_default_direction(TextDirection dir) @extern("gtk_widg
 
 
 <* Maps to GtkWidgetPaintable *>
-distinct WidgetPaintable = void*;
+typedef WidgetPaintable = void*;
 
 // Class to parent cast.
 fn gobject::Object* WidgetPaintable.as_gobject_Object(&self) => (gobject::Object*)(self);
@@ -15324,7 +15324,7 @@ extern fn void WidgetPaintable.set_widget(&self, Widget* widget) @extern("gtk_wi
 
 
 <* Maps to GtkWindow *>
-distinct Window = void*;
+typedef Window = void*;
 
 // Class to parent cast.
 fn Widget* Window.as_Widget(&self) => (Widget*)(self);
@@ -15527,7 +15527,7 @@ extern fn void window_set_interactive_debugging(bool enable) @extern("gtk_window
 
 
 <* Maps to GtkWindowControls *>
-distinct WindowControls = void*;
+typedef WindowControls = void*;
 
 // Class to parent cast.
 fn Widget* WindowControls.as_Widget(&self) => (Widget*)(self);
@@ -15562,7 +15562,7 @@ extern fn void WindowControls.set_side(&self, PackType side) @extern("gtk_window
 
 
 <* Maps to GtkWindowGroup *>
-distinct WindowGroup = void*;
+typedef WindowGroup = void*;
 
 // Class to parent cast.
 fn gobject::Object* WindowGroup.as_gobject_Object(&self) => (gobject::Object*)(self);
@@ -15591,7 +15591,7 @@ extern fn void WindowGroup.remove_window(&self, Window* window) @extern("gtk_win
 
 
 <* Maps to GtkWindowHandle *>
-distinct WindowHandle = void*;
+typedef WindowHandle = void*;
 
 // Class to parent cast.
 fn Widget* WindowHandle.as_Widget(&self) => (Widget*)(self);

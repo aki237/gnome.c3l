@@ -11,25 +11,25 @@ import gmodule;
 import gio;
 
 
-distinct PixbufFormatFlags = int;
+typedef PixbufFormatFlags = int;
 const PixbufFormatFlags PIXBUF_FORMAT_FLAGS_SCALABLE = 2;
 const PixbufFormatFlags PIXBUF_FORMAT_FLAGS_THREADSAFE = 4;
 const PixbufFormatFlags PIXBUF_FORMAT_FLAGS_WRITABLE = 1;
 
-distinct Colorspace = int;
+typedef Colorspace = int;
 const Colorspace COLORSPACE_RGB = 0;
 
-distinct InterpType = int;
+typedef InterpType = int;
 const InterpType INTERP_TYPE_BILINEAR = 2;
 const InterpType INTERP_TYPE_HYPER = 3;
 const InterpType INTERP_TYPE_NEAREST = 0;
 const InterpType INTERP_TYPE_TILES = 1;
 
-distinct PixbufAlphaMode = int;
+typedef PixbufAlphaMode = int;
 const PixbufAlphaMode PIXBUF_ALPHA_MODE_BILEVEL = 0;
 const PixbufAlphaMode PIXBUF_ALPHA_MODE_FULL = 1;
 
-distinct PixbufError = int;
+typedef PixbufError = int;
 const PixbufError PIXBUF_ERROR_BAD_OPTION = 2;
 const PixbufError PIXBUF_ERROR_CORRUPT_IMAGE = 0;
 const PixbufError PIXBUF_ERROR_FAILED = 5;
@@ -38,7 +38,7 @@ const PixbufError PIXBUF_ERROR_INSUFFICIENT_MEMORY = 1;
 const PixbufError PIXBUF_ERROR_UNKNOWN_TYPE = 3;
 const PixbufError PIXBUF_ERROR_UNSUPPORTED_OPERATION = 4;
 
-distinct PixbufRotation = int;
+typedef PixbufRotation = int;
 const PixbufRotation PIXBUF_ROTATION_CLOCKWISE = 270;
 const PixbufRotation PIXBUF_ROTATION_COUNTERCLOCKWISE = 90;
 const PixbufRotation PIXBUF_ROTATION_NONE = 0;
@@ -46,56 +46,56 @@ const PixbufRotation PIXBUF_ROTATION_UPSIDEDOWN = 180;
 
 
 
-distinct PixbufAnimationClass = void*;
+typedef PixbufAnimationClass = void*;
 
-distinct PixbufAnimationIterClass = void*;
+typedef PixbufAnimationIterClass = void*;
 
-distinct PixbufFormat = void*;
+typedef PixbufFormat = void*;
 
-distinct PixbufLoaderClass = void*;
+typedef PixbufLoaderClass = void*;
 
-distinct PixbufModule = void*;
+typedef PixbufModule = void*;
 
-distinct PixbufModulePattern = void*;
+typedef PixbufModulePattern = void*;
 
-distinct PixbufSimpleAnimClass = void*;
+typedef PixbufSimpleAnimClass = void*;
 
 
-def PixbufDestroyNotify = fn void(char pixels, void* data);
+alias PixbufDestroyNotify = fn void(char pixels, void* data);
 
-def PixbufModuleBeginLoadFunc = fn void*(PixbufModuleSizeFunc size_func, PixbufModulePreparedFunc prepared_func, PixbufModuleUpdatedFunc updated_func, void* user_data);
+alias PixbufModuleBeginLoadFunc = fn void*(PixbufModuleSizeFunc size_func, PixbufModulePreparedFunc prepared_func, PixbufModuleUpdatedFunc updated_func, void* user_data);
 
-def PixbufModuleFillInfoFunc = fn void(PixbufFormat* info);
+alias PixbufModuleFillInfoFunc = fn void(PixbufFormat* info);
 
-def PixbufModuleFillVtableFunc = fn void(PixbufModule* _module);
+alias PixbufModuleFillVtableFunc = fn void(PixbufModule* _module);
 
-def PixbufModuleIncrementLoadFunc = fn bool(void* context, char buf, uint size);
+alias PixbufModuleIncrementLoadFunc = fn bool(void* context, char buf, uint size);
 
-def PixbufModuleLoadAnimationFunc = fn PixbufAnimation*(void* f);
+alias PixbufModuleLoadAnimationFunc = fn PixbufAnimation*(void* f);
 
-def PixbufModuleLoadFunc = fn Pixbuf*(void* f);
+alias PixbufModuleLoadFunc = fn Pixbuf*(void* f);
 
-def PixbufModuleLoadXpmDataFunc = fn Pixbuf*(ZString* data);
+alias PixbufModuleLoadXpmDataFunc = fn Pixbuf*(ZString* data);
 
-def PixbufModulePreparedFunc = fn void(Pixbuf* pixbuf, PixbufAnimation* anim, void* user_data);
+alias PixbufModulePreparedFunc = fn void(Pixbuf* pixbuf, PixbufAnimation* anim, void* user_data);
 
-def PixbufModuleSaveCallbackFunc = fn bool(PixbufSaveFunc save_func, void* user_data, Pixbuf* pixbuf, ZString* option_keys, ZString* option_values);
+alias PixbufModuleSaveCallbackFunc = fn bool(PixbufSaveFunc save_func, void* user_data, Pixbuf* pixbuf, ZString* option_keys, ZString* option_values);
 
-def PixbufModuleSaveFunc = fn bool(void* f, Pixbuf* pixbuf, ZString* param_keys, ZString* param_values);
+alias PixbufModuleSaveFunc = fn bool(void* f, Pixbuf* pixbuf, ZString* param_keys, ZString* param_values);
 
-def PixbufModuleSaveOptionSupportedFunc = fn bool(ZString option_key);
+alias PixbufModuleSaveOptionSupportedFunc = fn bool(ZString option_key);
 
-def PixbufModuleSizeFunc = fn void(int* width, int* height, void* user_data);
+alias PixbufModuleSizeFunc = fn void(int* width, int* height, void* user_data);
 
-def PixbufModuleStopLoadFunc = fn bool(void* context);
+alias PixbufModuleStopLoadFunc = fn bool(void* context);
 
-def PixbufModuleUpdatedFunc = fn void(Pixbuf* pixbuf, int x, int y, int width, int height, void* user_data);
+alias PixbufModuleUpdatedFunc = fn void(Pixbuf* pixbuf, int x, int y, int width, int height, void* user_data);
 
-def PixbufSaveFunc = fn bool(char buf, usz count, glib::Error* error, void* data);
+alias PixbufSaveFunc = fn bool(char buf, usz count, glib::Error* error, void* data);
 
 
 <* Maps to GdkPixbuf *>
-distinct Pixbuf = void*;
+typedef Pixbuf = void*;
 
 // Class to parent cast.
 fn gobject::Object* Pixbuf.as_gobject_Object(&self) => (gobject::Object*)(self);
@@ -307,7 +307,7 @@ extern fn bool pixbuf_save_to_stream_finish(gio::AsyncResult* async_result) @ext
 
 
 <* Maps to GdkPixbufAnimation *>
-distinct PixbufAnimation = void*;
+typedef PixbufAnimation = void*;
 
 // Class to parent cast.
 fn gobject::Object* PixbufAnimation.as_gobject_Object(&self) => (gobject::Object*)(self);
@@ -360,7 +360,7 @@ extern fn void pixbuf_animation_new_from_stream_async(gio::InputStream* stream, 
 
 
 <* Maps to GdkPixbufAnimationIter *>
-distinct PixbufAnimationIter = void*;
+typedef PixbufAnimationIter = void*;
 
 // Class to parent cast.
 fn gobject::Object* PixbufAnimationIter.as_gobject_Object(&self) => (gobject::Object*)(self);
@@ -389,7 +389,7 @@ extern fn bool PixbufAnimationIter.on_currently_loading_frame(&self, ) @extern("
 
 
 <* Maps to GdkPixbufLoader *>
-distinct PixbufLoader = void*;
+typedef PixbufLoader = void*;
 
 // Class to parent cast.
 fn gobject::Object* PixbufLoader.as_gobject_Object(&self) => (gobject::Object*)(self);
@@ -436,7 +436,7 @@ extern fn bool PixbufLoader.write_bytes(&self, glib::Bytes* buffer) @extern("gdk
 
 
 <* Maps to  *>
-distinct PixbufNonAnim = void*;
+typedef PixbufNonAnim = void*;
 
 // Class to parent cast.
 fn PixbufAnimation* PixbufNonAnim.as_PixbufAnimation(&self) => (PixbufAnimation*)(self);
@@ -456,7 +456,7 @@ extern fn PixbufAnimation* pixbuf_non_anim_new(Pixbuf* pixbuf) @extern("gdk_pixb
 
 
 <* Maps to GdkPixbufSimpleAnim *>
-distinct PixbufSimpleAnim = void*;
+typedef PixbufSimpleAnim = void*;
 
 // Class to parent cast.
 fn PixbufAnimation* PixbufSimpleAnim.as_PixbufAnimation(&self) => (PixbufAnimation*)(self);
@@ -485,7 +485,7 @@ extern fn void PixbufSimpleAnim.set_loop(&self, bool loop) @extern("gdk_pixbuf_s
 
 
 <* Maps to  *>
-distinct PixbufSimpleAnimIter = void*;
+typedef PixbufSimpleAnimIter = void*;
 
 // Class to parent cast.
 fn PixbufAnimationIter* PixbufSimpleAnimIter.as_PixbufAnimationIter(&self) => (PixbufAnimationIter*)(self);

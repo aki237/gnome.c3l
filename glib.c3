@@ -1,17 +1,17 @@
 module glib;
 
-def Quark = uint;
-def Pid = int;
-def DestroyNotify = fn void(void* data);
-def DuplicateFunc = fn void*(void* data, void* user_data);
-def CompareDataFunc = fn int(void* a, void* b, void* user_data);
-def EqualFunc = fn bool(void* a, void* b);
-def EqualFuncFull = fn bool(void* a, void* b, void* user_data);
-def SourceFunc = fn bool(void* user_data);
-def SpawnChildSetupFunc = fn void(void* user_data);
+alias Quark = uint;
+alias Pid = int;
+alias DestroyNotify = fn void(void* data);
+alias DuplicateFunc = fn void*(void* data, void* user_data);
+alias CompareDataFunc = fn int(void* a, void* b, void* user_data);
+alias EqualFunc = fn bool(void* a, void* b);
+alias EqualFuncFull = fn bool(void* a, void* b, void* user_data);
+alias SourceFunc = fn bool(void* user_data);
+alias SpawnChildSetupFunc = fn void(void* user_data);
 
-distinct Bytes = void*;
-distinct DateTime = void*;
+typedef Bytes = void*;
+typedef DateTime = void*;
 
 struct Error{
   Quark domain;
@@ -39,13 +39,13 @@ struct SList {
   SList* next;
 }
 
-distinct MainContext = void*;
-distinct OptionGroup = void*;
-distinct Source = void*;
-distinct Tree = void*;
-distinct Variant = void*;
-distinct VariantDict = void*;
-distinct VariantType = void*;
+typedef MainContext = void*;
+typedef OptionGroup = void*;
+typedef Source = void*;
+typedef Tree = void*;
+typedef Variant = void*;
+typedef VariantDict = void*;
+typedef VariantType = void*;
 
 struct PollFD {
   int fd;
@@ -114,7 +114,7 @@ enum SeekType: uint(inline uint s) {
   END = 2
 }
 
-distinct HashTable = void*;
+typedef HashTable = void*;
 
 extern fn bool HashTable.contains(&self, void* key) @extern("g_hash_table_contains");
 extern fn bool HashTable.add(&self, void* key) @extern("g_hash_table_add");
@@ -129,7 +129,7 @@ struct String {
   usz allocated_len;
 }
 
-distinct KeyFile = void*;
+typedef KeyFile = void*;
 
 enum FileError {
   EXIST,

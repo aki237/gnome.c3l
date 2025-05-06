@@ -17,7 +17,7 @@ import pangocairo;
 import cairo;
 
 
-distinct AnchorHints = int;
+typedef AnchorHints = int;
 const AnchorHints ANCHOR_HINTS_FLIP = 3;
 const AnchorHints ANCHOR_HINTS_FLIP_X = 1;
 const AnchorHints ANCHOR_HINTS_FLIP_Y = 2;
@@ -28,7 +28,7 @@ const AnchorHints ANCHOR_HINTS_SLIDE = 12;
 const AnchorHints ANCHOR_HINTS_SLIDE_X = 4;
 const AnchorHints ANCHOR_HINTS_SLIDE_Y = 8;
 
-distinct AxisFlags = int;
+typedef AxisFlags = int;
 const AxisFlags AXIS_FLAGS_DELTA_X = 8;
 const AxisFlags AXIS_FLAGS_DELTA_Y = 16;
 const AxisFlags AXIS_FLAGS_DISTANCE = 512;
@@ -41,13 +41,13 @@ const AxisFlags AXIS_FLAGS_XTILT = 64;
 const AxisFlags AXIS_FLAGS_Y = 4;
 const AxisFlags AXIS_FLAGS_YTILT = 128;
 
-distinct DragAction = int;
+typedef DragAction = int;
 const DragAction DRAG_ACTION_ASK = 8;
 const DragAction DRAG_ACTION_COPY = 1;
 const DragAction DRAG_ACTION_LINK = 4;
 const DragAction DRAG_ACTION_MOVE = 2;
 
-distinct FrameClockPhase = int;
+typedef FrameClockPhase = int;
 const FrameClockPhase FRAME_CLOCK_PHASE_AFTER_PAINT = 64;
 const FrameClockPhase FRAME_CLOCK_PHASE_BEFORE_PAINT = 2;
 const FrameClockPhase FRAME_CLOCK_PHASE_FLUSH_EVENTS = 1;
@@ -57,11 +57,11 @@ const FrameClockPhase FRAME_CLOCK_PHASE_PAINT = 16;
 const FrameClockPhase FRAME_CLOCK_PHASE_RESUME_EVENTS = 32;
 const FrameClockPhase FRAME_CLOCK_PHASE_UPDATE = 4;
 
-distinct Glapi = int;
+typedef Glapi = int;
 const Glapi GLAPI_GL = 1;
 const Glapi GLAPI_GLES = 2;
 
-distinct ModifierType = int;
+typedef ModifierType = int;
 const ModifierType MODIFIER_TYPE_ALT_MASK = 8;
 const ModifierType MODIFIER_TYPE_BUTTON1_MASK = 256;
 const ModifierType MODIFIER_TYPE_BUTTON2_MASK = 512;
@@ -76,11 +76,11 @@ const ModifierType MODIFIER_TYPE_NO_MODIFIER_MASK = 0;
 const ModifierType MODIFIER_TYPE_SHIFT_MASK = 1;
 const ModifierType MODIFIER_TYPE_SUPER_MASK = 67108864;
 
-distinct PaintableFlags = int;
+typedef PaintableFlags = int;
 const PaintableFlags PAINTABLE_FLAGS_CONTENTS = 2;
 const PaintableFlags PAINTABLE_FLAGS_SIZE = 1;
 
-distinct SeatCapabilities = int;
+typedef SeatCapabilities = int;
 const SeatCapabilities SEAT_CAPABILITIES_ALL = 31;
 const SeatCapabilities SEAT_CAPABILITIES_ALL_POINTING = 7;
 const SeatCapabilities SEAT_CAPABILITIES_KEYBOARD = 8;
@@ -90,7 +90,7 @@ const SeatCapabilities SEAT_CAPABILITIES_TABLET_PAD = 16;
 const SeatCapabilities SEAT_CAPABILITIES_TABLET_STYLUS = 4;
 const SeatCapabilities SEAT_CAPABILITIES_TOUCH = 2;
 
-distinct ToplevelState = int;
+typedef ToplevelState = int;
 const ToplevelState TOPLEVEL_STATE_ABOVE = 16;
 const ToplevelState TOPLEVEL_STATE_BELOW = 32;
 const ToplevelState TOPLEVEL_STATE_BOTTOM_RESIZABLE = 8192;
@@ -109,7 +109,7 @@ const ToplevelState TOPLEVEL_STATE_TILED = 128;
 const ToplevelState TOPLEVEL_STATE_TOP_RESIZABLE = 512;
 const ToplevelState TOPLEVEL_STATE_TOP_TILED = 256;
 
-distinct AxisUse = int;
+typedef AxisUse = int;
 const AxisUse AXIS_USE_DELTA_X = 3;
 const AxisUse AXIS_USE_DELTA_Y = 4;
 const AxisUse AXIS_USE_DISTANCE = 9;
@@ -124,11 +124,11 @@ const AxisUse AXIS_USE_XTILT = 6;
 const AxisUse AXIS_USE_Y = 2;
 const AxisUse AXIS_USE_YTILT = 7;
 
-distinct CicpRange = int;
+typedef CicpRange = int;
 const CicpRange CICP_RANGE_FULL = 1;
 const CicpRange CICP_RANGE_NARROW = 0;
 
-distinct CrossingMode = int;
+typedef CrossingMode = int;
 const CrossingMode CROSSING_MODE_DEVICE_SWITCH = 8;
 const CrossingMode CROSSING_MODE_GRAB = 1;
 const CrossingMode CROSSING_MODE_GTK_GRAB = 3;
@@ -139,12 +139,12 @@ const CrossingMode CROSSING_MODE_TOUCH_BEGIN = 6;
 const CrossingMode CROSSING_MODE_TOUCH_END = 7;
 const CrossingMode CROSSING_MODE_UNGRAB = 2;
 
-distinct DevicePadFeature = int;
+typedef DevicePadFeature = int;
 const DevicePadFeature DEVICE_PAD_FEATURE_BUTTON = 0;
 const DevicePadFeature DEVICE_PAD_FEATURE_RING = 1;
 const DevicePadFeature DEVICE_PAD_FEATURE_STRIP = 2;
 
-distinct DeviceToolType = int;
+typedef DeviceToolType = int;
 const DeviceToolType DEVICE_TOOL_TYPE_AIRBRUSH = 5;
 const DeviceToolType DEVICE_TOOL_TYPE_BRUSH = 3;
 const DeviceToolType DEVICE_TOOL_TYPE_ERASER = 2;
@@ -154,17 +154,17 @@ const DeviceToolType DEVICE_TOOL_TYPE_PEN = 1;
 const DeviceToolType DEVICE_TOOL_TYPE_PENCIL = 4;
 const DeviceToolType DEVICE_TOOL_TYPE_UNKNOWN = 0;
 
-distinct DmabufError = int;
+typedef DmabufError = int;
 const DmabufError DMABUF_ERROR_CREATION_FAILED = 2;
 const DmabufError DMABUF_ERROR_NOT_AVAILABLE = 0;
 const DmabufError DMABUF_ERROR_UNSUPPORTED_FORMAT = 1;
 
-distinct DragCancelReason = int;
+typedef DragCancelReason = int;
 const DragCancelReason DRAG_CANCEL_REASON_ERROR = 2;
 const DragCancelReason DRAG_CANCEL_REASON_NO_TARGET = 0;
 const DragCancelReason DRAG_CANCEL_REASON_USER_CANCELLED = 1;
 
-distinct EventType = int;
+typedef EventType = int;
 const EventType EVENT_TYPE_BUTTON_PRESS = 2;
 const EventType EVENT_TYPE_BUTTON_RELEASE = 3;
 const EventType EVENT_TYPE_DELETE = 0;
@@ -196,18 +196,18 @@ const EventType EVENT_TYPE_TOUCH_CANCEL = 20;
 const EventType EVENT_TYPE_TOUCH_END = 19;
 const EventType EVENT_TYPE_TOUCH_UPDATE = 18;
 
-distinct FullscreenMode = int;
+typedef FullscreenMode = int;
 const FullscreenMode FULLSCREEN_MODE_ALL_MONITORS = 1;
 const FullscreenMode FULLSCREEN_MODE_CURRENT_MONITOR = 0;
 
-distinct GLError = int;
+typedef GLError = int;
 const GLError GL_ERROR_COMPILATION_FAILED = 3;
 const GLError GL_ERROR_LINK_FAILED = 4;
 const GLError GL_ERROR_NOT_AVAILABLE = 0;
 const GLError GL_ERROR_UNSUPPORTED_FORMAT = 1;
 const GLError GL_ERROR_UNSUPPORTED_PROFILE = 2;
 
-distinct Gravity = int;
+typedef Gravity = int;
 const Gravity GRAVITY_CENTER = 5;
 const Gravity GRAVITY_EAST = 6;
 const Gravity GRAVITY_NORTH = 2;
@@ -219,7 +219,7 @@ const Gravity GRAVITY_SOUTH_WEST = 7;
 const Gravity GRAVITY_STATIC = 10;
 const Gravity GRAVITY_WEST = 4;
 
-distinct InputSource = int;
+typedef InputSource = int;
 const InputSource INPUT_SOURCE_KEYBOARD = 2;
 const InputSource INPUT_SOURCE_MOUSE = 0;
 const InputSource INPUT_SOURCE_PEN = 1;
@@ -228,12 +228,12 @@ const InputSource INPUT_SOURCE_TOUCHPAD = 4;
 const InputSource INPUT_SOURCE_TOUCHSCREEN = 3;
 const InputSource INPUT_SOURCE_TRACKPOINT = 5;
 
-distinct KeyMatch = int;
+typedef KeyMatch = int;
 const KeyMatch KEY_MATCH_EXACT = 2;
 const KeyMatch KEY_MATCH_NONE = 0;
 const KeyMatch KEY_MATCH_PARTIAL = 1;
 
-distinct MemoryFormat = int;
+typedef MemoryFormat = int;
 const MemoryFormat MEMORY_FORMAT_A16 = 25;
 const MemoryFormat MEMORY_FORMAT_A16_FLOAT = 26;
 const MemoryFormat MEMORY_FORMAT_A32_FLOAT = 27;
@@ -269,7 +269,7 @@ const MemoryFormat MEMORY_FORMAT_R8G8B8X8 = 31;
 const MemoryFormat MEMORY_FORMAT_X8B8G8R8 = 32;
 const MemoryFormat MEMORY_FORMAT_X8R8G8B8 = 30;
 
-distinct NotifyType = int;
+typedef NotifyType = int;
 const NotifyType NOTIFY_TYPE_ANCESTOR = 0;
 const NotifyType NOTIFY_TYPE_INFERIOR = 2;
 const NotifyType NOTIFY_TYPE_NONLINEAR = 3;
@@ -277,18 +277,18 @@ const NotifyType NOTIFY_TYPE_NONLINEAR_VIRTUAL = 4;
 const NotifyType NOTIFY_TYPE_UNKNOWN = 5;
 const NotifyType NOTIFY_TYPE_VIRTUAL = 1;
 
-distinct ScrollDirection = int;
+typedef ScrollDirection = int;
 const ScrollDirection SCROLL_DIRECTION_DOWN = 1;
 const ScrollDirection SCROLL_DIRECTION_LEFT = 2;
 const ScrollDirection SCROLL_DIRECTION_RIGHT = 3;
 const ScrollDirection SCROLL_DIRECTION_SMOOTH = 4;
 const ScrollDirection SCROLL_DIRECTION_UP = 0;
 
-distinct ScrollUnit = int;
+typedef ScrollUnit = int;
 const ScrollUnit SCROLL_UNIT_SURFACE = 1;
 const ScrollUnit SCROLL_UNIT_WHEEL = 0;
 
-distinct SubpixelLayout = int;
+typedef SubpixelLayout = int;
 const SubpixelLayout SUBPIXEL_LAYOUT_HORIZONTAL_BGR = 3;
 const SubpixelLayout SUBPIXEL_LAYOUT_HORIZONTAL_RGB = 2;
 const SubpixelLayout SUBPIXEL_LAYOUT_NONE = 1;
@@ -296,7 +296,7 @@ const SubpixelLayout SUBPIXEL_LAYOUT_UNKNOWN = 0;
 const SubpixelLayout SUBPIXEL_LAYOUT_VERTICAL_BGR = 5;
 const SubpixelLayout SUBPIXEL_LAYOUT_VERTICAL_RGB = 4;
 
-distinct SurfaceEdge = int;
+typedef SurfaceEdge = int;
 const SurfaceEdge SURFACE_EDGE_EAST = 4;
 const SurfaceEdge SURFACE_EDGE_NORTH = 1;
 const SurfaceEdge SURFACE_EDGE_NORTH_EAST = 2;
@@ -306,109 +306,109 @@ const SurfaceEdge SURFACE_EDGE_SOUTH_EAST = 7;
 const SurfaceEdge SURFACE_EDGE_SOUTH_WEST = 5;
 const SurfaceEdge SURFACE_EDGE_WEST = 3;
 
-distinct TextureError = int;
+typedef TextureError = int;
 const TextureError TEXTURE_ERROR_CORRUPT_IMAGE = 1;
 const TextureError TEXTURE_ERROR_TOO_LARGE = 0;
 const TextureError TEXTURE_ERROR_UNSUPPORTED_CONTENT = 2;
 const TextureError TEXTURE_ERROR_UNSUPPORTED_FORMAT = 3;
 
-distinct TitlebarGesture = int;
+typedef TitlebarGesture = int;
 const TitlebarGesture TITLEBAR_GESTURE_DOUBLE_CLICK = 1;
 const TitlebarGesture TITLEBAR_GESTURE_MIDDLE_CLICK = 3;
 const TitlebarGesture TITLEBAR_GESTURE_RIGHT_CLICK = 2;
 
-distinct TouchpadGesturePhase = int;
+typedef TouchpadGesturePhase = int;
 const TouchpadGesturePhase TOUCHPAD_GESTURE_PHASE_BEGIN = 0;
 const TouchpadGesturePhase TOUCHPAD_GESTURE_PHASE_CANCEL = 3;
 const TouchpadGesturePhase TOUCHPAD_GESTURE_PHASE_END = 2;
 const TouchpadGesturePhase TOUCHPAD_GESTURE_PHASE_UPDATE = 1;
 
-distinct VulkanError = int;
+typedef VulkanError = int;
 const VulkanError VULKAN_ERROR_NOT_AVAILABLE = 1;
 const VulkanError VULKAN_ERROR_UNSUPPORTED = 0;
 
 
 
-distinct CicpParamsClass = void*;
+typedef CicpParamsClass = void*;
 
-distinct ColorState = void*;
+typedef ColorState = void*;
 
-distinct ContentFormats = void*;
+typedef ContentFormats = void*;
 
-distinct ContentFormatsBuilder = void*;
+typedef ContentFormatsBuilder = void*;
 
-distinct ContentProviderClass = void*;
+typedef ContentProviderClass = void*;
 
-distinct DevicePadInterface = void*;
+typedef DevicePadInterface = void*;
 
-distinct DmabufFormats = void*;
+typedef DmabufFormats = void*;
 
-distinct DmabufTextureBuilderClass = void*;
+typedef DmabufTextureBuilderClass = void*;
 
-distinct DmabufTextureClass = void*;
+typedef DmabufTextureClass = void*;
 
-distinct DragSurfaceInterface = void*;
+typedef DragSurfaceInterface = void*;
 
-distinct DragSurfaceSize = void*;
+typedef DragSurfaceSize = void*;
 
-distinct EventSequence = void*;
+typedef EventSequence = void*;
 
-distinct FileList = void*;
+typedef FileList = void*;
 
-distinct FrameClockClass = void*;
+typedef FrameClockClass = void*;
 
-distinct FrameClockPrivate = void*;
+typedef FrameClockPrivate = void*;
 
-distinct FrameTimings = void*;
+typedef FrameTimings = void*;
 
-distinct GLTextureBuilderClass = void*;
+typedef GLTextureBuilderClass = void*;
 
-distinct GLTextureClass = void*;
+typedef GLTextureClass = void*;
 
-distinct KeymapKey = void*;
+typedef KeymapKey = void*;
 
-distinct MemoryTextureBuilderClass = void*;
+typedef MemoryTextureBuilderClass = void*;
 
-distinct MemoryTextureClass = void*;
+typedef MemoryTextureClass = void*;
 
-distinct MonitorClass = void*;
+typedef MonitorClass = void*;
 
-distinct PaintableInterface = void*;
+typedef PaintableInterface = void*;
 
-distinct PopupInterface = void*;
+typedef PopupInterface = void*;
 
-distinct PopupLayout = void*;
+typedef PopupLayout = void*;
 
-distinct Rgba = void*;
+typedef Rgba = void*;
 
-distinct Rectangle = void*;
+typedef Rectangle = void*;
 
-distinct SnapshotClass = void*;
+typedef SnapshotClass = void*;
 
-distinct SurfaceClass = void*;
+typedef SurfaceClass = void*;
 
-distinct TextureClass = void*;
+typedef TextureClass = void*;
 
-distinct TextureDownloader = void*;
+typedef TextureDownloader = void*;
 
-distinct TimeCoord = void*;
+typedef TimeCoord = void*;
 
-distinct ToplevelInterface = void*;
+typedef ToplevelInterface = void*;
 
-distinct ToplevelLayout = void*;
+typedef ToplevelLayout = void*;
 
-distinct ToplevelSize = void*;
+typedef ToplevelSize = void*;
 
 
-def ContentDeserializeFunc = fn void(ContentDeserializer* deserializer);
+alias ContentDeserializeFunc = fn void(ContentDeserializer* deserializer);
 
-def ContentSerializeFunc = fn void(ContentSerializer* serializer);
+alias ContentSerializeFunc = fn void(ContentSerializer* serializer);
 
-def CursorGetTextureCallback = fn Texture*(Cursor* cursor, int cursor_size, double scale, int* width, int* height, int* hotspot_x, int* hotspot_y, void* data);
+alias CursorGetTextureCallback = fn Texture*(Cursor* cursor, int cursor_size, double scale, int* width, int* height, int* hotspot_x, int* hotspot_y, void* data);
 
 
 <* Maps to GdkAppLaunchContext *>
-distinct AppLaunchContext = void*;
+typedef AppLaunchContext = void*;
 
 // Class to parent cast.
 fn gio::AppLaunchContext* AppLaunchContext.as_gio_AppLaunchContext(&self) => (gio::AppLaunchContext*)(self);
@@ -440,7 +440,7 @@ extern fn void AppLaunchContext.set_timestamp(&self, uint timestamp) @extern("gd
 
 
 <* Maps to GdkButtonEvent *>
-distinct ButtonEvent = void*;
+typedef ButtonEvent = void*;
 
 // Class to parent cast.
 fn Event* ButtonEvent.as_Event(&self) => (Event*)(self);
@@ -460,7 +460,7 @@ extern fn uint ButtonEvent.get_button(&self, ) @extern("gdk_button_event_get_but
 
 
 <* Maps to GdkCairoContext *>
-distinct CairoContext = void*;
+typedef CairoContext = void*;
 
 // Class to parent cast.
 fn DrawContext* CairoContext.as_DrawContext(&self) => (DrawContext*)(self);
@@ -480,7 +480,7 @@ extern fn cairo::Context* CairoContext.cairo_create(&self, ) @extern("gdk_cairo_
 
 
 <* Maps to GdkCicpParams *>
-distinct CicpParams = void*;
+typedef CicpParams = void*;
 
 // Class to parent cast.
 fn gobject::Object* CicpParams.as_gobject_Object(&self) => (gobject::Object*)(self);
@@ -527,7 +527,7 @@ extern fn void CicpParams.set_transfer_function(&self, uint transfer_function) @
 
 
 <* Maps to GdkClipboard *>
-distinct Clipboard = void*;
+typedef Clipboard = void*;
 
 // Class to parent cast.
 fn gobject::Object* Clipboard.as_gobject_Object(&self) => (gobject::Object*)(self);
@@ -604,7 +604,7 @@ extern fn bool Clipboard.store_finish(&self, gio::AsyncResult* result) @extern("
 
 
 <* Maps to GdkContentDeserializer *>
-distinct ContentDeserializer = void*;
+typedef ContentDeserializer = void*;
 
 // Class to parent cast.
 fn gobject::Object* ContentDeserializer.as_gobject_Object(&self) => (gobject::Object*)(self);
@@ -654,7 +654,7 @@ extern fn void ContentDeserializer.set_task_data(&self, void* data, glib::Destro
 
 
 <* Maps to GdkContentProvider *>
-distinct ContentProvider = void*;
+typedef ContentProvider = void*;
 
 // Class to parent cast.
 fn gobject::Object* ContentProvider.as_gobject_Object(&self) => (gobject::Object*)(self);
@@ -701,7 +701,7 @@ extern fn bool ContentProvider.write_mime_type_finish(&self, gio::AsyncResult* r
 
 
 <* Maps to GdkContentSerializer *>
-distinct ContentSerializer = void*;
+typedef ContentSerializer = void*;
 
 // Class to parent cast.
 fn gobject::Object* ContentSerializer.as_gobject_Object(&self) => (gobject::Object*)(self);
@@ -751,7 +751,7 @@ extern fn void ContentSerializer.set_task_data(&self, void* data, glib::DestroyN
 
 
 <* Maps to GdkCrossingEvent *>
-distinct CrossingEvent = void*;
+typedef CrossingEvent = void*;
 
 // Class to parent cast.
 fn Event* CrossingEvent.as_Event(&self) => (Event*)(self);
@@ -777,7 +777,7 @@ extern fn CrossingMode CrossingEvent.get_mode(&self, ) @extern("gdk_crossing_eve
 
 
 <* Maps to GdkCursor *>
-distinct Cursor = void*;
+typedef Cursor = void*;
 
 // Class to parent cast.
 fn gobject::Object* Cursor.as_gobject_Object(&self) => (gobject::Object*)(self);
@@ -818,7 +818,7 @@ extern fn Texture* Cursor.get_texture(&self, ) @extern("gdk_cursor_get_texture")
 
 
 <* Maps to GdkDNDEvent *>
-distinct DNDEvent = void*;
+typedef DNDEvent = void*;
 
 // Class to parent cast.
 fn Event* DNDEvent.as_Event(&self) => (Event*)(self);
@@ -838,7 +838,7 @@ extern fn Drop* DNDEvent.get_drop(&self, ) @extern("gdk_dnd_event_get_drop");
 
 
 <* Maps to GdkDeleteEvent *>
-distinct DeleteEvent = void*;
+typedef DeleteEvent = void*;
 
 // Class to parent cast.
 fn Event* DeleteEvent.as_Event(&self) => (Event*)(self);
@@ -855,7 +855,7 @@ fn Event* DeleteEvent.as_Event(&self) => (Event*)(self);
 
 
 <* Maps to GdkDevice *>
-distinct Device = void*;
+typedef Device = void*;
 
 // Class to parent cast.
 fn gobject::Object* Device.as_gobject_Object(&self) => (gobject::Object*)(self);
@@ -923,7 +923,7 @@ extern fn bool Device.has_bidi_layouts(&self, ) @extern("gdk_device_has_bidi_lay
 
 
 <* Maps to GdkDeviceTool *>
-distinct DeviceTool = void*;
+typedef DeviceTool = void*;
 
 // Class to parent cast.
 fn gobject::Object* DeviceTool.as_gobject_Object(&self) => (gobject::Object*)(self);
@@ -952,7 +952,7 @@ extern fn DeviceToolType DeviceTool.get_tool_type(&self, ) @extern("gdk_device_t
 
 
 <* Maps to GdkDisplay *>
-distinct Display = void*;
+typedef Display = void*;
 
 // Class to parent cast.
 fn gobject::Object* Display.as_gobject_Object(&self) => (gobject::Object*)(self);
@@ -1059,7 +1059,7 @@ extern fn Display* display_open(ZString display_name) @extern("gdk_display_open"
 
 
 <* Maps to GdkDisplayManager *>
-distinct DisplayManager = void*;
+typedef DisplayManager = void*;
 
 // Class to parent cast.
 fn gobject::Object* DisplayManager.as_gobject_Object(&self) => (gobject::Object*)(self);
@@ -1091,7 +1091,7 @@ extern fn DisplayManager* display_manager_get() @extern("gdk_display_manager_get
 
 
 <* Maps to GdkDmabufTexture *>
-distinct DmabufTexture = void*;
+typedef DmabufTexture = void*;
 
 // Class to parent cast.
 fn Texture* DmabufTexture.as_Texture(&self) => (Texture*)(self);
@@ -1108,7 +1108,7 @@ fn Texture* DmabufTexture.as_Texture(&self) => (Texture*)(self);
 
 
 <* Maps to GdkDmabufTextureBuilder *>
-distinct DmabufTextureBuilder = void*;
+typedef DmabufTextureBuilder = void*;
 
 // Class to parent cast.
 fn gobject::Object* DmabufTextureBuilder.as_gobject_Object(&self) => (gobject::Object*)(self);
@@ -1209,7 +1209,7 @@ extern fn void DmabufTextureBuilder.set_width(&self, uint width) @extern("gdk_dm
 
 
 <* Maps to GdkDrag *>
-distinct Drag = void*;
+typedef Drag = void*;
 
 // Class to parent cast.
 fn gobject::Object* Drag.as_gobject_Object(&self) => (gobject::Object*)(self);
@@ -1259,7 +1259,7 @@ extern fn Drag* drag_begin(Surface* surface, Device* device, ContentProvider* co
 
 
 <* Maps to GdkDrawContext *>
-distinct DrawContext = void*;
+typedef DrawContext = void*;
 
 // Class to parent cast.
 fn gobject::Object* DrawContext.as_gobject_Object(&self) => (gobject::Object*)(self);
@@ -1294,7 +1294,7 @@ extern fn bool DrawContext.is_in_frame(&self, ) @extern("gdk_draw_context_is_in_
 
 
 <* Maps to GdkDrop *>
-distinct Drop = void*;
+typedef Drop = void*;
 
 // Class to parent cast.
 fn gobject::Object* Drop.as_gobject_Object(&self) => (gobject::Object*)(self);
@@ -1347,7 +1347,7 @@ extern fn void Drop.status(&self, DragAction actions, DragAction preferred) @ext
 
 
 <* Maps to GdkEvent *>
-distinct Event = void*;
+typedef Event = void*;
 
 // Class to parent cast.
 
@@ -1424,7 +1424,7 @@ extern fn void Event.unref(&self, ) @extern("gdk_event_unref");
 
 
 <* Maps to GdkFocusEvent *>
-distinct FocusEvent = void*;
+typedef FocusEvent = void*;
 
 // Class to parent cast.
 fn Event* FocusEvent.as_Event(&self) => (Event*)(self);
@@ -1444,7 +1444,7 @@ extern fn bool FocusEvent.get_in(&self, ) @extern("gdk_focus_event_get_in");
 
 
 <* Maps to GdkFrameClock *>
-distinct FrameClock = void*;
+typedef FrameClock = void*;
 
 // Class to parent cast.
 fn gobject::Object* FrameClock.as_gobject_Object(&self) => (gobject::Object*)(self);
@@ -1491,7 +1491,7 @@ extern fn void FrameClock.request_phase(&self, FrameClockPhase phase) @extern("g
 
 
 <* Maps to GdkGLContext *>
-distinct GLContext = void*;
+typedef GLContext = void*;
 
 // Class to parent cast.
 fn DrawContext* GLContext.as_DrawContext(&self) => (DrawContext*)(self);
@@ -1571,7 +1571,7 @@ extern fn GLContext* gl_context_get_current() @extern("gdk_gl_context_get_curren
 
 
 <* Maps to GdkGLTexture *>
-distinct GLTexture = void*;
+typedef GLTexture = void*;
 
 // Class to parent cast.
 fn Texture* GLTexture.as_Texture(&self) => (Texture*)(self);
@@ -1594,7 +1594,7 @@ extern fn void GLTexture.release(&self, ) @extern("gdk_gl_texture_release");
 
 
 <* Maps to GdkGLTextureBuilder *>
-distinct GLTextureBuilder = void*;
+typedef GLTextureBuilder = void*;
 
 // Class to parent cast.
 fn gobject::Object* GLTextureBuilder.as_gobject_Object(&self) => (gobject::Object*)(self);
@@ -1677,7 +1677,7 @@ extern fn void GLTextureBuilder.set_width(&self, int width) @extern("gdk_gl_text
 
 
 <* Maps to GdkGrabBrokenEvent *>
-distinct GrabBrokenEvent = void*;
+typedef GrabBrokenEvent = void*;
 
 // Class to parent cast.
 fn Event* GrabBrokenEvent.as_Event(&self) => (Event*)(self);
@@ -1700,7 +1700,7 @@ extern fn bool GrabBrokenEvent.get_implicit(&self, ) @extern("gdk_grab_broken_ev
 
 
 <* Maps to GdkKeyEvent *>
-distinct KeyEvent = void*;
+typedef KeyEvent = void*;
 
 // Class to parent cast.
 fn Event* KeyEvent.as_Event(&self) => (Event*)(self);
@@ -1741,7 +1741,7 @@ extern fn KeyMatch KeyEvent.matches(&self, uint keyval, ModifierType modifiers) 
 
 
 <* Maps to GdkMemoryTexture *>
-distinct MemoryTexture = void*;
+typedef MemoryTexture = void*;
 
 // Class to parent cast.
 fn Texture* MemoryTexture.as_Texture(&self) => (Texture*)(self);
@@ -1761,7 +1761,7 @@ extern fn MemoryTexture* memory_texture_new(int width, int height, MemoryFormat 
 
 
 <* Maps to GdkMemoryTextureBuilder *>
-distinct MemoryTextureBuilder = void*;
+typedef MemoryTextureBuilder = void*;
 
 // Class to parent cast.
 fn gobject::Object* MemoryTextureBuilder.as_gobject_Object(&self) => (gobject::Object*)(self);
@@ -1832,7 +1832,7 @@ extern fn void MemoryTextureBuilder.set_width(&self, int width) @extern("gdk_mem
 
 
 <* Maps to GdkMonitor *>
-distinct Monitor = void*;
+typedef Monitor = void*;
 
 // Class to parent cast.
 fn gobject::Object* Monitor.as_gobject_Object(&self) => (gobject::Object*)(self);
@@ -1888,7 +1888,7 @@ extern fn bool Monitor.is_valid(&self, ) @extern("gdk_monitor_is_valid");
 
 
 <* Maps to GdkMotionEvent *>
-distinct MotionEvent = void*;
+typedef MotionEvent = void*;
 
 // Class to parent cast.
 fn Event* MotionEvent.as_Event(&self) => (Event*)(self);
@@ -1905,7 +1905,7 @@ fn Event* MotionEvent.as_Event(&self) => (Event*)(self);
 
 
 <* Maps to GdkPadEvent *>
-distinct PadEvent = void*;
+typedef PadEvent = void*;
 
 // Class to parent cast.
 fn Event* PadEvent.as_Event(&self) => (Event*)(self);
@@ -1931,7 +1931,7 @@ extern fn void PadEvent.get_group_mode(&self, uint* group, uint* mode) @extern("
 
 
 <* Maps to GdkProximityEvent *>
-distinct ProximityEvent = void*;
+typedef ProximityEvent = void*;
 
 // Class to parent cast.
 fn Event* ProximityEvent.as_Event(&self) => (Event*)(self);
@@ -1948,7 +1948,7 @@ fn Event* ProximityEvent.as_Event(&self) => (Event*)(self);
 
 
 <* Maps to GdkScrollEvent *>
-distinct ScrollEvent = void*;
+typedef ScrollEvent = void*;
 
 // Class to parent cast.
 fn Event* ScrollEvent.as_Event(&self) => (Event*)(self);
@@ -1977,7 +1977,7 @@ extern fn bool ScrollEvent.is_stop(&self, ) @extern("gdk_scroll_event_is_stop");
 
 
 <* Maps to GdkSeat *>
-distinct Seat = void*;
+typedef Seat = void*;
 
 // Class to parent cast.
 fn gobject::Object* Seat.as_gobject_Object(&self) => (gobject::Object*)(self);
@@ -2012,7 +2012,7 @@ extern fn glib::List* Seat.get_tools(&self, ) @extern("gdk_seat_get_tools");
 
 
 <* Maps to GdkSnapshot *>
-distinct Snapshot = void*;
+typedef Snapshot = void*;
 
 // Class to parent cast.
 fn gobject::Object* Snapshot.as_gobject_Object(&self) => (gobject::Object*)(self);
@@ -2029,7 +2029,7 @@ fn gobject::Object* Snapshot.as_gobject_Object(&self) => (gobject::Object*)(self
 
 
 <* Maps to GdkSurface *>
-distinct Surface = void*;
+typedef Surface = void*;
 
 // Class to parent cast.
 fn gobject::Object* Surface.as_gobject_Object(&self) => (gobject::Object*)(self);
@@ -2127,7 +2127,7 @@ extern fn bool Surface.translate_coordinates(&self, Surface* to, double* x, doub
 
 
 <* Maps to GdkTexture *>
-distinct Texture = void*;
+typedef Texture = void*;
 
 // Class to parent cast.
 fn gobject::Object* Texture.as_gobject_Object(&self) => (gobject::Object*)(self);
@@ -2186,7 +2186,7 @@ extern fn glib::Bytes* Texture.save_to_tiff_bytes(&self, ) @extern("gdk_texture_
 
 
 <* Maps to GdkTouchEvent *>
-distinct TouchEvent = void*;
+typedef TouchEvent = void*;
 
 // Class to parent cast.
 fn Event* TouchEvent.as_Event(&self) => (Event*)(self);
@@ -2206,7 +2206,7 @@ extern fn bool TouchEvent.get_emulating_pointer(&self, ) @extern("gdk_touch_even
 
 
 <* Maps to GdkTouchpadEvent *>
-distinct TouchpadEvent = void*;
+typedef TouchpadEvent = void*;
 
 // Class to parent cast.
 fn Event* TouchpadEvent.as_Event(&self) => (Event*)(self);
@@ -2238,7 +2238,7 @@ extern fn double TouchpadEvent.get_pinch_scale(&self, ) @extern("gdk_touchpad_ev
 
 
 <* Maps to GdkVulkanContext *>
-distinct VulkanContext = void*;
+typedef VulkanContext = void*;
 
 // Class to parent cast.
 fn DrawContext* VulkanContext.as_DrawContext(&self) => (DrawContext*)(self);

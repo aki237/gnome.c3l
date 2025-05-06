@@ -5,7 +5,7 @@ module graphene;
 import gobject;
 
 
-distinct EulerOrder = int;
+typedef EulerOrder = int;
 const EulerOrder EULER_ORDER_DEFAULT = -1;
 const EulerOrder EULER_ORDER_RXYX = 19;
 const EulerOrder EULER_ORDER_RXYZ = 28;
@@ -38,50 +38,50 @@ const EulerOrder EULER_ORDER_YZX = 1;
 const EulerOrder EULER_ORDER_ZXY = 2;
 const EulerOrder EULER_ORDER_ZYX = 5;
 
-distinct RayIntersectionKind = int;
+typedef RayIntersectionKind = int;
 const RayIntersectionKind RAY_INTERSECTION_KIND_ENTER = 1;
 const RayIntersectionKind RAY_INTERSECTION_KIND_LEAVE = 2;
 const RayIntersectionKind RAY_INTERSECTION_KIND_NONE = 0;
 
 
 
-distinct Box = void*;
+typedef Box = void*;
 
-distinct Euler = void*;
+typedef Euler = void*;
 
-distinct Frustum = void*;
+typedef Frustum = void*;
 
-distinct Matrix = void*;
+typedef Matrix = void*;
 
-distinct Plane = void*;
+typedef Plane = void*;
 
-distinct Point = void*;
+typedef Point = void*;
 
-distinct Point3D = void*;
+typedef Point3D = void*;
 
-distinct Quad = void*;
+typedef Quad = void*;
 
-distinct Quaternion = void*;
+typedef Quaternion = void*;
 
-distinct Ray = void*;
+typedef Ray = void*;
 
-distinct Rect = void*;
+typedef Rect = void*;
 
-distinct Simd4F = void*;
+typedef Simd4F = void*;
 
-distinct Simd4X4F = void*;
+typedef Simd4X4F = void*;
 
-distinct Size = void*;
+typedef Size = void*;
 
-distinct Sphere = void*;
+typedef Sphere = void*;
 
-distinct Triangle = void*;
+typedef Triangle = void*;
 
-distinct Vec2 = void*;
+typedef Vec2 = void*;
 
-distinct Vec3 = void*;
+typedef Vec3 = void*;
 
-distinct Vec4 = void*;
+typedef Vec4 = void*;
 
 
 
